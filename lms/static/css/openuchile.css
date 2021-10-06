@@ -1,3 +1,18 @@
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+ol,
+li,
+div,
+button,
+a {
+    font-family: brandon-grotesque, sans-serif !important;
+}
+
 .openuchile-bg {
     background-repeat: no-repeat;
     background-attachment: fixed;
