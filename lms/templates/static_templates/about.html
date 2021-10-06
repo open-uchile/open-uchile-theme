@@ -5,15 +5,44 @@
 
 <%block name="pagetitle">${_("About")}</%block>
 
+<style>
+    #about_us h1 {
+        color: #069bdc;
+    }
 
-    <section class="container-fluid px-0">
-        <img src="${static.url('open-uchile-theme/images/about_us.png')}" alt="About Us" class="img-fluid mx-auto d-block">
-        <div class="container">
-            <h1 class="text-left">
-                <%block name="pageheader">${page_header or _("About")}</%block>
-            </h1>
-            <p>
-                <%block name="pagecontent">${page_content or _("This page left intentionally blank. Feel free to add your own content.")}</%block>
-            </p>
+    #about_us img {
+        min-width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    #about_us div.about-content {
+        column-count: 2;
+        text-align: justify;
+        text-justify: inter-word;
+        overflow-wrap: break-word;
+        hyphens: manual;
+    }
+
+    @media (max-width: 850px) { 
+        #about_us div.about-content  {
+            column-count: 1;
+        }
+    }
+</style>
+
+<section class="container-fluid px-0" id="about_us">
+    <img src="${static.url('open-uchile-theme/images/about_us.jpeg')}" alt="About Us" class="mx-auto d-block">
+    <img class="uchile-separator" src="${static.url('open-uchile-theme/images/uchile_separator.png')}" alt="">
+    <div class="container px-3">
+        <h1 class="text-left">
+            ${_('What is Open UChile?')}
+        </h1>
+        <div class="about-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
-    </section>
+    </div>
+</section>
