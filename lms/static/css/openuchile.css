@@ -1,3 +1,10 @@
+.openuchile-bg {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
 .navbar-brand img {
     max-height: 60px;
 }
@@ -47,4 +54,78 @@
 .navbar .nav-item button.btn:hover {
     background-color: #048dc9;
     border-color: #048dc9;
+}
+
+/* ABOUT */
+
+#about_us h1 {
+    color: #069bdc;
+}
+
+#about_us img {
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+#about_us div.about-content {
+    column-count: 2;
+    text-align: justify;
+    text-justify: inter-word;
+    overflow-wrap: break-word;
+    hyphens: manual;
+}
+
+@media (max-width: 850px) {
+    #about_us div.about-content {
+        column-count: 1;
+    }
+}
+
+/* FAQ */
+
+#faq h1 {
+    color: #069bdc;
+}
+
+#faq img {
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+#faq .accordion-item {
+    background-color: #ffffff5e;
+    border: 1px solid rgba(0, 0, 0, .125);
+}
+
+#faq .accordion-button {
+    background: none;
+    text-shadow: none;
+    box-shadow: none;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+#faq .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    transform: rotate(-0deg);
+    color: black;
+}
+
+#faq .accordion-button::after {
+    transform: rotate(-90deg);
+}
+
+#faq .accordion-button:not(.collapsed), #faq .accordion-collapse {
+    background-color: #afafaf5e;
+}
+
+#faq .accordion-button {
+    color: black;
+    font-weight: bold;
+}
+
+#faq .accordion-body {
+    padding: 0rem 2rem 1rem 2rem;
 }
