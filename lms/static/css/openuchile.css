@@ -1,4 +1,4 @@
-p, h1, h2, h3, h4, h5, ul, ol, li, div, button, a {
+p, h1, h2, h3, h4, h5, ul, ol, li, div, button, a, label, input, select, option, textarea {
     font-family: brandon-grotesque, sans-serif !important;
 }
 
@@ -154,6 +154,25 @@ img.openuchile-header {
     border-color: #048dc9;
 }
 
-#certificate_validation input {
-    font-family: brandon-grotesque, sans-serif !important;
+/* Contact Form */
+#eol-contact .contact-card, #eol-contact input, #eol-contact select, #eol-contact textarea {
+    background-color: #00000017 !important;
+}
+
+#eol-contact .form-submit {
+    width: auto;
+} 
+
+#eol-contact .btn {
+    box-shadow: none !important;
+    color: #ffff;
+    background: none;
+    background-color: #069bdc !important;
+    border-color: #069bdc;
+    text-shadow: none;
+}
+
+#eol-contact .btn:hover {
+    background-color: #048dc9 !important;
+    border-color: #048dc9;
 }
