@@ -1,15 +1,4 @@
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-ul,
-ol,
-li,
-div,
-button,
-a {
+p, h1, h2, h3, h4, h5, ul, ol, li, div, button, a {
     font-family: brandon-grotesque, sans-serif !important;
 }
 
@@ -18,6 +7,12 @@ a {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+}
+
+img.openuchile-header {
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
 }
 
 .navbar-brand img {
@@ -77,12 +72,6 @@ a {
     color: #069bdc;
 }
 
-#about_us img {
-    min-width: 100%;
-    max-width: 100%;
-    height: auto;
-}
-
 #about_us div.about-content {
     column-count: 2;
     text-align: justify;
@@ -101,12 +90,6 @@ a {
 
 #faq h1 {
     color: #069bdc;
-}
-
-#faq img {
-    min-width: 100%;
-    max-width: 100%;
-    height: auto;
 }
 
 #faq .accordion-item {
@@ -143,4 +126,34 @@ a {
 
 #faq .accordion-body {
     padding: 0rem 2rem 1rem 2rem;
+}
+
+/* Certificate Validation */
+
+#certificate_validation h1 {
+    border-bottom: .15rem solid black;
+    color: black;
+}
+
+#certificate_validation .card, #certificate_validation input {
+    background-color: #00000021;
+    border: none;
+}
+
+#certificate_validation .btn {
+    box-shadow: none !important;
+    color: #ffff;
+    background: none;
+    background-color: #069bdc;
+    border-color: #069bdc;
+    text-shadow: none;
+}
+
+#certificate_validation .btn:hover {
+    background-color: #048dc9;
+    border-color: #048dc9;
+}
+
+#certificate_validation input {
+    font-family: brandon-grotesque, sans-serif !important;
 }

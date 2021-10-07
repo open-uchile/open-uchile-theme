@@ -1,26 +1,42 @@
 # -*- coding: utf-8 -*-
 <%page expression_filter="h"/>
 <%! from django.utils.translation import ugettext as _ %>
+<%namespace name='static' file='../static_content.html'/>
 <%inherit file="../main.html" />
-<main id="main" aria-label="Content" tabindex="-1" class="static_pages">
-<h1>Validación de certificados</h1>
-    <div style="text-align: center">
-        <form method="POST">
-            <input type="hidden" name="csrfmiddlewaretoken" value="${ csrftoken }"/>
-            <div class="form-group" style="margin: 15px 15px;">
-                <label for="cert-id" style="line-height: 33px; text-align: right; clear: both; margin-right: 15px; font-style: normal; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif">ID de certificado:</label>
-                % if context.get('_id', UNDEFINED) is not UNDEFINED:
-                    <input style="min-width: 400px; font-style: normal; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif" type="text" name='cert-id' value="${_id}"></input>
-                % else:
-                    <input style="min-width: 400px; font-style: normal; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif" type="text" name='cert-id' placeholder="9c7f2edd26f7477a8b9fb05f763f869c"></input>
-                % endif
+
+<%block name="pagetitle">${_("Certificate Validation")}</%block>
+<section class="container-fluid px-0 openuchile-bg" id="certificate_validation" style="background-image: url(${static.url('open-uchile-theme/images/bg_nodes.png')});">
+    <img src="${static.url('open-uchile-theme/images/certificates.jpg')}" alt="Certificate Validation" class="mx-auto openuchile-header d-block">
+    <img class="uchile-separator" src="${static.url('open-uchile-theme/images/uchile_separator.png')}" alt="">
+    <div class="container px-3 my-5">
+        <div class="card col-11 col-md-8 col-lg-7 mx-auto shadow-lg px-5 py-4 mb-5 rounded-lg">
+            <div class="card-body">
+                <h1 class="text-left">
+                    ${_("Certificate Validation")}
+                </h1>
+                <form method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="${ csrftoken }"/>
+                    <div class="form-group">
+                        <h3 class="lead">
+                            ${_("Certificate ID number")}
+                        </h3>
+                        % if context.get('_id', UNDEFINED) is not UNDEFINED:
+                            <input type="text" class="form-control mt-2" name='cert-id' value="${_id}"></input>
+                        % else:
+                            <input type="text" class="form-control mt-2" name='cert-id' placeholder="9c7f2edd26f7477a8b9fb05f763f869c"></input>
+                        % endif
+                    </div>
+                    % if context.get('exists', UNDEFINED) is not UNDEFINED:
+                        % if context.get('exists') is False:
+                            <p style="color:firebrick; margin-top: 15px; text-align: center;">${_("Certificate was not found")}</p>
+                        % endif
+                    % endif
+                    <div class="text-center">
+                        <input type="submit" class="btn mt-4 py-2 px-5" value='${_("Validate")}'>
+                    </div>
+                </form>
             </div>
-            % if context.get('exists', UNDEFINED) is not UNDEFINED:
-                % if context.get('exists') is False:
-                    <p style="color:firebrick; margin-bottom: 15px;">Certificado no encontrado</p>
-                % endif
-            % endif
-            <input type="submit" style="text-shadow: none; border-color:white; background-color: #0075b4; background-image: none; display:block; margin: auto" value="Enviar">
-        </form>
+        </div>
+
     </div>
-</main>
+</section>
