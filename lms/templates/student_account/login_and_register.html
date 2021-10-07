@@ -36,20 +36,19 @@
         </script>
     % endfor
 </%block>
-<div class="section-bkg-wrapper">
-    <main id="main" aria-label="Content" tabindex="-1">
-        <div id="content-container" class="login-register-content">
-            % if enable_enterprise_sidebar:
-                <%include file="enterprise_sidebar.html" />
-                <%
-                    border_class = 'border-left'
-                %>
-            % else:
-                <%
-                    border_class = ''
-                %>
-            % endif
-            <div id="login-and-registration-container" class="login-register ${border_class}"></div>
-        </div>
-    </main>
+
+<div class="container px-3 mt-2">
+    <div class="card col-11 col-md-8 col-lg-7 mx-auto shadow-lg px-5 py-4 mb-5 rounded-lg" id="content-container">
+        % if enable_enterprise_sidebar:
+            <%include file="enterprise_sidebar.html" />
+            <%
+                border_class = 'border-left'
+            %>
+        % else:
+            <%
+                border_class = ''
+            %>
+        % endif
+        <div id="login-and-registration-container" class="login-register ${border_class}"></div>
+    </div>
 </div>

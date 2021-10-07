@@ -187,3 +187,25 @@ footer#openuchile-footer img:hover {
     background-color: #048dc9 !important;
     border-color: #048dc9;
 }
+
+/* LOGIN */
+
+#content-container{
+    background-color: #00000017 !important;
+    border-color: transparent;
+}
+
+#content-container input {
+    border-color: transparent;
+}
+#login-and-registration-container {
+    background-color: transparent;
+    margin: 0;
+    max-width: none;
+}
+
+#content-container h1 {
+    text-align: left;
+    border-bottom: .15rem solid black;
+    color: black;
+}
