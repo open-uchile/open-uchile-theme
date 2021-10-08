@@ -1,0 +1,35 @@
+<%page expression_filter="h"/>
+<%inherit file="main.html" />
+<%namespace name='static' file='static_content.html'/>
+<%!
+from django.utils.translation import ugettext as _
+from django.urls import reverse
+
+from openedx.core.djangolib.markup import HTML, Text
+%>
+
+<section class="container-fluid px-0" id="main">
+  <img src="${static.url('open-uchile-theme/images/banner.jpg')}" alt="About Us" class="mx-auto openuchile-header d-block">
+  <img class="uchile-separator" src="${static.url('open-uchile-theme/images/uchile_separator.png')}" alt="">
+  <div class="container px-3">
+    <%include file="${courses_list}" />
+  </div>
+</section>
+
+<%block name="js_extra">
+   <script type="text/javascript">
+      $(window).load(function() {
+         if(getParameterByName('next')) {
+              $('#login').trigger("click");
+         }
+      })
+   </script>
+</%block>
+
+% if show_signup_immediately is not UNDEFINED:
+  ## NOTE: This won't work in production, because anonymous views are cached, so it will
+  ## show either with or without this extra js for 3 minutes at a time.
+<script type="text/javascript">
+  $(window).load(function() {$('#signup_action').trigger("click");});
+</script>
+% endif

@@ -1,0 +1,42 @@
+# -*- coding: utf-8 -*-
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%namespace name='static' file='../static_content.html'/>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Certificate Validation")}</%block>
+<section class="container-fluid px-0" id="certificate_validation">
+    <img src="${static.url('open-uchile-theme/images/certificates.jpg')}" alt="Certificate Validation" class="mx-auto openuchile-header d-block">
+    <img class="uchile-separator" src="${static.url('open-uchile-theme/images/uchile_separator.png')}" alt="">
+    <div class="container px-3 mt-5">
+        <div class="card col-11 col-md-8 col-lg-7 mx-auto shadow-lg px-5 py-4 mb-5 rounded-lg">
+            <div class="card-body">
+                <h1 class="text-left">
+                    ${_("Certificate Validation")}
+                </h1>
+                <form method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="${ csrftoken }"/>
+                    <div class="form-group">
+                        <h3 class="lead">
+                            ${_("Certificate ID number")}
+                        </h3>
+                        % if context.get('_id', UNDEFINED) is not UNDEFINED:
+                            <input type="text" class="form-control mt-2" name='cert-id' value="${_id}"></input>
+                        % else:
+                            <input type="text" class="form-control mt-2" name='cert-id' placeholder="9c7f2edd26f7477a8b9fb05f763f869c"></input>
+                        % endif
+                    </div>
+                    % if context.get('exists', UNDEFINED) is not UNDEFINED:
+                        % if context.get('exists') is False:
+                            <p style="color:firebrick; margin-top: 15px; text-align: center;">${_("Certificate was not found")}</p>
+                        % endif
+                    % endif
+                    <div class="text-center">
+                        <input type="submit" class="btn mt-4 py-2 px-5" value='${_("Validate")}'>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</section>

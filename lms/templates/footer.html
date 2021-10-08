@@ -1,0 +1,53 @@
+## mako
+<%page expression_filter="h"/>
+<%!
+  from django.urls import reverse
+  from django.utils.translation import ugettext as _
+  from lms.djangoapps.branding.api import get_footer
+  from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_enabled
+%>
+<% footer = get_footer(is_secure=is_secure) %>
+<% icp_license_info = getattr(settings, 'ICP_LICENSE_INFO', {})%>
+<%namespace name='static' file='static_content.html'/>
+
+<footer id="openuchile-footer" class="openuchile-bg mt-auto text-center mx-auto py-4" style="background-image: url(${static.url('open-uchile-theme/images/bg_nodes.png')});">
+  <div class="container border-0 mb-3 px-5 text-center">
+    <a href="https://www.uchile.cl/" target="_blank" class="text-decoration-none">
+      <img src="${static.url('open-uchile-theme/images/logo_uchile.png')}" class="img-fluid my-auto py-2 px-5" alt="UChile" style="max-height: 80px;">
+    </a>
+    <a href="https://oficinaeol.uchile.cl/" target="_blank" class="text-decoration-none">
+      <img src="${static.url('open-uchile-theme/images/logo_eol.png')}" class="img-fluid my-auto py-2 px-5" alt="EOL" style="max-height: 70px;">
+    </a>
+  </div>
+  <p class="text-center">${_('Need help?')} <a href="/contact_form">${_('Contact us')}</a></p>
+  <p class="text-center">
+    <small class="text-muted">
+      ${footer['copyright']}
+      </br>
+      <a href="https://www.uchile.cl/portal/informacion-general/174996/politica-de-privacidad-de-la-informacion-y-datos-personales" target="_blank">${_('Privacy Policy')}</a>
+      % if icp_license_info.get('icp_license'):
+        ${u" | {text}".format(text=icp_license_info.get('text'))}
+        <a href="${icp_license_info.get('icp_license_link', '#')}">
+            ${u" {icp}".format(icp=icp_license_info.get('icp_license'))}
+        </a>
+      % endif
+    </small>
+  </p>
+</footer>
+
+% if context.get('include_language_selector', footer_language_selector_is_enabled()):
+    <%include file="${static.get_template_path('widgets/footer-language-selector.html')}"/>
+% endif
+<img class="uchile-separator" src="${static.url('open-uchile-theme/images/uchile_separator.png')}" alt="">
+
+% if include_dependencies:
+  <%static:js group='base_vendor'/>
+  <%static:css group='style-vendor'/>
+  <%include file="widgets/segment-io.html" />
+  <%include file="widgets/segment-io-footer.html" />
+% endif
+% if footer_css_urls:
+  % for url in footer_css_urls:
+    <link rel="stylesheet" type="text/css" href="${url}"></link>
+  % endfor
+% endif
