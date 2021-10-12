@@ -112,6 +112,37 @@ from six import string_types
   .course-info .info-row img.icon {
     max-width: 40px;
   }
+
+  .course-info .menu {
+    background-color: #dbdbdb;
+    color: #048dc9;
+    font-weight: 400;
+  }
+
+  .menu-sticky {
+    position: -webkit-sticky; /* Safari & IE */
+    position: sticky;
+    top: 0;
+  }
+
+  .course-info .menu a {
+    color: black;
+  }
+
+  .course-info .about-details p, .course-info .about-details strong { 
+    text-align: justify;
+    font-size: 1.2em;
+    line-height: normal;
+  }
+
+  .course-info .grey-background {
+    background-color: #8080804d;
+  }
+
+  .course-info .instructor {
+    background-color: #bdc0c1;
+  }
+  
 </style>
 
 
@@ -122,7 +153,7 @@ from six import string_types
 </script>
 
 <section class="course-info">
-  <div class="container px-4">
+  <div class="container px-4 pb-0">
     <div class="row">
       <div class="col-md-7 course-header py-2">
           <h1 class="text-left mb-0 pb-2">
@@ -157,7 +188,14 @@ from six import string_types
           <img src="${course_image_urls['large']}" class="img-fluid course-about-image" alt="image" />
         % endif
       </div>
-    </div>  
+    </div>
+    % if staff_access and studio_url is not None:
+      <div class="row">
+        <div class="wrap-instructor-info studio-view my-auto">
+          <a class="instructor-info-action" href="${studio_url}">${_("View About Page in studio")}</a>
+        </div>
+      </div>
+    % endif  
     <div class="row info-row my-3 rounded">
       <%
         course_start_date = 'None'
@@ -175,7 +213,7 @@ from six import string_types
           endif
         endif
       %>
-      <div class="col-md-3 my-3">
+      <div class="col-md-4 my-3">
         <div class="row">
           <div class="col-5 text-right">
             <img class="img-fluid icon" src="${static.url('open-uchile-theme/images/start_clock.png')}" alt="">
@@ -189,7 +227,7 @@ from six import string_types
         </div>
       </div>
       
-      <div class="col-md-3 my-3">
+      <div class="col-md-4 my-3">
         <div class="row">
           <div class="col-5 text-right">
             <img class="img-fluid icon" src="${static.url('open-uchile-theme/images/end_clock.png')}" alt="">
@@ -205,19 +243,6 @@ from six import string_types
       <div class="col-md-4 my-3">
         <div class="row">
           <div class="col-5 text-right">
-            <img class="img-fluid icon" src="${static.url('open-uchile-theme/images/course_code.png')}" alt="">
-          </div>
-          <div class="col-7 text-left pt-1 pl-0">
-            <span class="important-dates-item-title">
-              ${_("Course Code:")}</br>
-              ${course.id}
-            </span>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-2 my-3">
-        <div class="row">
-          <div class="col-5 text-right">
             <img class="img-fluid icon" src="${static.url('open-uchile-theme/images/course_price.png')}" alt="">
           </div>
           <div class="col-7 text-left pt-1 pl-0">
@@ -231,22 +256,91 @@ from six import string_types
     </div>
     <div class="row">
       <h3 class="text-right">${_("There is one session available:")}</h3>
-      <p class="text-right lead">${_("50,567 already enrolled! After a course session ends, it will be archived.")}</p>
+      <p class="text-right lead">${total_enrolled if total_enrolled else None}${_(" already enrolled! After a course session ends, it will be archived.")}</p>
     </div>
 
   </div>
-  <div class="container">
-
+  <div class="container pb-0">
     <%block name="course_about_details">
-    <div class="details">
-      % if staff_access and studio_url is not None:
-        <div class="wrap-instructor-info studio-view">
-          <a class="instructor-info-action" href="${studio_url}">${_("View About Page in studio")}</a>
-        </div>
-      % endif
+    <div class="row menu-sticky">
+      <div class="menu w-100 mt-2 mb-4 py-3 px-4 rounded h3">
+        <a href="#about" class="mr-4">${_("About")}</a> | <a href="#whatlearn" class="mr-4 ml-4">${_("What you'll learn")}</a> | <a href="#instructors" class="mr-4 ml-4">${_("Instructors")}</a> | <a href="#taughtby" class="ml-4">${_("Taught by")}</a>
+      </div>
+    </div>
+    <div class="row about-details">
+      <h1 id="about">About this course</h1>
+      <p>
+        The purpose of the course is to introduce an initial framework that leads to an understanding of the ways in which AI systems can be conceptualized, designed and implemented to support efforts to create a more diverse and inclusive society that does not obstruct people's opportunities and rights.
+        The course takes different approaches from the humanities, social sciences and communication, focused on the opportunities and challenges that these technologies present to society in relation to issues such as social inclusion and human rights, the future of work, education, health and welfare, quality of information, security and privacy -among others- and how these fields intersect with the development and use of Artificial Intelligence and associated technologies.
+        It will also explore how different stakeholders, e.g., developers, AI systems, users, and especially those individuals and communities that may not have access to these technologies, could be affected by them.
+      </p>
+      <h1 id="whatlearn">What you'll learn</h1>
+      <div class="course-content">
+        <h2>Module 1: Artificial Intelligence and Social Inclusion</h2>
+        <ol>
+          <li>Introductory notion of the concept of AI</li>
+          <li>AI and the possibilities of building a more Inclusive Society</li>
+          <li>Inclusion and exclusion in the Age of AI</li>
+        </ol>
 
-      <div class="inner-wrapper">
-        ${clean_dangerous_html(get_course_about_section(request, course, "overview"))}
+
+        <h2>Module 2: Artificial Intelligence, Bias and Discrimination</h2>
+        <ol>
+          <li>The challenges of AI bias and discrimintation</li>
+          <li>Exploratory cases</li>
+          <li>Deconstructing AI narratives</li>
+        </ol>
+
+        <h2>Module 3: Artificial Intelligence, Freedom of Speech and Misinformation</h2>
+        <ol>
+          <li>The ethical balance between safety and  freedom of speech</li>
+          <li>Misinformation and its Implications for democracy</li>
+          <li>Exploratory cases</li>
+        </ol>
+
+        <h2>Module 4: The challenges of Artificial Intelligence and facial recognition and classification</h2>
+        <ol>
+          <li>Conceptual framework. Face detection and classification. Face verification and Face recognition</li>
+          <li>Challenges of face recognition and classification</li>
+        </ol>
+
+        <h2>Module 4: Final activities and Certification</h2>
+        <ol>
+          <li>Summary</li>
+          <li>Final Video</li>
+          <li>Final Quiz</li>
+        </ol>
+
+      </div>
+      <h1 id="instructors">Instructors</h1>
+      <div class="row mb-4">
+        <div class="instructor rounded col-md-4 mx-auto text-center my-2 p-3">
+          <img src="/asset-v1:openuchile+test101+2021+type@asset+block@instructor_1.png" alt="Instructor 1">
+          <h3 class="mt-2">
+            <strong>Lionel Brossi</strong>
+          </h3>
+          <p class="text-center">
+            Director del Núcleo Inteligencia Artificial
+            y Sociedad IA+SIC.
+            Instituto de la Comunicación e Imagen,
+            Universidad de Chile
+          </p>
+        </div>
+        <div class="instructor rounded col-md-4 mx-auto text-center my-2 p-3">
+          <img src="/asset-v1:openuchile+test101+2021+type@asset+block@instructor_2.png" alt="Instructor 2">
+          <h3 class="mt-2">
+            <strong>Ana María Castillo</strong>
+          </h3>
+          <p class="text-center">
+            Académica y directiva del Núcleo IA+SIC.
+            Instituto de la Comunicación e Imagen, 
+            Universidad de Chile
+          </p>
+        </div>
+      </div>
+      <div class="grey-background rounded pt-3 pb-5 text-center">
+        <h1 id="taughtby">Taught by</h1>
+        <img src="/asset-v1:openuchile+test101+2021+type@asset+block@logos_ai.png" alt="logos" class="img-fluid" style="max-width: 500px;"/>
       </div>
     </div>
     </%block>
