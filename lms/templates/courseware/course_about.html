@@ -142,7 +142,11 @@ from six import string_types
   .course-info .instructor {
     background-color: #bdc0c1;
   }
-  
+  .enroll-message, .enroll-message:hover{
+    text-decoration: none;
+    color: black;
+    cursor: text;
+  }
 </style>
 
 
@@ -162,19 +166,45 @@ from six import string_types
           <h3>
             ${course.display_org_with_default}
           </h3>
-          <%
-            if ecommerce_checkout:
-              reg_href = ecommerce_checkout_link
-            else:
-              reg_href="#"
-            if single_paid_mode:
-              href_class = "add-to-cart"
-            else:
-              href_class = "register"
-          %>
-          <a href="${reg_href}" class="${href_class} my-auto pt-2">
-            <button class="btn">${_("Enroll Now")}</button>
-          </a>
+          %if user.is_authenticated and registered:
+            %if show_courseware_link:
+              <a href="${course_target}" class="my-auto pt-2">
+            %endif
+              <p class="font-italic lead enroll-message">${_("You are enrolled in this course")}</p>
+            %if show_courseware_link:
+              <button class="btn">${_("View Course")}</button>
+              </a>
+            %endif
+          % elif is_course_full:
+            <p class="font-italic lead enroll-message">
+              ${_("Course is full")}
+            </p>
+          % elif invitation_only and not can_enroll:
+            <p class="font-italic lead enroll-message">${_("Enrollment in this course is by invitation only")}</p>
+          % elif not is_shib_course and not can_enroll:
+            <p class="font-italic lead enroll-message">${_("Enrollment is Closed")}</p>
+          %elif allow_anonymous:
+            %if show_courseware_link:
+              <a href="${course_target}" class="my-auto pt-2">
+                <button class="btn">${_("View Course")}</button>
+              </a>
+            %endif
+          %else:
+            <%
+              if ecommerce_checkout:
+                reg_href = ecommerce_checkout_link
+              else:
+                reg_href="#"
+              if single_paid_mode:
+                href_class = "add-to-cart"
+              else:
+                href_class = "register"
+            %>
+            <a href="${reg_href}" class="${href_class} my-auto pt-2">
+              <button class="btn">${_("Enroll Now")}</button>
+            </a>
+            <div id="register_error"></div>
+          %endif
       </div>
       <div class="col-md-5 py-2">
         % if get_course_about_section(request, course, "video"):
