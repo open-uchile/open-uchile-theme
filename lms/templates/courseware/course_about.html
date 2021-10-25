@@ -142,10 +142,16 @@ from six import string_types
   .course-info .instructor {
     background-color: #bdc0c1;
   }
-  .enroll-message, .enroll-message:hover{
+  .enroll-message{
     text-decoration: none;
     color: black;
     cursor: text;
+    margin-top: auto !important;
+  }
+  .enroll-button{
+    align-self: initial !important;
+    background-color: #dbdbdb;
+    border-color: #dbdbdb;
   }
 </style>
 
@@ -168,21 +174,19 @@ from six import string_types
           </h3>
           %if user.is_authenticated and registered:
             %if show_courseware_link:
-              <a href="${course_target}" class="my-auto pt-2">
-            %endif
               <p class="font-italic lead enroll-message">${_("You are enrolled in this course")}</p>
-            %if show_courseware_link:
-              <button class="btn">${_("View Course")}</button>
+              <a href="${course_target}" class="pt-2">
+                <button class="btn">${_("View Course")}</button>
               </a>
+            %else:
+              <button class="btn my-auto pt-2 enroll-button" disabled>${_("You are enrolled in this course")}</button>
             %endif
           % elif is_course_full:
-            <p class="font-italic lead enroll-message">
-              ${_("Course is full")}
-            </p>
+            <button class="btn my-auto pt-2 enroll-button" disabled>${_("Course is full")}</button>
           % elif invitation_only and not can_enroll:
-            <p class="font-italic lead enroll-message">${_("Enrollment in this course is by invitation only")}</p>
+            <button class="btn my-auto pt-2 enroll-button" disabled>${_("Enrollment in this course is by invitation only")}</button>
           % elif not is_shib_course and not can_enroll:
-            <p class="font-italic lead enroll-message">${_("Enrollment is Closed")}</p>
+            <button class="btn my-auto pt-2 enroll-button" disabled>${_("Enrollment is Closed")}</button>
           %elif allow_anonymous:
             %if show_courseware_link:
               <a href="${course_target}" class="my-auto pt-2">
