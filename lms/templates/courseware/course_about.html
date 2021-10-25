@@ -153,6 +153,9 @@ from six import string_types
     background-color: #dbdbdb;
     border-color: #dbdbdb;
   }
+  .enroll-button-2{
+    margin-bottom: auto !important;
+  }
 </style>
 
 
@@ -175,7 +178,7 @@ from six import string_types
           %if user.is_authenticated and registered:
             %if show_courseware_link:
               <p class="font-italic lead enroll-message">${_("You are enrolled in this course")}</p>
-              <a href="${course_target}" class="pt-2">
+              <a href="${course_target}" class="pt-2 enroll-button-2">
                 <button class="btn">${_("View Course")}</button>
               </a>
             %else:
