@@ -67,11 +67,14 @@ img.openuchile-header {
 }
 
 footer#openuchile-footer img {
-    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
-    filter: gray; /* IE6-9 */
-    -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+    /* Firefox 3.5+ */
+    filter: gray;
+    /* IE6-9 */
+    -webkit-filter: grayscale(100%);
+    /* Chrome 19+ & Safari 6+ */
 }
-  
+
 footer#openuchile-footer img:hover {
     filter: none;
     -webkit-filter: grayscale(0%);
@@ -166,13 +169,14 @@ footer#openuchile-footer img:hover {
 }
 
 /* Contact Form */
+
 #eol-contact .contact-card, #eol-contact input, #eol-contact select, #eol-contact textarea {
     background-color: #00000017 !important;
 }
 
 #eol-contact .form-submit {
     width: auto;
-} 
+}
 
 #eol-contact .btn {
     box-shadow: none !important;
@@ -190,7 +194,7 @@ footer#openuchile-footer img:hover {
 
 /* LOGIN */
 
-#content-container{
+#content-container {
     background-color: #00000017 !important;
     border-color: transparent;
 }
@@ -198,6 +202,7 @@ footer#openuchile-footer img:hover {
 #content-container input {
     border-color: transparent;
 }
+
 #login-and-registration-container {
     background-color: transparent;
     margin: 0;
@@ -211,7 +216,6 @@ footer#openuchile-footer img:hover {
 }
 
 /* Courses List */
-
 
 .courses-list {
     margin-left: 0px;
@@ -257,10 +261,8 @@ footer#openuchile-footer img:hover {
     height: 20px;
 }
 
-.courses-list .card:not(:hover) .card-desc,
-.courses-list .card:not(:hover) .card-desc p,
-.courses-list .card:not(:hover) .card-desc .card-button {
-    height:0px;
+.courses-list .card:not(:hover) .card-desc, .courses-list .card:not(:hover) .card-desc p, .courses-list .card:not(:hover) .card-desc .card-button {
+    height: 0px;
     opacity: 0;
     padding: 0;
 }
@@ -283,7 +285,7 @@ footer#openuchile-footer img:hover {
 }
 
 .courses-list .card .card-desc .card-button {
-    max-height:80px;
+    max-height: 80px;
 }
 
 .courses-list .card:hover .card-desc {
@@ -291,8 +293,7 @@ footer#openuchile-footer img:hover {
     transition: height .2s;
 }
 
-.courses-list .card:hover .card-desc p,
-.courses-list .card:hover .card-desc .card-button {
+.courses-list .card:hover .card-desc p, .courses-list .card:hover .card-desc .card-button {
     transition: opacity 0.7s;
 }
 
@@ -307,4 +308,108 @@ footer#openuchile-footer img:hover {
 
 .courses-list .card .card-desc .card-button button.btn:hover {
     color: black !important;
+}
+
+/* Course About */
+
+.course-info h1 {
+    font-weight: 700;
+}
+
+.course-info .course-header {
+    flex-direction: column;
+    display: flex;
+}
+
+.course-info button.btn {
+    box-shadow: none !important;
+    color: #ffff;
+    font-weight: bold;
+    padding: 10px;
+    background: none;
+    background-color: #069bdc;
+    border-color: #069bdc;
+    text-shadow: none;
+    width: 60%;
+}
+
+.course-info button.btn:hover {
+    background-color: #048dc9;
+    border-color: #048dc9;
+}
+
+.course-info .course-about-image {
+    border-radius: 7px;
+}
+
+.course-info .media .play-intro {
+    background-image: -webkit-linear-gradient(-90deg, rgba(0, 156, 221, 0.58), rgba(0, 156, 221, 0.28));
+    background-image: linear-gradient(-90deg, rgba(0, 156, 221, 0.58), rgba(0, 156, 221, 0.28));
+    border-radius: 4px;
+    box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 100px;
+    height: 80px;
+    left: 50%;
+    margin-top: -40px;
+    margin-left: -40px;
+    position: absolute;
+    top: 50%;
+    width: 80px;
+}
+
+.course-info .info-row {
+    background-color: #089bdb47;
+}
+
+.course-info .info-row img.icon {
+    max-width: 40px;
+}
+
+.course-info .menu {
+    background-color: #dbdbdb;
+    color: #048dc9;
+    font-weight: 400;
+}
+
+.menu-sticky {
+    position: -webkit-sticky;
+    /* Safari & IE */
+    position: sticky;
+    top: 0;
+}
+
+.course-info .menu a {
+    color: black;
+}
+
+.course-info .about-details p, .course-info .about-details strong, .course-info .about-details li {
+    text-align: justify;
+    font-size: 1.2em;
+    line-height: normal;
+}
+
+.course-info .grey-background {
+    background-color: #8080804d;
+}
+
+.course-info .instructor {
+    background-color: #bdc0c1;
+}
+
+.enroll-message {
+    text-decoration: none;
+    color: black !important;
+    cursor: text;
+    margin-top: auto !important;
+}
+
+.enroll-button {
+    align-self: initial !important;
+    background-color: #dbdbdb;
+    border-color: #dbdbdb;
+}
+
+.enroll-button-2 {
+    margin-bottom: auto !important;
 }
