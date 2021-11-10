@@ -4,8 +4,10 @@ Open UChile MOOCs theme for  OpenedX. This theme must be used as open-uchile-the
 
 ### TO-DO:
 
+[ ] Course About: Video intro
+[ ] Course About: Template
 [ ] Main Django
 [ ] FAQs content
-[ ] About content
+[x] About content
 [ ] Terms of Service and Honor Code
 [ ] Privacy Policy

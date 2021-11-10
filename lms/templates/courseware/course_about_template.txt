@@ -1,0 +1,51 @@
+<div class="row menu-sticky">
+    <div class="menu w-100 mt-2 mb-4 py-3 px-4 rounded h3">
+        <a href="#about" class="mr-4">About</a> | <a href="#whatlearn" class="mr-4 ml-4">What you'll learn</a> | <a
+            href="#instructors" class="mr-4 ml-4">Instructors</a> | <a href="#taughtby" class="ml-4">Taught by</a>
+    </div>
+</div>
+<div class="row about-details">
+    <h1 id="about">About this course</h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+    </p>
+    <h1 id="whatlearn">What you'll learn</h1>
+    <div class="course-content">
+        <h2>Lorem ipsum dolor sit amet</h2>
+        <ol>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Lorem ipsum dolor sit amet</li>
+        </ol>
+
+        <h2>Lorem ipsum dolor sit amet</h2>
+        <ol>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Lorem ipsum dolor sit amet</li>
+        </ol>
+    </div>
+    <h1 id="instructors">Instructors</h1>
+    <div class="row mb-4">
+        <div class="instructor rounded col-md-4 mx-auto text-center my-2 p-3">
+            <img src="/static/instructor_1.png" alt="Instructor 1">
+            <h3 class="mt-2">
+                <strong>Lorem ipsum dolor sit amet</strong>
+            </h3>
+            <p class="text-center">
+                Lorem ipsum dolor sit amet
+            </p>
+        </div>
+        <div class="instructor rounded col-md-4 mx-auto text-center my-2 p-3">
+            <img src="/static/instructor_2.png" alt="Instructor 2">
+            <h3 class="mt-2">
+                <strong>Lorem ipsum dolor sit amet</strong>
+            </h3>
+            <p class="text-center">
+                Lorem ipsum dolor sit amet
+            </p>
+        </div>
+    </div>
+    <div class="grey-background rounded pt-3 pb-5 text-center">
+        <h1 id="taughtby">Taught by</h1>
+        <img src="/static/logos.png" alt="logos" class="img-fluid" style="max-width: 500px;" />
+    </div>
+</div>
