@@ -1,12 +1,12 @@
 <%page expression_filter="h"/>
 <%namespace name='static' file='static_content.html'/>
 <%! from django.utils.translation import ugettext as _ %>
-<%! from portal_api.utils import get_all_courses %>
+<%! from portal_api.utils import get_active_courses %>
 
 <%
   platform_portal = settings.PORTAL_API_PLATFORMS or {}
   if platform_portal:
-    courses_portal_api = get_all_courses(platform_portal)
+    courses_portal_api = get_active_courses(platform_portal)
 %>
 <section class="courses-container">
   <section class="highlighted-courses">
