@@ -1,7 +1,13 @@
 <%page expression_filter="h"/>
 <%namespace name='static' file='static_content.html'/>
 <%! from django.utils.translation import ugettext as _ %>
+<%! from portal_api.utils import get_active_courses %>
 
+<%
+  platform_portal = settings.PORTAL_API_PLATFORMS or {}
+  if platform_portal:
+    courses_portal_api = get_active_courses(platform_portal)
+%>
 <section class="courses-container">
   <section class="highlighted-courses">
 
@@ -12,9 +18,17 @@
           <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4">
               <%include file="course.html" args="course=course" />
           </div>
-        %endfor
+          %endfor
+          % if platform_portal:
+            %for platform in courses_portal_api:
+              %for course_portal in courses_portal_api[platform]:
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4">
+                      <%include file="course_portal.html" args="course=course_portal" />
+                </div>
+              %endfor
+            %endfor
+          % endif
       </section>
     % endif
-
   </section>
 </section>
