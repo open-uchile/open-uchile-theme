@@ -43,7 +43,7 @@ now = timezone.now()
   <div class="card-date">
       % if course_end is not None and now is not None and course_end < now:
           <div class="course-date" aria-hidden="true">${_("Finished course")}</div>
-      % else:
+      % elif course_start is not None:
           <div class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_start}" data-language="${LANGUAGE_CODE}" data-string="${_("Starts: {date}")}"></div>
       % endif
   </div>
