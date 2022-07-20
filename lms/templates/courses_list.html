@@ -1,10 +1,12 @@
 <%page expression_filter="h"/>
 <%namespace name='static' file='static_content.html'/>
 <%! from django.utils.translation import ugettext as _ %>
-<%! from portal_api.utils import get_active_courses, get_platform_names %>
+<%! from portal_api.utils import get_active_enroll_courses, get_platform_names %>
 
 <%
-  courses_portal_api = get_active_courses()
+  from django.utils import timezone
+  now = timezone.now()
+  courses_portal_api = get_active_enroll_courses()
   platforms_name = get_platform_names()
 %>
 <style>
@@ -27,9 +29,23 @@
       <section class="row courses-list">
           ## limiting the course number by using HOMEPAGE_COURSE_MAX as the maximum number of courses
           %for course in courses:
-          <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4">
-              <%include file="course.html" args="course=course" />
-          </div>
+            %if course.end is not None and course.end > now:
+              %if course.enrollment_start is not None and course.enrollment_end is not None:
+                %if course.enrollment_end > now:
+                  <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4">
+                      <%include file="course.html" args="course=course" />
+                  </div>
+                %endif
+              %endif
+            %elif course.end is None:
+              %if course.enrollment_start is not None and course.enrollment_end is not None:
+                %if course.enrollment_end > now:
+                  <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4">
+                      <%include file="course.html" args="course=course" />
+                  </div>
+                %endif
+              %endif
+            %endif
           %endfor
       </section>
     % endif

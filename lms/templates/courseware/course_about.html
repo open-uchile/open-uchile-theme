@@ -11,8 +11,9 @@ from common.djangoapps.edxmako.shortcuts import marketing_link
 from openedx.core.djangolib.js_utils import js_escaped_string
 from openedx.core.djangolib.markup import clean_dangerous_html, HTML, Text
 from openedx.core.lib.courses import course_image_url
-
 from six import string_types
+from django.utils import timezone
+now = timezone.now()
 %>
 
 <%inherit file="../main.html" />
@@ -198,7 +199,11 @@ from six import string_types
           <div class="col-7 text-left pt-1 pl-0">
             <span class="important-dates-item-title">
               ${_("Classes Start:")}</br>
-              <span class="important-dates-item-text start-date localized_datetime" data-format="shortDate" data-datetime="${course_start_date}" data-language="${LANGUAGE_CODE}"></span>
+              % if course.self_paced and course.start <= now:
+                <span class="important-dates-item-text start-date localized_datetime" data-language="${LANGUAGE_CODE}">${_("Today")}</span>
+              %else:
+                <span class="important-dates-item-text start-date localized_datetime" data-format="shortDate" data-datetime="${course_start_date}" data-language="${LANGUAGE_CODE}"></span>
+              %endif
             </span>
           </div>
         </div>
