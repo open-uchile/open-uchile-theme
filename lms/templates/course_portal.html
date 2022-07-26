@@ -47,7 +47,11 @@ now = timezone.now()
         %if course["self_paced"] and course_start <= now:
           <div class="course-date localized_datetime" aria-hidden="true" data-language="${LANGUAGE_CODE}" data-string='${_("Starts")}:${_("Today")}'></div>
        % else:
-          <div class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_start}" data-language="${LANGUAGE_CODE}" data-string="${_("Starts: {date}")}"></div>
+            %if "start_display" in course and course['start_display'] is not None:
+                <div class="course-date localized_datetime" aria-hidden="true" data-language="${LANGUAGE_CODE}" data-string='${_("Starts")}:${course["start_display"]}'></div>
+            %else:
+                <div class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_start}" data-language="${LANGUAGE_CODE}" data-string="${_("Starts: {date}")}"></div>
+            %endif
        % endif
       % endif
   </div>
