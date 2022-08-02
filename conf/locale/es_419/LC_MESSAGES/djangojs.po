@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: help-open@uchile.cl\n"
-"POT-Creation-Date: 2022-07-28 20:11+0000\n"
+"POT-Creation-Date: 2022-08-02 13:46+0000\n"
 "PO-Revision-Date: 2022-07-28 20:11+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es_419\n"
@@ -215,26 +215,43 @@ msgstr ""
 msgid "Privacy Policy"
 msgstr ""
 
+#: lms/templates/index.html:41
+msgid "Open UChile "
+msgstr ""
+
+#: lms/templates/index.html:42
+msgid "E-Learning "
+msgstr ""
+
+#: lms/templates/index.html:43
+msgid "Platform "
+msgstr ""
+
 #: lms/templates/main.html:192
 msgid "Skip to main content"
 msgstr ""
 
 #: lms/templates/certificates/validate_certificates.html:7
-#: lms/templates/certificates/validate_certificates.html:15
+#: lms/templates/certificates/validate_certificates.html:33
 #: lms/templates/header/navbar-authenticated.html:30
 #: lms/templates/header/navbar-not-authenticated.html:27
 msgid "Certificate Validation"
 msgstr ""
 
-#: lms/templates/certificates/validate_certificates.html:21
+#: lms/templates/certificates/validate_certificates.html:25
+#: lms/templates/certificates/validate_certificates.html:26
+msgid "Certificates validation"
+msgstr ""
+
+#: lms/templates/certificates/validate_certificates.html:39
 msgid "Certificate ID number"
 msgstr ""
 
-#: lms/templates/certificates/validate_certificates.html:31
+#: lms/templates/certificates/validate_certificates.html:49
 msgid "Certificate was not found"
 msgstr ""
 
-#: lms/templates/certificates/validate_certificates.html:35
+#: lms/templates/certificates/validate_certificates.html:53
 msgid "Validate"
 msgstr ""
 
@@ -432,6 +449,7 @@ msgid ""
 msgstr ""
 
 #: lms/templates/header/header.html:92
+#: lms/templates/widgets/footer-language-selector.html:24
 msgid "Choose Language"
 msgstr ""
 
@@ -452,6 +470,8 @@ msgstr ""
 #: lms/templates/header/navbar-authenticated.html:27
 #: lms/templates/header/navbar-not-authenticated.html:24
 #: lms/templates/static_templates/faq.html:6
+#: lms/templates/static_templates/faq.html:24
+#: lms/templates/static_templates/faq.html:25
 msgid "FAQ"
 msgstr ""
 
@@ -663,23 +683,28 @@ msgstr ""
 msgid "The status for any active tasks appears in a table below."
 msgstr ""
 
-#: lms/templates/static_templates/about.html:12
+#: lms/templates/static_templates/about.html:24
+#: lms/templates/static_templates/about.html:25
+msgid "About Us"
+msgstr ""
+
+#: lms/templates/static_templates/about.html:30
 msgid "What is Open UChile?"
 msgstr ""
 
-#: lms/templates/static_templates/about.html:15
+#: lms/templates/static_templates/about.html:33
 msgid ""
 "Universidad de Chile (UChile) is the first University in the country, "
 "within the 500 in the World and 9th in Latin America"
 msgstr ""
 
-#: lms/templates/static_templates/about.html:15
+#: lms/templates/static_templates/about.html:33
 msgid ""
 "As a public university, UChile is deeply concerned about global issues, "
 "such as Climate Change and the UN2030 agenda."
 msgstr ""
 
-#: lms/templates/static_templates/about.html:16
+#: lms/templates/static_templates/about.html:34
 msgid ""
 "Chile is a natural laboratory in a really complex environment, from "
 "Atacama Desert to Antarctica, threatened by 9 (out of 10) natural hazards"
@@ -691,7 +716,7 @@ msgid ""
 "spread those knowledge and experience."
 msgstr ""
 
-#: lms/templates/static_templates/about.html:17
+#: lms/templates/static_templates/about.html:35
 msgid ""
 "UChile is also founder member of the Global MOOC Alliance (Tsinghua "
 "University, Cornell University, Center for Research and "
@@ -701,11 +726,11 @@ msgid ""
 "Nairobi, University of Toronto,"
 msgstr ""
 
-#: lms/templates/static_templates/about.html:17
+#: lms/templates/static_templates/about.html:35
 msgid "among others"
 msgstr ""
 
-#: lms/templates/static_templates/faq.html:13
+#: lms/templates/static_templates/faq.html:30
 msgid "Frequently Asked Questions"
 msgstr ""
 

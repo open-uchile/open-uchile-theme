@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: help-open@uchile.cl\n"
-"POT-Creation-Date: 2022-07-28 20:11+0000\n"
+"POT-Creation-Date: 2022-08-02 13:46+0000\n"
 "PO-Revision-Date: 2022-07-28 20:11+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es_419\n"
@@ -215,26 +215,43 @@ msgstr "Mesa de Ayuda"
 msgid "Privacy Policy"
 msgstr ""
 
+#: lms/templates/index.html:41
+msgid "Open UChile "
+msgstr "Open UChile"
+
+#: lms/templates/index.html:42
+msgid "E-Learning "
+msgstr "Cursos E-Learning"
+
+#: lms/templates/index.html:43
+msgid "Platform "
+msgstr " "
+
 #: lms/templates/main.html:192
 msgid "Skip to main content"
 msgstr ""
 
 #: lms/templates/certificates/validate_certificates.html:7
-#: lms/templates/certificates/validate_certificates.html:15
+#: lms/templates/certificates/validate_certificates.html:33
 #: lms/templates/header/navbar-authenticated.html:30
 #: lms/templates/header/navbar-not-authenticated.html:27
 msgid "Certificate Validation"
 msgstr "Validación de certificados"
 
-#: lms/templates/certificates/validate_certificates.html:21
+#: lms/templates/certificates/validate_certificates.html:25
+#: lms/templates/certificates/validate_certificates.html:26
+msgid "Certificates validation"
+msgstr "Validación de Certificados"
+
+#: lms/templates/certificates/validate_certificates.html:39
 msgid "Certificate ID number"
 msgstr "ID de certificado"
 
-#: lms/templates/certificates/validate_certificates.html:31
+#: lms/templates/certificates/validate_certificates.html:49
 msgid "Certificate was not found"
 msgstr "Certificado no encontrado"
 
-#: lms/templates/certificates/validate_certificates.html:35
+#: lms/templates/certificates/validate_certificates.html:53
 msgid "Validate"
 msgstr "Validar"
 
@@ -335,7 +352,9 @@ msgstr "Formulario de contacto"
 
 #: lms/templates/eol_contact_form/contact.html:19
 msgid "Fill out the form and our help desk will contact you shortly."
-msgstr "Llena el formulario y nuestra mesa de ayuda se pondrá en contacto a la brevedad."
+msgstr ""
+"Llena el formulario y nuestra mesa de ayuda se pondrá en contacto a la "
+"brevedad."
 
 #: lms/templates/eol_contact_form/contact.html:22
 msgid "Help desk hours (GMT-3): from 09:00 until 18:00 (Monday - Friday)"
@@ -432,6 +451,7 @@ msgid ""
 msgstr ""
 
 #: lms/templates/header/header.html:92
+#: lms/templates/widgets/footer-language-selector.html:24
 msgid "Choose Language"
 msgstr ""
 
@@ -452,6 +472,8 @@ msgstr ""
 #: lms/templates/header/navbar-authenticated.html:27
 #: lms/templates/header/navbar-not-authenticated.html:24
 #: lms/templates/static_templates/faq.html:6
+#: lms/templates/static_templates/faq.html:24
+#: lms/templates/static_templates/faq.html:25
 msgid "FAQ"
 msgstr ""
 
@@ -621,7 +643,8 @@ msgstr ""
 msgid ""
 "Click to generate a ZIP file that contains all submission texts and "
 "attachments."
-msgstr "Click para generar un archivo ZIP que contiene todas las respuestas y "
+msgstr ""
+"Click para generar un archivo ZIP que contiene todas las respuestas y "
 "archivos enviados."
 
 #: lms/templates/instructor/instructor_dashboard_2/data_download.html:102
@@ -664,23 +687,32 @@ msgstr ""
 msgid "The status for any active tasks appears in a table below."
 msgstr ""
 
-#: lms/templates/static_templates/about.html:12
-msgid "What is Open UChile?"
-msgstr ""
+#: lms/templates/static_templates/about.html:24
+#: lms/templates/static_templates/about.html:25
+msgid "About Us"
+msgstr "Acerca de"
 
-#: lms/templates/static_templates/about.html:15
+#: lms/templates/static_templates/about.html:30
+msgid "What is Open UChile?"
+msgstr "¿Qué es OpenUChile?"
+
+#: lms/templates/static_templates/about.html:33
 msgid ""
 "Universidad de Chile (UChile) is the first University in the country, "
 "within the 500 in the World and 9th in Latin America"
 msgstr ""
+"La Universidad de Chile (UChile) es la primera universidad del país, "
+"dentro de las 500 del mundo y la 9° de América Latina"
 
-#: lms/templates/static_templates/about.html:15
+#: lms/templates/static_templates/about.html:33
 msgid ""
 "As a public university, UChile is deeply concerned about global issues, "
 "such as Climate Change and the UN2030 agenda."
 msgstr ""
+"Como universidad pública, la UChile está profundamente preocupada por los temas globales, "
+"como el Cambio Climático y la Agenda 2030 de Naciones Unidas."
 
-#: lms/templates/static_templates/about.html:16
+#: lms/templates/static_templates/about.html:34
 msgid ""
 "Chile is a natural laboratory in a really complex environment, from "
 "Atacama Desert to Antarctica, threatened by 9 (out of 10) natural hazards"
@@ -691,8 +723,16 @@ msgid ""
 "worldwide referents in those topics, and this MOOC platform seeks to "
 "spread those knowledge and experience."
 msgstr ""
+"Chile es un laboratorio natural en un entorno realmente complejo, desde "
+"el Desierto de Atacama hasta la Antártida, amenazado por 9 (de 10) peligros naturales"
+" (Desastres y Cambio Climático). Esta condición nos brinda una ubicación "
+"perfecta para desarrollar centros de investigación en diferentes áreas, tales como minería, "
+"geología, sismología, infraestructura sismorresistente y asuntos "
+"públicos. Nuestros académicos tienen un profundo conocimiento y experiencia y son "
+"referentes a nivel mundial en esos temas, y esta plataforma MOOC busca "
+"busca difundir esos conocimientos y experiencia."
 
-#: lms/templates/static_templates/about.html:17
+#: lms/templates/static_templates/about.html:35
 msgid ""
 "UChile is also founder member of the Global MOOC Alliance (Tsinghua "
 "University, Cornell University, Center for Research and "
@@ -701,14 +741,20 @@ msgid ""
 "University of Auckland, The University of Manchester, University of "
 "Nairobi, University of Toronto,"
 msgstr ""
+"UChile también es miembro fundador de Global MOOC Alliance junto "
+"a diversas universidades, como Tsinghua University, Cornell University, Center for Research "
+"and Interdisciplinarity (CRI), Peking University, Politecnico di Milano, "
+"Saint Petersburg State University, Shanghai Jiao Tong University, The "
+"University of Auckland, The University of Manchester, University of "
+"Nairobi, Universidad de Toronto,"
 
-#: lms/templates/static_templates/about.html:17
+#: lms/templates/static_templates/about.html:35
 msgid "among others"
-msgstr ""
+msgstr "entre otras instituciones"
 
-#: lms/templates/static_templates/faq.html:13
+#: lms/templates/static_templates/faq.html:30
 msgid "Frequently Asked Questions"
-msgstr ""
+msgstr "Preguntas Frecuentes"
 
 #: lms/templates/student_account/form_field.underscore:136
 msgid "Need help signing in?"

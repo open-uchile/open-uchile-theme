@@ -4,8 +4,26 @@
 <%inherit file="../main.html" />
 
 <%block name="pagetitle">${_("About")}</%block>
+<style>
+    .container-center {
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 5.5vw;
+        width: 100%;
+    }
+</style>
 <section class="container-fluid px-0" id="about_us">
-    <img src="${static.url('open-uchile-theme/images/about_us.jpg')}" alt="About Us" class="mx-auto openuchile-header d-block">
+    <div class="container-center">
+        <img src="${static.url('open-uchile-theme/images/banner-02-bg.jpg')}" alt='${_("About Us")}' class="mx-auto openuchile-header d-block">
+        <div class="centered">${_("About Us")}</div>
+    </div>
     <img class="uchile-separator" src="${static.url('open-uchile-theme/images/uchile_separator.png')}" alt="">
     <div class="container px-3">
         <h1 class="text-left">
