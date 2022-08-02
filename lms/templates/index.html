@@ -7,9 +7,41 @@ from django.urls import reverse
 
 from openedx.core.djangolib.markup import HTML, Text
 %>
-
+<style>
+  .container-center {
+      position: relative;
+      text-align: center;
+      color: white;
+  }
+  .title-1 {
+      position: absolute;
+      top: 32%;
+      left: 232px;
+      font-size: 5.1vw;
+      font-weight: 100;
+  }
+  .title-2 {
+      position: absolute;
+      top: 52%;
+      left: 232px;
+      font-size: 5.1vw;
+      font-weight: bold;
+  }
+  .title-3 {
+      position: absolute;
+      top: 72%;
+      left: 232px;
+      font-size: 5.1vw;
+      font-weight: 100;
+  }
+</style>
 <section class="container-fluid px-0" id="main">
-  <img src="${static.url('open-uchile-theme/images/banner.jpg')}" alt="About Us" class="mx-auto openuchile-header d-block">
+  <div class="container-center">
+    <img src="${static.url('open-uchile-theme/images/banner-01-bg.jpg')}" class="mx-auto openuchile-header d-block">
+      <div class="title-1">${_("Open UChile ")}</div>
+      <div class="title-2">${_("E-Learning ")}</div>
+      <div class="title-3">${_("Platform ")}</div>
+  </div>
   <img class="uchile-separator" src="${static.url('open-uchile-theme/images/uchile_separator.png')}" alt="">
   <div class="container px-3">
     <%include file="${courses_list}" />
