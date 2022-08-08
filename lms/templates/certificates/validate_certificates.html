@@ -4,7 +4,7 @@
 <%namespace name='static' file='../static_content.html'/>
 <%inherit file="../main.html" />
 
-<%block name="pagetitle">${_("Certificate Validation")}</%block>
+<%block name="pagetitle">${_("Certificate Validation ")}</%block>
 <style>
     .container-center {
         position: relative;
@@ -30,7 +30,7 @@
         <div class="card col-11 col-md-8 col-lg-7 mx-auto shadow-lg px-5 py-4 mb-5 rounded-lg">
             <div class="card-body">
                 <h1 class="text-left">
-                    ${_("Certificate Validation")}
+                    ${_("Certificate Validation ")}
                 </h1>
                 <form method="POST">
                     <input type="hidden" name="csrfmiddlewaretoken" value="${ csrftoken }"/>
