@@ -452,3 +452,6 @@ label{
 .dropdown-menu {
     font-size: 1.2rem !important;
 }
+.courses-list .card .card-date .course-date{
+    font-size: 1em !important;
+}
