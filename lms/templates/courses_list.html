@@ -32,17 +32,29 @@
             %if course.end is not None and course.end > now:
               %if course.enrollment_start is not None and course.enrollment_end is not None:
                 %if course.enrollment_end > now:
-                  <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4">
+                  %if course.id.course[-2:] == '_E':
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4 courses-english">
+                        <%include file="course.html" args="course=course" />
+                    </div>
+                  %else:
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4 courses-spanish">
                       <%include file="course.html" args="course=course" />
-                  </div>
+                    </div>
+                  %endif
                 %endif
               %endif
             %elif course.end is None:
               %if course.enrollment_start is not None and course.enrollment_end is not None:
                 %if course.enrollment_end > now:
-                  <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4">
+                  %if course.id.course[-2:] == '_E':
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4 courses-english">
+                        <%include file="course.html" args="course=course" />
+                    </div>
+                  %else:
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4 courses-spanish">
                       <%include file="course.html" args="course=course" />
-                  </div>
+                    </div>
+                  %endif
                 %endif
               %endif
             %endif
@@ -54,7 +66,7 @@
 
 %for platform in courses_portal_api:
   % if len(courses_portal_api[platform]) > 0:
-    <section class="courses-container">
+    <section class="courses-container courses-spanish">
       <h2 class="course-tittle">${platforms_name[platform]}</h2>
       <section class="highlighted-courses" style="padding-top: 25px;">
         % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
@@ -70,3 +82,16 @@
     </section>
   % endif
 %endfor
+<script type="text/javascript">
+  $(window).load(function() {
+      var lang = $.cookie("openedx-language-preference");
+      if(lang == 'es' || lang == 'es-419'){
+        $('.courses-spanish').show()
+        $('.courses-english').hide()
+      }
+      else{
+        $('.courses-spanish').hide()
+        $('.courses-english').show()
+      }
+  })
+</script>

@@ -65,17 +65,29 @@
               %if course.end is not None and course.end > now:
                 %if course.enrollment_start is not None and course.enrollment_end is not None:
                   %if course.enrollment_end > now:
-                    <li class="courses-listing-item">
-                      <%include file="../course.html" args="course=course" />
-                    </li>
+                    %if course.id.course[-2:] == '_E':
+                      <li class="courses-listing-item courses-english">
+                        <%include file="../course.html" args="course=course" />
+                      </li>
+                    %else:
+                      <li class="courses-listing-item courses-spanish">
+                        <%include file="../course.html" args="course=course" />
+                      </li>
+                    %endif
                   %endif
                 %endif
               %elif course.end is None:
                 %if course.enrollment_start is not None and course.enrollment_end is not None:
                   %if course.enrollment_end > now:
-                    <li class="courses-listing-item">
-                      <%include file="../course.html" args="course=course" />
-                    </li>
+                    %if course.id.course[-2:] == '_E':
+                      <li class="courses-listing-item courses-english">
+                        <%include file="../course.html" args="course=course" />
+                      </li>
+                    %else:
+                      <li class="courses-listing-item courses-spanish">
+                        <%include file="../course.html" args="course=course" />
+                      </li>
+                    %endif
                   %endif
                 %endif
               %endif
@@ -95,3 +107,16 @@
       </section>
     </section>
 </main>
+<script type="text/javascript">
+  $(window).load(function() {
+    var lang = $.cookie("openedx-language-preference");
+    if(lang == 'es' || lang == 'es-419'){
+      $('.courses-spanish').show()
+      $('.courses-english').hide()
+    }
+    else{
+      $('.courses-spanish').hide()
+      $('.courses-english').show()
+    }
+  })
+</script>

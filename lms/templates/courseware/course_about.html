@@ -179,7 +179,9 @@ now = timezone.now()
         course_start_date = 'None'
         if not course.start_date_is_still_default:
           course_start_date = course.advertised_start or course.start
+          aux_start_date = False
           if not isinstance(course_start_date, string_types):
+            aux_start_date = True
             course_start_date = course_start_date.strftime('%Y-%m-%dT%H:%M:%S%z')
           endif
         endif
@@ -199,8 +201,12 @@ now = timezone.now()
           <div class="col-7 text-left pt-1 pl-0">
             <span class="important-dates-item-title">
               ${_("Classes Start:")}</br>
-              % if course.self_paced and course.start <= now:
-                <span class="important-dates-item-text start-date localized_datetime" data-language="${LANGUAGE_CODE}">${_("Today")}</span>
+              %if aux_start_date:
+                % if course.self_paced and course.start <= now:
+                  <span class="important-dates-item-text start-date localized_datetime" data-language="${LANGUAGE_CODE}">${_("Today")}</span>
+                %else:
+                  <span class="important-dates-item-text start-date localized_datetime" data-format="shortDate" data-datetime="${course_start_date}" data-language="${LANGUAGE_CODE}"></span>
+                %endif
               %else:
                 <span class="important-dates-item-text start-date localized_datetime" data-format="shortDate" data-datetime="${course_start_date}" data-language="${LANGUAGE_CODE}"></span>
               %endif
@@ -208,7 +214,7 @@ now = timezone.now()
           </div>
         </div>
       </div>
-      
+      %if course_end_date != "None":
       <div class="col-md-4 my-3">
         <div class="row">
           <div class="col-5 text-right">
@@ -222,6 +228,7 @@ now = timezone.now()
           </div>
         </div>
       </div>
+      %endif
       <div class="col-md-4 my-3">
         <div class="row">
           <div class="col-5 text-right">

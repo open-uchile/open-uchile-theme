@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: help-open@uchile.cl\n"
-"POT-Creation-Date: 2022-08-08 19:30+0000\n"
+"POT-Creation-Date: 2022-09-02 16:28+0000\n"
 "PO-Revision-Date: 2022-07-28 20:11+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es_419\n"
@@ -192,8 +192,8 @@ msgstr ""
 msgid "Starts"
 msgstr ""
 
-#: lms/templates/course.html:46 lms/templates/course_portal.html:48
-#: lms/templates/courseware/course_about.html:203
+#: lms/templates/course.html:48 lms/templates/course_portal.html:48
+#: lms/templates/courseware/course_about.html:206
 msgid "Today"
 msgstr ""
 
@@ -255,6 +255,32 @@ msgstr ""
 msgid "Validate"
 msgstr ""
 
+#: lms/templates/course_experience/course-outline-fragment.html:79
+msgid "Expand All"
+msgstr ""
+
+#: lms/templates/course_experience/course-outline-fragment.html:98
+#: lms/templates/course_experience/course-outline-fragment.html:151
+#: lms/templates/course_experience/course-outline-fragment.html:245
+msgid "Completed"
+msgstr ""
+
+#: lms/templates/course_experience/course-outline-fragment.html:132
+msgid "Prerequisite: "
+msgstr ""
+
+#: lms/templates/course_experience/course-outline-fragment.html:167
+msgid "due {date}"
+msgstr ""
+
+#: lms/templates/course_experience/course-outline-fragment.html:169
+msgid "{subsection_format} due {{date}}"
+msgstr ""
+
+#: lms/templates/course_experience/course-outline-fragment.html:207
+msgid "This content is graded"
+msgstr ""
+
 #: lms/templates/courseware/course_about.html:45
 msgid "An error has occurred. Please ensure that you are logged in to enroll."
 msgstr ""
@@ -293,32 +319,32 @@ msgstr ""
 msgid "View About Page in studio"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:201
+#: lms/templates/courseware/course_about.html:203
 msgid "Classes Start:"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:219
+#: lms/templates/courseware/course_about.html:225
 msgid "Classes End:"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:232
+#: lms/templates/courseware/course_about.html:239
 msgid "Price:"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:240
+#: lms/templates/courseware/course_about.html:247
 msgid "There is one session available:"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:241
+#: lms/templates/courseware/course_about.html:248
 msgid " already enrolled! After a course session ends, it will be archived."
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:260
+#: lms/templates/courseware/course_about.html:267
 msgctxt "self"
 msgid "Enroll"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:265
+#: lms/templates/courseware/course_about.html:272
 msgctxt "self"
 msgid "enroll"
 msgstr ""
@@ -340,8 +366,8 @@ msgstr ""
 msgid "List of Courses"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:88
-#: lms/templates/courseware/courses.html:89
+#: lms/templates/courseware/courses.html:100
+#: lms/templates/courseware/courses.html:101
 msgid "Refine Your Search"
 msgstr ""
 
