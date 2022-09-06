@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: help-open@uchile.cl\n"
-"POT-Creation-Date: 2022-09-02 16:28+0000\n"
+"POT-Creation-Date: 2022-09-06 17:52+0000\n"
 "PO-Revision-Date: 2022-07-28 20:11+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es_419\n"
@@ -337,7 +337,9 @@ msgstr "Hay una edición del curso disponible:"
 
 #: lms/templates/courseware/course_about.html:248
 msgid " already enrolled! After a course session ends, it will be archived."
-msgstr " inscritos de momento. Cuando el curso termine, será guardado en la pestaña de 'Cursos Archivados'"
+msgstr ""
+" inscritos de momento. Cuando el curso termine, será guardado en la "
+"pestaña de 'Cursos Archivados'"
 
 #: lms/templates/courseware/course_about.html:267
 msgctxt "self"
@@ -369,6 +371,70 @@ msgstr ""
 #: lms/templates/courseware/courses.html:100
 #: lms/templates/courseware/courses.html:101
 msgid "Refine Your Search"
+msgstr ""
+
+#: lms/templates/emails/failed_verification_email.txt:4
+msgid ""
+"¡Lo lamentamos! Las fotos que enviaste para verificar tu identidad no "
+"fueron aceptadas, detalle(s) a continuación:"
+msgstr ""
+
+#: lms/templates/emails/failed_verification_email.txt:9
+msgid "Tu fotografía:"
+msgstr ""
+
+#: lms/templates/emails/failed_verification_email.txt:17
+msgid "La fotografía de tu ID:"
+msgstr ""
+
+#: lms/templates/emails/failed_verification_email.txt:25
+msgid "Otras razones:"
+msgstr ""
+
+#: lms/templates/emails/failed_verification_email.txt:34
+msgid "Resubmit Verification: {reverify_url}"
+msgstr "Reenviar Verificación: {reverify_url}"
+
+#: lms/templates/emails/failed_verification_email.txt:37
+#: lms/templates/emails/passed_verification_email.txt:9
+#: lms/templates/emails/photo_submission_confirmation.txt:12
+msgid "Thank you,"
+msgstr "Gracias,"
+
+#: lms/templates/emails/failed_verification_email.txt:38
+#: lms/templates/emails/passed_verification_email.txt:10
+#: lms/templates/emails/photo_submission_confirmation.txt:13
+msgid "The {platform_name} team"
+msgstr "El equipo de {platform_name}"
+
+#: lms/templates/emails/passed_verification_email.txt:4
+msgid "Hola {full_name},"
+msgstr ""
+
+#: lms/templates/emails/passed_verification_email.txt:6
+msgid "¡Felicitaciones! Tu verificación de identidad fue exitosa."
+msgstr ""
+
+#: lms/templates/emails/passed_verification_email.txt:7
+msgid ""
+"Tu verificación es válida durante un año. Esta expirará el "
+"{expiration_datetime}."
+msgstr ""
+
+#: lms/templates/emails/photo_submission_confirmation.txt:4
+msgid "Hi {full_name},"
+msgstr "Hola {full_name},"
+
+#: lms/templates/emails/photo_submission_confirmation.txt:7
+msgid "Thanks for submitting your photos!"
+msgstr "¡Gracias por enviar sus fotos!"
+
+#: lms/templates/emails/photo_submission_confirmation.txt:8
+msgid ""
+"Hemos recibido su información y el proceso de verificación de ID ha "
+"empezado. Revise si recibe un correo electrónico de {platform_name} en los "
+"próximos días para confirmar si su verificación fue exitosa. También puede"
+" revisar el estado del proceso de verificación en su página de inicio."
 msgstr ""
 
 #: lms/templates/eol_contact_form/contact.html:7
