@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: help-open@uchile.cl\n"
-"POT-Creation-Date: 2022-08-08 19:30+0000\n"
+"POT-Creation-Date: 2022-09-06 17:52+0000\n"
 "PO-Revision-Date: 2022-07-28 20:11+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -192,8 +192,8 @@ msgstr ""
 msgid "Starts"
 msgstr ""
 
-#: lms/templates/course.html:46 lms/templates/course_portal.html:48
-#: lms/templates/courseware/course_about.html:203
+#: lms/templates/course.html:48 lms/templates/course_portal.html:48
+#: lms/templates/courseware/course_about.html:206
 msgid "Today"
 msgstr ""
 
@@ -255,6 +255,32 @@ msgstr ""
 msgid "Validate"
 msgstr ""
 
+#: lms/templates/course_experience/course-outline-fragment.html:79
+msgid "Expand All"
+msgstr ""
+
+#: lms/templates/course_experience/course-outline-fragment.html:98
+#: lms/templates/course_experience/course-outline-fragment.html:151
+#: lms/templates/course_experience/course-outline-fragment.html:245
+msgid "Completed"
+msgstr ""
+
+#: lms/templates/course_experience/course-outline-fragment.html:132
+msgid "Prerequisite: "
+msgstr ""
+
+#: lms/templates/course_experience/course-outline-fragment.html:167
+msgid "due {date}"
+msgstr ""
+
+#: lms/templates/course_experience/course-outline-fragment.html:169
+msgid "{subsection_format} due {{date}}"
+msgstr ""
+
+#: lms/templates/course_experience/course-outline-fragment.html:207
+msgid "This content is graded"
+msgstr ""
+
 #: lms/templates/courseware/course_about.html:45
 msgid "An error has occurred. Please ensure that you are logged in to enroll."
 msgstr ""
@@ -293,32 +319,32 @@ msgstr ""
 msgid "View About Page in studio"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:201
+#: lms/templates/courseware/course_about.html:203
 msgid "Classes Start:"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:219
+#: lms/templates/courseware/course_about.html:225
 msgid "Classes End:"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:232
+#: lms/templates/courseware/course_about.html:239
 msgid "Price:"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:240
+#: lms/templates/courseware/course_about.html:247
 msgid "There is one session available:"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:241
+#: lms/templates/courseware/course_about.html:248
 msgid " already enrolled! After a course session ends, it will be archived."
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:260
+#: lms/templates/courseware/course_about.html:267
 msgctxt "self"
 msgid "Enroll"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:265
+#: lms/templates/courseware/course_about.html:272
 msgctxt "self"
 msgid "enroll"
 msgstr ""
@@ -340,9 +366,73 @@ msgstr ""
 msgid "List of Courses"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:88
-#: lms/templates/courseware/courses.html:89
+#: lms/templates/courseware/courses.html:100
+#: lms/templates/courseware/courses.html:101
 msgid "Refine Your Search"
+msgstr ""
+
+#: lms/templates/emails/failed_verification_email.txt:4
+msgid ""
+"¡Lo lamentamos! Las fotos que enviaste para verificar tu identidad no "
+"fueron aceptadas, detalle(s) a continuación:"
+msgstr ""
+
+#: lms/templates/emails/failed_verification_email.txt:9
+msgid "Tu fotografía:"
+msgstr ""
+
+#: lms/templates/emails/failed_verification_email.txt:17
+msgid "La fotografía de tu ID:"
+msgstr ""
+
+#: lms/templates/emails/failed_verification_email.txt:25
+msgid "Otras razones:"
+msgstr ""
+
+#: lms/templates/emails/failed_verification_email.txt:34
+msgid "Resubmit Verification: {reverify_url}"
+msgstr ""
+
+#: lms/templates/emails/failed_verification_email.txt:37
+#: lms/templates/emails/passed_verification_email.txt:9
+#: lms/templates/emails/photo_submission_confirmation.txt:12
+msgid "Thank you,"
+msgstr ""
+
+#: lms/templates/emails/failed_verification_email.txt:38
+#: lms/templates/emails/passed_verification_email.txt:10
+#: lms/templates/emails/photo_submission_confirmation.txt:13
+msgid "The {platform_name} team"
+msgstr ""
+
+#: lms/templates/emails/passed_verification_email.txt:4
+msgid "Hola {full_name},"
+msgstr ""
+
+#: lms/templates/emails/passed_verification_email.txt:6
+msgid "¡Felicitaciones! Tu verificación de identidad fue exitosa."
+msgstr ""
+
+#: lms/templates/emails/passed_verification_email.txt:7
+msgid ""
+"Tu verificación es válida durante un año. Esta expirará el "
+"{expiration_datetime}."
+msgstr ""
+
+#: lms/templates/emails/photo_submission_confirmation.txt:4
+msgid "Hi {full_name},"
+msgstr ""
+
+#: lms/templates/emails/photo_submission_confirmation.txt:7
+msgid "Thanks for submitting your photos!"
+msgstr ""
+
+#: lms/templates/emails/photo_submission_confirmation.txt:8
+msgid ""
+"Hemos recibido su información y el proceso de verificación del ID ha "
+"empezado.Revise si tiene un correo electrónico de nosotros en los "
+"próximos días para confirmar si su verificación fue exitosa.También puede"
+" revisar el estado del proceso de verificación en su página de inicio ."
 msgstr ""
 
 #: lms/templates/eol_contact_form/contact.html:7
