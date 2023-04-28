@@ -55,6 +55,7 @@ now = timezone.now()
   </script>
 
   <script src="${static.url('js/course_info.js')}"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </%block>
 
 <%block name="pagetitle">${course.display_name_with_default}</%block>
@@ -249,12 +250,44 @@ now = timezone.now()
     </div>
 
   </div>
-  <div class="container pb-0">
-    <%block name="course_about_details">
-    ${clean_dangerous_html(get_course_about_section(request, course, "overview"))}
-    </%block>
-
-  </div>
+  <div id="open-course-about" class="container pb-0">
+      <div class="details" style="width: auto; float:none;">
+        <div class="inner-wrapper">
+          ${HTML(get_course_about_section(request, course, "overview"))}
+        </div>
+        <script>
+          $(function() {
+            //$('.faq').prependTo("#accordionFAQS");
+            $("#accordionFAQS").append($('.course-faqs').contents());
+            if($('.course-faqs').length == 0) {
+              $(".faqs-row").hide();
+            }
+          });
+        </script>
+      </div>
+      <script>
+        $(function() {
+          $("#open-course-about .menu .btn").on("click", function() {
+            // Clear 'active' class
+            $("#open-course-about .menu-content-section").removeClass("active");
+            $("#open-course-about .menu .btn").removeClass("active");
+            // Set 'active' and show
+            $(this).addClass("active");
+            $("#" + $(this).attr("data-section")).addClass("active");
+          });
+        });
+      </script>
+      <div class="row my-2 faqs-row">
+        <div class="col-lg-8 p-3">
+            <div class="course-about-card m-2">
+              <h3 class="px-4">${_("Preguntas frecuentes")}</h3>
+              <div class="accordion text-justify mt-3" id="accordionFAQS">
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    
 </section>
 
 ## Need to put this hidden form on the page so that the registration button works.

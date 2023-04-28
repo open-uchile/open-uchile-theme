@@ -337,6 +337,7 @@ footer#openuchile-footer img:hover {
 .course-info button.btn:hover {
     background-color: #048dc9;
     border-color: #048dc9;
+    background-image: none;
 }
 
 .course-info .course-about-image {
@@ -454,4 +455,69 @@ label{
 }
 .courses-list .card .card-date .course-date{
     font-size: 1em !important;
+}
+/*
+* Course About
+*/
+
+#open-course-about .inner-wrapper {
+    border-radius: 7px;
+    color: #515151;
+}
+
+#open-course-about .inner-wrapper table{
+    font-size: 0.9em;
+}
+
+#open-course-about .inner-wrapper h1 {
+    color: var(--primary-color);
+}
+#open-course-about .inner-wrapper p.course-org {
+    color: var(--primary-color);
+}
+
+#open-course-about .inner-wrapper .menu {
+    border: none;
+    border-radius: 0px;
+    border-bottom: .05rem solid #515151;;
+    background: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    letter-spacing: normal !important;
+    color: #515151;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+#open-course-about .inner-wrapper .menu.active {
+    margin-bottom: -.12rem;
+    border-bottom: .30rem solid #515151;;
+    font-weight: bold;
+}
+
+#open-course-about .inner-wrapper .menu:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+#open-course-about .inner-wrapper .menu-content-section {
+    display: none;
+    padding: 10px;
+    text-align: justify;
+}
+
+#open-course-about .inner-wrapper .menu-content-section.active {
+    display: block;
+}
+
+#open-course-about .inner-wrapper .menu-content-section .author img {
+    max-width: 120px;
+}
+
+.course-about-card .card-header {
+    cursor: pointer;
+}
+
+.course-about-card .card-question {
+    margin-bottom: 0;
 }
