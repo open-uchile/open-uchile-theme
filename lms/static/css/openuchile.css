@@ -464,6 +464,9 @@ label{
     border-radius: 7px;
     color: #515151;
 }
+#open-course-about .media{
+    display: flex;
+}
 
 #open-course-about .inner-wrapper table{
     font-size: 0.9em;
