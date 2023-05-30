@@ -524,3 +524,14 @@ label{
 .course-about-card .card-question {
     margin-bottom: 0;
 }
+.eoldiscussion-module .row{
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+.eoldiscussion-module .eol-notification-btn, .eoldiscussion-module .row.eol-thread div:first-child{
+    width: auto !important;
+}
+.eoldiscussion-module hr {
+    opacity: unset !important;
+}
