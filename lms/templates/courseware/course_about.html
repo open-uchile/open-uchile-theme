@@ -238,7 +238,10 @@ now = timezone.now()
           <div class="col-7 text-left pt-1 pl-0">
             <span class="important-dates-item-title">
               ${_("Price:")}</br>
-              ${course_price}
+              %if course_price not in ['Gratis', 'Free', None, "None"]:
+                <% aux_price = int(course_price[1:]) %>
+                $ ${f'{aux_price:,}'.replace(',', '.')}
+              %endif
             </span>
           </div>
         </div>
