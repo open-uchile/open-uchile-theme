@@ -241,6 +241,8 @@ now = timezone.now()
               %if course_price not in ['Gratis', 'Free', None, "None"]:
                 <% aux_price = int(course_price[1:]) %>
                 $ ${f'{aux_price:,}'.replace(',', '.')}
+              %else:
+                  ${course_price}
               %endif
             </span>
           </div>
