@@ -34,6 +34,48 @@ from openedx.core.djangolib.markup import HTML, Text
       font-size: 5.1vw;
       font-weight: 100;
   }
+  #main .course-search .search-input {
+      border: 2px solid #c8c8c8;
+      border-radius: 3px;
+      box-shadow: none;
+      width: 350px;
+      height: 55px;
+      color: #000;
+      font-style: normal;
+      font-weight: normal;
+  }
+  #main .course-search .search-button {
+    z-index: 100;
+    -webkit-border-top-left-radius: 1px;
+    -moz-border-topleft-radius: 1px;
+    border-top-left-radius: 1px;
+    -webkit-border-top-right-radius: 3px;
+    -moz-border-topright-radius: 3px;
+    border-top-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    -moz-border-bottomright-radius: 3px;
+    border-bottom-right-radius: 3px;
+    -webkit-border-bottom-left-radius: 1px;
+    -moz-border-bottomleft-radius: 1px;
+    border-bottom-left-radius: 1px;
+    position: absolute;
+    border: 2px solid #1790c7;
+    box-shadow: none;
+    background: #009ee7;
+    padding: 0 14px;
+    height: 55px;
+    color: #fff;
+    text-shadow: none;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .course-search{
+    margin-top: 20px;
+    width: 350px;
+    height: 55px;
+    margin-right: 70px;
+    float: right;
+  }
 </style>
 <section class="container-fluid px-0" id="main">
   <div class="container-center">
@@ -43,6 +85,18 @@ from openedx.core.djangolib.markup import HTML, Text
       <div class="title-3">${_("Platform ")}</div>
   </div>
   <img class="uchile-separator" src="${static.url('open-uchile-theme/images/uchile_separator.png')}" alt="">
+  % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+    <div class="course-search">
+      <form method="get" action="/courses">
+        <label><span class="sr">${_("Search for a course")}</span>
+          <input class="search-input" name="search_query" type="text" placeholder="${_("Search for a course")}"></input>
+        </label>
+        <button class="search-button" type="submit">
+          <span class="icon fa fa-search" aria-hidden="true"></span><span class="sr">${_("Search")}</span>
+        </button>
+      </form>
+    </div>
+  % endif
   <div class="container px-3">
     <%include file="${courses_list}" />
   </div>
