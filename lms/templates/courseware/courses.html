@@ -33,7 +33,11 @@
 % endif
 
 <%block name="pagetitle">${_("Courses")}</%block>
-
+<style>
+  .collapse:not(.show) {
+    display: block;
+}
+</style>
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="find-courses">
       <section class="courses-container">

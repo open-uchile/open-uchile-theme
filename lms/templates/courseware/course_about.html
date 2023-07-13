@@ -178,9 +178,9 @@ now = timezone.now()
     <div class="row info-row my-3 rounded">
       <%
         course_start_date = 'None'
+        aux_start_date = False
         if not course.start_date_is_still_default:
           course_start_date = course.advertised_start or course.start
-          aux_start_date = False
           if not isinstance(course_start_date, string_types):
             aux_start_date = True
             course_start_date = course_start_date.strftime('%Y-%m-%dT%H:%M:%S%z')
