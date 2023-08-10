@@ -8,8 +8,7 @@
 from django.urls import reverse
 from django.utils.translation import ugettext as _
 %>
-
-
+<!-- https://codepen.io/k185/pen/PQajXE -->
 <div class="collapse navbar-collapse pt-3" id="navbar">
   <ul class="navbar-nav mr-auto">
       <li class="nav-item my-auto">
@@ -20,6 +19,19 @@ from django.utils.translation import ugettext as _
       </li>
   </ul>
   <ul class="navbar-nav">
+    % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+    <li class="nav-item my-auto">
+        <div class="search-container">
+            <form action="/courses" method="get">
+              <input class="search expandright" id="searchright" type="search" name="search_query" placeholder="Search">          
+              <button class="searchbutton" type="submit" for="searchright">
+                <span class="mglass">&#9906;</span>
+              </button>
+            </form>
+        </div>
+    </li>
+    
+    % endif
     <li class="nav-item my-auto">
         <a class="nav-link my-auto ${'active ' if '/about' == request.path else ''}" href="/about">${_('About')}</a>
     </li>

@@ -535,3 +535,153 @@ label{
 .eoldiscussion-module hr {
     opacity: unset !important;
 }
+
+
+/* New Desing and Search button */
+#open-navbar{
+    background-color: #172c6b;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+#open-navbar .nav-link {
+    color: white !important;
+}
+#open-navbar .nav-item .nav-link:not(.btn):hover, .navbar .nav-item .nav-link:not(.btn):focus {
+    border-color: rgb(255 255 255 / 55%) !important;
+    text-decoration: none;
+}
+
+#open-navbar input[type="submit"]:hover:not(:disabled), 
+#open-navbar input[type="button"]:hover:not(:disabled), 
+#open-navbar button:hover:not(:disabled), 
+#open-navbar .button:hover:not(:disabled) {
+    background-color: #0d3d8f;
+    background-image: none;
+}
+.searchbutton, .searchbutton:hover, .searchbutton:active, .searchbutton:focus {
+   z-index: 100;
+   position: absolute;
+   border: none;
+   box-shadow: none !important;
+   background: #0d3d8f;
+   padding: 0 14px;
+   height: 35px;
+   color: #fff;
+   text-shadow: none;
+   font-size: 24px;
+   font-weight: 600;
+}
+.searchbutton:active{
+   background: #0c1738;
+   color: #0d3d8f;
+}
+.search-container {
+   position: relative;
+   display: inline-block;
+   height: 35px;
+   width: 50px;
+   vertical-align: middle;
+}
+
+.mglass {
+   display: inline-block;
+   pointer-events: none;
+   -webkit-transform: rotate(-45deg);
+   -moz-transform: rotate(-45deg);
+   -o-transform: rotate(-45deg);
+   -ms-transform: rotate(-45deg);
+}
+
+.searchbutton {
+   display: inline-block;
+   background-color: #0d3d8f;
+   font-size: 14px;
+   padding-left: 32px;
+   padding-right: 32px;
+   height: 35px;
+   line-height: 35px;
+   text-align: center;
+   color: #fff;
+   text-decoration: none;
+   cursor: pointer;
+   -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+   position: absolute;
+   font-size: 22px;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+   border-radius: 10px 0 0 10px;
+}
+.searchbutton:hover {
+   transition-duration: 0.4s;
+   -moz-transition-duration: 0.4s;
+   -webkit-transition-duration: 0.4s;
+   -o-transition-duration: 0.4s;
+   background-color: #0d3d8f;
+   color: #172c6b;
+}
+.search:focus + .searchbutton {
+   transition-duration: 0.4s;
+   -moz-transition-duration: 0.4s;
+   -webkit-transition-duration: 0.4s;
+   -o-transition-duration: 0.4s;
+   background-color: #0d3d8f;
+   color: #fff;
+}
+
+.search {
+   position: absolute;
+   background-color: #0d3d8f;
+   left: 49px;
+   color: #fff;
+   outline: none;
+   border: none;
+   padding: 0;
+   padding-left: 8px;
+   width: 80px;
+   height: 100%;
+   z-index: 10;
+   border-radius: 0 10px 10px 0;
+   transition-duration: 0.4s;
+   -moz-transition-duration: 0.4s;
+   -webkit-transition-duration: 0.4s;
+   -o-transition-duration: 0.4s;
+}
+input[type="search"]::placeholder {
+   color: #fff;
+   opacity: 1;  /* Firefox */
+}
+input[type="search"]:-webkit-input-placeholder {
+   /* Chrome, Safari, Opera */
+   color: #fff;
+}
+input[type="search"]::-ms-input-placeholder {
+   /* Microsoft Edge */
+   color: #fff;
+}
+.search:focus {
+   width: 200px; /* Bar width+1px */
+   padding: 0 16px 0 0;
+}
+
+@media screen and (min-width: 991px) {
+   .search {
+       border-radius: 10px 0 0 10px;
+   }
+   .expandright {
+       left: auto;
+       right: 49px; /* Button width-1px */
+   }
+
+   .expandright:focus {
+       padding: 0 0 0 16px;
+   }
+   .searchbutton{
+       border-radius: 0 10px 10px 0;
+   }
+   
+}
