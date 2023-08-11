@@ -1,0 +1,52 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Privacy Policy")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <style>
+        h2{
+            font-weight: bold;
+            color: #000;
+        }
+    </style>
+    <section class="container about">
+        <h1>
+            <%block name="pageheader">Política de Información, Datos Personales y Privacidad </%block>
+        </h1>
+        <ol type = "1">
+            <li>
+                <p><h2>Información recolectada por OpenUChile</h2></p>
+                <p>
+                    La plataforma OpenUChile almacena toda la información que ingresan los usuarios a través de sus componentes, incluyendo los registros de navegación de los usuarios. 
+                </p>
+                <p>
+                    La información es recolectada para proveer los servicios que entrega la plataforma OpenUChile y desarrollar mejoras a las funcionalidades que vayan en beneficio directo de los usuarios. Los datos almacenados se utilizan anónimamente para investigación académica sobre educación mediada por tecnología. 
+                </p>
+                <p>
+                    OpenUChile no difundirá información de carácter personal ni otro tipo de información almacenados en la plataforma en ninguna forma. 
+                </p>
+            </li>
+            <li>
+                <p><h2>Seguridad y Privacidad de la Información Recolectada </h2></p>
+                <p>
+                    Toda la información recolectada por la plataforma OpenUChile, es almacenada cumpliendo con la <a href="https://uchile.cl/informacion-general/politica-de-privacidad-de-la-informacion-y-datos-personales" target="_blank">Política de Privacidad de la Información y Datos Personales de la Universidad de Chile. </a>
+                </p>
+                <p>
+                    La información personal de los usuarios es protegida para evitar modificación, divulgación, destrucción o acceso no autorizado a los datos almacenados. Para esto se utilizan herramientas y prácticas estándares de seguridad de la industria. 
+                </p>
+            </li>
+            <li>
+                <p><h2>Uso de Cookies</h2></p>
+                <p>
+                    Para el correcto funcionamiento de la plataforma se usan cookies, cuyo principal uso es entregar al usuario una experiencia continua entre sus componentes, recordándolo a través de los servicios que accede. Adicionalmente, utilizamos cookies para obtener estadísticas de uso general en los servicios de Google Analytics.  
+                </p>
+                <p>
+                    En este servicio no enviamos datos personales de los usuarios y la información recopilada se utiliza para evaluar las tasas de uso de la plataforma y mejorar los flujos e interfaces. 
+                </p>
+            </li>
+        </ol>
+    </section>
+</main>
