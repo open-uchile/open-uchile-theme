@@ -21,17 +21,52 @@
       <%static:include path="discovery/${template_name}.underscore" />
   </script>
   % endfor
-
 </%block>
 % endif
-
+<%block name="js_extra">
+  <script type="text/javascript" src="${static.url('open-uchile-theme/js/open_search.js')}"></script>
+</%block>
 <%block name="pagetitle">${_("Courses")}</%block>
 <style>
   .collapse:not(.show) {
     display: block;
-}
+  }
+  #open-carousel{
+    max-height: 560px;
+  }
+  .find-courses{
+    background: transparent;
+  }
 </style>
 <main id="main" aria-label="Content" tabindex="-1">
+  <!--header>
+    <div id="open-carousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#open-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#open-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#open-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://virtual-labx.uchile.cl/static/virtual-labx-theme/images/edx_02.09d7413bd248.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://virtual-labx.uchile.cl/static/virtual-labx-theme/images/sld_1.0179282467f7.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://virtual-labx.uchile.cl/static/virtual-labx-theme/images/edx_01.1a4dd3e883e9.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#open-carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </a>
+      <a class="carousel-control-next"  href="#open-carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </a>
+    </div>
+  </header-->
     <section class="find-courses">
       <section class="courses-container">
         % if course_discovery_enabled:
@@ -55,7 +90,7 @@
         <div id="filter-bar" class="filters hide-phone is-collapsed">
           <div class="filters-inner">
             <ul id="active-filters" class="active-filters facet-list"></ul>
-            <button id="clear-all-filters" class="clear-filters flt-right discovery-button">Borrar todo</button>
+            <button id="clear-all-filters" class="clear-filters flt-right discovery-button">${_('Clear All')}</button>
           </div>
         </div>
         % endif
@@ -94,29 +129,101 @@
               %endif
             %endfor
           </ul>
+          <ul class="courses-listing courses-list" id="list-courses_orgs"></ul>
         </div>
 
 
         % if course_discovery_enabled:
-        <aside aria-label="Refinar su búsqueda" class="search-facets phone-menu">
-          <h2 class="header-search-facets">Refinar su búsqueda</h2>
+        <aside aria-label="${_('Refine Your Search')}" class="search-facets phone-menu">
+          <h2 class="header-search-facets">${_('Refine Your Search')}</h2>
           <section class="search-facets-lists">
-            <h3 class="header-facet"> Ordenar por: </h3>
+            <h3 class="header-facet" data-text="Sort by:">${_('Sort by:')}</h3>
             <ul data-facet="order_by" class="facet-list collapse">
               <li>
                 <button data-facet="order_by" data-value="newer" data-text="Newer" class="facet-option discovery-button order_by">
-                  Newer
-                  <span class="count">
-                    <span class="count-number">XX</span>
-                  </span>
+                  ${_('Newer')} 
+                  <span class="count"><span class="count-number"></span></span>
                 </button>
               </li>
               <li>
                 <button data-facet="order_by" data-value="older" data-text="Older" class="facet-option discovery-button order_by">
-                  Older
-                  <span class="count">
-                    <span class="count-number">XX</span>
-                  </span>
+                  ${_('Older')}
+                  <span class="count"><span class="count-number"></span></span>
+                </button>
+              </li>
+            </ul>
+            <h3 class="header-facet" data-text="Year:">${_('Year:')}</h3>
+            <ul data-facet="year" class="facet-list collapse">
+              <li>
+                <button data-facet="year" data-value="2023" data-text="2023" class="facet-option discovery-button year">
+                  2023
+                  <span class="count"><span class="count-number"></span></span>
+                </button>
+              </li>
+              <li>
+                <button data-facet="year" data-value="2024" data-text="2024" class="facet-option discovery-button year">
+                  2024
+                  <span class="count"><span class="count-number"></span></span>
+                </button>
+              </li>
+            </ul>
+            <h3 class="header-facet" data-text="State:">${_('State:')}</h3>
+            <ul data-facet="state" class="facet-list collapse">
+              <li>
+                <button data-facet="state" data-value="active" data-text="Active" class="facet-option discovery-button state">
+                  ${_('Active')}
+                  <span class="count"><span class="count-number"></span></span>
+                </button>
+              </li>
+              <li>
+                <button data-facet="state" data-value="finished" data-text="Finished" class="facet-option discovery-button state">
+                  ${_('Finished')}
+                  <span class="count"><span class="count-number"></span></span>
+                </button>
+              </li>
+            </ul>
+            <h3 class="header-facet" data-text="Organizations:">${_('Organizations:')}</h3>
+            <ul data-facet="open_org" class="facet-list collapse">
+              <li>
+                <button data-facet="open_org" data-value="CLIL" data-text="CLIL" class="facet-option discovery-button open_org">
+                  ${_('Universität Heidelberg')}
+                  <span class="count"><span class="count-number"></span></span>
+                </button>
+              </li>
+              <li>
+                <button data-facet="open_org" data-value="CMS" data-text="CMS" class="facet-option discovery-button open_org">
+                  ${_('Facultad de Ciencias Físicas y Matemáticas')}
+                  <span class="count"><span class="count-number"></span></span>
+                </button>
+              </li>
+              <li>
+                <button data-facet="open_org" data-value="DCS" data-text="DCS" class="facet-option discovery-button open_org">
+                  ${_('Facultad de Economía y Negocios')}
+                  <span class="count"><span class="count-number"></span></span>
+                </button>
+              </li>
+              <li>
+                <button data-facet="open_org" data-value="DEM" data-text="DEM" class="facet-option discovery-button open_org">
+                  ${_('Facultad de Medicina')}
+                  <span class="count"><span class="count-number"></span></span>
+                </button>
+              </li>
+              <li>
+                <button data-facet="open_org" data-value="ECBI" data-text="ECBI" class="facet-option discovery-button open_org">
+                  ${_('ECBI Chile')}
+                  <span class="count"><span class="count-number"></span></span>
+                </button>
+              </li>
+              <li>
+                <button data-facet="open_org" data-value="CR2" data-text="CR2" class="facet-option discovery-button open_org">
+                  ${_('Centro de Ciencia del Clima y la Resiliencia (CR)^2')}
+                  <span class="count"><span class="count-number"></span></span>
+                </button>
+              </li>
+              <li>
+                <button data-facet="open_org" data-value="REUNA" data-text="REUNA" class="facet-option discovery-button open_org">
+                  ${_('Red Universitaria Nacional (REUNA)')}
+                  <span class="count"><span class="count-number"></span></span>
                 </button>
               </li>
             </ul>
@@ -127,235 +234,3 @@
       </section>
     </section>
 </main>
-<script type="text/javascript">
-  var index = 0;
-  var currentTotal = 0;
-  var state = 0 //0:can get data 1:waiting data 2: no more data
-  var filters = {
-    "search_string": "",
-    "order_by": "none"
-  }
-  $(window).load(function() {
-    initDiscovery();
-    $(window).scroll(function() {
-        if($(window).scrollTop()  > $(window).height() / 2) {
-          if (state == 0){
-            state = 1;
-            getData();
-          }
-        }
-    });
-    function initDiscovery(){
-      index = 0;
-      currentTotal = 0;
-      state = 1;
-      filters = {
-        "search_string": "",
-        "order_by": "none"
-      }
-      getData();
-    }
-
-    function getData(){
-      var pages = {"page_size": 10, "page_index": index }
-      var copy = {...filters, ...pages};
-      
-      $.post( "/search/course_discovery/", copy )
-      .done(function( data ) {
-        data.results.forEach(element => {
-          edx.HtmlUtils.append($("#list-courses")[0], createCourse(element.data))
-        });
-        currentTotal = currentTotal + data.results.length;
-        if (data.total > currentTotal){
-          index = index + 1;
-          state = 0;
-        }
-        else state = 2;
-        $("#discovery-message").text("Mostrando " + data.total + " cursos");
-      });
-    }
-
-    $('.search-facets-lists button').live('click', function(e) {
-      e.preventDefault();
-      $(this).blur();
-      let facet = $(this).data("facet");
-      let display_name = $(this).data("text");
-      let add_btn = true;
-      if ($(this).hasClass("selected")){
-        $(this).removeClass("selected");
-        if($(this).data("facet") == "order_by") filters["order_by"] = "none";
-        add_btn = false;
-      }
-      else{
-        $(this).addClass("selected");
-        if($(this).data("facet") == "order_by") filters["order_by"] = $(this).data("value");
-        if($(".order_by").not(this).hasClass("selected")) $(".order_by").not(this).removeClass("selected");
-      }
-
-      let list_course1 = getCourses();
-      // executes when promise is resolved successfully
-      list_course1.then(
-          function successValue(result) {
-              console.log(result);
-              if (add_btn) AddBtnFilterBar(facet, display_name);
-              else {
-                $("#" + facet).remove();
-                if ( $('#active-filters').children().length == 0 ) $('#filter-bar').addClass("is-collapsed");
-              }
-          },
-      )
-      // executes if there is an error
-      .catch(
-          function errorValue(result) {
-              console.log(result);
-          }
-      )
-      .finally(
-        function greet() {
-        }
-      );
-    });
-
-    $('#clear-all-filters').live('click', function(e) {
-      e.preventDefault();
-      $('#filter-bar').addClass("is-collapsed");
-      $("#active-filters").html('');
-      cleanCourses();
-      initDiscovery();
-    });
-    $('#filter-bar .facet-option.discovery-button').live('click', function(e) {
-      e.preventDefault();
-      let btnType = $(this).data('type');
-      $("#" + btnType).remove();
-      if ( $('#active-filters').children().length == 0 ) $('#filter-bar').addClass("is-collapsed");
-      let filters = {
-        "search_string": ""
-      }
-      let list_course2 = getCourses();
-      // executes when promise is resolved successfully
-      list_course2.then(
-          function successValue(result) {
-              console.log(result);
-              //AddBtnFilterBar(result);
-          },
-      )
-      // executes if there is an error
-      .catch(
-          function errorValue(result) {
-              console.log(result);
-          }
-      )
-      .finally(
-        function greet() {
-          
-        }
-      );
-    });
-
-    $('#discovery-submit').live('click', function(e) {
-      e.preventDefault();
-      $('.icon.fa.fa-search').css("visibility", "hidden");
-      $('#loading-indicator').toggleClass('hidden');
-      filters["search_string"] = $("#discovery-input").val();
-      let list_course3 = getCourses();
-      // executes when promise is resolved successfully
-      list_course3.then(
-          function successValue(result) {
-              console.log(result);
-              AddBtnFilterBar("search_string", filters["search_string"]);
-              
-          },
-      )
-      // executes if there is an error
-      .catch(
-          function errorValue(result) {
-              console.log(result);
-          }
-      )
-      .finally(
-        function greet() {
-          $('.icon.fa.fa-search').css("visibility", "visible");
-          $('#loading-indicator').toggleClass('hidden');
-        }
-      );
-    });
-
-    function getCourses(){
-      cleanCourses();
-      // returns a promise
-      return new Promise(function (resolve, reject) {
-        getData();
-        //pasar datos a resolve
-        resolve('Promise success');
-        reject('Promise rejected');
-      });
-      
-    }
-
-    function createCourse(data){
-      /*
-        "data": {
-            "id": "course-v1:eol+NA303+2022",
-            "course": "course-v1:eol+NA303+2022",
-            "content": {
-                "display_name": "Test202",
-                "overview": " About This Course Include your long course description here. The long course description should contain 150-400 words. This is paragraph 2 of the long course description. Add more paragraphs as needed. Make sure to enclose them in paragraph tags. Requirements Add information about the skills and knowledge students need to take this course. Course Staff Staff Member #1 Biography of instructor/staff member #1 Staff Member #2 Biography of instructor/staff member #2 Frequently Asked Questions What web browser should I use? The Open edX platform works best with current versions of Chrome, Edge, Firefox, Internet Explorer, or Safari. See our list of supported browsers for the most up-to-date information. Question #2 Your answer would be displayed here. ",
-                "number": "NA303"
-            },
-            "image_url": "/asset-v1:eol+NA303+2022+type@asset+block@images_course_image.jpg",
-            "start": "2022-01-01T00:00:00+00:00",
-            "end": "2023-11-30T00:00:00+00:00",
-            "number": "NA303",
-            "enrollment_start": "2021-01-01T00:00:00+00:00",
-            "enrollment_end": "2021-12-31T00:00:00+00:00",
-            "org": "eol",
-            "modes": [
-                "audit"
-            ],
-            "language": "en"
-          }
-      */
-      const coursehtml = '<li class="courses-listing-item"><article class="course" role="region" aria-label="{course_display_name}">'+
-      '<a href="/courses/{course}/about"><header class="course-image">'+
-      '<div class="cover-image"><img src="{image_url}" alt="{course_display_name}">'+
-      '<div class="learn-more" aria-hidden="true">APRENDER MAS</div></div></header>'+
-      '<section class="course-info" aria-hidden="true"><h2 class="course-name">'+
-      '<span class="course-organization">{org}</span><span class="course-code">{number}</span><span class="course-title">{course_display_name}</span>'+
-      '</h2><div class="course-date" aria-hidden="true">Comienza: {start}</div>'+
-      '</section><div class="sr"><ul><li>{org}</li><li>{number}</li><li>Empieza<time itemprop="startDate" datetime="{start}">{start}</time></li>'+
-      '</ul></div></a></article></li>';
-      data["course_display_name"] = data.content.display_name;
-      return edx.HtmlUtils.interpolateHtml(edx.HtmlUtils.HTML(coursehtml), data);
-    }
-
-    function AddBtnFilterBar(type, value){
-      if ( $('#active-filters').children().length == 0 ) $('#filter-bar').removeClass("is-collapsed");
-      createBtnActiveFilters(type, value)
-    }
-
-    /*function createActiveFilters(){
-      let filterBarHtml = '<div class="filters-inner"><ul id="active-filters" class="active-filters facet-list">'+
-          '</ul><button id="clear-all-filters" class="clear-filters flt-right discovery-button">Borrar todo</button></div>';
-      edx.HtmlUtils.append($("#filter-bar")[0], edx.HtmlUtils.HTML(filterBarHtml));
-    }*/
-    
-    function createBtnActiveFilters(type, value){
-      $("#" + type).remove();
-      let buttons = '<li class="active-filter" id="{type}"><button data-value="{value}" class="facet-option discovery-button" data-type="{type}">'+
-          '<span class="query">"{value}"</span><span aria-hidden="true" class="fa fa-times"></span></button></li>';
-      let filterBtn = edx.HtmlUtils.interpolateHtml(edx.HtmlUtils.HTML(buttons), {type:type, value:value});
-      edx.HtmlUtils.append($("#active-filters")[0], filterBtn);
-    }
-    function removeBtnActiveFilters(type, value){
-      $("#" + type).remove();
-      if ( $('#active-filters').children().length == 0 ) $('#filter-bar').addClass("is-collapsed");
-    }
-    function cleanCourses(){
-      index = 0;
-      currentTotal = 0;
-      state = 1;
-      $("#discovery-message").text("");
-      $("#list-courses").html('')
-    }
-  })
-</script>
