@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: help-open@uchile.cl\n"
-"POT-Creation-Date: 2022-09-06 17:52+0000\n"
+"POT-Creation-Date: 2023-08-25 18:07+0000\n"
 "PO-Revision-Date: 2022-07-28 20:11+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -44,10 +44,11 @@ msgid "Preview"
 msgstr ""
 
 #: cms/templates/container.html:146
+#: lms/templates/eoldiscussion/templates2.underscore:890
 msgid "Edit"
 msgstr ""
 
-#: cms/templates/container.html:165 lms/templates/courseware/courses.html:51
+#: cms/templates/container.html:165 lms/templates/courseware/courses.html:83
 msgid "Loading"
 msgstr ""
 
@@ -187,18 +188,25 @@ msgstr ""
 msgid "Finished course"
 msgstr ""
 
-#: lms/templates/course.html:46 lms/templates/course.html:48
+#: lms/templates/course.html:48
+msgid "Permanently open"
+msgstr ""
+
 #: lms/templates/course_portal.html:48 lms/templates/course_portal.html:51
 msgid "Starts"
 msgstr ""
 
-#: lms/templates/course.html:48 lms/templates/course_portal.html:48
-#: lms/templates/courseware/course_about.html:206
+#: lms/templates/course_portal.html:48
+#: lms/templates/courseware/course_about.html:207
 msgid "Today"
 msgstr ""
 
-#: lms/templates/course.html:50 lms/templates/course_portal.html:53
+#: lms/templates/course_portal.html:53
 msgid "Starts: {date}"
+msgstr ""
+
+#: lms/templates/courses_list.html:54
+msgid "No existen cursos"
 msgstr ""
 
 #: lms/templates/footer.html:22
@@ -206,25 +214,41 @@ msgid "Need help?"
 msgstr ""
 
 #: lms/templates/footer.html:22
-#: lms/templates/header/navbar-authenticated.html:33
-#: lms/templates/header/navbar-not-authenticated.html:30
+#: lms/templates/header/navbar-authenticated.html:45
+#: lms/templates/header/navbar-not-authenticated.html:50
 msgid "Contact us"
 msgstr ""
 
-#: lms/templates/footer.html:27
+#: lms/templates/footer.html:29
+msgid "Términos y Condiciones"
+msgstr ""
+
+#: lms/templates/footer.html:32 lms/templates/static_templates/privacy.html:6
 msgid "Privacy Policy"
 msgstr ""
 
-#: lms/templates/index.html:41
+#: lms/templates/index.html:89
 msgid "Open UChile "
 msgstr ""
 
-#: lms/templates/index.html:42
+#: lms/templates/index.html:90
 msgid "E-Learning "
 msgstr ""
 
-#: lms/templates/index.html:43
+#: lms/templates/index.html:91
 msgid "Platform "
+msgstr ""
+
+#: lms/templates/courseware/courses.html:76
+#: lms/templates/courseware/courses.html:77 lms/templates/index.html:97
+#: lms/templates/index.html:98
+msgid "Search for a course"
+msgstr ""
+
+#: lms/templates/courseware/courses.html:78
+#: lms/templates/header/navbar-authenticated.html:26
+#: lms/templates/index.html:101
+msgid "Search"
 msgstr ""
 
 #: lms/templates/main.html:192
@@ -233,8 +257,8 @@ msgstr ""
 
 #: lms/templates/certificates/validate_certificates.html:7
 #: lms/templates/certificates/validate_certificates.html:33
-#: lms/templates/header/navbar-authenticated.html:30
-#: lms/templates/header/navbar-not-authenticated.html:27
+#: lms/templates/header/navbar-authenticated.html:42
+#: lms/templates/header/navbar-not-authenticated.html:47
 msgid "Certificate Validation "
 msgstr ""
 
@@ -289,86 +313,146 @@ msgstr ""
 msgid "An error occurred. Please try again later."
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:120
-#: lms/templates/courseware/course_about.html:125
+#: lms/templates/courseware/course_about.html:121
+#: lms/templates/courseware/course_about.html:126
 msgid "You are enrolled in this course"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:122
-#: lms/templates/courseware/course_about.html:136
+#: lms/templates/courseware/course_about.html:123
+#: lms/templates/courseware/course_about.html:137
 msgid "View Course"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:128
+#: lms/templates/courseware/course_about.html:129
 msgid "Course is full"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:130
+#: lms/templates/courseware/course_about.html:131
 msgid "Enrollment in this course is by invitation only"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:132
+#: lms/templates/courseware/course_about.html:133
 msgid "Enrollment is Closed"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:151
+#: lms/templates/courseware/course_about.html:152
 msgid "Enroll Now"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:173
+#: lms/templates/courseware/course_about.html:174
 msgid "View About Page in studio"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:203
+#: lms/templates/courseware/course_about.html:204
 msgid "Classes Start:"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:225
+#: lms/templates/courseware/course_about.html:226
 msgid "Classes End:"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:239
+#: lms/templates/courseware/course_about.html:240
 msgid "Price:"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:247
+#: lms/templates/courseware/course_about.html:253
 msgid "There is one session available:"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:248
-msgid " already enrolled! After a course session ends, it will be archived."
+#: lms/templates/courseware/course_about.html:254
+msgid " already enrolled!"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:267
+#: lms/templates/courseware/course_about.html:288
+#: lms/templates/static_templates/faq.html:35
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#: lms/templates/courseware/course_about.html:305
 msgctxt "self"
 msgid "Enroll"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:272
+#: lms/templates/courseware/course_about.html:310
 msgctxt "self"
 msgid "enroll"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:35
+#: lms/templates/courseware/courses.html:29
 msgid "Courses"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:44
-#: lms/templates/courseware/courses.html:45
-msgid "Search for a course"
+#: lms/templates/courseware/courses.html:93
+msgid "Clear All"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:46
-msgid "Search"
-msgstr ""
-
-#: lms/templates/courseware/courses.html:62
+#: lms/templates/courseware/courses.html:98
 msgid "List of Courses"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:100
-#: lms/templates/courseware/courses.html:101
+#: lms/templates/courseware/courses.html:137
+#: lms/templates/courseware/courses.html:138
 msgid "Refine Your Search"
+msgstr ""
+
+#: lms/templates/courseware/courses.html:140
+msgid "Sort by:"
+msgstr ""
+
+#: lms/templates/courseware/courses.html:144
+msgid "Newer"
+msgstr ""
+
+#: lms/templates/courseware/courses.html:150
+msgid "Older"
+msgstr ""
+
+#: lms/templates/courseware/courses.html:155
+msgid "Year:"
+msgstr ""
+
+#: lms/templates/courseware/courses.html:170
+msgid "State:"
+msgstr ""
+
+#: lms/templates/courseware/courses.html:174
+msgid "Active"
+msgstr ""
+
+#: lms/templates/courseware/courses.html:180
+msgid "Finished"
+msgstr ""
+
+#: lms/templates/courseware/courses.html:185
+msgid "Organizations:"
+msgstr ""
+
+#: lms/templates/courseware/courses.html:189
+msgid "Universität Heidelberg"
+msgstr ""
+
+#: lms/templates/courseware/courses.html:195
+msgid "Facultad de Ciencias Físicas y Matemáticas"
+msgstr ""
+
+#: lms/templates/courseware/courses.html:201
+msgid "Facultad de Economía y Negocios"
+msgstr ""
+
+#: lms/templates/courseware/courses.html:207
+msgid "Facultad de Medicina"
+msgstr ""
+
+#: lms/templates/courseware/courses.html:213
+msgid "ECBI Chile"
+msgstr ""
+
+#: lms/templates/courseware/courses.html:219
+msgid "Centro de Ciencia del Clima y la Resiliencia (CR)^2"
+msgstr ""
+
+#: lms/templates/courseware/courses.html:225
+msgid "Red Universitaria Nacional (REUNA)"
 msgstr ""
 
 #: lms/templates/emails/failed_verification_email.txt:4
@@ -402,7 +486,7 @@ msgstr ""
 #: lms/templates/emails/failed_verification_email.txt:38
 #: lms/templates/emails/passed_verification_email.txt:10
 #: lms/templates/emails/photo_submission_confirmation.txt:13
-msgid "The {platform_name} team"
+msgid "{platform_name} team"
 msgstr ""
 
 #: lms/templates/emails/passed_verification_email.txt:4
@@ -429,10 +513,10 @@ msgstr ""
 
 #: lms/templates/emails/photo_submission_confirmation.txt:8
 msgid ""
-"Hemos recibido su información y el proceso de verificación del ID ha "
-"empezado.Revise si tiene un correo electrónico de nosotros en los "
+"Hemos recibido su información y el proceso de verificación de ID ha "
+"empezado.Revise si recibe un correo electrónico de OpenUChile en los "
 "próximos días para confirmar si su verificación fue exitosa.También puede"
-" revisar el estado del proceso de verificación en su página de inicio ."
+" revisar el estado del proceso de verificación en su página de inicio."
 msgstr ""
 
 #: lms/templates/eol_contact_form/contact.html:7
@@ -445,7 +529,7 @@ msgid "Fill out the form and our help desk will contact you shortly."
 msgstr ""
 
 #: lms/templates/eol_contact_form/contact.html:22
-msgid "Help desk hours (GMT-3): from 09:00 until 18:00 (Monday - Friday)"
+msgid "Help desk hours (GMT-4): from 09:00 until 18:00 (Monday - Friday)"
 msgstr ""
 
 #: lms/templates/eol_contact_form/contact.html:27
@@ -529,39 +613,527 @@ msgid "Enter your questions and queries here"
 msgstr ""
 
 #: lms/templates/eol_contact_form/contact.html:80
+#: lms/templates/eoldiscussion/templates2.underscore:36
+#: lms/templates/eoldiscussion/templates2.underscore:201
+#: lms/templates/eoldiscussion/templates2.underscore:540
 msgid "Submit"
 msgstr ""
 
-#: lms/templates/header/header.html:69
+#: lms/templates/eoldiscussion/_discussion_inline.html:40
+msgid "Topic:"
+msgstr ""
+
+#: lms/templates/eoldiscussion/_discussion_inline.html:51
+msgid "El foro termina el"
+msgstr ""
+
+#: lms/templates/eoldiscussion/_discussion_inline.html:55
+msgid "El foro inicia el"
+msgstr ""
+
+#: lms/templates/eoldiscussion/_discussion_inline.html:59
+#: lms/templates/eoldiscussion/_discussion_inline.html:65
+msgid "El foro ha finalizado."
+msgstr ""
+
+#: lms/templates/eoldiscussion/_discussion_inline.html:71
+#: lms/templates/eoldiscussion/_discussion_inline.html:81
+msgid "Notifications"
+msgstr ""
+
+#: lms/templates/eoldiscussion/_discussion_inline.html:122
+msgid "Save"
+msgstr ""
+
+#: lms/templates/eoldiscussion/_discussion_inline_studio.html:8
+msgid "To view live discussions, click Preview or View Live in Unit Settings."
+msgstr ""
+
+#: lms/templates/eoldiscussion/_discussion_inline_studio.html:9
+msgid "Discussion ID: {discussion_id}"
+msgstr ""
+
+#: lms/templates/eoldiscussion/_filter_dropdown.html:53
+msgid "Discussion topics list"
+msgstr ""
+
+#: lms/templates/eoldiscussion/_filter_dropdown.html:55
+#: lms/templates/eoldiscussion/_filter_dropdown.html:56
+msgid "Filter Topics"
+msgstr ""
+
+#: lms/templates/eoldiscussion/_filter_dropdown.html:57
+msgid "filter topics"
+msgstr ""
+
+#: lms/templates/eoldiscussion/_filter_dropdown.html:63
+msgid "All Discussions"
+msgstr ""
+
+#: lms/templates/eoldiscussion/_filter_dropdown.html:67
+msgid "Posts I'm Following"
+msgstr ""
+
+#: lms/templates/eoldiscussion/_thread_list_template.html:8
+msgid "Filter:"
+msgstr ""
+
+#: lms/templates/eoldiscussion/_thread_list_template.html:11
+msgid "Show all posts"
+msgstr ""
+
+#: lms/templates/eoldiscussion/_thread_list_template.html:13
+msgid "Unread posts"
+msgstr ""
+
+#: lms/templates/eoldiscussion/_thread_list_template.html:16
+msgid "Unanswered posts"
+msgstr ""
+
+#: lms/templates/eoldiscussion/_thread_list_template.html:20
+msgid "Flagged"
+msgstr ""
+
+#: lms/templates/eoldiscussion/_thread_list_template.html:26
+msgid "Group:"
+msgstr ""
+
+#: lms/templates/eoldiscussion/_thread_list_template.html:28
+msgid "in all groups"
+msgstr ""
+
+#: lms/templates/eoldiscussion/_thread_list_template.html:37
+msgid "Sort:"
+msgstr ""
+
+#: lms/templates/eoldiscussion/_thread_list_template.html:40
+msgid "Por actividad reciente"
+msgstr ""
+
+#: lms/templates/eoldiscussion/_thread_list_template.html:42
+msgid "Por mayor actividad"
+msgstr ""
+
+#: lms/templates/eoldiscussion/_thread_list_template.html:44
+msgid "Por mayor número de votos"
+msgstr ""
+
+#: lms/templates/eoldiscussion/_user_profile.html:8
+#, python-format
+msgid "%s discussion started"
+msgid_plural "%s discussions started"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lms/templates/eoldiscussion/_user_profile.html:9
+#, python-format
+msgid "%s comment"
+msgid_plural "%s comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:15
+msgid "Responder"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:22
+msgid "Add a response:"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:26
+#: lms/templates/eoldiscussion/templates2.underscore:161
+#: lms/templates/eoldiscussion/templates2.underscore:191
+#: lms/templates/eoldiscussion/templates2.underscore:278
+#: lms/templates/eoldiscussion/templates2.underscore:334
+#: lms/templates/eoldiscussion/templates2.underscore:509
+msgid "Caracteres restantes"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:45
+#: lms/templates/eoldiscussion/templates2.underscore:685
+msgid "This thread is closed."
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:84
+#, python-format
+msgid "discussion posted %(time_ago)s by %(author)s"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:86
+#, python-format
+msgid "question posted %(time_ago)s by %(author)s"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:94
+msgid "Pinned"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:97
+#: lms/templates/eoldiscussion/templates2.underscore:251
+#: lms/templates/eoldiscussion/templates2.underscore:324
+msgid "Reported"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:100
+msgid "Closed"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:123
+#, python-format
+msgid "Related to: %(courseware_title_linked)s"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:133
+#, python-format
+msgid "This post is visible only to %(group_name)s."
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:139
+msgid "This post is visible to everyone."
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:146
+msgid "Editing post"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:151
+#: lms/templates/eoldiscussion/templates2.underscore:496
+msgid "Title"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:153
+#: lms/templates/eoldiscussion/templates2.underscore:498
+msgid "Add a clear and descriptive title to encourage participation. (Required)"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:159
+msgid "Edit your post below."
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:171
+msgid "Update post"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:172
+#: lms/templates/eoldiscussion/templates2.underscore:288
+#: lms/templates/eoldiscussion/templates2.underscore:344
+#: lms/templates/eoldiscussion/templates2.underscore:466
+#: lms/templates/eoldiscussion/templates2.underscore:541
+msgid "Cancel"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:178
+#, python-format
+msgid "Show Comment (%(num_comments)s)"
+msgid_plural "Show Comments (%(num_comments)s)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:188
+#: lms/templates/eoldiscussion/templates2.underscore:190
+msgid "Add a comment"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:222
+#, python-format
+msgid "marked as answer %(time_ago)s by %(user)s"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:226
+#, python-format
+msgid "marked as answer %(time_ago)s"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:232
+#, python-format
+msgid "endorsed %(time_ago)s by %(user)s"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:236
+#, python-format
+msgid "endorsed %(time_ago)s"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:275
+msgid "Editing response"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:287
+msgid "Update response"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:317
+#, python-format
+msgid "posted %(time_ago)s by %(author)s"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:331
+msgid "Editing comment"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:343
+msgid "Update comment"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:386
+#: lms/templates/eoldiscussion/templates2.underscore:605
+#: lms/templates/eoldiscussion/templates2.underscore:680
+msgid "anonymous"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:398
+msgid "Staff"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:400
+msgid "Community TA"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:403
+msgid "Student"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:413
+#: lms/templates/eoldiscussion/templates2.underscore:414
+msgid "Creación"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:416
+#: lms/templates/eoldiscussion/templates2.underscore:417
+msgid "Última actividad"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:434
+#, python-format
+msgid ""
+"%(comments_count)s %(span_sr_open)scomments (%(unread_comments_count)s "
+"unread comments)%(span_close)s"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:437
+#, python-format
+msgid "%(comments_count)s %(span_sr_open)scomments %(span_close)s"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:454
+#: lms/templates/eoldiscussion/templates2.underscore:876
+#: lms/templates/eoldiscussion/templates2.underscore:878
+#: lms/templates/eoldiscussion/templates2.underscore:926
+msgid "Close"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:462
+#: lms/templates/eoldiscussion/templates2.underscore:612
+msgid "Crear publicación"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:477
+msgid "Visible to"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:480
+msgid ""
+"Discussion admins, moderators, and TAs can make their posts visible to "
+"all students or specify a single group."
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:484
+msgid "All Groups"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:507
+msgid "Tu pregunta o idea (requerido)"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:523
+msgid "follow this post"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:529
+msgid "post anonymously"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:535
+msgid "post anonymously to classmates"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:559
+msgid "Error posting your message."
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:572
+#, python-format
+msgid "This post will be visible only to %(group_name)s."
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:578
+msgid "This post will be visible to everyone."
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:584
+msgid "Topic area"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:587
+msgid "Add your post to a relevant topic to help others find it. (Required)"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:600
+msgid "(Community TA)"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:602
+msgid "(Staff)"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:628
+msgid "All Posts"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:629
+msgid "Return to all posts"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:642
+msgid "Previous"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:648
+#: lms/templates/eoldiscussion/templates2.underscore:660
+msgid "…"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:666
+msgid "Next"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:692
+msgid "View discussion"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:753
+#: lms/templates/eoldiscussion/templates2.underscore:942
+msgid "Load more"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:763
+msgid "Post type"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:767
+msgid ""
+"Questions raise issues that need answers. Discussions share ideas and "
+"start conversations. (Required)"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:775
+msgid "Question"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:783
+msgid "Discussion"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:792
+#: lms/templates/eoldiscussion/templates2.underscore:794
+msgid "Endorse"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:795
+msgid "Unendorse"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:804
+#: lms/templates/eoldiscussion/templates2.underscore:806
+msgid "Mark as Answer"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:807
+msgid "Unmark as Answer"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:816
+#: lms/templates/eoldiscussion/templates2.underscore:818
+msgid "Follow"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:819
+msgid "Unfollow"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:832
+msgid "Vote for this post,"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:848
+msgid "Report abuse"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:850
+msgid "Report"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:851
+msgid "Unreport"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:862
+#: lms/templates/eoldiscussion/templates2.underscore:864
+msgid "Pin"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:865
+msgid "Unpin"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:879
+msgid "Open"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:898
+msgid "Delete"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:909
+#: lms/templates/eoldiscussion/templates2.underscore:910
+msgid "More"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:935
+msgid "OK"
+msgstr ""
+
+#: lms/templates/header/header.html:68
 msgid ""
 "{begin_strong}Warning:{end_strong} Your browser is not fully supported. "
 "We strongly recommend using {chrome_link} or {ff_link}."
 msgstr ""
 
-#: lms/templates/header/header.html:92
+#: lms/templates/header/header.html:91
 #: lms/templates/widgets/footer-language-selector.html:24
 msgid "Choose Language"
 msgstr ""
 
-#: lms/templates/header/navbar-authenticated.html:16
+#: lms/templates/header/navbar-authenticated.html:15
 msgid "My Courses"
 msgstr ""
 
-#: lms/templates/header/navbar-authenticated.html:19
-msgid "Discover New"
+#: lms/templates/header/navbar-authenticated.html:18
+#: lms/templates/header/navbar-not-authenticated.html:22
+msgid "Explore courses"
 msgstr ""
 
-#: lms/templates/header/navbar-authenticated.html:24
-#: lms/templates/header/navbar-not-authenticated.html:21
+#: lms/templates/header/navbar-authenticated.html:36
+#: lms/templates/header/navbar-not-authenticated.html:41
 #: lms/templates/static_templates/about.html:6
 msgid "About"
 msgstr ""
 
-#: lms/templates/header/navbar-authenticated.html:27
-#: lms/templates/header/navbar-not-authenticated.html:24
+#: lms/templates/header/navbar-authenticated.html:39
+#: lms/templates/header/navbar-not-authenticated.html:44
 #: lms/templates/static_templates/faq.html:6
-#: lms/templates/static_templates/faq.html:24
-#: lms/templates/static_templates/faq.html:25
+#: lms/templates/static_templates/faq.html:29
+#: lms/templates/static_templates/faq.html:30
 msgid "FAQ"
 msgstr ""
 
@@ -569,7 +1141,7 @@ msgstr ""
 msgid "{platform_name} Home Page"
 msgstr ""
 
-#: lms/templates/header/navbar-not-authenticated.html:37
+#: lms/templates/header/navbar-not-authenticated.html:57
 #: lms/templates/student_account/login.underscore:49
 msgid "Sign in"
 msgstr ""
@@ -766,11 +1338,143 @@ msgid ""
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/data_download.html:140
+#: lms/templates/instructor/instructor_dashboard_2/send_email.html:137
 msgid "Pending Tasks"
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/data_download.html:142
 msgid "The status for any active tasks appears in a table below."
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/instructor_dashboard_2.html:25
+#: lms/templates/instructor/instructor_dashboard_2/instructor_dashboard_2.html:105
+msgid "Instructor Dashboard"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/instructor_dashboard_2.html:108
+msgid "View Course in Studio"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/instructor_dashboard_2.html:124
+msgid "Correo de bienvenida"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/send_email.html:16
+msgid "Habilitar:"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/send_email.html:23
+msgid "Habilitar correo de bienvenida"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/send_email.html:30
+#: lms/templates/instructor/instructor_dashboard_2/send_email.html:34
+msgid "Send to:"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/send_email.html:38
+msgid "Myself"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/send_email.html:42
+msgid "Staff and Administrators"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/send_email.html:46
+msgid "All Learners"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/send_email.html:55
+msgid "Cohort: "
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/send_email.html:59
+msgid "(Learners not explicitly assigned to a cohort)"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/send_email.html:74
+msgid "Learners in the {track_name} Track"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/send_email.html:84
+msgid "Subject: "
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/send_email.html:92
+msgid "(Maximum 128 characters)"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/send_email.html:97
+msgid "Responder a (opcional): "
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/send_email.html:104
+msgid ""
+"(Ingrese el/los correos al que los estudiantes podrán responder. Si "
+"ingresa más de un correo separelos con una coma, ejemplo: "
+"correo1@correo.cl, correo2@correo.cl)"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/send_email.html:109
+msgid "Message:"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/send_email.html:118
+msgid ""
+"We recommend sending learners no more than one email message per week. "
+"Before you send your email, review the text carefully and send it to "
+"yourself first, so that you can preview the formatting and make sure "
+"embedded images and links work correctly."
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/send_email.html:121
+msgid "CAUTION!"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/send_email.html:122
+msgid ""
+"When you select Send Email, your email message is added to the queue for "
+"sending, and cannot be cancelled."
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/send_email.html:126
+msgid "Send Email"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/send_email.html:128
+msgid "Guardar Cambios"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/send_email.html:139
+msgid ""
+"Email actions run in the background. The status for any active tasks - "
+"including email tasks - appears in a table below."
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/send_email.html:151
+msgid "Email Task History"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/send_email.html:153
+msgid "To see the content of previously sent emails, click this button:"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/send_email.html:155
+msgid "Show Sent Email History"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/send_email.html:159
+msgid "To read a sent email message, click its subject."
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/send_email.html:166
+msgid ""
+"To see the status for all email tasks submitted for this course, click "
+"this button:"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/send_email.html:168
+msgid "Show Email Task History"
 msgstr ""
 
 #: lms/templates/static_templates/about.html:24
@@ -818,10 +1522,6 @@ msgstr ""
 
 #: lms/templates/static_templates/about.html:35
 msgid "among others"
-msgstr ""
-
-#: lms/templates/static_templates/faq.html:30
-msgid "Frequently Asked Questions"
 msgstr ""
 
 #: lms/templates/student_account/form_field.underscore:136
@@ -918,5 +1618,29 @@ msgid "Sign in or Register"
 msgstr ""
 
 #~ msgid "Certificate Validation"
+#~ msgstr ""
+
+#~ msgid " already enrolled! After a course session ends, it will be archived."
+#~ msgstr ""
+
+#~ msgid "The {platform_name} team"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Hemos recibido su información y el "
+#~ "proceso de verificación del ID ha "
+#~ "empezado.Revise si tiene un correo "
+#~ "electrónico de nosotros en los próximos"
+#~ " días para confirmar si su "
+#~ "verificación fue exitosa.También puede revisar"
+#~ " el estado del proceso de "
+#~ "verificación en su página de inicio "
+#~ "."
+#~ msgstr ""
+
+#~ msgid "Help desk hours (GMT-3): from 09:00 until 18:00 (Monday - Friday)"
+#~ msgstr ""
+
+#~ msgid "Discover New"
 #~ msgstr ""
 
