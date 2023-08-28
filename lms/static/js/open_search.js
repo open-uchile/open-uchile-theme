@@ -82,7 +82,7 @@ $(window).load(function() {
     const urlParams = new URLSearchParams(queryString);
     if (urlParams.has('search_query')){ 
         initDiscovery(urlParams.get('search_query'));
-        AddBtnFilterBar("search_string", filters["search_string"]);
+        if (filters["search_string"] != "") AddBtnFilterBar("search_string", filters["search_string"]);
     }
     else initDiscovery();
     $(window).scroll(function() {
@@ -194,6 +194,7 @@ $('#clear-all-filters').live('click', function(e) {
     e.preventDefault();
     $('#filter-bar').addClass("is-collapsed");
     $("#active-filters").html('');
+    $('.search-facets-lists button.selected').removeClass("selected");
     cleanCourses();
     initDiscovery();
 });
@@ -241,8 +242,7 @@ $('#discovery-submit').live('click', function(e) {
     list_course3.then(
         function successValue(result) {
             //console.log(result);
-            AddBtnFilterBar("search_string", filters["search_string"]);
-            
+            if (filters["search_string"] != "") AddBtnFilterBar("search_string", filters["search_string"]);
         },
     )
     // executes if there is an error
@@ -366,6 +366,7 @@ function cleanCourses(){
     currentTotal = 0;
     state = 1;
     $("#discovery-message").text("");
+    $('#list-courses').show();
     $("#list-courses").html('')
 }
 })

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: help-open@uchile.cl\n"
-"POT-Creation-Date: 2023-08-28 15:07+0000\n"
+"POT-Creation-Date: 2023-08-28 23:44+0000\n"
 "PO-Revision-Date: 2022-07-28 20:11+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es_419\n"
@@ -48,7 +48,7 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#: cms/templates/container.html:165 lms/templates/courseware/courses.html:83
+#: cms/templates/container.html:165 lms/templates/courseware/courses.html:88
 msgid "Loading"
 msgstr ""
 
@@ -222,13 +222,13 @@ msgstr "Open UChile"
 msgid "E-Learning Platform "
 msgstr "Cursos E-Learning"
 
-#: lms/templates/courseware/courses.html:76
-#: lms/templates/courseware/courses.html:77 lms/templates/index.html:89
+#: lms/templates/courseware/courses.html:81
+#: lms/templates/courseware/courses.html:82 lms/templates/index.html:89
 #: lms/templates/index.html:90
 msgid "Search for a course"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:78
+#: lms/templates/courseware/courses.html:83
 #: lms/templates/header/navbar-authenticated.html:26
 #: lms/templates/index.html:93
 msgid "Search"
@@ -312,7 +312,7 @@ msgstr ""
 
 #: lms/templates/courseware/course_about.html:131
 msgid "Enrollment in this course is by invitation only"
-msgstr ""
+msgstr "Curso requiere postulación"
 
 #: lms/templates/courseware/course_about.html:133
 msgid "Enrollment is Closed"
@@ -365,80 +365,87 @@ msgctxt "self"
 msgid "enroll"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:29
+#: lms/templates/courseware/courses.html:34
 msgid "Courses"
 msgstr "Cursos"
 
-#: lms/templates/courseware/courses.html:93
+#: lms/templates/courseware/courses.html:98
 msgid "Clear All"
 msgstr "Borrar Todo"
 
-#: lms/templates/courseware/courses.html:98
+#: lms/templates/courseware/courses.html:103
 msgid "List of Courses"
 msgstr "Lista de Cursos"
 
-#: lms/templates/courseware/courses.html:137
-#: lms/templates/courseware/courses.html:138
+#: lms/templates/courseware/courses.html:142
+#: lms/templates/courseware/courses.html:143
 msgid "Refine Your Search"
 msgstr "Refinar su búsqueda"
 
-#: lms/templates/courseware/courses.html:140
+#: lms/templates/courseware/courses.html:145
 msgid "Sort by:"
 msgstr "Ordenar por:"
 
-#: lms/templates/courseware/courses.html:144
+#: lms/templates/courseware/courses.html:149
 msgid "Newer"
 msgstr "Más recientes"
 
-#: lms/templates/courseware/courses.html:150
+#: lms/templates/courseware/courses.html:155
 msgid "Older"
 msgstr "Más antiguos"
 
-#: lms/templates/courseware/courses.html:155
+#: lms/templates/courseware/courses.html:160
 msgid "Year:"
 msgstr "Año:"
 
-#: lms/templates/courseware/courses.html:170
+#: lms/templates/courseware/courses.html:175
 msgid "State:"
 msgstr "Estado:"
 
-#: lms/templates/courseware/courses.html:174
+#: lms/templates/courseware/courses.html:179
 msgid "Active"
 msgstr "Activo"
 
-#: lms/templates/courseware/courses.html:180
+#: lms/templates/courseware/courses.html:185
 msgid "Finished"
 msgstr "Finalizado"
 
-#: lms/templates/courseware/courses.html:185
+#: lms/templates/courseware/courses.html:190
 msgid "Organizations:"
 msgstr "Organizaciones:"
 
-#: lms/templates/courseware/courses.html:189
+#: lms/templates/courseware/courses.html:193
+#: lms/templates/courseware/courses.html:194
 msgid "Universität Heidelberg"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:195
+#: lms/templates/courseware/courses.html:199
+#: lms/templates/courseware/courses.html:200
 msgid "Facultad de Ciencias Físicas y Matemáticas"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:201
+#: lms/templates/courseware/courses.html:205
+#: lms/templates/courseware/courses.html:206
 msgid "Facultad de Economía y Negocios"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:207
+#: lms/templates/courseware/courses.html:211
+#: lms/templates/courseware/courses.html:212
 msgid "Facultad de Medicina"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:213
+#: lms/templates/courseware/courses.html:217
+#: lms/templates/courseware/courses.html:218
 msgid "ECBI Chile"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:219
+#: lms/templates/courseware/courses.html:223
+#: lms/templates/courseware/courses.html:224
 msgid "Centro de Ciencia del Clima y la Resiliencia (CR)^2"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:225
+#: lms/templates/courseware/courses.html:229
+#: lms/templates/courseware/courses.html:230
 msgid "Red Universitaria Nacional (REUNA)"
 msgstr ""
 
