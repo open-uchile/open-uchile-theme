@@ -102,10 +102,6 @@ from openedx.core.djangolib.markup import HTML, Text
         width: 70%;
         position: relative;
       }
-      /* To disable arrows on first and last slide */
-      .disabled{
-          display: none;
-        }
 
       /* fix blank or flashing items on carousel */
       .owl-carousel .item {
@@ -152,6 +148,9 @@ from openedx.core.djangolib.markup import HTML, Text
         display: flex;
         align-items: center;
         justify-content: center;
+      }
+      .owl-nav{
+        display: block !important;
       }
     </style>
     <!-- https://codepen.io/karan_tewari601/pen/mvvQay -->
