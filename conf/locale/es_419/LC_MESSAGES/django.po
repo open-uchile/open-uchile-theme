@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: help-open@uchile.cl\n"
-"POT-Creation-Date: 2023-08-25 18:07+0000\n"
+"POT-Creation-Date: 2023-08-28 15:07+0000\n"
 "PO-Revision-Date: 2022-07-28 20:11+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es_419\n"
@@ -188,24 +188,11 @@ msgstr ""
 msgid "Finished course"
 msgstr "Curso finalizado"
 
-#: lms/templates/course.html:48
+#: lms/templates/course.html:48 lms/templates/course_portal.html:48
 msgid "Permanently open"
 msgstr "Abierto permanentemente"
 
-#: lms/templates/course_portal.html:48 lms/templates/course_portal.html:51
-msgid "Starts"
-msgstr ""
-
-#: lms/templates/course_portal.html:48
-#: lms/templates/courseware/course_about.html:207
-msgid "Today"
-msgstr ""
-
-#: lms/templates/course_portal.html:53
-msgid "Starts: {date}"
-msgstr ""
-
-#: lms/templates/courses_list.html:54
+#: lms/templates/courses_list.html:61
 msgid "No existen cursos"
 msgstr ""
 
@@ -227,29 +214,25 @@ msgstr ""
 msgid "Privacy Policy"
 msgstr ""
 
-#: lms/templates/index.html:89
+#: lms/templates/index.html:82
 msgid "Open UChile "
 msgstr "Open UChile"
 
-#: lms/templates/index.html:90
-msgid "E-Learning "
+#: lms/templates/index.html:83
+msgid "E-Learning Platform "
 msgstr "Cursos E-Learning"
 
-#: lms/templates/index.html:91
-msgid "Platform "
-msgstr " "
-
 #: lms/templates/courseware/courses.html:76
-#: lms/templates/courseware/courses.html:77 lms/templates/index.html:97
-#: lms/templates/index.html:98
+#: lms/templates/courseware/courses.html:77 lms/templates/index.html:89
+#: lms/templates/index.html:90
 msgid "Search for a course"
 msgstr ""
 
 #: lms/templates/courseware/courses.html:78
 #: lms/templates/header/navbar-authenticated.html:26
-#: lms/templates/index.html:101
+#: lms/templates/index.html:93
 msgid "Search"
-msgstr ""
+msgstr "Buscar"
 
 #: lms/templates/main.html:192
 msgid "Skip to main content"
@@ -346,6 +329,10 @@ msgstr ""
 #: lms/templates/courseware/course_about.html:204
 msgid "Classes Start:"
 msgstr "Inicio de clases:"
+
+#: lms/templates/courseware/course_about.html:207
+msgid "Today"
+msgstr ""
 
 #: lms/templates/courseware/course_about.html:226
 msgid "Classes End:"
@@ -1669,4 +1656,16 @@ msgstr ""
 
 #~ msgid "Discover New"
 #~ msgstr ""
+
+#~ msgid "Starts"
+#~ msgstr ""
+
+#~ msgid "Starts: {date}"
+#~ msgstr ""
+
+#~ msgid "E-Learning "
+#~ msgstr "Cursos E-Learning"
+
+#~ msgid "Platform "
+#~ msgstr " "
 

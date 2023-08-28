@@ -173,7 +173,7 @@ $('.search-facets-lists button').live('click', function(e) {
     // executes when promise is resolved successfully
     list_course1.then(
         function successValue(result) {
-            console.log(result);
+            //console.log(result);
         },
     )
     // executes if there is an error
@@ -213,7 +213,7 @@ $('#filter-bar .facet-option.discovery-button').live('click', function(e) {
     // executes when promise is resolved successfully
     list_course2.then(
         function successValue(result) {
-            console.log(result);
+            //console.log(result);
             //AddBtnFilterBar(result);
         },
     )
@@ -240,7 +240,7 @@ $('#discovery-submit').live('click', function(e) {
     // executes when promise is resolved successfully
     list_course3.then(
         function successValue(result) {
-            console.log(result);
+            //console.log(result);
             AddBtnFilterBar("search_string", filters["search_string"]);
             
         },

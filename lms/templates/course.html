@@ -47,7 +47,7 @@ now = timezone.now()
       % elif course.self_paced and course.start <= now:
         <div class="course-date" aria-hidden="true">${_("Permanently open")}</div>
       % else:
-          <div class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_date_string}" data-language="${LANGUAGE_CODE}" data-string="${course_date_string}"></div>
+          <div class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_date_string}" data-language="${LANGUAGE_CODE}" data-string=""></div>
       % endif
   </div>
 </div>
