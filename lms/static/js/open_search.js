@@ -53,20 +53,20 @@ var fake_orgs = {
 	"course-v1:openuchile+M013+2023_T1":"REUNA"
 }
 var fake_filter = {
-"org": ""
+    "org": ""
 }
 var translation = {
-"Starts": "Empieza",
-"Viewing": "Mostrando",
-"courses": "cursos",
-"course": "curso",
-"Newer": "Más nuevo",
-"Older": "Más antiguo",
-"Refine Your Search": "Refinar su búsqueda",
-"Sort by:": "Ordenar por:",
-"Year:": "Año:",
-"Finished course": "Curso finalizado",
-"Permanently open": "Abierto permanentemente"
+    "Starts": "Empieza",
+    "Viewing": "Mostrando",
+    "courses": "cursos",
+    "course": "curso",
+    "Newer": "Más nuevo",
+    "Older": "Más antiguo",
+    "Refine Your Search": "Refinar su búsqueda",
+    "Sort by:": "Ordenar por:",
+    "Year:": "Año:",
+    "Finished course": "Curso finalizado",
+    "Permanently open": "Abierto permanentemente"
 }
 $(window).load(function() {
     /*if(document.documentElement.lang == "es-419" ){
@@ -122,6 +122,7 @@ function getData(){
         $('#list-courses li.courses-listing-item.open_org_'+fake_filter.org).each(function( index ) {
         $( this ).clone().appendTo("#list-courses_orgs");
         });
+        $('#list-courses_orgs').show();
     }
     currentTotal = currentTotal + data.results.length;
     if (data.total > currentTotal){
