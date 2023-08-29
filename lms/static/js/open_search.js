@@ -366,7 +366,9 @@ function cleanCourses(){
     currentTotal = 0;
     state = 1;
     $("#discovery-message").text("");
+    $("#list-courses").empty();
     $('#list-courses').show();
-    $("#list-courses").html('')
+    $('#list-courses_orgs').hide();
+    $("#list-courses_orgs").empty();
 }
 })
