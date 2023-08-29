@@ -158,15 +158,16 @@ $('.search-facets-lists button').live('click', function(e) {
     if ( $('#active-filters').children().length == 0 ) $('#filter-bar').addClass("is-collapsed");
     }
     if(facet == "open_org"){
-    if (add_btn) {
-        $('#list-courses').hide();
-        $('#list-courses li.courses-listing-item.open_org_'+$(this).data("value")).each(function( index ) {
-        $( this ).clone().appendTo("#list-courses_orgs");
-        });
-    }
-    else {
-        $('#list-courses').show();
-    }
+        if (add_btn) {
+            $('#list-courses').hide();
+            $('#list-courses_orgs').show();
+            $('#list-courses li.courses-listing-item.open_org_'+$(this).data("value")).each(function( index ) {
+            $( this ).clone().appendTo("#list-courses_orgs");
+            });
+        }
+        else {
+            $('#list-courses').show();
+        }
     }
     else{
     let list_course1 = getCourses();
