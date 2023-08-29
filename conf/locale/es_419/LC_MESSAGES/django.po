@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: help-open@uchile.cl\n"
-"POT-Creation-Date: 2023-08-28 23:44+0000\n"
+"POT-Creation-Date: 2023-08-29 17:08+0000\n"
 "PO-Revision-Date: 2022-07-28 20:11+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es_419\n"
@@ -311,8 +311,8 @@ msgid "Course is full"
 msgstr ""
 
 #: lms/templates/courseware/course_about.html:131
-msgid "Enrollment in this course is by invitation only"
-msgstr "Curso requiere postulación"
+msgid "Curso requiere postulación"
+msgstr ""
 
 #: lms/templates/courseware/course_about.html:133
 msgid "Enrollment is Closed"
@@ -447,6 +447,215 @@ msgstr ""
 #: lms/templates/courseware/courses.html:229
 #: lms/templates/courseware/courses.html:230
 msgid "Red Universitaria Nacional (REUNA)"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:71
+msgid "Course details"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:76
+msgid "{course_number} {course_name} Home Page"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:80
+#: lms/templates/dashboard/_dashboard_course_listing.html:85
+msgid "{course_number} {course_name} Cover Image"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:90
+msgid "Enrolled as: "
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:116
+msgid "Coming Soon"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:122
+msgid "Ended - {date}"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:125
+msgid "Started - {date}"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:131
+#: lms/templates/dashboard/_dashboard_course_listing.html:135
+msgid "Starts - {date}"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:146
+msgid "for {course_display_name}"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:154
+msgid "You must select a session by {expiration_date} to access the course."
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:156
+msgid "You must select a session to access the course."
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:169
+msgid "Change or Leave Session"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:177
+msgid "You can no longer change sessions."
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:179
+msgid "You can change sessions until {entitlement_expiration_date}."
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:189
+msgid "View Archived Course"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:209
+#: lms/templates/dashboard/_dashboard_course_listing.html:231
+msgid "¡Te invito a matricularte a este curso! {course_name}"
+msgstr "I invite you to enroll in this course! {course_name}"
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:212
+msgid "Share {course_name} on Facebook"
+msgstr "Compartir {course_name} en Facebook"
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:215
+#: lms/templates/dashboard/_dashboard_course_listing.html:221
+msgid "Share on Facebook"
+msgstr "Compartir en Facebook"
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:234
+msgid "Share {course_name} on Twitter"
+msgstr "Compartir {course_name} en Twitter"
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:237
+#: lms/templates/dashboard/_dashboard_course_listing.html:243
+msgid "Share on Twitter"
+msgstr "Compartir en Twitter"
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:253
+msgid "¡Te invito a matricularte a este curso! {course_name} {url}"
+msgstr "I invite you to enroll in this course! {course_name} {url}"
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:255
+msgid "Share {course_name} on Linkedin"
+msgstr "Compartir {course_name} en Linkedin"
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:258
+#: lms/templates/dashboard/_dashboard_course_listing.html:264
+msgid "Share on Linkedin"
+msgstr "Compartir en Linkedin"
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:282
+msgid "Course options for"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:289
+msgid "Available Actions"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:302
+msgid "Unenroll"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:308
+msgid ""
+"You are enrolled by your institution and you should reach out to your "
+"institution to drop this course."
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:314
+msgid "Email Settings"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:353
+msgid "Related Programs"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:382
+msgid "Verification not yet complete."
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:383
+msgid "You only have {days} day left to verify for this course."
+msgid_plural "You only have {days} days left to verify for this course."
+msgstr[0] ""
+msgstr[1] ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:389
+msgid "Almost there!"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:390
+msgid "You still need to verify for this course."
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:394
+msgid "Verify Now"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:397
+msgid "You have submitted your verification information."
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:398
+msgid ""
+"You will see a message on your dashboard when the verification process is"
+" complete (usually within 5-7 days)."
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:400
+msgid "Your current verification will expire soon!"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:401
+msgid ""
+"You have submitted your reverification information. You will see a "
+"message on your dashboard when the verification process is complete "
+"(usually within 5-7 days)."
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:403
+msgid "You have successfully verified your ID with edX"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:405
+msgid "Your current verification is effective until {date}."
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:408
+msgid "Your current verification will expire soon."
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:411
+msgid ""
+"Your current verification will expire in {days} days. {start_link}Re-"
+"verify your identity now{end_link} using a webcam and a government-issued"
+" photo ID."
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:426
+msgid ""
+"Pursue a {cert_name_long} to highlight the knowledge and skills you gain "
+"in this course."
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:428
+msgid ""
+"It's official. It's easily shareable. It's a proven motivator to complete"
+" the course. {line_break}{link_start}Learn more about the verified "
+"{cert_name_long}{link_end}."
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:448
+msgid "Upgrade to Verified"
+msgstr ""
+
+#: lms/templates/dashboard/_dashboard_course_listing.html:462
+msgid ""
+"You must successfully complete {link_start}{prc_display}{link_end} before"
+" you begin this course."
 msgstr ""
 
 #: lms/templates/emails/failed_verification_email.txt:4
@@ -1675,4 +1884,7 @@ msgstr ""
 
 #~ msgid "Platform "
 #~ msgstr " "
+
+#~ msgid "Enrollment in this course is by invitation only"
+#~ msgstr "Curso requiere postulación"
 

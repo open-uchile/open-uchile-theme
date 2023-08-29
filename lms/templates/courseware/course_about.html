@@ -63,7 +63,7 @@ now = timezone.now()
 
 <script>
   function show_default_image() {
-    return "${static.url('eol-uchile-2020/images/default-course.jpg')}";
+    return "${static.url('open-uchile-theme/images/default-course.jpg')}";
   }
 </script>
 <style>
@@ -128,7 +128,7 @@ now = timezone.now()
           % elif is_course_full:
             <button class="btn my-auto pt-2 enroll-button" disabled>${_("Course is full")}</button>
           % elif invitation_only and not can_enroll:
-            <button class="btn my-auto pt-2 enroll-button" disabled>${_("Enrollment in this course is by invitation only")}</button>
+            <button class="btn my-auto pt-2 enroll-button" disabled>${_("Curso requiere postulación")}</button>
           % elif not is_shib_course and not can_enroll:
             <button class="btn my-auto pt-2 enroll-button" disabled>${_("Enrollment is Closed")}</button>
           %elif allow_anonymous:
