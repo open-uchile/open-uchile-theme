@@ -43,6 +43,7 @@ from common.djangoapps.status.status import get_site_status_msg
     catch(e){window.attachEvent("onload", $buo_f)}
   </script>
 % endif
+
 <%
 banner_messages = list(PageLevelMessages.user_messages(request))
 
@@ -78,8 +79,9 @@ if site_status_message:
         % endif
     %endfor    
 %endif
+
 <img class="uchile-separator" src="${static.url('open-uchile-theme/images/uchile_separator.png')}" alt="">
-<nav class="navbar navbar-expand-lg navbar-light px-3" >
+<nav id="open-navbar" class="navbar navbar-expand-lg navbar-light px-3" >
     <div class="container-fluid">
         % if use_cookie_banner:
             ${static.renderReact(

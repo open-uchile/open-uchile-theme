@@ -45,12 +45,12 @@ now = timezone.now()
           <div class="course-date" aria-hidden="true">${_("Finished course")}</div>
       % elif course_start is not None:
         %if course["self_paced"] and course_start <= now:
-          <div class="course-date localized_datetime" aria-hidden="true" data-language="${LANGUAGE_CODE}" data-string='${_("Starts")}:${_("Today")}'></div>
+          <div class="course-date localized_datetime" aria-hidden="true" data-language="${LANGUAGE_CODE}" data-string='${_("Permanently open")}'></div>
        % else:
             %if "start_display" in course and course['start_display'] is not None:
-                <div class="course-date localized_datetime" aria-hidden="true" data-language="${LANGUAGE_CODE}" data-string='${_("Starts")}:${course["start_display"]}'></div>
+                <div class="course-date localized_datetime" aria-hidden="true" data-language="${LANGUAGE_CODE}" data-string='${course["start_display"]}'></div>
             %else:
-                <div class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_start}" data-language="${LANGUAGE_CODE}" data-string="${_("Starts: {date}")}"></div>
+                <div class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_start}" data-language="${LANGUAGE_CODE}" data-string=""></div>
             %endif
        % endif
       % endif

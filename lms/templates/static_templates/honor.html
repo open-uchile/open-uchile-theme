@@ -1,0 +1,153 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">Términos y Condiciones</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <style>
+        h2{
+            font-weight: bold;
+            color: #000;
+        }
+    </style>
+    <section class="container about">
+        <h1>
+            <%block name="pageheader">Términos y Condiciones</%block>
+        </h1>
+        <p>
+            La plataforma de aprendizaje OpenUChile busca proporcionar acceso personas de todo el mundo a cursos desarrollados por la Universidad de Chile, por sí sola o en colaboración con otras universidades e instituciones del mundo, ofreciendo a los participantes una experiencia educativa de excelencia en modalidad online.  
+        </p>
+        <p>
+            Para participar en cursos y programas de OpenUChile, usted debe aceptar el Código de Honor que aparece a continuación y cualquier término adicional específico de un curso o programa.  
+        </p>
+        <p>
+            Este Código de Honor y los términos adicionales, estarán públicos en la plataforma de manera permanente.  
+        </p>
+        <ol type = "1">
+            <li>
+                <h2>Código de Honor </h2>
+                <p>
+                    Al inscribirme en un curso o programa de OpenUChile, me comprometo con: 
+                </p>
+                <ol type = "1">
+                    <li>No compartir la clave de acceso con terceras personas, ni difundir información de otros participantes de la plataforma fuera de ésta. </li>
+                    <li>No ingresar información falsa o imprecisa en ninguna de las componentes de la plataforma. </li>
+                    <li>Mantener un ambiente de respeto y tolerancia en la comunicación con otros usuarios. </li>
+                    <li>Mantener actualizada mi información de perfil y participar en encuestas o evaluaciones de la plataforma.</li>
+                    <li>No realizar actividades deshonestas que incidan en mi participación, o que perjudiquen a otros participantes. </li>
+                    <li>Respetar las instrucciones y participar de forma honesta en todas las actividades de la plataforma. </li>
+                    <li>Compartir únicamente material que tenga permiso explícito para compartir o que esté bajo licencias de uso libre. Si la información compartida es de terceros, debe citarse según establezca su licencia de uso. </li>
+                    <li>Respetar la propiedad intelectual de otros usuarios y no plagiar su trabajo. </li>
+                    <li>Notificar al equipo de soporte técnico si se detectan problemas técnicos o de seguridad en la plataforma. De igual forma, notificar inmediatamente cualquier actividad sospechosa o fraudulenta que se detecte en la plataforma.</li>
+                </ol>
+            </li>
+            <li>
+                <p><h2>Infracciones al Código de Honor</h2></p>
+                <p>
+                    Si se descubre que ha infringido las condiciones del servicio o el Código de Honor, podrá ser objeto de una o más de las siguientes acciones: 
+                </p>
+                <ul style="list-style-type: '- '">
+                    <li>
+                        Recibir un cero o ningún crédito por una tarea; 
+                    </li>
+                    <li>
+                        La retención o revocación de cualquier certificado obtenido en el curso o programa; 
+                    </li>
+                    <li>
+                        Ser dado de baja de un curso o programa; o 
+                    </li>
+                    <li>
+                        Ser dado de baja como usuario de la plataforma OpenUChile. 
+                    </li>
+                    <li>
+                        La Universidad de Chile y las instituciones asociadas se reservan el derecho de tomar acciones adicionales. 
+                    </li>
+                </ul>
+                <p>
+                    En caso de aplicación de cualquiera de las acciones mencionadas, <b>no se emitirán reembolsos</b> por los pagos que pueda haber realizado el participante. 
+                </p>
+                <p>
+                    Las violaciones del Código de Honor serán determinadas a la sola discreción de la Universidad de Chile. Se le notificará si se ha determinado que usted ha violado este Código de Honor y se le informará de la acción correspondiente que se tomará como resultado de la violación. 
+                </p>
+            </li>
+            <li>
+                <p><h2>Política de Pagos y Devolución  </h2></p>
+                <p>
+                    La plataforma OpenUChile dispondrá de dos medios de pago para la recaudación de las compras de cursos y programas educativos: 
+                </p>
+                <ul style="list-style-type: '- '">
+                    <li>
+                        WebPay: para tarjetas de débito y crédito emitidas en Chile. 
+                    </li>
+                    <li>
+                        PayPal: para pagos con entidades bancarias extranjeras. 
+                    </li>
+                </ul>
+                <p>
+                    Para otras contrataciones de instancias formativas presentes en OpenUChile, que impliquen convenios corporativos o Mercado Público, deberán ser tramitadas por la unidad académica responsable y la Oficina de Educación Online de la Universidad de Chile. Para iniciar el procedimiento, deberá comunicarse con la Mesa de Ayuda de OpenUChile, a través del enlace <a href="https://open.uchile.cl/contact_form">https://open.uchile.cl/contact_form</a> . 
+                </p>
+                <p>
+                    Los precios, condiciones y fechas para el pago de los cursos y programas formativos ofertados por OpenUChile dependerán de las condiciones establecidas por las unidades académicas que imparten dichas instancias, sin perjuicio de las que la legislación chilena establece.  
+                </p>
+                <p>
+                    Para compras realizadas a la Universidad de Chile fuera de esta plataforma, por inscripción de cursos y programas que se encuentran en OpenUChile, aplicará la política de pagos y reembolsos determinada por la unidad académica responsable de la impartición, quienes deberán informar sus políticas de pagos y reembolsos. Ante cualquier eventualidad, el estudiante deberá realizar las consultas al personal responsable de dichas entidades. 
+                </p>
+                <p>
+                    En los casos en que corresponda la realización de un reembolso, estos se abonarán a la cuenta bancaria que la persona informe durante el proceso y pueden tardar hasta 60 días en procesarse. Para iniciar el procedimiento, el estudiante deberá comunicarse con la Mesa de Ayuda de OpenUChile, a través del enlace <a href="https://open.uchile.cl/contact_form">https://open.uchile.cl/contact_form</a> . 
+                </p>
+                <p>
+                    La Universidad de Chile no realizará reembolsos cuando ocurra alguna de las siguientes situaciones, (independiente si se dan dentro de los 10 días corridos posterior a la compra): 
+                </p>
+                <ul style="list-style-type: '- '">
+                    <li>
+                        La certificación del curso o programa formativo ya se haya emitido.
+                    </li>
+                    <li>
+                        Se completaron todas las actividades de evaluación del curso o programa formativo. 
+                    </li>
+                    <li>
+                        Se manifieste insatisfacción con la calificación final, o bien esta sea reprobatoria. 
+                    </li>
+                    <li>
+                        Existan infracciones al Código de Honor. 
+                    </li>
+                    <li>
+                        Solicita el reembolso fuera del periodo establecido por dicho curso o programa. 
+                    </li>
+                </ul>
+                <p>
+                    Salvo que la unidad académica lo declare explícitamente en sus políticas de pagos y reembolsos, se considerarán periodos válidos para solicitud de reembolso: 
+                </p>
+                <ul style="list-style-type: '- '">
+                    <li>
+                        <b>Periodo de retracto legal:</b> 10 días corridos desde la fecha de pago (inclusive), en cuyo caso la devolución se realizará por un monto equivalente al 100% del valor pagado.  
+                    </li>
+                    <li>
+                        <b>Periodo de retracto adicional:</b> Entre el día 11 desde la fecha de pago, hasta el día en que se cumpla el 50% del calendario de la instancia formativa (ambas fechas inclusive). La devolución se realizará por un monto igual al 80% del valor pagado, cobrándose una multa de 20% por costos administrativos y transaccionales. 
+                    </li>
+                </ul>
+                <p>
+                    No se realizarán reembolsos en aquellas instancias formativas que superen el 50% de avance en su calendario lectivo, al momento de haber realizado la solicitud. 
+                </p>
+            </li>
+            <li>
+                <p><h2>Cancelaciones de Cursos y Programas </h2></p>
+                <p>
+                    La Universidad de Chile se reserva el derecho de suspender la realización de los cursos y programas formativos si no cuentan con el mínimo de alumnos requeridos, o por motivos de fuerza mayor. En tal caso, se reembolsará a los inscritos la totalidad del dinero pagado en un plazo aproximado de 20 días hábiles a través de las cuentas bancarias informadas u otros mecanismos alternativos. 
+                </p>
+            </li>
+            <li>
+                <p><h2>Modificaciones a los Términos y Condiciones </h2></p>
+                <p>
+                    Informamos a usted que podemos hacer cambios en estos términos y condiciones, que se comunicarán debidamente para que actualice su acuerdo con ellos. Cualquier cambio será efectivo inmediatamente después de su publicación en esta página, con una fecha de vigencia actualizada. Al acceder al Sitio OpenUChile después de que se haya realizado cualquier cambio, usted manifiesta su acuerdo sobre una base prospectiva con los Términos y Condiciones modificados y cualquier cambio contenido en el mismo.  
+                </p>
+                <p>
+                    Asegúrese de volver a esta página periódicamente para familiarizarse con la versión más actualizada de estos Términos y Condiciones. 
+                </p>
+            </li>
+        </ol>
+        
+        
+    </section>
+</main>

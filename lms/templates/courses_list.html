@@ -10,19 +10,58 @@
   platforms_name = get_platform_names()
 %>
 <style>
+.course-title-container{
+  background: #00bcfc;
+  padding: 2px 20px;
+  display: flex;
+}
   .course-tittle {
-    background: #00bcfc;
+    /*background: #00bcfc;*/
     font-size: 24px;
     color: #fff;
     text-align: center;
     font-weight: 1000;
     font-family: 'Exo 2', sans-serif;
-    margin: 32px 0 0;
+    /*margin: 32px 0 0;*/
     text-transform: uppercase;
-    display: inline-block;
-    padding: 2px 20px;
+    display: contents;
+    /*padding: 2px 20px;*/
 }
 </style>
+<%! from lms.djangoapps.course_info.helpers import get_course_class %>
+% if settings.FEATURES.get('SHOW_COURSES_BY_CLASS'):
+<%  cats,course_class = get_course_class(courses) %>
+  %for categ in cats:
+    %if (categ['show_opt'] == 2 or (categ['show_opt'] == 1 and len(course_class[categ['id']]['courses']) > 0)):
+      <section class="courses-container courses-spanish">
+        <div class="course-title-container">
+          <h2 class="course-tittle">${categ['name'].capitalize()}</h2> 
+        </div>
+        <section class="highlighted-courses" style="padding-top: 25px;">
+          % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
+            <section class="row courses-list">
+              <!-- Agregar if para diferenciar cursos en ingles/español -->
+              %for course in course_class[categ['id']]['courses']:
+                %if course.end is not None and course.end > now:
+                  <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4">
+                    <%include file="course.html" args="course=course" />
+                  </div>
+                %elif course.end is None:
+                  <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4">
+                    <%include file="course.html" args="course=course" />
+                  </div>
+                %endif
+              %endfor
+            </section>
+          % endif
+        </section>
+      </section>
+    %endif
+    %if (categ['show_opt'] == 2 and len(course_class[categ['id']]['courses']) == 0):
+      <p class="without-courses"> ${_("No existen cursos")}</p>
+    %endif
+  %endfor
+%else:
 <section class="courses-container">
   <section class="highlighted-courses" style="padding-top: 25px;">
     % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
@@ -63,11 +102,13 @@
     % endif
   </section>
 </section>
-
+% endif
 %for platform in courses_portal_api:
   % if len(courses_portal_api[platform]) > 0:
     <section class="courses-container courses-spanish">
-      <h2 class="course-tittle">${platforms_name[platform]}</h2>
+      <div class="course-title-container">
+        <h2 class="course-tittle">${platforms_name[platform]}</h2>
+      </div>
       <section class="highlighted-courses" style="padding-top: 25px;">
         % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
           <section class="row courses-list">

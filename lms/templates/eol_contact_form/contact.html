@@ -19,7 +19,7 @@ data = context.get('data', None)
                 <p class="text-center mt-0 pt-0 text-muted">${_("Fill out the form and our help desk will contact you shortly.")}</p>
             </div>
             <div class="contact-card col-11 col-md-10 col-lg-8 mx-auto shadow-lg px-5 py-4 mt-2 mb-5 bg-white rounded-lg">
-                <p class="contact-availability mt-0 text-right text-muted"><small>${_("Help desk hours (GMT-3): from 09:00 until 18:00 (Monday - Friday)")}</small></p>
+                <p class="contact-availability mt-0 text-right text-muted"><small>${_("Help desk hours (GMT-4): from 09:00 until 18:00 (Monday - Friday)")}</small></p>
                 <form method="POST">
                     % if context.get('send_email_error', None):
                     <div class="alert error">

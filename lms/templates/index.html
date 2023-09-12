@@ -15,34 +15,359 @@ from openedx.core.djangolib.markup import HTML, Text
   }
   .title-1 {
       position: absolute;
-      top: 32%;
+      top: 26%;
       left: 232px;
       font-size: 5.1vw;
       font-weight: 100;
   }
   .title-2 {
       position: absolute;
-      top: 52%;
+      top: 46%;
       left: 232px;
       font-size: 5.1vw;
       font-weight: bold;
   }
-  .title-3 {
-      position: absolute;
-      top: 72%;
-      left: 232px;
-      font-size: 5.1vw;
-      font-weight: 100;
+  #main .course-search .search-input {
+      border: 2px solid #c8c8c8;
+      border-radius: 3px;
+      box-shadow: none;
+      width: 350px;
+      height: 55px;
+      color: #000;
+      font-style: normal;
+      font-weight: normal;
+  }
+  #main .course-search .search-button {
+    z-index: 100;
+    -webkit-border-top-left-radius: 1px;
+    -moz-border-topleft-radius: 1px;
+    border-top-left-radius: 1px;
+    -webkit-border-top-right-radius: 3px;
+    -moz-border-topright-radius: 3px;
+    border-top-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    -moz-border-bottomright-radius: 3px;
+    border-bottom-right-radius: 3px;
+    -webkit-border-bottom-left-radius: 1px;
+    -moz-border-bottomleft-radius: 1px;
+    border-bottom-left-radius: 1px;
+    position: absolute;
+    border: 2px solid #1790c7;
+    box-shadow: none;
+    background: #009ee7;
+    padding: 0 14px;
+    height: 55px;
+    color: #fff;
+    text-shadow: none;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .course-search{
+    margin-top: 20px;
+    width: 350px;
+    height: 55px;
+    margin-right: 70px;
+    float: right;
   }
 </style>
+<%block name="header_extras">
+<link rel="stylesheet" href="${static.url('open-uchile-theme/owlcarousel/owl.carousel.min.css')}">
+<link rel="stylesheet" href="${static.url('open-uchile-theme/owlcarousel/owl.theme.default.min.css')}">
+<script type="text/javascript" src="${static.url('open-uchile-theme/owlcarousel/owl.carousel.min.js')}"></script>
+
+</%block>
 <section class="container-fluid px-0" id="main">
   <div class="container-center">
     <img src="${static.url('open-uchile-theme/images/banner-01-bg.jpg')}" class="mx-auto openuchile-header d-block">
       <div class="title-1">${_("Open UChile ")}</div>
-      <div class="title-2">${_("E-Learning ")}</div>
-      <div class="title-3">${_("Platform ")}</div>
+      <div class="title-2">${_("E-Learning Platform ")}</div>
   </div>
   <img class="uchile-separator" src="${static.url('open-uchile-theme/images/uchile_separator.png')}" alt="">
+  % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+    <!--div class="course-search">
+      <form method="get" action="/courses">
+        <label><span class="sr">${_("Search for a course")}</span>
+          <input class="search-input" name="search_query" type="text" placeholder="${_("Search for a course")}"></input>
+        </label>
+        <button class="search-button" type="submit">
+          <span class="icon fa fa-search" aria-hidden="true"></span><span class="sr">${_("Search")}</span>
+        </button>
+      </form>
+    </div-->
+    <style>
+      .carousel-wrap {
+        margin-right: auto;
+        margin-left: auto;
+        padding: 1% 5%;
+        width: 70%;
+        position: relative;
+      }
+
+      /* fix blank or flashing items on carousel */
+      .owl-carousel .item {
+        position: relative;
+        z-index: 100; 
+        -webkit-backface-visibility: hidden; 
+        
+      }
+      .owl-carousel .owl-item {
+        width: 316px !important;
+      }
+      @media (min-width: 600px) {
+        .owl-carousel .owl-item {
+          width: 231px !important;
+        }
+      }
+      @media (min-width: 933px) {
+        .owl-carousel .owl-item {
+          width: 180px !important;
+        }
+      }
+      /* end fix */
+      .owl-nav > button, .owl-nav > button:active, .owl-nav > button:focus{
+        border-radius: 0;
+        box-shadow: none;
+        margin-top: -38px;
+        position: absolute;
+        top: 50%;
+        color: #cdcbcd !important;
+        text-shadow: none !important;
+      }
+
+      .owl-nav i {
+        font-size: 52px;
+      }
+      .owl-nav .owl-prev {
+        left: -30px;
+      }
+
+      .owl-nav .owl-next {
+        right: -30px;
+      }
+      .owl-carousel .owl-stage {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .owl-nav{
+        display: block !important;
+      }
+    </style>
+    <!-- https://codepen.io/karan_tewari601/pen/mvvQay -->
+    <div style="width:100%;display: flex;box-shadow: 0px 4px 8px 2px rgb(0 0 0 / 20%);background: white;">
+      <div class="carousel-wrap">
+        <div class="owl-carousel">
+          <div class="item"><img src="${static.url('open-uchile-theme/images/2023/MEDICINA.png')}"></div>
+          <div class="item"><img src="${static.url('open-uchile-theme/images/2023/uchile-IE.png')}"></div>
+          <div class="item"><img src="${static.url('open-uchile-theme/images/2023/uabierta.png')}"></div>
+          <div class="item"><img src="${static.url('open-uchile-theme/images/2023/reuna.png')}"></div>
+          <div class="item"><img src="${static.url('open-uchile-theme/images/2023/FCFM.png')}"></div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- https://codepen.io/smashingmag/pen/LYWBgXy -->
+    <!--style>
+      .filter-class{
+        margin-right: auto;
+        margin-left: auto;
+        width: fit-content;
+      }
+      /*#filter-button{
+        height:100%;
+        display: flex;
+        width: 20px;
+        align-items: center;
+      }*/
+      .filters {
+        width: 250px;
+        box-shadow: 0 0 0.5em 0 rgba(0,0,0,0.3);
+        position: absolute;
+        right: calc(50% - 125px);
+        margin-top: -60px;
+        z-index: 1000;
+        /*backdrop-filter: blur(2px);*/
+        background: #ffffffad;
+        padding: 0.5em;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 30px;
+        color: #515151;
+      }
+      .filters__list{
+        list-style: none;
+        padding: 0;
+      }
+      .filters__list li {
+        display: flex;
+        align-items: center;
+        user-select: none;
+        margin-bottom: 1em;
+        padding-left: 5px;
+        line-height: 0;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0 0.5em 0 rgba(0,0,0,0.3);
+      }
+      .filters__list li:last-child {
+        padding-bottom: 0;
+      }
+
+      input[type="checkbox"] {
+        margin-right: 0.5em;
+      }
+
+      .filters:not(.filters--active) {
+        display: none;
+      }
+      @media screen and (min-width: 600px) {
+        .filters {
+          right: 50%;
+        }
+      }
+      @media screen and (min-width: 992px) {
+        .filter-class{
+          position: absolute;
+          right: 80px;
+          margin-top: -175px;
+        }
+        .filters {
+          right: 5px;
+        }
+      }
+      .filters hr{
+        border-top: 2px solid #515151;
+        margin-top: 5px;
+      }
+      .checkbox-round {
+        width: 1.3em;
+        height: 1.3em;
+        background-color: white;
+        border-radius: 50%;
+        vertical-align: middle;
+        border: 1px solid #172c6b;
+        appearance: none;
+        -webkit-appearance: none;
+        outline: none;
+        cursor: pointer;
+      }
+
+      .checkbox-round:checked {
+        background-color: #172c6b;
+      }
+    </style>
+    <div class="filter-class">
+      <div id="filter-button">
+        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+          <path d="M496 384H160v-16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v16H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h80v16c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-16h336c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm0-160h-80v-16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v16H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h336v16c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-16h80c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm0-160H288V48c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v16H16C7.2 64 0 71.2 0 80v32c0 8.8 7.2 16 16 16h208v16c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-16h208c8.8 0 16-7.2 16-16V80c0-8.8-7.2-16-16-16z"/>
+        </svg>
+      </div>
+      <div id="filter-container" class="filters">
+        Filtrar por
+        <hr>
+        <ul class="filters__list">
+          <li>
+            <input id="newer" name="newer" type="checkbox" class="checkbox-round" />
+            <label for="newer">Mas recientes</label>
+          </li>
+          <li>
+            <input id="older" name="older" type="checkbox" class="checkbox-round" />
+            <label for="older">Mas antiguos</label>
+          </li>
+          <li>
+            <input id="f3" type="checkbox" class="checkbox-round" />
+            <label for="f3">Filter 3</label>
+          </li>
+          <li>
+            <input id="f4" type="checkbox" class="checkbox-round" />
+            <label for="f4">Filter 4</label>
+          </li>
+          <li>
+            <input id="f5" type="checkbox" class="checkbox-round" />
+            <label for="f5">Filter 5</label>
+          </li>
+        </ul>
+        <button id="btn-filter">Aplicar</button>
+      </div>
+    </div-->
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.owl-carousel').owlCarousel({
+          loop: true,
+          margin: 40,
+          nav: true,
+          autoWidth: true,
+          slideTransition: 'linear',
+          autoplayTimeout: 3000,
+          autoplaySpeed: 3000,
+          navText: [
+            "<i class='fa fa-caret-left'></i>",
+            "<i class='fa fa-caret-right'></i>"
+          ],
+          autoplay: true,
+          autoplayHoverPause: true,
+          responsive: {
+            0: {
+              items: 1
+            },
+            600: {
+              items: 2
+            },
+            1000: {
+              items: 4
+            },
+            1500: {
+              items: 5
+            }
+          },
+        })
+      });
+      /*
+      var button = document.getElementById("filter-button");
+      var container = document.getElementById("filter-container");
+      var input = document.querySelectorAll("input");
+
+      button.onclick = function (e) {
+        e.stopPropagation();
+        if (container.classList.contains("filters--active")) {
+          container.classList.remove("filters--active");
+        } else {
+          container.classList.add("filters--active");
+        }
+      };
+
+      container.onclick = function (e) {
+        e.stopPropagation();
+      };
+
+      window.onclick = function () {
+        container.classList.remove("filters--active");
+      };
+
+      console.log(input);
+
+      for (var i = 0; i < input.length; i++) {
+        var currentInput = input[i];
+
+        currentInput.onclick = function () {
+          var isChecked = false;
+          for (var j = 0; j < input.length; j++) {
+            if (input[j].checked) {
+              isChecked = true;
+              break;
+            }
+          }
+
+          if (isChecked) {
+            button.classList.add("button--highlight");
+          } else {
+            button.classList.remove("button--highlight");
+          }
+        };
+      }
+      */
+    </script>
+  % endif
   <div class="container px-3">
     <%include file="${courses_list}" />
   </div>
@@ -54,6 +379,14 @@ from openedx.core.djangolib.markup import HTML, Text
          if(getParameterByName('next')) {
               $('#login').trigger("click");
          }
+         /*$('#btn-filter').bind('click', function(e) {
+            let newer = $('#newer').is(":checked");
+            let older = $('#older').is(":checked");
+            let order_by = 'false'
+            if (newer) order_by = 'newer';
+            if (older) order_by = 'older';
+           
+        });*/
       })
    </script>
 </%block>

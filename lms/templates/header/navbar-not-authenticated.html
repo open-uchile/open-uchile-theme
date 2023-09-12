@@ -13,10 +13,30 @@ from django.utils.translation import ugettext as _
 
 <%
   allows_login = not settings.FEATURES['DISABLE_LOGIN_BUTTON'] and not combined_login_and_register
+  courses_are_browsable = settings.FEATURES.get('COURSES_ARE_BROWSABLE')
 %>
-
 <div class="collapse navbar-collapse pt-3" id="navbar">
+  % if courses_are_browsable:
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item my-auto mx-4">
+          <a class="nav-link my-auto ${'active ' if '/courses' == request.path else ''}" href="/courses">${_('Explore courses')}</a>
+      </li>
+    </ul>
+  %endif
   <ul class="navbar-nav ml-auto">
+    % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+    <li class="nav-item my-auto mx-4">
+        <div class="search-container">
+            <form action="/courses" method="get">
+              <input class="search expandright" id="searchright" type="search" name="search_query" placeholder="Search">          
+              <button class="searchbutton" type="submit" for="searchright">
+                <span class="mglass">&#9906;</span>
+              </button>
+            </form>
+        </div>
+    </li>
+    
+    % endif
     <li class="nav-item my-auto mx-4">
         <a class="nav-link my-auto ${'active ' if '/about' == request.path else ''}" href="/about">${_('About')}</a>
     </li>

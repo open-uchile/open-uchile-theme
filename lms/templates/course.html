@@ -43,11 +43,11 @@ now = timezone.now()
       % if course.end is not None and now is not None and course.end < now:
         <div class="course-date" aria-hidden="true">${_("Finished course")}</div>
       % elif course.advertised_start is not None:
-        <div class="course-date" aria-hidden="true">${_("Starts")}: ${course.advertised_start}</div>
+        <div class="course-date" aria-hidden="true">${course.advertised_start}</div>
       % elif course.self_paced and course.start <= now:
-        <div class="course-date" aria-hidden="true">${_("Starts")}: ${_("Today")}</div>
+        <div class="course-date" aria-hidden="true">${_("Permanently open")}</div>
       % else:
-          <div class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_date_string}" data-language="${LANGUAGE_CODE}" data-string="${_("Starts: {date}")}"></div>
+          <div class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_date_string}" data-language="${LANGUAGE_CODE}" data-string=""></div>
       % endif
   </div>
 </div>

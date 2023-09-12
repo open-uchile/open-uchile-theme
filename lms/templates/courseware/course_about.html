@@ -55,6 +55,7 @@ now = timezone.now()
   </script>
 
   <script src="${static.url('js/course_info.js')}"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </%block>
 
 <%block name="pagetitle">${course.display_name_with_default}</%block>
@@ -62,7 +63,7 @@ now = timezone.now()
 
 <script>
   function show_default_image() {
-    return "${static.url('eol-uchile-2020/images/default-course.jpg')}";
+    return "${static.url('open-uchile-theme/images/default-course.jpg')}";
   }
 </script>
 <style>
@@ -127,7 +128,7 @@ now = timezone.now()
           % elif is_course_full:
             <button class="btn my-auto pt-2 enroll-button" disabled>${_("Course is full")}</button>
           % elif invitation_only and not can_enroll:
-            <button class="btn my-auto pt-2 enroll-button" disabled>${_("Enrollment in this course is by invitation only")}</button>
+            <button class="btn my-auto pt-2 enroll-button" disabled>${_("Curso requiere postulación")}</button>
           % elif not is_shib_course and not can_enroll:
             <button class="btn my-auto pt-2 enroll-button" disabled>${_("Enrollment is Closed")}</button>
           %elif allow_anonymous:
@@ -177,9 +178,9 @@ now = timezone.now()
     <div class="row info-row my-3 rounded">
       <%
         course_start_date = 'None'
+        aux_start_date = False
         if not course.start_date_is_still_default:
           course_start_date = course.advertised_start or course.start
-          aux_start_date = False
           if not isinstance(course_start_date, string_types):
             aux_start_date = True
             course_start_date = course_start_date.strftime('%Y-%m-%dT%H:%M:%S%z')
@@ -208,7 +209,7 @@ now = timezone.now()
                   <span class="important-dates-item-text start-date localized_datetime" data-format="shortDate" data-datetime="${course_start_date}" data-language="${LANGUAGE_CODE}"></span>
                 %endif
               %else:
-                <span class="important-dates-item-text start-date localized_datetime" data-format="shortDate" data-datetime="${course_start_date}" data-language="${LANGUAGE_CODE}"></span>
+                <span class="important-dates-item-text start-date localized_datetime" data-language="${LANGUAGE_CODE}">${course_start_date}</span>
               %endif
             </span>
           </div>
@@ -237,7 +238,12 @@ now = timezone.now()
           <div class="col-7 text-left pt-1 pl-0">
             <span class="important-dates-item-title">
               ${_("Price:")}</br>
-              ${course_price}
+              %if course_price not in ['Gratis', 'Free', None, "None"]:
+                <% aux_price = int(course_price[1:]) %>
+                $ ${f'{aux_price:,}'.replace(',', '.')}
+              %else:
+                  ${course_price}
+              %endif
             </span>
           </div>
         </div>
@@ -245,16 +251,48 @@ now = timezone.now()
     </div>
     <div class="row">
       <h3 class="text-right">${_("There is one session available:")}</h3>
-      <p class="text-right lead">${total_enrolled if total_enrolled else None}${_(" already enrolled! After a course session ends, it will be archived.")}</p>
+      <p class="text-right lead">${total_enrolled if total_enrolled else None}${_(" already enrolled!")}</p>
     </div>
 
   </div>
-  <div class="container pb-0">
-    <%block name="course_about_details">
-    ${clean_dangerous_html(get_course_about_section(request, course, "overview"))}
-    </%block>
-
-  </div>
+  <div id="open-course-about" class="container pb-0">
+      <div class="details" style="width: auto; float:none;">
+        <div class="inner-wrapper">
+          ${HTML(get_course_about_section(request, course, "overview"))}
+        </div>
+        <script>
+          $(function() {
+            //$('.faq').prependTo("#accordionFAQS");
+            $("#accordionFAQS").append($('.course-faqs').contents());
+            if($('.course-faqs').length == 0) {
+              $(".faqs-row").hide();
+            }
+          });
+        </script>
+      </div>
+      <script>
+        $(function() {
+          $("#open-course-about .menu .btn").on("click", function() {
+            // Clear 'active' class
+            $("#open-course-about .menu-content-section").removeClass("active");
+            $("#open-course-about .menu .btn").removeClass("active");
+            // Set 'active' and show
+            $(this).addClass("active");
+            $("#" + $(this).attr("data-section")).addClass("active");
+          });
+        });
+      </script>
+      <div class="row my-2 faqs-row">
+        <div class="col-lg-8 p-3">
+            <div class="course-about-card m-2">
+              <h3 class="px-4">${_("Frequently Asked Questions")}</h3>
+              <div class="accordion text-justify mt-3" id="accordionFAQS">
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    
 </section>
 
 ## Need to put this hidden form on the page so that the registration button works.
