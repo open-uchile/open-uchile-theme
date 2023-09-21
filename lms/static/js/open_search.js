@@ -6,55 +6,10 @@ var filters = {
 "search_string": "",
 "order_by": "",
 "year": "",
-"state": ""
+"state": "",
+"classification": ""
 }
-var fake_orgs = {
-	"course-v1:openuchile+CLIL_1+2023_1":"CLIL",
-	"course-v1:openuchile+CMS-B+2023_1":"CMS",
-	"course-v1:openuchile+CMS-BI+2023_1":"CMS",
-	"course-v1:openuchile+CMS-C1+2023_1":"CMS",
-	"course-v1:openuchile+CMS-C2+2023_1":"CMS",
-	"course-v1:openuchile+CMS-C3+2023_1":"CMS",
-	"course-v1:openuchile+CMS-C4+2023_1":"CMS",
-	"course-v1:openuchile+CMS-DO+2023_1":"CMS",
-	"course-v1:openuchile+CMS-E+2023_1":"CMS",
-	"course-v1:openuchile+CMS-EB+2023_1":"CMS",
-	"course-v1:openuchile+CMS-EIE+2023_1":"CMS",
-	"course-v1:openuchile+CMS-ILS+2023_1":"CMS",
-	"course-v1:openuchile+CMS-IVE+2023_1":"CMS",
-	"course-v1:openuchile+CMS-L+2023_1":"CMS",
-	"course-v1:openuchile+CMS-PC+2023_1":"CMS",
-	"course-v1:openuchile+CMS-PD+2023_1":"CMS",
-	"course-v1:openuchile+CMS-PE+2023_1":"CMS",
-	"course-v1:openuchile+CMS-PF+2023_1":"CMS",
-	"course-v1:openuchile+CMS-PI+2023_1":"CMS",
-	"course-v1:openuchile+CMS-PMN+2023_1":"CMS",
-	"course-v1:openuchile+CMS-PP+2023_1":"CMS",
-	"course-v1:openuchile+DCS_01+2023_1":"DCS",
-	"course-v1:openuchile+DCS_02+2023_1":"DCS",
-	"course-v1:openuchile+DCS_03+2023_1":"DCS",
-	"course-v1:openuchile+DCS_04+2023_1":"DCS",
-	"course-v1:openuchile+DEM_01+2023_1":"DEM",
-	"course-v1:openuchile+ECBI_01+2023_1":"ECBI",
-	"course-v1:openuchile+ECBI_02+2023_1":"ECBI",
-	"course-v1:openuchile+FCFM_OP1+2023_1":"CMS",
-	"course-v1:openuchile+FEN-EF+2023_2":"DCS",
-	"course-v1:openuchile+M002+dic.2021":"CR2",
-	"course-v1:openuchile+M003+2022_T3":"REUNA",
-	"course-v1:openuchile+M004+2022_T2":"CMS",
-	"course-v1:openuchile+M005+2022_T2":"CMS",
-	"course-v1:openuchile+M006+2022_T2":"CMS",
-	"course-v1:openuchile+M007+2022_T2":"CMS",
-	"course-v1:openuchile+M008+2022_T2":"CMS",
-	"course-v1:openuchile+M009+2022_T2":"CMS",
-	"course-v1:openuchile+M010+2022_T2":"CMS",
-	"course-v1:openuchile+M011+2022_T2":"CMS",
-	"course-v1:openuchile+M012+2022_T2":"CMS",
-	"course-v1:openuchile+M013+2023_T1":"REUNA"
-}
-var fake_filter = {
-    "org": ""
-}
+
 var translation = {
     "Starts": "Empieza",
     "Viewing": "Mostrando",
@@ -101,9 +56,9 @@ function initDiscovery(search_string=""){
     "search_string": search_string,
     "order_by": "",
     "year": "",
-    "state": ""
+    "state": "",
+    "classification":""
     };
-    fake_filter = {"org": ""};
     getData();
 }
 
@@ -113,64 +68,42 @@ function getData(){
     
     $.post( "/search/course_discovery/", copy )
     .done(function( data ) {
-    var count = 0;
     data.results.forEach(element => {
         edx.HtmlUtils.append($("#list-courses")[0], createCourse(element.data));
     });
-    if (fake_filter.org != "") {
-        $('#list-courses').hide();
-        $('#list-courses li.courses-listing-item.open_org_'+fake_filter.org).each(function( index ) {
-        $( this ).clone().appendTo("#list-courses_orgs");
-        });
-        $('#list-courses_orgs').show();
-    }
+
     currentTotal = currentTotal + data.results.length;
     if (data.total > currentTotal){
         index = index + 1;
         state = 0;
     }
     else state = 2;
-    //$("#discovery-message").text(T("Viewing")+' ' + data.total + " "+T("courses"));
+    $("#discovery-message").text(T("Viewing")+' ' + data.total + " "+T("courses"));
     });
 }
 
 $('.search-facets-lists button').live('click', function(e) {
     e.preventDefault();
     $(this).blur();
-    $("#list-courses_orgs").empty();
     let facet = $(this).data("facet");
     let display_name = T($(this).data("text"));
     let add_btn = true;
     if ($(this).hasClass("selected")){
-    $(this).removeClass("selected");
-    if(facet == "open_org") fake_filter.org = "";
-    else filters[$(this).data("facet")] = "";
-    add_btn = false;
+        $(this).removeClass("selected");
+        filters[facet] = "";
+        add_btn = false;
     }
     else{
-    $(this).addClass("selected");
-    if(facet == "open_org") fake_filter.org = $(this).data("value");
-    else filters[$(this).data("facet")] = $(this).data("value");
-    if($("."+$(this).data("facet")).not(this).hasClass("selected")) $("."+$(this).data("facet")).not(this).removeClass("selected");
+        $(this).addClass("selected");
+        filters[facet] = $(this).data("value");
+        if($("."+$(this).data("facet")).not(this).hasClass("selected")) $("."+$(this).data("facet")).not(this).removeClass("selected");
     }
     if (add_btn) AddBtnFilterBar(facet, display_name);
     else {
-    $("#" + facet).remove();
-    if ( $('#active-filters').children().length == 0 ) $('#filter-bar').addClass("is-collapsed");
+        $("#" + facet).remove();
+        if ( $('#active-filters').children().length == 0 ) $('#filter-bar').addClass("is-collapsed");
     }
-    if(facet == "open_org"){
-        if (add_btn) {
-            $('#list-courses').hide();
-            $('#list-courses_orgs').show();
-            $('#list-courses li.courses-listing-item.open_org_'+$(this).data("value")).each(function( index ) {
-            $( this ).clone().appendTo("#list-courses_orgs");
-            });
-        }
-        else {
-            $('#list-courses').show();
-        }
-    }
-    else{
+
     let list_course1 = getCourses();
     // executes when promise is resolved successfully
     list_course1.then(
@@ -187,9 +120,7 @@ $('.search-facets-lists button').live('click', function(e) {
     .finally(
         function greet() {
         }
-    );
-    }
-    
+    );    
 });
 
 $('#clear-all-filters').live('click', function(e) {
@@ -202,16 +133,12 @@ $('#clear-all-filters').live('click', function(e) {
 });
 $('#filter-bar .facet-option.discovery-button').live('click', function(e) {
     e.preventDefault();
-    $("#list-courses_orgs").empty();
     let btnType = $(this).data('type');
     $("#" + btnType).remove();
     if ( $('#active-filters').children().length == 0 ) $('#filter-bar').addClass("is-collapsed");
-    if (btnType == "open_org") fake_filter.org = "";
-    else filters[btnType] = "";
+    filters[btnType] = "";
     $('.search-facets-lists button.'+btnType+'.selected').removeClass("selected");
 
-    if(btnType == "open_org") $('#list-courses').show();
-    else {
     let list_course2 = getCourses();
     // executes when promise is resolved successfully
     list_course2.then(
@@ -231,7 +158,6 @@ $('#filter-bar .facet-option.discovery-button').live('click', function(e) {
         
         }
     );
-    }
 });
 
 $('#discovery-submit').live('click', function(e) {
@@ -304,9 +230,9 @@ function createCourse(data){
         "language": "en"
         }
     */
-    var org = "";
-    if (fake_orgs[data.id] !== undefined) org = "open_org_"+fake_orgs[data.id];
-    const coursehtml = '<li class="courses-listing-item '+org+'"><article class="course" role="region" aria-label="{course_display_name}">'+
+    //var org = "";
+    //if (fake_orgs[data.id] !== undefined) org = "open_org_"+fake_orgs[data.id];
+    const coursehtml = '<li class="courses-listing-item"><article class="course" role="region" aria-label="{course_display_name}">'+
     '<a href="/courses/{course}/about"><header class="course-image">'+
     '<div class="cover-image"><img src="{image_url}" alt="{course_display_name}">'+
     '<div class="learn-more" aria-hidden="true">APRENDER MAS</div></div></header>'+
@@ -369,8 +295,5 @@ function cleanCourses(){
     state = 1;
     $("#discovery-message").text("");
     $("#list-courses").empty();
-    $('#list-courses').show();
-    $('#list-courses_orgs').hide();
-    $("#list-courses_orgs").empty();
 }
 })

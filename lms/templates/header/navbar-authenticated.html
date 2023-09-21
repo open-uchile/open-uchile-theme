@@ -19,7 +19,7 @@ from django.utils.translation import ugettext as _
       </li>
   </ul>
   <ul class="navbar-nav">
-    % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+    % if settings.FEATURES.get('ENABLE_DASHBOARD_SEARCH'):
     <li class="nav-item my-auto">
         <div class="search-container">
             <form action="/courses" method="get">

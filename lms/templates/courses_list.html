@@ -11,7 +11,7 @@
 %>
 <style>
 .course-title-container{
-  background: #00bcfc;
+  background: #172c6b;
   padding: 2px 20px;
   display: flex;
 }
@@ -28,10 +28,10 @@
     /*padding: 2px 20px;*/
 }
 </style>
-<%! from lms.djangoapps.course_info.helpers import get_course_class %>
+<%! from course_classification.helpers import get_course_ctgs %>
 % if settings.FEATURES.get('SHOW_COURSES_BY_CLASS'):
-<%  cats,course_class = get_course_class(courses) %>
-  %for categ in cats:
+<%  course_class = get_course_ctgs(courses) %>
+  %for categ in course_class.values():
     %if (categ['show_opt'] == 2 or (categ['show_opt'] == 1 and len(course_class[categ['id']]['courses']) > 0)):
       <section class="courses-container courses-spanish">
         <div class="course-title-container">
@@ -40,7 +40,6 @@
         <section class="highlighted-courses" style="padding-top: 25px;">
           % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
             <section class="row courses-list">
-              <!-- Agregar if para diferenciar cursos en ingles/español -->
               %for course in course_class[categ['id']]['courses']:
                 %if course.end is not None and course.end > now:
                   <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4">
@@ -58,7 +57,7 @@
       </section>
     %endif
     %if (categ['show_opt'] == 2 and len(course_class[categ['id']]['courses']) == 0):
-      <p class="without-courses"> ${_("No existen cursos")}</p>
+      <p class="without-courses" style="padding-bottom: 10px;"> ${_("No existen cursos")}</p>
     %endif
   %endfor
 %else:

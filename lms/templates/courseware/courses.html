@@ -6,7 +6,7 @@
 %>
 <%inherit file="../main.html" />
 <%
-  course_discovery_enabled = settings.FEATURES.get('ENABLE_COURSE_DISCOVERY')
+  course_discovery_enabled = settings.FEATURES.get('ENABLE_DASHBOARD_SEARCH')
 %>
 <%
   from django.utils import timezone
@@ -16,11 +16,6 @@
 
 % if course_discovery_enabled:
 <%block name="header_extras">
-  % for template_name in ["course_card", "filter_bar", "filter", "facet", "facet_option"]:
-  <script type="text/template" id="${template_name}-tpl">
-      <%static:include path="discovery/${template_name}.underscore" />
-  </script>
-  % endfor
   <style>
     .search-container{
       display: none !important;
@@ -134,7 +129,6 @@
               %endif
             %endfor
           </ul>
-          <ul class="courses-listing courses-list" id="list-courses_orgs"></ul>
         </div>
 
 
@@ -188,54 +182,20 @@
               </li>
             </ul>
             <h3 class="header-facet" data-text="Organizations:">${_('Organizations:')}</h3>
-            <ul data-facet="open_org" class="facet-list collapse">
-              <li>
-                <button data-facet="open_org" data-value="CLIL" data-text="${_('Universität Heidelberg')}" class="facet-option discovery-button open_org">
-                  ${_('Universität Heidelberg')}
-                  <span class="count"><span class="count-number"></span></span>
-                </button>
-              </li>
-              <li>
-                <button data-facet="open_org" data-value="CMS" data-text="${_('Facultad de Ciencias Físicas y Matemáticas')}" class="facet-option discovery-button open_org">
-                  ${_('Facultad de Ciencias Físicas y Matemáticas')}
-                  <span class="count"><span class="count-number"></span></span>
-                </button>
-              </li>
-              <li>
-                <button data-facet="open_org" data-value="DCS" data-text="${_('Facultad de Economía y Negocios')}" class="facet-option discovery-button open_org">
-                  ${_('Facultad de Economía y Negocios')}
-                  <span class="count"><span class="count-number"></span></span>
-                </button>
-              </li>
-              <li>
-                <button data-facet="open_org" data-value="DEM" data-text="${_('Facultad de Medicina')}" class="facet-option discovery-button open_org">
-                  ${_('Facultad de Medicina')}
-                  <span class="count"><span class="count-number"></span></span>
-                </button>
-              </li>
-              <li>
-                <button data-facet="open_org" data-value="ECBI" data-text="${_('ECBI Chile')}" class="facet-option discovery-button open_org">
-                  ${_('ECBI Chile')}
-                  <span class="count"><span class="count-number"></span></span>
-                </button>
-              </li>
-              <li>
-                <button data-facet="open_org" data-value="CR2" data-text="${_('Centro de Ciencia del Clima y la Resiliencia (CR)^2')}" class="facet-option discovery-button open_org">
-                  ${_('Centro de Ciencia del Clima y la Resiliencia (CR)^2')}
-                  <span class="count"><span class="count-number"></span></span>
-                </button>
-              </li>
-              <li>
-                <button data-facet="open_org" data-value="REUNA" data-text="${_('Red Universitaria Nacional (REUNA)')}" class="facet-option discovery-button open_org">
-                  ${_('Red Universitaria Nacional (REUNA)')}
-                  <span class="count"><span class="count-number"></span></span>
-                </button>
-              </li>
+            <%! from course_classification.helpers import get_all_main_classifications %>
+            <ul data-facet="classification" class="facet-list collapse">
+              %for org in get_all_main_classifications():
+                <li>
+                  <button data-facet="classification" data-value="${org[0]}" data-text="${_(org[1])}" class="facet-option discovery-button classification">
+                    ${_(org[1])}
+                    <span class="count"><span class="count-number"></span></span>
+                  </button>
+                </li>
+              %endfor
             </ul>
           </section>
         </aside>
         % endif
-
       </section>
     </section>
 </main>

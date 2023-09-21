@@ -83,17 +83,10 @@ from openedx.core.djangolib.markup import HTML, Text
       <div class="title-2">${_("E-Learning Platform ")}</div>
   </div>
   <img class="uchile-separator" src="${static.url('open-uchile-theme/images/uchile_separator.png')}" alt="">
-  % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-    <!--div class="course-search">
-      <form method="get" action="/courses">
-        <label><span class="sr">${_("Search for a course")}</span>
-          <input class="search-input" name="search_query" type="text" placeholder="${_("Search for a course")}"></input>
-        </label>
-        <button class="search-button" type="submit">
-          <span class="icon fa fa-search" aria-hidden="true"></span><span class="sr">${_("Search")}</span>
-        </button>
-      </form>
-    </div-->
+  % if settings.FEATURES.get('ENABLE_DASHBOARD_SEARCH'):
+  <%!
+   from course_classification.helpers import get_all_logos
+  %>
     <style>
       .carousel-wrap {
         margin-right: auto;
@@ -157,11 +150,13 @@ from openedx.core.djangolib.markup import HTML, Text
     <div style="width:100%;display: flex;box-shadow: 0px 4px 8px 2px rgb(0 0 0 / 20%);background: white;">
       <div class="carousel-wrap">
         <div class="owl-carousel">
-          <div class="item"><img src="${static.url('open-uchile-theme/images/2023/MEDICINA.png')}"></div>
-          <div class="item"><img src="${static.url('open-uchile-theme/images/2023/uchile-IE.png')}"></div>
-          <div class="item"><img src="${static.url('open-uchile-theme/images/2023/uabierta.png')}"></div>
-          <div class="item"><img src="${static.url('open-uchile-theme/images/2023/reuna.png')}"></div>
-          <div class="item"><img src="${static.url('open-uchile-theme/images/2023/FCFM.png')}"></div>
+          %for logo in get_all_logos():
+           %if logo[1]:
+            <div class="item"><a href="${logo[1]}" target="_blank"><img src="${logo[0]}"></div></a>
+           %else:
+           <div class="item"><a href="/" target="_blank"><img src="${logo[0]}"></div></a>
+           %endif
+          %endfor
         </div>
       </div>
     </div>
