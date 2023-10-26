@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: help-open@uchile.cl\n"
-"POT-Creation-Date: 2023-09-04 16:06+0000\n"
+"POT-Creation-Date: 2023-10-26 18:19+0000\n"
 "PO-Revision-Date: 2022-07-28 20:11+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -48,7 +48,7 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#: cms/templates/container.html:165 lms/templates/courseware/courses.html:88
+#: cms/templates/container.html:165
 msgid "Loading"
 msgstr ""
 
@@ -180,19 +180,27 @@ msgstr ""
 msgid "Se ha producido un error en actualizar la miniatura."
 msgstr ""
 
-#: lms/templates/course.html:32 lms/templates/course_portal.html:39
-msgid "See more"
-msgstr ""
-
-#: lms/templates/course.html:44 lms/templates/course_portal.html:45
+#: lms/templates/course.html:70 lms/templates/course_portal.html:45
 msgid "Finished course"
 msgstr ""
 
-#: lms/templates/course.html:48 lms/templates/course_portal.html:48
+#: lms/templates/course.html:86 lms/templates/course_portal.html:48
 msgid "Permanently open"
 msgstr ""
 
-#: lms/templates/courses_list.html:61
+#: lms/templates/course.html:95
+msgid "Inicio del curso"
+msgstr ""
+
+#: lms/templates/course.html:104
+msgid "Termino del curso"
+msgstr ""
+
+#: lms/templates/course.html:111 lms/templates/course_portal.html:39
+msgid "See more"
+msgstr ""
+
+#: lms/templates/courses_list.html:62
 msgid "No existen cursos"
 msgstr ""
 
@@ -201,8 +209,10 @@ msgid "Need help?"
 msgstr ""
 
 #: lms/templates/footer.html:22
-#: lms/templates/header/navbar-authenticated.html:45
-#: lms/templates/header/navbar-not-authenticated.html:50
+#: lms/templates/header/navbar-authenticated.html:46
+#: lms/templates/header/navbar-authenticated.html:66
+#: lms/templates/header/navbar-not-authenticated.html:53
+#: lms/templates/header/navbar-not-authenticated.html:70
 msgid "Contact us"
 msgstr ""
 
@@ -214,24 +224,12 @@ msgstr "Terms and Conditions"
 msgid "Privacy Policy"
 msgstr ""
 
-#: lms/templates/index.html:82
+#: lms/templates/index.html:20
 msgid "Open UChile "
 msgstr ""
 
-#: lms/templates/index.html:83
+#: lms/templates/index.html:21
 msgid "E-Learning Platform "
-msgstr ""
-
-#: lms/templates/courseware/courses.html:81
-#: lms/templates/courseware/courses.html:82 lms/templates/index.html:89
-#: lms/templates/index.html:90
-msgid "Search for a course"
-msgstr ""
-
-#: lms/templates/courseware/courses.html:83
-#: lms/templates/header/navbar-authenticated.html:26
-#: lms/templates/index.html:93
-msgid "Search"
 msgstr ""
 
 #: lms/templates/main.html:192
@@ -240,8 +238,10 @@ msgstr ""
 
 #: lms/templates/certificates/validate_certificates.html:7
 #: lms/templates/certificates/validate_certificates.html:33
-#: lms/templates/header/navbar-authenticated.html:42
-#: lms/templates/header/navbar-not-authenticated.html:47
+#: lms/templates/header/navbar-authenticated.html:44
+#: lms/templates/header/navbar-authenticated.html:63
+#: lms/templates/header/navbar-not-authenticated.html:51
+#: lms/templates/header/navbar-not-authenticated.html:67
 msgid "Certificate Validation "
 msgstr ""
 
@@ -286,6 +286,16 @@ msgstr ""
 
 #: lms/templates/course_experience/course-outline-fragment.html:207
 msgid "This content is graded"
+msgstr ""
+
+#: lms/templates/course_modes/_upgrade_button.html:14
+#: lms/templates/course_modes/choose.html:143
+msgid "Pursue the Verified Track"
+msgstr ""
+
+#: lms/templates/course_modes/_upgrade_button.html:17
+#: lms/templates/course_modes/choose.html:145
+msgid "Pursue a Verified Certificate"
 msgstr ""
 
 #: lms/templates/course_modes/choose.html:12
@@ -360,14 +370,6 @@ msgstr ""
 msgid ""
 "{b_start}Easily shareable:{b_end} Add the certificate to your CV or "
 "resume, or post it directly on LinkedIn"
-msgstr ""
-
-#: lms/templates/course_modes/choose.html:143
-msgid "Pursue the Verified Track"
-msgstr ""
-
-#: lms/templates/course_modes/choose.html:145
-msgid "Pursue a Verified Certificate"
 msgstr ""
 
 #: lms/templates/course_modes/choose.html:150
@@ -524,89 +526,67 @@ msgctxt "self"
 msgid "enroll"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:34
+#: lms/templates/courseware/courses.html:32
 msgid "Courses"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:98
-msgid "Clear All"
+#: lms/templates/courseware/courses.html:45
+#: lms/templates/eoldiscussion/templates2.underscore:642
+msgid "Previous"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:103
-msgid "List of Courses"
+#: lms/templates/courseware/courses.html:49
+#: lms/templates/eoldiscussion/templates2.underscore:666
+msgid "Next"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:142
-#: lms/templates/courseware/courses.html:143
-msgid "Refine Your Search"
+#: lms/templates/courseware/courses.html:61
+#: lms/templates/courseware/courses.html:62
+msgid "Search for a course"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:145
-msgid "Sort by:"
-msgstr ""
-
-#: lms/templates/courseware/courses.html:149
+#: lms/templates/courseware/courses.html:71
 msgid "Newer"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:155
+#: lms/templates/courseware/courses.html:72
 msgid "Older"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:160
-msgid "Year:"
+#: lms/templates/courseware/courses.html:92
+#: lms/templates/courseware/courses.html:104
+msgid "Refine Your Search"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:175
-msgid "State:"
+#: lms/templates/courseware/courses.html:96
+msgid "Has seleccionado"
+msgstr "You have selected"
+
+#: lms/templates/courseware/courses.html:97
+msgid "Clear All"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:179
+#: lms/templates/courseware/courses.html:108
+msgid "Year"
+msgstr ""
+
+#: lms/templates/courseware/courses.html:125
+msgid "State"
+msgstr ""
+
+#: lms/templates/courseware/courses.html:131
+#: lms/templates/courseware/courses.html:132
 msgid "Active"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:185
+#: lms/templates/courseware/courses.html:135
+#: lms/templates/courseware/courses.html:136
 msgid "Finished"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:190
-msgid "Organizations:"
+#: lms/templates/courseware/courses.html:142
+msgid "Organizations"
 msgstr ""
-
-#: lms/templates/courseware/courses.html:193
-#: lms/templates/courseware/courses.html:194
-msgid "Universität Heidelberg"
-msgstr "University Heidelberg"
-
-#: lms/templates/courseware/courses.html:199
-#: lms/templates/courseware/courses.html:200
-msgid "Facultad de Ciencias Físicas y Matemáticas"
-msgstr "Faculty of Physical Sciences and Mathematics"
-
-#: lms/templates/courseware/courses.html:205
-#: lms/templates/courseware/courses.html:206
-msgid "Facultad de Economía y Negocios"
-msgstr "Faculty of Economics and Business"
-
-#: lms/templates/courseware/courses.html:211
-#: lms/templates/courseware/courses.html:212
-msgid "Facultad de Medicina"
-msgstr "School of Medicine"
-
-#: lms/templates/courseware/courses.html:217
-#: lms/templates/courseware/courses.html:218
-msgid "ECBI Chile"
-msgstr ""
-
-#: lms/templates/courseware/courses.html:223
-#: lms/templates/courseware/courses.html:224
-msgid "Centro de Ciencia del Clima y la Resiliencia (CR)^2"
-msgstr "Climate Science and Resilience Center (CR)^2"
-
-#: lms/templates/courseware/courses.html:229
-#: lms/templates/courseware/courses.html:230
-msgid "Red Universitaria Nacional (REUNA)"
-msgstr "National University Network (REUNA)"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html:71
 msgid "Course details"
@@ -802,16 +782,15 @@ msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html:428
 msgid ""
-"It's official. It's easily shareable. It's a proven motivator to complete"
-" the course. {line_break}{link_start}Learn more about the verified "
-"{cert_name_long}{link_end}."
+"Es oficial. Es fácil de compartir. Es comprobado como motivador para la "
+"finalización del curso. "
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:448
+#: lms/templates/dashboard/_dashboard_course_listing.html:441
 msgid "Upgrade to Verified"
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:462
+#: lms/templates/dashboard/_dashboard_course_listing.html:455
 msgid ""
 "You must successfully complete {link_start}{prc_display}{link_end} before"
 " you begin this course."
@@ -1360,17 +1339,9 @@ msgstr ""
 msgid "Return to all posts"
 msgstr ""
 
-#: lms/templates/eoldiscussion/templates2.underscore:642
-msgid "Previous"
-msgstr ""
-
 #: lms/templates/eoldiscussion/templates2.underscore:648
 #: lms/templates/eoldiscussion/templates2.underscore:660
 msgid "…"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:666
-msgid "Next"
 msgstr ""
 
 #: lms/templates/eoldiscussion/templates2.underscore:692
@@ -1469,34 +1440,52 @@ msgstr ""
 msgid "OK"
 msgstr ""
 
-#: lms/templates/header/header.html:68
+#: lms/templates/header/header.html:100
+#: lms/templates/widgets/footer-language-selector.html:24
+msgid "Choose Language"
+msgstr ""
+
+#: lms/templates/header/header.html:137
 msgid ""
 "{begin_strong}Warning:{end_strong} Your browser is not fully supported. "
 "We strongly recommend using {chrome_link} or {ff_link}."
 msgstr ""
 
-#: lms/templates/header/header.html:91
-#: lms/templates/widgets/footer-language-selector.html:24
-msgid "Choose Language"
-msgstr ""
-
-#: lms/templates/header/navbar-authenticated.html:15
-msgid "My Courses"
-msgstr ""
-
 #: lms/templates/header/navbar-authenticated.html:18
-#: lms/templates/header/navbar-not-authenticated.html:22
-msgid "Explore courses"
+msgid "Search"
+msgstr ""
+
+#: lms/templates/header/navbar-authenticated.html:31
+#: lms/templates/header/navbar-authenticated.html:32
+#: lms/templates/header/navbar-not-authenticated.html:40
+#: lms/templates/header/navbar-not-authenticated.html:41
+msgid "Menu"
 msgstr ""
 
 #: lms/templates/header/navbar-authenticated.html:36
-#: lms/templates/header/navbar-not-authenticated.html:41
+#: lms/templates/header/navbar-authenticated.html:51
+msgid "My Courses"
+msgstr ""
+
+#: lms/templates/header/navbar-authenticated.html:38
+#: lms/templates/header/navbar-authenticated.html:54
+#: lms/templates/header/navbar-not-authenticated.html:45
+#: lms/templates/header/navbar-not-authenticated.html:58
+msgid "Explore courses"
+msgstr ""
+
+#: lms/templates/header/navbar-authenticated.html:40
+#: lms/templates/header/navbar-authenticated.html:57
+#: lms/templates/header/navbar-not-authenticated.html:47
+#: lms/templates/header/navbar-not-authenticated.html:61
 #: lms/templates/static_templates/about.html:6
 msgid "About"
 msgstr ""
 
-#: lms/templates/header/navbar-authenticated.html:39
-#: lms/templates/header/navbar-not-authenticated.html:44
+#: lms/templates/header/navbar-authenticated.html:42
+#: lms/templates/header/navbar-authenticated.html:60
+#: lms/templates/header/navbar-not-authenticated.html:49
+#: lms/templates/header/navbar-not-authenticated.html:64
 #: lms/templates/static_templates/faq.html:6
 #: lms/templates/static_templates/faq.html:29
 #: lms/templates/static_templates/faq.html:30
@@ -1507,28 +1496,32 @@ msgstr ""
 msgid "{platform_name} Home Page"
 msgstr ""
 
-#: lms/templates/header/navbar-not-authenticated.html:57
+#: lms/templates/header/navbar-not-authenticated.html:35
 #: lms/templates/student_account/login.underscore:49
 msgid "Sign in"
 msgstr ""
 
-#: lms/templates/header/user_dropdown.html:33
-msgid "Dashboard for:"
+#: lms/templates/header/user_dropdown.html:31
+msgid "Profile:"
 msgstr ""
 
 #: lms/templates/header/user_dropdown.html:37
+msgid "Dashboard for:"
+msgstr ""
+
+#: lms/templates/header/user_dropdown.html:41
 msgid "Profile"
 msgstr ""
 
-#: lms/templates/header/user_dropdown.html:39
+#: lms/templates/header/user_dropdown.html:43
 msgid "Account"
 msgstr ""
 
-#: lms/templates/header/user_dropdown.html:42
+#: lms/templates/header/user_dropdown.html:46
 msgid "Order History"
 msgstr ""
 
-#: lms/templates/header/user_dropdown.html:45
+#: lms/templates/header/user_dropdown.html:49
 msgid "Sign Out"
 msgstr ""
 
@@ -2027,5 +2020,48 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Enrollment in this course is by invitation only"
+#~ msgstr ""
+
+#~ msgid "List of Courses"
+#~ msgstr ""
+
+#~ msgid "Sort by:"
+#~ msgstr ""
+
+#~ msgid "Year:"
+#~ msgstr ""
+
+#~ msgid "State:"
+#~ msgstr ""
+
+#~ msgid "Organizations:"
+#~ msgstr ""
+
+#~ msgid "Universität Heidelberg"
+#~ msgstr "University Heidelberg"
+
+#~ msgid "Facultad de Ciencias Físicas y Matemáticas"
+#~ msgstr "Faculty of Physical Sciences and Mathematics"
+
+#~ msgid "Facultad de Economía y Negocios"
+#~ msgstr "Faculty of Economics and Business"
+
+#~ msgid "Facultad de Medicina"
+#~ msgstr "School of Medicine"
+
+#~ msgid "ECBI Chile"
+#~ msgstr ""
+
+#~ msgid "Centro de Ciencia del Clima y la Resiliencia (CR)^2"
+#~ msgstr "Climate Science and Resilience Center (CR)^2"
+
+#~ msgid "Red Universitaria Nacional (REUNA)"
+#~ msgstr "National University Network (REUNA)"
+
+#~ msgid ""
+#~ "It's official. It's easily shareable. "
+#~ "It's a proven motivator to complete "
+#~ "the course. {line_break}{link_start}Learn more "
+#~ "about the verified {cert_name_long}{link_end}."
 #~ msgstr ""
 
