@@ -19,11 +19,11 @@
           <ul class="courses-list">
             %for course in course_class['featured']:
               %if course.end is not None and course.end > now:
-                <li class="mb-3 mr-3">
+                <li class="mb-3">
                   <%include file="course.html" args="course=course,main_class=main_class" />
                 </li>
               %elif course.end is None:
-                <li class="mb-3 mr-3">
+                <li class="mb-3">
                   <%include file="course.html" args="course=course,main_class=main_class" />
                 </li>
               %endif
@@ -41,19 +41,19 @@
           </div>
           <section class="highlighted-courses">
             % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
-              <section class="row courses-list">
+              <ul class="courses-list">
                 %for course in course_class[categ['id']]['courses']:
                   %if course.end is not None and course.end > now:
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-3">
+                    <li class="mb-3">
                       <%include file="course.html" args="course=course,main_class=main_class" />
-                    </div>
+                    </li>
                   %elif course.end is None:
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-3 h-100">
+                    <li class="mb-3">
                       <%include file="course.html" args="course=course,main_class=main_class" />
-                    </div>
+                    </li>
                   %endif
                 %endfor
-              </section>
+              </ul>
             % endif
           </section>
         </section>
@@ -67,28 +67,28 @@
 <section class="courses-container">
   <section class="highlighted-courses">
     % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
-      <section class="row courses-list">
+      <ul class="courses-list">
           ## limiting the course number by using HOMEPAGE_COURSE_MAX as the maximum number of courses
           %for course in courses:
             %if course.end is not None and course.end > now:
               %if course.enrollment_start is not None and course.enrollment_end is not None:
                 %if course.enrollment_end > now:
-                  <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-3 h-100">
+                  <li class="mb-3">
                     <%include file="course.html" args="course=course,main_class={}" />
-                  </div>
+                  </li>
                 %endif
               %endif
             %elif course.end is None:
               %if course.enrollment_start is not None and course.enrollment_end is not None:
                 %if course.enrollment_end > now:
-                  <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-3 h-100">
+                  <li class="mb-3">
                     <%include file="course.html" args="course=course,main_class={}" />
-                  </div>
+                  </li>
                 %endif
               %endif
             %endif
           %endfor
-      </section>
+      </ul>
     % endif
   </section>
 </section>
@@ -101,13 +101,13 @@
       </div>
       <section class="highlighted-courses">
         % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
-          <section class="row courses-list">
+          <ul class="courses-list">
             %for course_portal in courses_portal_api[platform]:
-              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-3 h-100">
+              <li class="mb-3">
                 <%include file="course_portal.html" args="course=course_portal" />
-              </div>
+              </li>
             %endfor
-          </section>
+          </ul>
         % endif
       </section>
     </section>
