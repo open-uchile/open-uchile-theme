@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: help-open@uchile.cl\n"
-"POT-Creation-Date: 2023-10-26 18:19+0000\n"
+"POT-Creation-Date: 2023-10-31 16:15+0000\n"
 "PO-Revision-Date: 2022-07-28 20:11+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es_419\n"
@@ -180,27 +180,31 @@ msgstr ""
 msgid "Se ha producido un error en actualizar la miniatura."
 msgstr ""
 
-#: lms/templates/course.html:70 lms/templates/course_portal.html:45
+#: lms/templates/course.html:70 lms/templates/course_portal.html:54
 msgid "Finished course"
 msgstr ""
 
-#: lms/templates/course.html:86 lms/templates/course_portal.html:48
+#: lms/templates/course.html:86 lms/templates/course_portal.html:70
 msgid "Permanently open"
 msgstr ""
 
-#: lms/templates/course.html:95
+#: lms/templates/course.html:95 lms/templates/course_portal.html:79
 msgid "Inicio del curso"
 msgstr ""
 
-#: lms/templates/course.html:104
+#: lms/templates/course.html:104 lms/templates/course_portal.html:88
 msgid "Termino del curso"
 msgstr ""
 
-#: lms/templates/course.html:111 lms/templates/course_portal.html:39
+#: lms/templates/course.html:111 lms/templates/course_portal.html:95
 msgid "See more"
 msgstr ""
 
-#: lms/templates/courses_list.html:62
+#: lms/templates/courses_list.html:18
+msgid "Starred Courses"
+msgstr ""
+
+#: lms/templates/courses_list.html:66
 msgid "No existen cursos"
 msgstr ""
 

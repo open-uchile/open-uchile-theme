@@ -740,6 +740,29 @@ input[type="search"]::-ms-input-placeholder {
     text-transform: uppercase;
     display: contents;
 }
+.starred-course-title-container{
+    background: #fff;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.starred-course-tittle-institution {
+    font-size: 30px;
+    color: #565756;
+    text-align: center;
+    font-weight: 1000;
+    margin-bottom: 0;
+    text-transform: capitalize;
+}
+.starred-course-border{
+    border-top: 3px solid #172c6b;
+    width: 60px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
 .courses-container .highlighted-courses{
     display: flex;
     padding-top: 25px;

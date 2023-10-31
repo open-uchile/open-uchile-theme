@@ -14,6 +14,10 @@
 <%  course_class, main_class = get_course_ctgs(courses) %>
   % if 'featured' in course_class and len(course_class['featured']) > 0 :
     <section class="courses-container">
+      <div class="starred-course-title-container">
+        <h2 class="starred-course-tittle-institution">${_("Starred Courses").upper()}</h2>
+        <div class="starred-course-border"></div>
+      </div>
       <section class="highlighted-courses">
         % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
           <ul class="courses-list">
@@ -92,24 +96,25 @@
     % endif
   </section>
 </section>
-% endif
-%for platform in courses_portal_api:
-  % if len(courses_portal_api[platform]) > 0:
-    <section class="courses-container courses-spanish">
-      <div class="course-title-container">
-        <h2 class="course-tittle">${platforms_name[platform]}</h2>
-      </div>
-      <section class="highlighted-courses">
-        % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
-          <ul class="courses-list">
-            %for course_portal in courses_portal_api[platform]:
-              <li class="mb-3">
-                <%include file="course_portal.html" args="course=course_portal" />
-              </li>
-            %endfor
-          </ul>
-        % endif
+  %for platform in courses_portal_api:
+    % if len(courses_portal_api[platform]) > 0:
+      <section class="courses-container courses-spanish">
+        <div class="course-title-container">
+          <h2 class="course-tittle">${platforms_name[platform]}</h2>
+        </div>
+        <section class="highlighted-courses">
+          % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
+            <ul class="courses-list">
+              %for course_portal in courses_portal_api[platform]:
+                <li class="mb-3">
+                  <%include file="course_portal.html" args="course=course_portal" />
+                </li>
+              %endfor
+            </ul>
+          % endif
+        </section>
       </section>
-    </section>
-  % endif
-%endfor
+    % endif
+  %endfor
+% endif
+
