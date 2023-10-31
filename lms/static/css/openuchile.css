@@ -774,6 +774,7 @@ input[type="search"]::-ms-input-placeholder {
 }
 .courses-container {
     max-width: 1765px;
+    margin-top: 50px;
 }
 /* New course card */
 @media screen and (min-width: 991px) {

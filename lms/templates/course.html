@@ -73,7 +73,7 @@ now = timezone.now()
           % elif course.advertised_start is not None:
           <div class="col-md-12">
             <div class="open-course-date-icon">
-              <img src="${static.url('open-uchile-theme/images/svg-2023/fecha termino.svg')}">
+              <img src="${static.url('open-uchile-theme/images/svg-2023/fecha inicio.svg')}">
             </div>
             <div class="open-course-date-text">
               <span>${course.advertised_start}</span>
@@ -81,7 +81,9 @@ now = timezone.now()
           </div>
           % elif course.self_paced and course.start <= now:
           <div class="col-md-12">
-            <div class="open-course-date-icon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+            <div class="open-course-date-icon">
+              <img src="${static.url('open-uchile-theme/images/svg-2023/fecha inicio.svg')}">
+            </div>
             <div class="open-course-date-text">
               <span>${_("Permanently open")}</span>
             </div>
