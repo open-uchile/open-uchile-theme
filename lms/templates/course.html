@@ -35,7 +35,7 @@ now = timezone.now()
         %if main_class and course.id in main_class and main_class[course.id]['logo']:
           <img class="card-logo" src="${main_class[course.id]['logo'].url}" >
         %endif
-        <h5 class="card-title" title="${course.display_name_with_default}">${course.display_name_with_default} (CURSO DOCUMENTO) Entornos de enseñanza y aprendizaje mediados por tecnologías: orientaciones para la docencia universitaria</h5>
+        <h5 class="card-title" title="${course.display_name_with_default}">${course.display_name_with_default}</h5>
         %if not main_class or course.id not in main_class or not main_class[course.id]['logo']:
           <p class="card-text ct1" title="${course.display_org_with_default}"><small>
               %if course.org != course.display_org_with_default:
@@ -48,7 +48,7 @@ now = timezone.now()
           </small></p>
         %endif
         <p class="card-text ct2" title="${course.short_description}">
-          <small>${course.short_description} Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</small>
+          <small>${course.short_description}</small>
         </p>
         <div class="row ct3">
           <%
