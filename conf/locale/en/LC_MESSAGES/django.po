@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: help-open@uchile.cl\n"
-"POT-Creation-Date: 2023-10-31 16:15+0000\n"
+"POT-Creation-Date: 2023-11-02 15:01+0000\n"
 "PO-Revision-Date: 2022-07-28 20:11+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -184,19 +184,19 @@ msgstr ""
 msgid "Finished course"
 msgstr ""
 
-#: lms/templates/course.html:86 lms/templates/course_portal.html:70
+#: lms/templates/course.html:88 lms/templates/course_portal.html:72
 msgid "Permanently open"
 msgstr ""
 
-#: lms/templates/course.html:95 lms/templates/course_portal.html:79
+#: lms/templates/course.html:97 lms/templates/course_portal.html:81
 msgid "Inicio del curso"
 msgstr ""
 
-#: lms/templates/course.html:104 lms/templates/course_portal.html:88
+#: lms/templates/course.html:106 lms/templates/course_portal.html:90
 msgid "Termino del curso"
 msgstr ""
 
-#: lms/templates/course.html:111 lms/templates/course_portal.html:95
+#: lms/templates/course.html:113 lms/templates/course_portal.html:97
 msgid "See more"
 msgstr ""
 
@@ -484,8 +484,8 @@ msgid "Enrollment is Closed"
 msgstr ""
 
 #: lms/templates/courseware/course_about.html:152
-msgid "Enroll Now"
-msgstr ""
+msgid "Inscríbase ahora"
+msgstr "Enroll now"
 
 #: lms/templates/courseware/course_about.html:174
 msgid "View About Page in studio"
@@ -2067,5 +2067,8 @@ msgstr ""
 #~ "It's a proven motivator to complete "
 #~ "the course. {line_break}{link_start}Learn more "
 #~ "about the verified {cert_name_long}{link_end}."
+#~ msgstr ""
+
+#~ msgid "Enroll Now"
 #~ msgstr ""
 
