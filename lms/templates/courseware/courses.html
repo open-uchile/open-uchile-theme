@@ -3,120 +3,157 @@
   import json
   from django.utils.translation import ugettext as _
   from openedx.core.djangolib.js_utils import js_escaped_string, dump_js_escaped_json
+  from course_classification.helpers import get_featured_courses
 %>
 <%inherit file="../main.html" />
 <%
-  course_discovery_enabled = settings.FEATURES.get('ENABLE_COURSE_DISCOVERY')
+  course_discovery_enabled = settings.FEATURES.get('ENABLE_DASHBOARD_SEARCH')
 %>
 <%
   from django.utils import timezone
   now = timezone.now()
+  featured_courses, mc_courses = get_featured_courses()
 %>
+
 <%namespace name='static' file='../static_content.html'/>
 
 % if course_discovery_enabled:
 <%block name="header_extras">
-  % for template_name in ["course_card", "filter_bar", "filter", "facet", "facet_option"]:
-  <script type="text/template" id="${template_name}-tpl">
-      <%static:include path="discovery/${template_name}.underscore" />
-  </script>
-  % endfor
-  <%static:require_module module_name="js/discovery/discovery_factory" class_name="DiscoveryFactory">
-    DiscoveryFactory(
-      ${course_discovery_meanings | n, dump_js_escaped_json},
-      getParameterByName('search_query'),
-      "${user_language | n, js_escaped_string}",
-      "${user_timezone | n, js_escaped_string}"
-    );
-  </%static:require_module>
+  <style>
+    .search-container{
+      display: none !important;
+    }
+  </style>
 </%block>
 % endif
-
+<%block name="js_extra">
+  <script type="text/javascript" src="${static.url('open-uchile-theme/js/open_search.js')}"></script>
+</%block>
 <%block name="pagetitle">${_("Courses")}</%block>
-
 <main id="main" aria-label="Content" tabindex="-1">
-    <section class="find-courses">
-      <section class="courses-container">
-        % if course_discovery_enabled:
-        <div id="discovery-form" role="search" aria-label="course" class="wrapper-search-context">
-          <div id="discovery-message" class="search-status-label"></div>
-          <form class="wrapper-search-input">
-            <label for="discovery-input" class="sr">${_('Search for a course')}</label>
-            <input id="discovery-input" class="discovery-input" placeholder="${_('Search for a course')}" type="text"/>
-            <button type="submit" class="button postfix discovery-submit" title="${_('Search')}">
-              <span class="icon fa fa-search" aria-hidden="true"></span>
-              <div aria-live="polite" aria-relevant="all">
-                <div id="loading-indicator" class="loading-spinner hidden">
-                  <span class="icon fa fa-spinner fa-spin" aria-hidden="true"></span>
-                  <span class="sr">${_('Loading')}</span>
-                </div>
-              </div>
-            </button>
-          </form>
+  <header>
+    <div id="open-carousel-courses" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        %for i, c in enumerate(featured_courses):
+        <div class="carousel-item ${'active' if i==0 else ''}">
+          <%include file="../course.html" args="course=c,main_class=mc_courses" />
         </div>
-
-        <div id="filter-bar" class="filters hide-phone is-collapsed">
+        %endfor
+      </div>
+      <a class="carousel-control-prev" href="#open-carousel-courses" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">${_('Previous')}</span>
+      </a>
+      <a class="carousel-control-next"  href="#open-carousel-courses" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">${_('Next')}</span>
+      </a>
+    </div>
+  </header>
+  % if course_discovery_enabled:
+  <section class="open-search-bar">
+    <div class="row">
+      <div class="open-search-col col-md-10">
+        <div class="open-search-container">
+          <button class="courses-search-btn" for="discovery-input" id="discovery-submit">
+            <span class="icon fa fa-search" aria-hidden="true"></span>
+          </button>
+          <label for="discovery-input" class="sr">${_('Search for a course')}</label>
+          <input id="discovery-input" class="open-discovery-input" placeholder="${_('Search for a course')}" type="text"/>
         </div>
-        % endif
-
-        <div class="courses${'' if course_discovery_enabled else ' no-course-discovery'}" role="region" aria-label="${_('List of Courses')}">
-          <ul class="courses-listing courses-list">
-            %for course in courses:
-              %if course.end is not None and course.end > now:
-                %if course.enrollment_start is not None and course.enrollment_end is not None:
-                  %if course.enrollment_end > now:
-                    %if course.id.course[-2:] == '_E':
-                      <li class="courses-listing-item courses-english">
-                        <%include file="../course.html" args="course=course" />
-                      </li>
-                    %else:
-                      <li class="courses-listing-item courses-spanish">
-                        <%include file="../course.html" args="course=course" />
-                      </li>
-                    %endif
-                  %endif
-                %endif
-              %elif course.end is None:
-                %if course.enrollment_start is not None and course.enrollment_end is not None:
-                  %if course.enrollment_end > now:
-                    %if course.id.course[-2:] == '_E':
-                      <li class="courses-listing-item courses-english">
-                        <%include file="../course.html" args="course=course" />
-                      </li>
-                    %else:
-                      <li class="courses-listing-item courses-spanish">
-                        <%include file="../course.html" args="course=course" />
-                      </li>
-                    %endif
-                  %endif
-                %endif
-              %endif
-            %endfor
-          </ul>
+      </div>
+      <div class="open-search-col col-md-2">
+        <div class="filter-class dropdown">
+          <a href="#" id="open-order-by" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="${static.url('open-uchile-theme/images/svg-2023/filtro-mayor-menor.svg')}" width="28">
+          </a>
+          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="open-order-by">
+            <a class="dropdown-item open-order-by-btn" href="#" data-value="newer">${_('Newer')}</a>
+            <a class="dropdown-item open-order-by-btn" href="#" data-value="older">${_('Older')} </a>
+          </div>
+          <a href="#" id="open-filter-mobile-btn" role="button" data-bs-toggle="offcanvas" data-bs-target="#FilterOffcanvasBottom" aria-controls="FilterOffcanvasBottom" aria-expanded="false">
+            <img src="${static.url('open-uchile-theme/images/svg-2023/filtro.svg')}" width="28">
+          </a>
+          <div class="offcanvas offcanvas-bottom" tabindex="-1" id="FilterOffcanvasBottom" aria-labelledby="FilterOffcanvasBottomLabel">
+            <div class="offcanvas-header">
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div id="open-filter-mobile-body" class="offcanvas-body small"></div>
+          </div>
         </div>
-
-
-        % if course_discovery_enabled:
+      </div>
+    </div>
+  </section>
+  % endif 
+  <section class="courses-list">
+    <div class="row" style="margin: 0;">
+      <div class="col-md-9" id="list-courses"></div>
+      <div class="col-md-3 open-filter-bar">
         <aside aria-label="${_('Refine Your Search')}" class="search-facets phone-menu">
-          <h2 class="header-search-facets">${_('Refine Your Search')}</h2>
+          <div id="filter-bar" class="open-filters">
+            <div class="filters-inner">
+              <div>
+                <span id="title-filter">${_("Has seleccionado")}</span>
+                <a id="clear-filters" href="#">${_('Clear All')}</a>
+              </div>
+              <ul id="active-filters" class="active-filters facet-list">
+              </ul>
+            </div>
+          </div>
+          <h2 class="header-search-facets" id="discovery-message"></h2>
+          <h2 class="header-search-facets open-refine-search">${_('Refine Your Search')}</h2>
           <section class="search-facets-lists">
-          </section>
-        </aside>
-        % endif
-
-      </section>
-    </section>
+            <hr>
+            <a class="filter-btn collapsed" data-bs-toggle="collapse" href="#collapse_year" role="button" aria-expanded="false" aria-controls="collapse_year">
+              ${_('Year')}
+              <span class="arrow-filter" aria-hidden="true"></span>
+            </a>
+            <div class="collapse" id="collapse_year">
+              <div class="list-group">
+                <label class="list-group-item" >
+                  <input class="form-check-input me-1" type="checkbox" value="" data-facet="year" data-value="2023" data-text="2023">
+                  2023
+                </label>
+                <label class="list-group-item" >
+                  <input class="form-check-input me-1" type="checkbox" value="" data-facet="year" data-value="2024" data-text="2024">
+                  2024
+                </label>
+              </div>
+            </div>
+            <hr>
+            <a class="filter-btn collapsed" data-bs-toggle="collapse" href="#collapse_state" role="button" aria-expanded="false" aria-controls="collapse_state">
+              ${_('State')}
+              <span class="arrow-filter" aria-hidden="true"></span>
+            </a>
+            <div class="collapse" id="collapse_state">
+              <div class="list-group">
+                <label class="list-group-item" >
+                  <input class="form-check-input me-1" type="checkbox" value="" data-facet="state" data-value="active" data-text="${_('Active')}">
+                  ${_('Active')}
+                </label>
+                <label class="list-group-item" >
+                  <input class="form-check-input me-1" type="checkbox" value="" data-facet="state" data-value="finished" data-text="${_('Finished')}">
+                  ${_('Finished')}
+                </label>
+              </div>
+            </div>
+            <hr>
+            <a class="filter-btn collapsed" data-bs-toggle="collapse" href="#collapse_classification" role="button" aria-expanded="false" aria-controls="collapse_classification">
+              ${_('Organizations')}
+              <span class="arrow-filter" aria-hidden="true"></span>
+            </a>
+            <div class="collapse" id="collapse_classification">
+              <div class="list-group">
+                <%! from course_classification.helpers import get_all_main_classifications %>
+                %for org in get_all_main_classifications():
+                  <label class="list-group-item" >
+                    <input class="form-check-input me-1" type="checkbox" value="" data-facet="classification" data-value="${org[0]}" data-text="${org[1]}">
+                    ${_(org[1])}
+                  </label>
+                %endfor
+              </div>
+            </div>
+      </div>
+    </div>
+  </section>
 </main>
-<!--script type="text/javascript">
-  $(window).load(function() {
-    var lang = $.cookie("openedx-language-preference");
-    if(lang == 'es' || lang == 'es-419'){
-      $('.courses-spanish').show()
-      $('.courses-english').hide()
-    }
-    else{
-      $('.courses-spanish').hide()
-      $('.courses-english').show()
-    }
-  })
-</script-->

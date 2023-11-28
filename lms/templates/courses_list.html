@@ -9,121 +9,112 @@
   courses_portal_api = get_active_enroll_courses()
   platforms_name = get_platform_names()
 %>
-<style>
-  .course-tittle {
-    background: #00bcfc;
-    font-size: 24px;
-    color: #fff;
-    text-align: center;
-    font-weight: 1000;
-    font-family: 'Exo 2', sans-serif;
-    margin: 32px 0 0;
-    text-transform: uppercase;
-    display: inline-block;
-    padding: 2px 20px;
-}
-</style>
-<%! from lms.djangoapps.course_info.helpers import get_course_class %>
+<%! from course_classification.helpers import get_course_ctgs %>
 % if settings.FEATURES.get('SHOW_COURSES_BY_CLASS'):
-<%  cats,course_class = get_course_class(courses) %>
-  %for categ in cats:
-    %if (categ['show_opt'] == 2 or (categ['show_opt'] == 1 and len(course_class[categ['id']]['courses']) > 0)):
-      <section class="courses-container courses-spanish">
-        <h2 class="course-tittle">${categ['name'].capitalize()}</h2>  
-        <section class="highlighted-courses" style="padding-top: 25px;">
-          % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
-            <section class="row courses-list">
-              <!-- Agregar if para diferenciar cursos en ingles/español -->
-              %for course in course_class[categ['id']]['courses']:
-                %if course.end is not None and course.end > now:
-                  <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4">
-                    <%include file="course.html" args="course=course" />
-                  </div>
-                %elif course.end is None:
-                  <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4">
-                    <%include file="course.html" args="course=course" />
-                  </div>
-                %endif
-              %endfor
-            </section>
-          % endif
-        </section>
+<%  course_class, main_class = get_course_ctgs(courses) %>
+  % if 'featured' in course_class and len(course_class['featured']) > 0 :
+    <section class="courses-container">
+      <div class="starred-course-title-container">
+        <h2 class="starred-course-tittle-institution">${_("Starred Courses").upper()}</h2>
+        <div class="starred-course-border"></div>
+      </div>
+      <section class="highlighted-courses">
+        % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
+          <ul class="courses-list">
+            %for course in course_class['featured']:
+              %if course.end is not None and course.end > now:
+                <li class="mb-3">
+                  <%include file="course.html" args="course=course,main_class=main_class" />
+                </li>
+              %elif course.end is None:
+                <li class="mb-3">
+                  <%include file="course.html" args="course=course,main_class=main_class" />
+                </li>
+              %endif
+            %endfor
+          </ul>
+        % endif
       </section>
-    %endif
-    %if (categ['show_opt'] == 2 and len(course_class[categ['id']]['courses']) == 0):
-      <p class="without-courses"> ${_("No existen cursos")}</p>
-    %endif
-  %endfor
+    </section>
+  %else:
+    %for categ in course_class.values():
+      %if (categ['show_opt'] == 2 or (categ['show_opt'] == 1 and len(categ['courses']) > 0)):
+        <section class="courses-container">
+          <div class="course-title-container">
+            <h2 class="course-tittle">${categ['name'].capitalize()}</h2> 
+          </div>
+          <section class="highlighted-courses">
+            % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
+              <ul class="courses-list">
+                %for course in course_class[categ['id']]['courses']:
+                  %if course.end is not None and course.end > now:
+                    <li class="mb-3">
+                      <%include file="course.html" args="course=course,main_class=main_class" />
+                    </li>
+                  %elif course.end is None:
+                    <li class="mb-3">
+                      <%include file="course.html" args="course=course,main_class=main_class" />
+                    </li>
+                  %endif
+                %endfor
+              </ul>
+            % endif
+          </section>
+        </section>
+      %endif
+      %if (categ['show_opt'] == 2 and len(course_class[categ['id']]['courses']) == 0):
+        <p class="without-courses" style="padding-bottom: 10px;"> ${_("No existen cursos")}</p>
+      %endif
+    %endfor
+  %endif
 %else:
 <section class="courses-container">
-  <section class="highlighted-courses" style="padding-top: 25px;">
+  <section class="highlighted-courses">
     % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
-      <section class="row courses-list">
+      <ul class="courses-list">
           ## limiting the course number by using HOMEPAGE_COURSE_MAX as the maximum number of courses
           %for course in courses:
             %if course.end is not None and course.end > now:
               %if course.enrollment_start is not None and course.enrollment_end is not None:
                 %if course.enrollment_end > now:
-                  %if course.id.course[-2:] == '_E':
-                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4 courses-english">
-                        <%include file="course.html" args="course=course" />
-                    </div>
-                  %else:
-                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4 courses-spanish">
-                      <%include file="course.html" args="course=course" />
-                    </div>
-                  %endif
+                  <li class="mb-3">
+                    <%include file="course.html" args="course=course,main_class={}" />
+                  </li>
                 %endif
               %endif
             %elif course.end is None:
               %if course.enrollment_start is not None and course.enrollment_end is not None:
                 %if course.enrollment_end > now:
-                  %if course.id.course[-2:] == '_E':
-                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4 courses-english">
-                        <%include file="course.html" args="course=course" />
-                    </div>
-                  %else:
-                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4 courses-spanish">
-                      <%include file="course.html" args="course=course" />
-                    </div>
-                  %endif
+                  <li class="mb-3">
+                    <%include file="course.html" args="course=course,main_class={}" />
+                  </li>
                 %endif
               %endif
             %endif
           %endfor
-      </section>
+      </ul>
     % endif
   </section>
 </section>
-% endif
-%for platform in courses_portal_api:
-  % if len(courses_portal_api[platform]) > 0:
-    <section class="courses-container courses-spanish">
-      <h2 class="course-tittle">${platforms_name[platform]}</h2>
-      <section class="highlighted-courses" style="padding-top: 25px;">
-        % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
-          <section class="row courses-list">
-            %for course_portal in courses_portal_api[platform]:
-              <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mb-4">
-                <%include file="course_portal.html" args="course=course_portal" />
-              </div>
-            %endfor
-          </section>
-        % endif
+  %for platform in courses_portal_api:
+    % if len(courses_portal_api[platform]) > 0:
+      <section class="courses-container">
+        <div class="course-title-container">
+          <h2 class="course-tittle">${platforms_name[platform]}</h2>
+        </div>
+        <section class="highlighted-courses">
+          % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
+            <ul class="courses-list">
+              %for course_portal in courses_portal_api[platform]:
+                <li class="mb-3">
+                  <%include file="course_portal.html" args="course=course_portal" />
+                </li>
+              %endfor
+            </ul>
+          % endif
+        </section>
       </section>
-    </section>
-  % endif
-%endfor
-<!--script type="text/javascript">
-  $(window).load(function() {
-      var lang = $.cookie("openedx-language-preference");
-      if(lang == 'es' || lang == 'es-419'){
-        $('.courses-spanish').show()
-        $('.courses-english').hide()
-      }
-      else{
-        $('.courses-spanish').hide()
-        $('.courses-english').show()
-      }
-  })
-</script-->
+    % endif
+  %endfor
+% endif
+

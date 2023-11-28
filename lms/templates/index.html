@@ -7,43 +7,39 @@ from django.urls import reverse
 
 from openedx.core.djangolib.markup import HTML, Text
 %>
-<style>
-  .container-center {
-      position: relative;
-      text-align: center;
-      color: white;
-  }
-  .title-1 {
-      position: absolute;
-      top: 32%;
-      left: 232px;
-      font-size: 5.1vw;
-      font-weight: 100;
-  }
-  .title-2 {
-      position: absolute;
-      top: 52%;
-      left: 232px;
-      font-size: 5.1vw;
-      font-weight: bold;
-  }
-  .title-3 {
-      position: absolute;
-      top: 72%;
-      left: 232px;
-      font-size: 5.1vw;
-      font-weight: 100;
-  }
-</style>
+
+<%block name="header_extras">
+<link rel="stylesheet" href="${static.url('open-uchile-theme/owlcarousel/owl.carousel.min.css')}">
+<link rel="stylesheet" href="${static.url('open-uchile-theme/owlcarousel/owl.theme.default.min.css')}">
+<script type="text/javascript" src="${static.url('open-uchile-theme/owlcarousel/owl.carousel.min.js')}"></script>
+
+</%block>
 <section class="container-fluid px-0" id="main">
   <div class="container-center">
-    <img src="${static.url('open-uchile-theme/images/banner-01-bg.jpg')}" class="mx-auto openuchile-header d-block">
-      <div class="title-1">${_("Open UChile ")}</div>
-      <div class="title-2">${_("E-Learning ")}</div>
-      <div class="title-3">${_("Platform ")}</div>
+    <img src="${static.url('open-uchile-theme/images/svg-2023/bannerOpenUchile.jpg')}" class="mx-auto openuchile-header d-block">
+      <!--div class="title-1">${_("Open UChile ")}</div>
+      <div class="title-2">${_("E-Learning Platform ")}</div-->
   </div>
   <img class="uchile-separator" src="${static.url('open-uchile-theme/images/uchile_separator.png')}" alt="">
-  <div class="container px-3">
+  % if settings.FEATURES.get('ENABLE_DASHBOARD_SEARCH'):
+  <%!
+   from course_classification.helpers import get_all_logos
+  %>
+    <div class="open-carousel-orgs">
+      <div class="carousel-wrap">
+        <div class="owl-carousel">
+          %for logo in get_all_logos():
+           %if logo[1]:
+            <div class="item"><a href="${logo[1]}" target="_blank"><img src="${logo[0]}"></div></a>
+           %else:
+           <div class="item"><a href="/" target="_blank"><img src="${logo[0]}"></div></a>
+           %endif
+          %endfor
+        </div>
+      </div>
+    </div>
+  % endif
+  <div class="px-3" style="margin-top: 25px;">
     <%include file="${courses_list}" />
   </div>
 </section>
@@ -55,6 +51,38 @@ from openedx.core.djangolib.markup import HTML, Text
               $('#login').trigger("click");
          }
       })
+      $(document).ready(function(){
+        $('.owl-carousel').owlCarousel({
+          loop: true,
+          margin: 40,
+          nav: true,
+          autoWidth: true,
+          slideTransition: 'linear',
+          autoplayTimeout: 3000,
+          autoplaySpeed: 3000,
+          dots: false,
+          navText: [
+            "<i class='fa fa-angle-left'></i>",
+            "<i class='fa fa-angle-right'></i>"
+          ],
+          autoplay: true,
+          autoplayHoverPause: true,
+          responsive: {
+            0: {
+              items: 1
+            },
+            600: {
+              items: 2
+            },
+            1000: {
+              items: 4
+            },
+            1500: {
+              items: 5
+            }
+          },
+        })
+      });
    </script>
 </%block>
 

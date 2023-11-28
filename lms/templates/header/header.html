@@ -16,7 +16,9 @@ from openedx.core.djangolib.markup import HTML, Text
 from lms.djangoapps.branding import api as branding_api
 from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_enabled, released_languages
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
-
+from openedx.core.djangoapps.util.user_messages import PageLevelMessages, UserMessage, UserMessageType
+from openedx.core.djangolib.markup import HTML
+from common.djangoapps.status.status import get_site_status_msg
 %>
 
 ## Provide a hook for themes to inject branding on top.
@@ -42,8 +44,74 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
   </script>
 % endif
 
+<%
+banner_messages = list(PageLevelMessages.user_messages(request))
+
+course_id= None
+site_status_message = get_site_status_msg(course_id)
+if site_status_message:
+    banner_messages.insert(0, UserMessage(UserMessageType.WARNING, site_status_message))
+%>
+% if banner_messages:
+    <style>
+        .alert-eol {
+            min-height: 25px;
+            line-height: 35px;
+            text-align: center;
+            background-color: hsl(19deg 92% 59%);
+            color: white;
+            border-bottom: 1px solid black;
+            font-size: 1.1em;
+        }
+        .alert-eol-text{
+            display: inline-block;
+            vertical-align: middle;
+            line-height: normal;
+        }
+    </style>
+    % for message in banner_messages:
+        % if "globalMessage" in message.message_html :
+            <div class="alert-eol">
+                <span class="alert-eol-text">
+                    ${HTML(message.message_html)}
+                </span>
+            </div>
+        % endif
+    %endfor    
+%endif
+
 <img class="uchile-separator" src="${static.url('open-uchile-theme/images/uchile_separator.png')}" alt="">
-<nav class="navbar navbar-expand-lg navbar-light px-3" >
+% if header_language_selector_is_enabled():
+    <% 
+    languages = released_languages() 
+    flags = {
+        'en': u'\U0001f1fa\U0001f1f8',
+        'es-419': u'\U0001f1e8\U0001f1f1',
+    }
+    %>
+    % if len(languages) > 1:
+        <form action="/i18n/setlang/" method="post" class="settings-language-form" id="language-settings-form">
+            <input type="hidden" id="csrf_token" name="csrfmiddlewaretoken" value="${csrf_token}">
+            % if user.is_authenticated:
+                <input title="preference api" type="hidden" class="url-endpoint" value="${reverse('preferences_api', kwargs={'username': user.username})}" data-user-is-authenticated="true">
+            % else:
+                <input title="session update url" type="hidden" class="url-endpoint" value="${reverse('session_language')}" data-user-is-authenticated="false">
+            % endif
+            <label><span class="sr">${_("Choose Language")}</span>
+            <select class="input select language-selector header-lang-selector" id="settings-language-value" name="language">
+                % for language in languages:
+                    % if language[0] == LANGUAGE_CODE:
+                        <option value="${language[0]}" selected="selected">${flags.get(language[0], '')}&emsp;${language[1]}</option>
+                    % else:
+                        <option value="${language[0]}">${flags.get(language[0], '')}&emsp;${language[1]}</option>
+                    % endif
+                % endfor
+            </select>
+            </label>
+        </form>
+    % endif
+% endif
+<nav id="open-navbar" class="navbar navbar-expand-lg navbar-light px-3" >
     <div class="container-fluid">
         % if use_cookie_banner:
             ${static.renderReact(
@@ -53,8 +121,8 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
             )}
         % endif
         <%include file="navbar-logo-header.html" args="online_help_token=online_help_token"/>
-        <button class="navbar-toggler ml-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler ml-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars" aria-hidden="true" style="font-size: 28px;color: white;"></i>
         </button>
         % if user.is_authenticated:
             <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
@@ -79,27 +147,4 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
   <%include file="../widgets/cookie-consent.html" />
 % endif
 
-% if header_language_selector_is_enabled():
-    <% languages = released_languages() %>
-    % if len(languages) > 1:
-        <form action="/i18n/setlang/" method="post" class="settings-language-form" id="language-settings-form">
-            <input type="hidden" id="csrf_token" name="csrfmiddlewaretoken" value="${csrf_token}">
-            % if user.is_authenticated:
-                <input title="preference api" type="hidden" class="url-endpoint" value="${reverse('preferences_api', kwargs={'username': user.username})}" data-user-is-authenticated="true">
-            % else:
-                <input title="session update url" type="hidden" class="url-endpoint" value="${reverse('session_language')}" data-user-is-authenticated="false">
-            % endif
-            <label><span class="sr">${_("Choose Language")}</span>
-            <select class="input select language-selector" id="settings-language-value" name="language">
-                % for language in languages:
-                    % if language[0] == LANGUAGE_CODE:
-                        <option value="${language[0]}" selected="selected">${language[1]}</option>
-                    % else:
-                        <option value="${language[0]}" >${language[1]}</option>
-                    % endif
-                % endfor
-            </select>
-            </label>
-        </form>
-    % endif
-% endif
+

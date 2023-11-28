@@ -63,7 +63,7 @@ now = timezone.now()
 
 <script>
   function show_default_image() {
-    return "${static.url('eol-uchile-2020/images/default-course.jpg')}";
+    return "${static.url('open-uchile-theme/images/default-course.jpg')}";
   }
 </script>
 <style>
@@ -128,7 +128,7 @@ now = timezone.now()
           % elif is_course_full:
             <button class="btn my-auto pt-2 enroll-button" disabled>${_("Course is full")}</button>
           % elif invitation_only and not can_enroll:
-            <button class="btn my-auto pt-2 enroll-button" disabled>${_("Enrollment in this course is by invitation only")}</button>
+            <button class="btn my-auto pt-2 enroll-button" disabled>${_("Curso requiere postulación")}</button>
           % elif not is_shib_course and not can_enroll:
             <button class="btn my-auto pt-2 enroll-button" disabled>${_("Enrollment is Closed")}</button>
           %elif allow_anonymous:
@@ -149,7 +149,7 @@ now = timezone.now()
                 href_class = "register"
             %>
             <a href="${reg_href}" class="${href_class} my-auto pt-2">
-              <button class="btn">${_("Enroll Now")}</button>
+              <button class="btn">${_("Inscríbase ahora")}</button>
             </a>
             <div id="register_error"></div>
           %endif
@@ -178,9 +178,9 @@ now = timezone.now()
     <div class="row info-row my-3 rounded">
       <%
         course_start_date = 'None'
+        aux_start_date = False
         if not course.start_date_is_still_default:
           course_start_date = course.advertised_start or course.start
-          aux_start_date = False
           if not isinstance(course_start_date, string_types):
             aux_start_date = True
             course_start_date = course_start_date.strftime('%Y-%m-%dT%H:%M:%S%z')
@@ -251,7 +251,7 @@ now = timezone.now()
     </div>
     <div class="row">
       <h3 class="text-right">${_("There is one session available:")}</h3>
-      <p class="text-right lead">${total_enrolled if total_enrolled else None}${_(" already enrolled! After a course session ends, it will be archived.")}</p>
+      <p class="text-right lead">${total_enrolled if total_enrolled else None}${_(" already enrolled!")}</p>
     </div>
 
   </div>

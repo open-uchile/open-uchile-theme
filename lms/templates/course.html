@@ -15,40 +15,105 @@ now = timezone.now()
     card_class = 'inactive'
 %>
 
-<%page args="course" expression_filter="h"/>
-<div class="card h-100 mx-auto ${card_class}" style="background-image: url(${course.course_image_url}), url(${static.url('open-uchile-theme/images/default-course.png')}); max-width: 400px;">
-  <div class="card-body"></div>
-  <div class="card-footer text-white">
-      <span class="course-name"><strong>${course.display_name_with_default}</strong></span>
-      <br>
-      <span class="course-org"><small>${course.display_org_with_default}</small></span>
-  </div>
-  <div class="card-desc text-center text-white">
-      <p class="font-weight-lighter font-italic">${course.short_description}</p>
-      <div class="card-button">
-          <%
-              course_about = reverse('about_course', args=[text_type(course.id)])
-          %>
-          <a href="${course_about}"><button type="button" class="btn btn-outline-light">${_("See more")}</button></a>
-      </div>
+<%page args="course,main_class" expression_filter="h"/>
+<%
+    course_about = reverse('about_course', args=[text_type(course.id)])
+%>
+<div class="card ${card_class}" data-about="${course_about}" style="cursor: pointer;" onclick="window.location.href = this.dataset.about">
+  <div class="row g-0">
+    <div class="col-md-7">
+      <!--object data="${course.course_image_url}" class="img-fluid" type="image/png">
+        <img src="${static.url('open-uchile-theme/images/default-course2.png')}" class="img-fluid rounded-start" alt="...">
+      </-->
+      <figure>
+        <img src="${course.course_image_url}" class="card-img-top img-fluid rounded-start" alt="${course.display_name_with_default}">
+      </figure>
       
-  </div>
-  <div class="card-date">
-      <%
-      if course.start is not None:
-          course_date_string = course.start.strftime('%Y-%m-%dT%H:%M:%S%z')
-      else:
-          course_date_string = ''
-      %>
-      % if course.end is not None and now is not None and course.end < now:
-        <div class="course-date" aria-hidden="true">${_("Finished course")}</div>
-      % elif course.advertised_start is not None:
-        <div class="course-date" aria-hidden="true">${_("Starts")}: ${course.advertised_start}</div>
-      % elif course.self_paced and course.start <= now:
-        <div class="course-date" aria-hidden="true">${_("Starts")}: ${_("Today")}</div>
-      % else:
-          <div class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_date_string}" data-language="${LANGUAGE_CODE}" data-string="${_("Starts: {date}")}"></div>
-      % endif
+    </div>
+    <div class="col-md-5">
+      <div class="card-body">
+        %if main_class and course.id in main_class and main_class[course.id]['logo']:
+          <img class="card-logo" src="${main_class[course.id]['logo'].url}" >
+        %endif
+        <h5 class="card-title" title="${course.display_name_with_default}">${course.display_name_with_default}</h5>
+        %if not main_class or course.id not in main_class or not main_class[course.id]['logo']:
+          <p class="card-text ct1" title="${course.display_org_with_default}"><small>
+              %if course.org != course.display_org_with_default:
+                ${course.display_org_with_default}
+              %elif main_class and course.id in main_class:
+                ${main_class[course.id]['name']}
+              %else:
+                ${course.org}
+              %endif
+          </small></p>
+        %endif
+        <p class="card-text ct2" title="${course.short_description}">
+          <small>${course.short_description}</small>
+        </p>
+        <div class="row ct3">
+          <%
+            if course.start is not None:
+                course_date_string = course.start.strftime('%Y-%m-%dT%H:%M:%S%z')
+            else:
+                course_date_string = ''
+            if course.end is not None:
+                course_enddate_string = course.end.strftime('%Y-%m-%dT%H:%M:%S%z')
+            else:
+                course_enddate_string = ''
+          %>
+          % if course.end is not None and now is not None and course.end < now:
+          <div class="col-md-12">
+            <div class="open-course-date-icon">
+              <img src="${static.url('open-uchile-theme/images/svg-2023/fecha termino.svg')}">
+            </div>
+            <div class="open-course-date-text">
+              <span>${_("Finished course")}</span>
+            </div>
+          </div>
+          % elif course.advertised_start is not None:
+          <div class="col-md-12">
+            <div class="open-course-date-icon">
+              <img src="${static.url('open-uchile-theme/images/svg-2023/fecha inicio.svg')}">
+            </div>
+            <div class="open-course-date-text">
+              <span>${course.advertised_start}</span>
+            </div>
+          </div>
+          % elif course.self_paced and course.start <= now:
+          <div class="col-md-12">
+            <div class="open-course-date-icon">
+              <img src="${static.url('open-uchile-theme/images/svg-2023/fecha inicio.svg')}">
+            </div>
+            <div class="open-course-date-text">
+              <span>${_("Permanently open")}</span>
+            </div>
+          </div>
+          % else:
+            <div class="col-md-6">
+              <div class="open-course-date-icon">
+                <img src="${static.url('open-uchile-theme/images/svg-2023/fecha inicio.svg')}">
+              </div>
+              <div class="open-course-date-text">
+                <span>${_("Inicio del curso")}</span>
+                <div class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_date_string}" data-language="${LANGUAGE_CODE}" data-string=""></div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="open-course-date-icon">
+                <img src="${static.url('open-uchile-theme/images/svg-2023/fecha termino.svg')}">
+              </div>
+              <div class="open-course-date-text">
+                <span>${_("Termino del curso")}</span>
+                <div class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_enddate_string}" data-language="${LANGUAGE_CODE}" data-string=""></div>
+              </div>
+            </div>
+          % endif
+        </div>
+        <div class="card-button">
+          <a href="${course_about}"><button type="button" class="btn btn-outline-light">${_("See more")}</button></a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 <%static:require_module_async module_name="js/dateutil_factory" class_name="DateUtilFactory">
