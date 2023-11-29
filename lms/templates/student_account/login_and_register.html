@@ -155,18 +155,26 @@
     });
     
     // REGISTER
-    function crearte_btn(text){
+    function crearte_btn(text, btn_type){
         if($('form#register button#SSO_btn').length > 0){
             $('form#register button#SSO_btn').text(text);
+            $('form#register button#SSO_btn').data('type', btn_type);
         }
         else{
             let SSO_btn = document.createElement('button');
             SSO_btn.id = 'SSO_btn';
-            SSO_btn.className = 'action action-primary action-update js-register register-button';
+            SSO_btn.className = 'action action-primary';
             SSO_btn.innerText = text;
+            SSO_btn.dataset.type = btn_type;
             $('form#register').append(SSO_btn);
         }
     }
+    $('form#register button#SSO_btn').live('click', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        if(this.dataset.type == 'login') window.location.href = '/eol_sso_login/uchile_login/?next=%2Fdashboard';
+        else window.location.href = 'https://cuenta.uchile.cl/crear-cuenta';
+    });
     $('#register-document').live('focusout', function(e) {
         e.preventDefault();
         //e.stopPropagation();
@@ -190,11 +198,11 @@
                     if(type_document == 'rut'){
                         if(data.have_sso){
                             $('form#register button[type="submit"]').prop("disabled",true);
-                            crearte_btn('${_("Sign in with Mi.UChile") }');
+                            crearte_btn('${_("Sign in with Mi.UChile") }', 'login');
                         }
                         else{
                             if(type_document == "rut"){
-                                crearte_btn('${_("Create Mi.UChile account") }');
+                                crearte_btn('${_("Create Mi.UChile account") }', 'create');
                             }
                         }
                         $('form#register button#SSO_btn').show();
@@ -211,11 +219,11 @@
                 if(type_document == 'rut'){
                     if(data.have_sso){
                         $('form#register button[type="submit"]').prop("disabled",true);
-                        crearte_btn('${_("Sign in with Mi.UChile") }');
+                        crearte_btn('${_("Sign in with Mi.UChile") }', 'login');
                     }
                     else{
                         if(type_document == "rut"){
-                            crearte_btn('${_("Create Mi.UChile account") }');
+                            crearte_btn('${_("Create Mi.UChile account") }', 'create');
                         }
                     }
                     $('form#register button#SSO_btn').show();
