@@ -157,8 +157,8 @@
     // REGISTER
     function crearte_btn(text, btn_type){
         if($('form#register button#SSO_btn').length > 0){
-            $('form#register button#SSO_btn').text(text);
-            $('form#register button#SSO_btn').data('type', btn_type);
+            $('form#register button#SSO_btn')[0].innerText = text;
+            $('form#register button#SSO_btn')[0].dataset.type = btn_type;
         }
         else{
             let SSO_btn = document.createElement('button');
