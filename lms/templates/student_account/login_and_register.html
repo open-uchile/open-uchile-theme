@@ -173,7 +173,7 @@
         e.preventDefault();
         e.stopPropagation();
         if(this.dataset.type == 'login') window.location.href = '/eol_sso_login/uchile_login/?next=%2Fdashboard';
-        else window.location.href = 'https://cuenta.uchile.cl/crear-cuenta';
+        else window.open('https://cuenta.uchile.cl/crear-cuenta', '_blank').focus();
     });
     $('#register-document').live('focusout', function(e) {
         e.preventDefault();
