@@ -198,7 +198,7 @@ msgstr ""
 
 #: lms/templates/course.html:113 lms/templates/course_portal.html:97
 msgid "See more"
-msgstr ""
+msgstr "Aprender más"
 
 #: lms/templates/courses_list.html:18
 msgid "Starred Courses"
@@ -1914,11 +1914,11 @@ msgstr "entre otras instituciones"
 
 #: lms/templates/student_account/form_field.underscore:136
 msgid "Need help signing in?"
-msgstr ""
+msgstr "¿Necesitas ayuda para iniciar sesión?"
 
 #: lms/templates/student_account/form_field.underscore:138
 msgid "Forgot my password"
-msgstr ""
+msgstr "Olvidé mi contraseña"
 
 #: lms/templates/student_account/form_field.underscore:140
 #: lms/templates/student_account/form_field.underscore:149
@@ -1931,7 +1931,7 @@ msgstr ""
 
 #: lms/templates/student_account/form_field.underscore:147
 msgid "Create an account"
-msgstr ""
+msgstr "Crear una cuenta"
 
 #: lms/templates/student_account/login2.underscore:8
 msgid "Sign in to continue learning as {email}"

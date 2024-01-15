@@ -21,7 +21,8 @@ var translation = {
     "Sort by:": "Ordenar por:",
     "Year:": "Año:",
     "Finished course": "Curso finalizado",
-    "Permanently open": "Abierto permanentemente"
+    "Permanently open": "Abierto permanentemente",
+    "See more": "Aprender más"
 }
 $(window).load(function() {
     /*if(document.documentElement.lang == "es-419" ){
@@ -318,21 +319,28 @@ function createCourse(data, extra_data){
         data["mainClass_logo"] = extra_data.main_classification.logo;
         org_html = '';
     }
-    const coursehtml = '<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-3"><div class="card mb-3 ${card_class}" data-about="/courses/{course}/about" style="cursor: pointer;" onclick="window.location.href = this.dataset.about"><div class="row g-0"><div class="col-md-7"><figure>'+
+    const coursehtml = '<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-3"><div class="card mb-3 {is_active}" data-about="/courses/{course}/about" style="cursor: pointer;" onclick="window.location.href = this.dataset.about"><div class="row g-0"><div class="col-md-7"><figure>'+
     '<img src="{image_url}" class="card-img-top img-fluid rounded-start" alt="{course_display_name}"></figure></div>'+
     '<div class="col-md-5"><div class="card-body">'+img_html+'<h5 class="card-title" title="{course_display_name}">{course_display_name}</h5>'+
     org_html+'<p class="card-text ct2" title="{course_overview}"><small>{course_overview}</small></p>'+
-    '<div class="row ct3">{course_date_html}</div><div class="card-button"><a href="/courses/{course}/about"><button type="button" class="btn btn-outline-light">APRENDER MAS</button></a></div>'+
+    '<div class="row ct3">{course_date_html}</div><div class="card-button"><a href="/courses/{course}/about"><button type="button" class="btn btn-outline-light">'+T("See more")+'</button></a></div>'+
     '</div></div></div></div></div>';
     data['course_date_html'] = create_course_date_html(data.start, data.end, extra_data.advertised_start)
     data["course_display_name"] = data.content.display_name;
     data["course_overview"] = extra_data.short_description || data.content.overview;
+    data["is_active"] = course_is_active(data.end);
     if(extra_data.display_org_with_default != data["org"]) data["org"] = extra_data.display_org_with_default;
     else data["org"] = extra_data.main_classification.name || data.org;
     //data["formatDate"] = formatDate(data.start, data.end);
     return edx.HtmlUtils.interpolateHtml(edx.HtmlUtils.HTML(coursehtml), data);
 }
-
+function course_is_active(end){
+    if (end !== undefined){
+        var end_date = new Date(end);
+        if(end_date < now) return 'inactive';
+    }
+    return ''
+}
 function create_course_date_html(start, end, advertised_start){
     const html1 = '<div class="col-md-12"><div class="open-course-date-icon"><img src="/static/open-uchile-theme/images/svg-2023/fecha termino.svg"></div>'+
     '<div class="open-course-date-text"><span>{date_text}</span></div></div>';
