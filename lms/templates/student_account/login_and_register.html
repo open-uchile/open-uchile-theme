@@ -70,13 +70,14 @@
             e.stopPropagation();
         }
     });
-    $('#login-email').live('focusout', function(e) {
+
+    function check_sso_email(){
         $('#next_btn').hide();
         $('#create_text').text('');
         $('#login_btn').hide();
+        $('#sso_btn').hide();
+        $('#first_time').show();
         $('.form-field.password-password').hide();
-        e.preventDefault();
-        e.stopPropagation();
         let email = $('#login-email').val();
         $.post( "/eol_sso_login/api/email/", {email: email} )
         .done(function( data ) {
@@ -86,6 +87,7 @@
                         if(data.have_sso){
                             $('#sso_btn').text('${_("Sign in with Mi.UChile") }');
                             $('#sso_btn').show();
+                            $('#first_time').hide();
                         }
                         else{
                             $('#sso_btn').hide();
@@ -108,45 +110,17 @@
         .fail(function() {
             msg_login('${_("Unexpected error, refresh the page and try again, if the error persists contact the help desk") }');
         });
+    }
+    $('#login-email').live('focusout', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        check_sso_email();
+
     });
     $('#next_btn').live('click', function(e){
-        $('#next_btn').hide();
-        $('#create_text').text('');
-        $('#login_btn').hide();
-        $('.form-field.password-password').hide();
         e.preventDefault();
         e.stopPropagation();
-        let email = $('#login-email').val();
-        $.post( "/eol_sso_login/api/email/", {email: email} )
-        .done(function( data ) {
-            if (data.result == 'success'){
-                if(data.exists){
-                    if(data.active){
-                        if(data.have_sso){
-                            $('#sso_btn').text('${_("Sign in with Mi.UChile") }');
-                            $('#sso_btn').show();
-                        }
-                        else{
-                            $('#sso_btn').hide();
-                            $('#login_btn').show();
-                            $('.form-field.password-password').show();
-                        }
-                    }
-                    else msg_login('${_("Account not active") }');
-                }
-                else{
-                    msg_login('${_("There is no account associated with the email entered") }');
-                }
-            }
-            else {
-                $('#create_text').text('${_("Enter email") }');
-                $('#next_btn').show();
-            }
-            
-        })
-        .fail(function() {
-            msg_login('${_("Unexpected error, refresh the page and try again, if the error persists contact the help desk") }');
-        });
+        check_sso_email();
     });
     $('#sso_btn').live('click', function(e){
         e.preventDefault();
@@ -155,6 +129,7 @@
     });
     
     // REGISTER
+
     function crearte_btn(text, btn_type){
         if($('form#register button#SSO_btn').length > 0){
             $('form#register button#SSO_btn')[0].innerText = text;

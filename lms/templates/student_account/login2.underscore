@@ -79,7 +79,7 @@
 
 
 <% if ( context.createAccountOption !== false && !context.syncLearnerProfileData && !(context.enterpriseName && context.currentProvider) ) { %>
-<div class="toggle-form text-center mt-4">
+<div id="first_time" class="toggle-form text-center mt-4">
     <span class="lead"><%- gettext("First time here?") %></span>
     <a href="#login" class="form-toggle" data-type="register"><%- gettext("Create an Account.") %></a>
 </div>

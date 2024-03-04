@@ -67,3 +67,9 @@
     	<% if ( context.registerFormSubmitButtonText ) { %><%- context.registerFormSubmitButtonText %><% } else { %><%- gettext("Create Account") %><% } %>
     </button>
 </form>
+<script type="text/javascript">
+    $( document ).ready(function() {
+        $(".form-field.text-document").prependTo(".required-fields");
+        $(".form-field.select-type_document").prependTo(".required-fields");
+    });
+</script>

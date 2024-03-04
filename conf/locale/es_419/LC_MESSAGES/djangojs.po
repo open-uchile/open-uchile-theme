@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: help-open@uchile.cl\n"
-"POT-Creation-Date: 2023-12-11 12:39+0000\n"
+"POT-Creation-Date: 2024-03-04 18:08+0000\n"
 "PO-Revision-Date: 2022-07-28 20:11+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es_419\n"
@@ -1961,10 +1961,9 @@ msgid "or sign in with"
 msgstr ""
 
 #: lms/templates/student_account/login2.underscore:50
-#: lms/templates/student_account/login_and_register.html:87
-#: lms/templates/student_account/login_and_register.html:126
-#: lms/templates/student_account/login_and_register.html:201
-#: lms/templates/student_account/login_and_register.html:220
+#: lms/templates/student_account/login_and_register.html:88
+#: lms/templates/student_account/login_and_register.html:176
+#: lms/templates/student_account/login_and_register.html:195
 msgid "Sign in with Mi.UChile"
 msgstr "Iniciar sesión con Mi.UChile"
 
@@ -1985,58 +1984,54 @@ msgstr ""
 msgid "Sign in or Register"
 msgstr ""
 
-#: lms/templates/student_account/login_and_register.html:96
-#: lms/templates/student_account/login_and_register.html:135
+#: lms/templates/student_account/login_and_register.html:98
 msgid "Account not active"
 msgstr ""
 
-#: lms/templates/student_account/login_and_register.html:99
-#: lms/templates/student_account/login_and_register.html:138
+#: lms/templates/student_account/login_and_register.html:101
 msgid "There is no account associated with the email entered"
 msgstr ""
 
-#: lms/templates/student_account/login_and_register.html:103
-#: lms/templates/student_account/login_and_register.html:142
+#: lms/templates/student_account/login_and_register.html:105
 msgid "Enter email"
 msgstr ""
 
-#: lms/templates/student_account/login_and_register.html:109
-#: lms/templates/student_account/login_and_register.html:148
+#: lms/templates/student_account/login_and_register.html:111
 msgid ""
 "Unexpected error, refresh the page and try again, if the error persists "
 "contact the help desk"
 msgstr ""
 
-#: lms/templates/student_account/login_and_register.html:191
+#: lms/templates/student_account/login_and_register.html:166
 msgid "Enter document number"
 msgstr ""
 
-#: lms/templates/student_account/login_and_register.html:192
+#: lms/templates/student_account/login_and_register.html:167
 msgid "The document number must be between 5 and 20 characters"
 msgstr ""
 
-#: lms/templates/student_account/login_and_register.html:193
+#: lms/templates/student_account/login_and_register.html:168
 msgid "Select a document type"
 msgstr ""
 
-#: lms/templates/student_account/login_and_register.html:194
+#: lms/templates/student_account/login_and_register.html:169
 msgid "The document number must be alphanumeric"
 msgstr ""
 
-#: lms/templates/student_account/login_and_register.html:195
+#: lms/templates/student_account/login_and_register.html:170
 msgid "Incorrect Rut"
 msgstr ""
 
-#: lms/templates/student_account/login_and_register.html:197
+#: lms/templates/student_account/login_and_register.html:172
 msgid "Document number already exists on the platform"
 msgstr ""
 
-#: lms/templates/student_account/login_and_register.html:204
-#: lms/templates/student_account/login_and_register.html:223
+#: lms/templates/student_account/login_and_register.html:179
+#: lms/templates/student_account/login_and_register.html:198
 msgid "Create Mi.UChile account"
 msgstr ""
 
-#: lms/templates/student_account/login_and_register.html:234
+#: lms/templates/student_account/login_and_register.html:209
 msgid "Unexpected error, please update and try again"
 msgstr ""
 
