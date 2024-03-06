@@ -4,6 +4,8 @@
     from django.utils.translation import ugettext as _
     from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
     from openedx.core.djangolib.js_utils import dump_js_escaped_json
+    from urllib.parse import urlencode
+    from django.urls import reverse
 %>
 <%namespace name='static' file='/static_content.html'/>
 
@@ -39,7 +41,7 @@
         <%static:include path="student_account/login2.underscore" />
     </script>
 </%block>
-
+<div style="visibility: hidden;" id="url_next">${ reverse('eol_sso_login:uchile_login') | h }?${urlencode({'next':login_redirect_url})}</div>
 <div class="container px-3 mt-2">
     <div class="card col-11 col-md-8 col-lg-7 mx-auto shadow-lg px-5 py-4 mb-5 rounded-lg" id="content-container">
         % if enable_enterprise_sidebar:
@@ -125,7 +127,8 @@
     $('#sso_btn').live('click', function(e){
         e.preventDefault();
         e.stopPropagation();
-        window.location.href = '/eol_sso_login/uchile_login/?next=%2Fdashboard';
+        var url = document.getElementById("url_next").textContent;
+        window.location.href = url;
     });
     
     // REGISTER
@@ -147,7 +150,10 @@
     $('form#register button#SSO_btn').live('click', function(e){
         e.preventDefault();
         e.stopPropagation();
-        if(this.dataset.type == 'login') window.location.href = '/eol_sso_login/uchile_login/?next=%2Fdashboard';
+        if(this.dataset.type == 'login') {
+            var url = document.getElementById("url_next").textContent;
+            window.location.href = url;
+        }
         else window.open('https://cuenta.uchile.cl/crear-cuenta', '_blank').focus();
     });
     $('#register-document').live('focusout', function(e) {
