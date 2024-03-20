@@ -3,6 +3,8 @@
 <%!
 from django.utils.translation import ugettext as _
 from openedx.core.djangolib.markup import HTML, Text
+from django.urls import reverse
+import urllib
 %>
 <script type="text/javascript" src="${static.url('eol_survey/js/eol_survey_report_analytics.js')}"></script>
 <link rel="stylesheet" type="text/css" href="${static.url('eol_survey/css/eol_survey_report_analytics.css')}"/>
