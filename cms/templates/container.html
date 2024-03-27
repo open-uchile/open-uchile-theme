@@ -42,6 +42,12 @@ from openedx.core.djangolib.markup import HTML, Text
         opacity: 0.7;
     }
 </style>
+<script type="text/javascript" src="${static.url('eol_duplicate_xblock/js/eol_copy_xblock.js')}"></script>
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function(){ 
+        $("#eol_duplicate_xblock_div").load("${static.url('eol_duplicate_xblock/html/copy-to-other-course.html')}");
+    }, false);
+</script>
 </%block>
 
 <%block name="page_bundle">
@@ -82,7 +88,7 @@ from openedx.core.djangolib.markup import HTML, Text
 </%block>
 
 <%block name="content">
-
+<div id="eol_duplicate_xblock_div"></div>
 <script type="text/javascript">
     window.STUDIO_FRONTEND_IN_CONTEXT_IMAGE_SELECTION = true;
 </script>
