@@ -54,7 +54,7 @@
     <%= context.fields /* xss-lint: disable=underscore-not-escaped */ %>
 
     <div class="form-field checkbox-optional_fields_toggle">
-        <input type="checkbox" id="toggle_optional_fields" class="input-block checkbox"">
+        <input type="checkbox" id="toggle_optional_fields" class="input-block checkbox">
         <label for="toggle_optional_fields">
             <span class="label-text">
                 <%- gettext("Support education research by providing additional information") %>
@@ -63,13 +63,27 @@
     </div>
 
 
-    <button type="submit" class="action action-primary action-update js-register register-button">
-    	<% if ( context.registerFormSubmitButtonText ) { %><%- context.registerFormSubmitButtonText %><% } else { %><%- gettext("Create Account") %><% } %>
-    </button>
+    
+    <center>
+        <button type="submit" class="action action-primary action-update js-register register-button" style="display: none;">
+            <% if ( context.registerFormSubmitButtonText ) { %><%- context.registerFormSubmitButtonText %><% } else { %><%- gettext("Create Account") %><% } %>
+        </button>
+        <button id="next_btn_register" class="action-primary"><%- gettext("Next") %></button>
+        <button id="sso_btn_register" class="action-primary" style="display: none;"><%- gettext("Sign in with Mi.UChile") %></button>
+        <button id="clean_btn_register" class="action-primary"><%- gettext("Clean data") %></button>
+    </center>
 </form>
 <script type="text/javascript">
     $( document ).ready(function() {
         $(".form-field.text-document").prependTo(".required-fields");
         $(".form-field.select-type_document").prependTo(".required-fields");
+        $(".form-field.email-email").hide();
+        $(".form-field.text-name").hide();
+        $(".form-field.text-username").hide();
+        $(".form-field.password-password").hide();
+        $(".form-field.select-country").hide();
+        $(".form-field.select-gender").hide();
+        $(".form-field.select-year_of_birth").hide();
+        $(".form-field.select-level_of_education").hide();
     });
 </script>
