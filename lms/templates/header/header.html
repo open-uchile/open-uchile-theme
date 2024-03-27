@@ -68,6 +68,20 @@ if site_status_message:
             vertical-align: middle;
             line-height: normal;
         }
+        .activation-email-eol {
+            min-height: 25px;
+            line-height: 35px;
+            text-align: center;
+            background-color: yellow;
+            color: black;
+            border-bottom: 1px solid black;
+            font-size: 1.1em;
+        }
+        .activation-email-eol-text{
+            display: inline-block;
+            vertical-align: middle;
+            line-height: normal;
+        }
     </style>
     % for message in banner_messages:
         % if "globalMessage" in message.message_html :
@@ -79,7 +93,24 @@ if site_status_message:
         % endif
     %endfor    
 %endif
-
+% if user.is_authenticated and not user.is_active:
+<div class="status status-verification warning" style="text-align: center;">
+    <span id="status-title" class="title status-title">
+        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+        <span class="sr">Notice</span>
+        ${_("Activate your account!")}
+    </span>
+    ${Text(_("Check your {email_start}{email}{email_end} inbox for an account activation link from {platform_name}.{newline} If you need help, contact {link_start}{platform_name} Support {link_end}.")).format(
+        platform_name=platform_name,
+        email_start=HTML("<strong>"),
+        email_end=HTML("</strong>"),
+        email=user.email,
+        newline=HTML("</br>"),
+        link_start=HTML("<a target='_blank' href='/eol_contact_form'>"),
+        link_end=HTML("</a>"),)
+    }
+</div>
+% endif
 <img class="uchile-separator" src="${static.url('open-uchile-theme/images/uchile_separator.png')}" alt="">
 % if header_language_selector_is_enabled():
     <% 

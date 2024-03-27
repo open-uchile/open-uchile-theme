@@ -46,10 +46,13 @@
 
     <%= HtmlUtils.HTML(context.fields) %>
     <center>
+        <span id="create_text" style="color: #842029;font-weight: bold;display: block;margin-top: 15px;"></span> 
         <button id="login_btn" type="submit" class="action action-primary action-update js-login login-button"><%- gettext("Sign in") %></button>
         <button id="sso_btn" class=" action-primary "><%- gettext("Sign in with Mi.UChile") %></button>
+        <button id="no_active_btn" class="action-primary"><%- gettext("Reenviar correo de verificación") %></button>
         <button id="next_btn" class=" action-primary"><%- gettext("Next") %></button>
-        <span id="create_text" style="color: #842029;font-weight: bold;display: block;margin-top: 15px;"></span>  
+        <a id="create_account_login" href="#login" class="form-toggle" data-type="register"><%- gettext("Create an Account.") %></a>
+        <button id="clean_btn_login" class="action-primary"><%- gettext("Clean data") %></button>
     </center>
 
     <% if ( context.providers.length > 0 && !context.currentProvider) { %>
@@ -79,15 +82,39 @@
 
 
 <% if ( context.createAccountOption !== false && !context.syncLearnerProfileData && !(context.enterpriseName && context.currentProvider) ) { %>
+    <style>
+    .separator {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: black;
+        font-size: 1.5em;
+    }
+    .separator::before, .separator::after {
+    margin-right: 0.25em;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid black;
+}
+    </style>
+
 <div id="first_time" class="toggle-form text-center mt-4">
+    <div id="login_separator" class="separator mx-5 my-3">O</div>
     <span class="lead"><%- gettext("First time here?") %></span>
     <a href="#login" class="form-toggle" data-type="register"><%- gettext("Create an Account.") %></a>
 </div>
+<span id="eol_verification_msg" style="color: #172c6b;font-weight: bold;display: block;margin-top: 15px;display: none;"></span> 
 <% } %>
 <script type="text/javascript">
     $( document ).ready(function() {
         $('#login_btn').hide();
         $('#sso_btn').hide();
+        $('#no_active_btn').hide();
+        $('#create_account_login').hide();
+        $('#clean_btn_login').hide();
         $('.form-field.password-password').hide();
     });
 </script>

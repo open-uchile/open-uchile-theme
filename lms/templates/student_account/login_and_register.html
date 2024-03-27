@@ -59,11 +59,24 @@
 </div>
 <script type="text/javascript">
     //LOGIN
-    function msg_login(msg){
+
+    window.addEventListener("load", (event) => {
+        $('#first_time span').html('${_("¿No tienes cuenta en Open UChile?") }');
+        $('#first_time a').html('${_("Crear Cuenta") }');
+    });
+    function clean_form(){
+        $('#next_btn').hide();
+        $('#create_text').text('');
+        $('#eol_verification_msg').text('');
         $('#login_btn').hide();
+        $('#create_account_login').hide();
         $('#sso_btn').hide();
-        $('#next_btn').show();
+        $('#clean_btn_login').hide();
+        $('#first_time').hide();
+        $('#no_active_btn').hide();
         $('.form-field.password-password').hide();
+    }
+    function msg_login(msg){
         $('#create_text').text(msg);
     }
     $('#login-email').live('keydown', function(e) {
@@ -74,16 +87,12 @@
     });
 
     function check_sso_email(){
-        $('#next_btn').hide();
-        $('#create_text').text('');
-        $('#login_btn').hide();
-        $('#sso_btn').hide();
-        $('#first_time').show();
-        $('.form-field.password-password').hide();
+        clean_form();
         let email = $('#login-email').val();
         $.post( "/eol_sso_login/api/email/", {email: email} )
         .done(function( data ) {
             if (data.result == 'success'){
+                $('#clean_btn_login').show();
                 if(data.exists){
                     if(data.active){
                         if(data.have_sso){
@@ -97,15 +106,20 @@
                             $('.form-field.password-password').show();
                         }
                     }
-                    else msg_login('${_("Account not active") }');
+                    else {
+                        msg_login('${_("Account not active") }');
+                        $('#no_active_btn').show();
+                    }
                 }
                 else{
                     msg_login('${_("There is no account associated with the email entered") }');
+                    $('#create_account_login').show();
                 }
             }
             else {
                 $('#create_text').text('${_("Enter email") }');
                 $('#next_btn').show();
+                $('#first_time').show();
             }
             
         })
@@ -113,12 +127,7 @@
             msg_login('${_("Unexpected error, refresh the page and try again, if the error persists contact the help desk") }');
         });
     }
-    $('#login-email').live('focusout', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        check_sso_email();
 
-    });
     $('#next_btn').live('click', function(e){
         e.preventDefault();
         e.stopPropagation();
@@ -130,41 +139,107 @@
         var url = document.getElementById("url_next").textContent;
         window.location.href = url;
     });
-    
-    // REGISTER
-
-    function crearte_btn(text, btn_type){
-        if($('form#register button#SSO_btn').length > 0){
-            $('form#register button#SSO_btn')[0].innerText = text;
-            $('form#register button#SSO_btn')[0].dataset.type = btn_type;
-        }
-        else{
-            let SSO_btn = document.createElement('button');
-            SSO_btn.id = 'SSO_btn';
-            SSO_btn.className = 'action action-primary';
-            SSO_btn.innerText = text;
-            SSO_btn.dataset.type = btn_type;
-            $('form#register').append(SSO_btn);
-        }
-    }
-    $('form#register button#SSO_btn').live('click', function(e){
+    $('#no_active_btn').live('click', function(e){
         e.preventDefault();
         e.stopPropagation();
-        if(this.dataset.type == 'login') {
-            var url = document.getElementById("url_next").textContent;
-            window.location.href = url;
-        }
-        else window.open('https://cuenta.uchile.cl/crear-cuenta', '_blank').focus();
+        clean_form();
+        let email = $('#login-email').val();
+        send_activation_email(email);
     });
-    $('#register-document').live('focusout', function(e) {
+    function send_activation_email(email){
+        $.post( "/eol_sso_login/api/send_activation_email/", {email: email} )
+        .done(function( data ) {
+            if (data.result == 'success'){
+                $('#no_active_btn').hide();
+                $('form#login').hide();
+                $('#eol_verification_msg').show();
+                $('#eol_verification_msg').text('${_("Correo de verificaión enviado") }');
+            }
+            else {
+                $('#clean_btn_login').show();
+                if(data.error == "no_email") $('#create_text').text('${_("Enter email") }');
+                if(data.error == "email_no_exists") $('#create_text').text('${_("There is no account associated with the email entered") }');
+            }
+        })
+        .fail(function() {
+            msg_login('${_("Unexpected error, refresh the page and try again, if the error persists contact the help desk") }');
+        });
+    }
+    $('#clean_btn_login').live('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $('#login-email').val('');
+        $('#login-password').val('');
+        clean_form();
+        $('#next_btn').show();
+        $('#first_time').show();
+    })
+    // REGISTER
+
+    $('form#register button#sso_btn_register').live('click', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        var url = document.getElementById("url_next").textContent;
+        window.location.href = url;
+    });
+    function show_hide_form(show){
+        if(show){
+            $(".form-field.email-email").show();
+            $(".form-field.text-name").show();
+            $(".form-field.text-username").show();
+            $(".form-field.password-password").show();
+            $(".form-field.select-country").show();
+            $(".form-field.select-gender").show();
+            $(".form-field.select-year_of_birth").show();
+            $(".form-field.select-level_of_education").show();
+        }
+        else{
+            $(".form-field.email-email").hide();
+            $(".form-field.text-name").hide();
+            $(".form-field.text-username").hide();
+            $(".form-field.password-password").hide();
+            $(".form-field.select-country").hide();
+            $(".form-field.select-gender").hide();
+            $(".form-field.select-year_of_birth").hide();
+            $(".form-field.select-level_of_education").hide();
+        }
+    }
+    $('#clean_btn_register').live('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        show_hide_form(false);
+        $('form#register button#sso_btn_register').hide();
+        $('form#register button#next_btn_register').show();
+        $('form#register button[type="submit"]').hide();
+        $('form#register')[0].reset();
+        $('#register-type_document-validation-error-msg').html('');
+        $('#register-document-validation-error-msg').html('');
+        $('#register-email-validation-error-msg').html('');
+        $('#register-name-validation-error-msg').html('');
+        $('#register-username-validation-error-msg').html('');
+        $('#register-password-validation-error-msg').html('');
+        $('#register-country-validation-error-msg').html('');
+        $('#register-gender-validation-error-msg').html('');
+        $('#register-year_of_birth-validation-error-msg').html('');
+        $('#register-level_of_education-validation-error-msg').html('');
+        $("form#register .error.fa-exclamation").removeClass('error').removeClass('fa-exclamation');
+        $("form#register .label-required.error").addClass('hidden');
+        $("form#register .label-required.error").addClass('hidden');
+        $("form#register .label-required.error").removeClass('error');
+        $("form#register .focus-in.error").removeClass('error');
+    } );
+    $('#next_btn_register').live('click', function(e) {
         e.preventDefault();
         //e.stopPropagation();
-        $('form#register button#SSO_btn').hide();
+        $('form#register button#sso_btn_register').hide();
+        $('form#register button#next_btn_register').hide();
+        $('form#register button[type="submit"]').hide();
         let type_document = $('#register-type_document').val();
-        let document = this.value;
+        let document = $('#register-document').val();
         $.post( "/eol_sso_login/api/registration/", {document: document, type_document: type_document} )
         .done(function( data ) {
             if(data.result == 'error'){
+                $('form#register button#next_btn_register').show();
                 $('#register-document-validation-error').removeClass('hidden');
                 $('label[for="register-document"]').removeClass('success').addClass('error');
                 $('#register-document-required-label').removeClass('success');
@@ -174,36 +249,30 @@
                 if(data.error == "no_type_document") $('#register-document-validation-error-msg').html('${_("Select a document type") }');
                 if(data.error == "wrong_document") $('#register-document-validation-error-msg').html('${_("The document number must be alphanumeric") }');
                 if(data.error == "wrong_rut") $('#register-document-validation-error-msg').html('${_("Incorrect Rut") }');
-                if(data.error == "document_exists") {
-                    $('#register-document-validation-error-msg').html('${_("Document number already exists on the platform") }');
-                    if(type_document == 'rut'){
-                        if(data.have_sso){
-                            $('form#register button[type="submit"]').prop("disabled",true);
-                            crearte_btn('${_("Sign in with Mi.UChile") }', 'login');
-                        }
-                        else{
-                            crearte_btn('${_("Create Mi.UChile account") }', 'create');
-                        }
-                        $('form#register button#SSO_btn').show();
-                    }
-                }
+                if(data.error == "document_exists") $('#register-document-validation-error-msg').html('${_("Document number already exists on the platform") }');
             }
             else{
+                $('form#register button#next_btn_register').show();
                 $('#register-document-validation-error-msg').html('')
                 $('#register-document-validation-error').addClass('hidden');
                 $('label[for="register-document"]').addClass('success').removeClass('error');
                 $('#register-document-required-label').addClass('success');
                 $('#register-document-validation-icon').addClass('success').addClass('fa-check');
                 $('form#register button[type="submit"]').prop("disabled",false);
+                $('form#register button[type="submit"]').show();
                 if(type_document == 'rut'){
+                    $('form#register button#next_btn_register').hide();
                     if(data.have_sso){
                         $('form#register button[type="submit"]').prop("disabled",true);
-                        crearte_btn('${_("Sign in with Mi.UChile") }', 'login');
+                        $('form#register button[type="submit"]').hide();
+                        $('form#register button#sso_btn_register')[0].innerText = '${_("Sign in with Mi.UChile") }';
+                        $('form#register button#sso_btn_register').show();
                     }
                     else{
-                        crearte_btn('${_("Create Mi.UChile account") }', 'create');
+                        show_hide_form(true);
+                        $('form#register button[type="submit"]').prop("disabled",false);
+                        $('form#register button[type="submit"]').show();
                     }
-                    $('form#register button#SSO_btn').show();
                 }
             }
         })
