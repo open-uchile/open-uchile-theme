@@ -154,8 +154,8 @@
             var url = document.getElementById("url_next").textContent;
             window.location.href = url;
         }
-        else window.open('https://cuenta.uchile.cl/crear-cuenta', '_blank').focus();
     });
+
     $('#register-document').live('focusout', function(e) {
         e.preventDefault();
         //e.stopPropagation();
@@ -181,9 +181,6 @@
                             $('form#register button[type="submit"]').prop("disabled",true);
                             crearte_btn('${_("Sign in with Mi.UChile") }', 'login');
                         }
-                        else{
-                            crearte_btn('${_("Create Mi.UChile account") }', 'create');
-                        }
                         $('form#register button#SSO_btn').show();
                     }
                 }
@@ -199,9 +196,6 @@
                     if(data.have_sso){
                         $('form#register button[type="submit"]').prop("disabled",true);
                         crearte_btn('${_("Sign in with Mi.UChile") }', 'login');
-                    }
-                    else{
-                        crearte_btn('${_("Create Mi.UChile account") }', 'create');
                     }
                     $('form#register button#SSO_btn').show();
                 }
