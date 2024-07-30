@@ -2163,3 +2163,5 @@ msgstr ""
 #~ msgid "Rut already exists on the platform"
 #~ msgstr ""
 
+#~ msgid "Type of document"
+#~ msgstr "Tipo de documento"
