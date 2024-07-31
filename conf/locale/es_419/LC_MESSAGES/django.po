@@ -2053,8 +2053,8 @@ msgid "Incorrect Rut"
 msgstr "Rut incorrecto"
 
 #: lms/templates/student_account/login_and_register.html:172
-msgid "Document number already exists on the platform"
-msgstr "Número documento ya existe en plataforma"
+msgid "Document number already exists on the platform, press the login button."
+msgstr "Número documento ya existe en plataforma, presione el botón de inicio de sesión"
 
 #: lms/templates/student_account/login_and_register.html:179
 #: lms/templates/student_account/login_and_register.html:198
@@ -2194,4 +2194,3 @@ msgstr ""
 
 #~ msgid "Rut already exists on the platform"
 #~ msgstr "Rut ya existe en plataforma"
-
