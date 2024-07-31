@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: help-open@uchile.cl\n"
-"POT-Creation-Date: 2024-03-04 18:08+0000\n"
+"POT-Creation-Date: 2024-07-31 21:43+0000\n"
 "PO-Revision-Date: 2022-07-28 20:11+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -18,104 +18,350 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
 
-#: cms/templates/container.html:121
+#: cms/templates/container.html:127
+#: cms/templates/js/course-outline.underscore:123
+#: cms/templates/js/course-outline.underscore:128
 msgid "Display Name"
 msgstr ""
 
-#: cms/templates/container.html:128 cms/templates/container.html:129
+#: cms/templates/container.html:134 cms/templates/container.html:135
+#: cms/templates/course_outline.html:177 cms/templates/course_outline.html:178
 #: cms/templates/videos_index.html:74 cms/templates/videos_index.html:75
 msgid "Page Actions"
 msgstr ""
 
-#: cms/templates/container.html:133
+#: cms/templates/container.html:139
 msgid "Open the courseware in the LMS"
 msgstr ""
 
-#: cms/templates/container.html:134
+#: cms/templates/container.html:140
 msgid "View Live Version"
 msgstr ""
 
-#: cms/templates/container.html:138
+#: cms/templates/container.html:144
 msgid "Preview the courseware in the LMS"
 msgstr ""
 
-#: cms/templates/container.html:139
+#: cms/templates/container.html:145
 msgid "Preview"
 msgstr ""
 
-#: cms/templates/container.html:146
+#: cms/templates/container.html:152 cms/templates/studio_xblock_wrapper.html:81
 #: lms/templates/eoldiscussion/templates2.underscore:890
 msgid "Edit"
 msgstr ""
 
-#: cms/templates/container.html:165
+#: cms/templates/container.html:171 cms/templates/course_outline.html:259
 msgid "Loading"
 msgstr ""
 
-#: cms/templates/container.html:171
+#: cms/templates/container.html:177
 msgid "Adding components"
 msgstr ""
 
-#: cms/templates/container.html:172
+#: cms/templates/container.html:178
 msgid ""
 "Select a component type under {strong_start}Add New "
 "Component{strong_end}. Then select a template."
 msgstr ""
 
-#: cms/templates/container.html:176
+#: cms/templates/container.html:182
 msgid ""
 "The new component is added at the bottom of the page or group. You can "
 "then edit and move the component."
 msgstr ""
 
-#: cms/templates/container.html:177
+#: cms/templates/container.html:183
 msgid "Editing components"
 msgstr ""
 
-#: cms/templates/container.html:178
+#: cms/templates/container.html:184
 msgid ""
 "Click the {strong_start}Edit{strong_end} icon in a component to edit its "
 "content."
 msgstr ""
 
-#: cms/templates/container.html:182
+#: cms/templates/container.html:188
 msgid "Reorganizing components"
 msgstr ""
 
-#: cms/templates/container.html:183
+#: cms/templates/container.html:189
 msgid "Drag components to new locations within this component."
 msgstr ""
 
-#: cms/templates/container.html:184
+#: cms/templates/container.html:190
 msgid "For content experiments, you can drag components to other groups."
 msgstr ""
 
-#: cms/templates/container.html:185
+#: cms/templates/container.html:191
 msgid "Working with content experiments"
 msgstr ""
 
-#: cms/templates/container.html:186
+#: cms/templates/container.html:192
 msgid ""
 "Confirm that you have properly configured content in each of your "
 "experiment groups."
 msgstr ""
 
-#: cms/templates/container.html:189
+#: cms/templates/container.html:195
 msgid "Learn more about component containers"
 msgstr ""
 
-#: cms/templates/container.html:195
+#: cms/templates/container.html:201
 msgid "Unit Location"
 msgstr ""
 
-#: cms/templates/container.html:197
+#: cms/templates/container.html:203
 msgid "Location ID"
 msgstr ""
 
-#: cms/templates/container.html:200
+#: cms/templates/container.html:206
 msgid ""
 "To create a link to this unit from an HTML component in this course, "
 "enter \"/jump_to_id/<location ID>\" as the URL value."
+msgstr ""
+
+#: cms/templates/course_outline.html:16 cms/templates/course_outline.html:174
+#: cms/templates/course_outline.html:254
+msgid "Course Outline"
+msgstr ""
+
+#: cms/templates/course_outline.html:58
+msgid "This course was created as a re-run. Some manual configuration is needed."
+msgstr ""
+
+#: cms/templates/course_outline.html:60
+msgid ""
+"No course content is currently visible, and no learners are enrolled. Be "
+"sure to review and reset all dates, including the Course Start Date; set "
+"up the course team; review course updates and other assets for dated "
+"material; and seed the discussions and wiki."
+msgstr ""
+
+#: cms/templates/course_outline.html:67
+msgid "Dismiss"
+msgstr ""
+
+#: cms/templates/course_outline.html:78
+msgid "Warning"
+msgstr ""
+
+#: cms/templates/course_outline.html:81
+msgid "This course uses features that are no longer supported."
+msgstr ""
+
+#: cms/templates/course_outline.html:85
+msgid "You must delete or replace the following components."
+msgstr ""
+
+#: cms/templates/course_outline.html:86
+msgid "Unsupported Components"
+msgstr ""
+
+#: cms/templates/course_outline.html:93
+msgid "Deprecated Component"
+msgstr ""
+
+#: cms/templates/course_outline.html:105
+msgid ""
+"To avoid errors, {platform_name} strongly recommends that you remove "
+"unsupported features from the course advanced settings. To do this, go to"
+" the {link_start}Advanced Settings page{link_end}, locate the \"Advanced "
+"Module List\" setting, and then delete the following modules from the "
+"list."
+msgstr ""
+
+#: cms/templates/course_outline.html:111
+msgid "Unsupported Advance Modules"
+msgstr ""
+
+#: cms/templates/course_outline.html:131
+msgid "This course has proctored exam settings that are incomplete or invalid."
+msgstr ""
+
+#: cms/templates/course_outline.html:135
+msgid ""
+"To update these settings go to the {link_start}Proctored Exam Settings "
+"page{link_end}."
+msgstr ""
+
+#: cms/templates/course_outline.html:143
+msgid ""
+"To update these settings go to the {link_start}Advanced Settings "
+"page{link_end}."
+msgstr ""
+
+#: cms/templates/course_outline.html:150
+msgid "Proctoring Settings Errors"
+msgstr ""
+
+#: cms/templates/course_outline.html:173 cms/templates/videos_index.html:70
+msgid "Content"
+msgstr ""
+
+#: cms/templates/course_outline.html:181
+msgid "Section"
+msgstr ""
+
+#: cms/templates/course_outline.html:181
+msgid "Click to add a new section"
+msgstr ""
+
+#: cms/templates/course_outline.html:182
+msgid "New Section"
+msgstr ""
+
+#: cms/templates/course_outline.html:187
+msgid "Reindex current course"
+msgstr ""
+
+#: cms/templates/course_outline.html:188
+msgid "Reindex"
+msgstr ""
+
+#: cms/templates/course_outline.html:194
+msgid "Collapse All Sections"
+msgstr ""
+
+#: cms/templates/course_outline.html:195
+msgid "Expand All Sections"
+msgstr ""
+
+#: cms/templates/course_outline.html:200
+msgid "Click to open the courseware in the LMS in a new tab"
+msgstr ""
+
+#: cms/templates/course_outline.html:200
+msgid "View Live"
+msgstr ""
+
+#: cms/templates/course_outline.html:264
+msgid "Creating your course organization"
+msgstr ""
+
+#: cms/templates/course_outline.html:265
+msgid "You add sections, subsections, and units directly in the outline."
+msgstr ""
+
+#: cms/templates/course_outline.html:266
+msgid ""
+"Create a section, then add subsections and units. Open a unit to add "
+"course components."
+msgstr ""
+
+#: cms/templates/course_outline.html:269
+msgid "Reorganizing your course"
+msgstr ""
+
+#: cms/templates/course_outline.html:270
+msgid "Drag sections, subsections, and units to new locations in the outline."
+msgstr ""
+
+#: cms/templates/course_outline.html:272
+msgid "Learn more about the course outline"
+msgstr ""
+
+#: cms/templates/course_outline.html:276
+msgid "Setting release dates and grading policies"
+msgstr ""
+
+#: cms/templates/course_outline.html:277
+msgid ""
+"Select the Configure icon for a section or subsection to set its release "
+"date. When you configure a subsection, you can also set the grading "
+"policy and due date."
+msgstr ""
+
+#: cms/templates/course_outline.html:279
+msgid "Learn more about grading policy settings"
+msgstr ""
+
+#: cms/templates/course_outline.html:283
+msgid "Changing the content learners see"
+msgstr ""
+
+#: cms/templates/course_outline.html:284
+msgid ""
+"To publish draft content, select the Publish icon for a section, "
+"subsection, or unit."
+msgstr ""
+
+#: cms/templates/course_outline.html:285
+msgid ""
+"To make a section, subsection, or unit unavailable to learners, select "
+"the Configure icon for that level, then select the appropriate "
+"{em_start}Hide{em_end} option. Grades for hidden sections, subsections, "
+"and units are not included in grade calculations."
+msgstr ""
+
+#: cms/templates/course_outline.html:286
+msgid ""
+"To hide the content of a subsection from learners after the subsection "
+"due date has passed, select the Configure icon for a subsection, then "
+"select {em_start}Hide content after due date{em_end}. Grades for the "
+"subsection remain included in grade calculations."
+msgstr ""
+
+#: cms/templates/course_outline.html:288
+msgid "Learn more about content visibility settings"
+msgstr ""
+
+#: cms/templates/studio_xblock_wrapper.html:61
+#: cms/templates/studio_xblock_wrapper.html:63
+msgid "Expand or Collapse"
+msgstr ""
+
+#: cms/templates/studio_xblock_wrapper.html:86
+msgid "Access Settings"
+msgstr ""
+
+#: cms/templates/studio_xblock_wrapper.html:88
+msgid "Set Access"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:160
+#: cms/templates/js/course-outline.underscore:162
+#: cms/templates/studio_xblock_wrapper.html:94
+#: cms/templates/studio_xblock_wrapper.html:96
+msgid "Duplicar a otro Curso"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:166
+#: cms/templates/js/course-outline.underscore:168
+#: cms/templates/studio_xblock_wrapper.html:100
+#: cms/templates/studio_xblock_wrapper.html:102
+msgid "Duplicate"
+msgstr ""
+
+#: cms/templates/studio_xblock_wrapper.html:108
+#: cms/templates/studio_xblock_wrapper.html:113
+msgid "Move"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:174
+#: cms/templates/js/course-outline.underscore:176
+#: cms/templates/studio_xblock_wrapper.html:121
+#: cms/templates/studio_xblock_wrapper.html:123
+#: lms/templates/eoldiscussion/templates2.underscore:898
+msgid "Delete"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:182
+#: cms/templates/js/course-outline.underscore:184
+#: cms/templates/studio_xblock_wrapper.html:129
+msgid "Drag to reorder"
+msgstr ""
+
+#: cms/templates/studio_xblock_wrapper.html:135
+msgid "Details"
+msgstr ""
+
+#: cms/templates/studio_xblock_wrapper.html:147
+msgid "This block contains multiple components."
+msgstr ""
+
+#: cms/templates/studio_xblock_wrapper.html:152
+msgid "View"
 msgstr ""
 
 #: cms/templates/videos_index.html:13 cms/templates/videos_index.html:71
@@ -133,12 +379,127 @@ msgstr ""
 msgid "EN PROGRESO"
 msgstr ""
 
-#: cms/templates/videos_index.html:70
-msgid "Content"
-msgstr ""
-
 #: cms/templates/videos_index.html:77
 msgid "Course Video Settings"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:40
+#, python-format
+msgid "Prerequisite: %(prereq_display_name)s"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:48
+msgid "Contains staff only content"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:54
+msgid "Unpublished changes to live content"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:56
+msgid "Unpublished units will not be released"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:58
+msgid "Unpublished changes to content that will release in the future"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:66
+msgid "Access to this unit is restricted to: {selectedGroupsLabel}"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:75
+msgid ""
+"Access to some content in this unit is restricted to specific groups of "
+"learners"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:80
+msgid "Ungraded"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:91
+msgid "Onboarding Exam"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:93
+msgid "Practice proctored Exam"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:95
+msgid "Proctored Exam"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:99
+msgid "Timed Exam"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:114
+#, python-format
+msgid "Collapse/Expand this %(xblock_type)s"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:137
+#: cms/templates/js/course-outline.underscore:138
+msgid "Proctoring Settings"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:144
+#: cms/templates/js/course-outline.underscore:146
+msgid "Publish"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:152
+#: cms/templates/js/course-outline.underscore:154
+msgid "Configure"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:202
+msgid "Release Status:"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:207
+msgid "Released:"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:210
+msgid "Scheduled:"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:213
+msgid "Unscheduled"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:228
+msgid "Section Highlights"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:235
+#: cms/templates/js/course-outline.underscore:249
+msgid "Graded as:"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:242
+#: cms/templates/js/course-outline.underscore:253
+msgid "Due:"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:264
+msgid "Subsection is hidden after course end date"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:266
+msgid "Subsection is hidden after due date"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:288
+msgid "You haven't added any content to this course yet."
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:292
+#: cms/templates/js/course-outline.underscore:313
+#, python-format
+msgid "Click to add a new %(xblock_type)s"
 msgstr ""
 
 #: cms/templates/widgets/video/transcripts.html:112
@@ -869,106 +1230,6 @@ msgid ""
 " revisar el estado del proceso de verificación en su página de inicio."
 msgstr ""
 
-#: lms/templates/eol_contact_form/contact.html:7
-#: lms/templates/eol_contact_form/contact.html:18
-msgid "Contact Form"
-msgstr ""
-
-#: lms/templates/eol_contact_form/contact.html:19
-msgid "Fill out the form and our help desk will contact you shortly."
-msgstr ""
-
-#: lms/templates/eol_contact_form/contact.html:22
-msgid "Help desk hours (GMT-4): from 09:00 until 18:00 (Monday - Friday)"
-msgstr ""
-
-#: lms/templates/eol_contact_form/contact.html:27
-msgid "Try Again"
-msgstr ""
-
-#: lms/templates/eol_contact_form/contact.html:27
-msgid "There was a problem trying to generate your ticket."
-msgstr ""
-
-#: lms/templates/eol_contact_form/contact.html:27
-msgid "If the problem persists, send an email to"
-msgstr ""
-
-#: lms/templates/eol_contact_form/contact.html:33
-msgid "Enter a valid {error}"
-msgstr ""
-
-#: lms/templates/eol_contact_form/contact.html:39
-msgid "¡Sent!"
-msgstr ""
-
-#: lms/templates/eol_contact_form/contact.html:39
-msgid "Our help desk will answer you as soon as possible"
-msgstr ""
-
-#: lms/templates/eol_contact_form/contact.html:45
-msgid "Name"
-msgstr ""
-
-#: lms/templates/eol_contact_form/contact.html:46
-msgid "Enter your name"
-msgstr ""
-
-#: lms/templates/eol_contact_form/contact.html:49
-msgid "Email"
-msgstr ""
-
-#: lms/templates/eol_contact_form/contact.html:50
-msgid "Enter your email"
-msgstr ""
-
-#: lms/templates/eol_contact_form/contact.html:53
-msgid "Related to:"
-msgstr ""
-
-#: lms/templates/eol_contact_form/contact.html:61
-msgid "Select an option"
-msgstr ""
-
-#: lms/templates/eol_contact_form/contact.html:62
-msgid "General"
-msgstr ""
-
-#: lms/templates/eol_contact_form/contact.html:63
-msgid "Specific Course"
-msgstr ""
-
-#: lms/templates/eol_contact_form/contact.html:64
-msgid "Login"
-msgstr ""
-
-#: lms/templates/eol_contact_form/contact.html:65
-msgid "Other"
-msgstr ""
-
-#: lms/templates/eol_contact_form/contact.html:69
-msgid "Course name"
-msgstr ""
-
-#: lms/templates/eol_contact_form/contact.html:70
-msgid "Enter the course name"
-msgstr ""
-
-#: lms/templates/eol_contact_form/contact.html:73
-msgid "Describe your problem"
-msgstr ""
-
-#: lms/templates/eol_contact_form/contact.html:74
-msgid "Enter your questions and queries here"
-msgstr ""
-
-#: lms/templates/eol_contact_form/contact.html:80
-#: lms/templates/eoldiscussion/templates2.underscore:36
-#: lms/templates/eoldiscussion/templates2.underscore:201
-#: lms/templates/eoldiscussion/templates2.underscore:540
-msgid "Submit"
-msgstr ""
-
 #: lms/templates/eoldiscussion/_discussion_inline.html:40
 msgid "Topic:"
 msgstr ""
@@ -1097,6 +1358,12 @@ msgstr ""
 #: lms/templates/eoldiscussion/templates2.underscore:334
 #: lms/templates/eoldiscussion/templates2.underscore:509
 msgid "Caracteres restantes"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:36
+#: lms/templates/eoldiscussion/templates2.underscore:201
+#: lms/templates/eoldiscussion/templates2.underscore:540
+msgid "Submit"
 msgstr ""
 
 #: lms/templates/eoldiscussion/templates2.underscore:45
@@ -1432,10 +1699,6 @@ msgstr ""
 msgid "Open"
 msgstr ""
 
-#: lms/templates/eoldiscussion/templates2.underscore:898
-msgid "Delete"
-msgstr ""
-
 #: lms/templates/eoldiscussion/templates2.underscore:909
 #: lms/templates/eoldiscussion/templates2.underscore:910
 msgid "More"
@@ -1530,7 +1793,7 @@ msgstr ""
 msgid "Sign Out"
 msgstr ""
 
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:13
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html:18
 msgid ""
 "Click to display the grading configuration for the course. The grading "
 "configuration is the breakdown of graded subsections of the course (such "
@@ -1538,23 +1801,23 @@ msgid ""
 "(under 'Settings') in Studio."
 msgstr ""
 
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:14
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html:19
 msgid "Grading Configuration"
 msgstr ""
 
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:19
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html:24
 msgid "Click to download a CSV of anonymized student IDs:"
 msgstr ""
 
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:20
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html:25
 msgid "Get Student Anonymized IDs CSV"
 msgstr ""
 
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:26
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html:31
 msgid "Reports"
 msgstr ""
 
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:28
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html:33
 msgid ""
 "For large courses, generating some reports can take several hours. When "
 "report generation is complete, a link that includes the date and time of "
@@ -1563,61 +1826,61 @@ msgid ""
 "report is generating."
 msgstr ""
 
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:30
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html:35
 msgid ""
 "Please be patient and do not click these buttons multiple times. Clicking"
 " these buttons multiple times will significantly slow the generation "
 "process."
 msgstr ""
 
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:32
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html:37
 msgid ""
 "Click to generate a CSV file of all students enrolled in this course, "
 "along with profile information such as email address and username:"
 msgstr ""
 
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:34
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html:39
 msgid "Download profile information as a CSV"
 msgstr ""
 
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:36
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html:41
 msgid ""
 "Click to generate a CSV file that lists learners who can enroll in the "
 "course but have not yet done so."
 msgstr ""
 
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:38
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html:43
 msgid "Download a CSV of learners who can enroll"
 msgstr ""
 
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:41
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html:46
 msgid "Click to generate a CSV file of all proctored exam results in this course."
 msgstr ""
 
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:42
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html:47
 msgid "Generate Proctored Exam Results Report"
 msgstr ""
 
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:46
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html:51
 msgid "Click to generate a CSV file of survey results for this course."
 msgstr ""
 
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:47
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html:52
 msgid "Generate Survey Results Report"
 msgstr ""
 
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:50
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html:55
 msgid ""
 "Select a problem to generate a CSV file that lists all student answers to"
 " the problem. You also select a section or chapter to include results of "
 "all problems in that section or chapter."
 msgstr ""
 
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:54
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html:59
 msgid "NOTE"
 msgstr ""
 
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:55
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html:60
 msgid ""
 "The generated report is limited to {max_entries} responses. If you expect"
 " more than {max_entries} responses, try generating the report on a "
@@ -1625,65 +1888,73 @@ msgid ""
 "administrator to increase the limit."
 msgstr ""
 
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:77
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html:82
 msgid "Click to list certificates that are issued for this course:"
 msgstr ""
 
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:79
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html:84
 msgid "View Certificates Issued"
 msgstr ""
 
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:80
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html:85
 msgid "Download CSV of Certificates Issued"
 msgstr ""
 
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:87
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html:92
 msgid ""
 "For smaller courses, click to list profile information for enrolled "
 "students directly on this page:"
 msgstr ""
 
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:88
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html:93
 msgid "List enrolled students' profile information"
 msgstr ""
 
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:93
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html:98
 msgid "Click to generate a CSV grade report for all currently enrolled students."
 msgstr ""
 
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:95
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html:100
 msgid "Generate Grade Report"
 msgstr ""
 
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:96
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html:101
 msgid "Generate Problem Grade Report"
 msgstr ""
 
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:97
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html:102
 msgid "Generate ORA Data Report"
 msgstr ""
 
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:100
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html:105
 msgid ""
 "Click to generate a ZIP file that contains all submission texts and "
 "attachments."
 msgstr ""
 
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:102
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html:107
 msgid "Generate Submission Files Archive"
 msgstr ""
 
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:110
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html:121
+msgid "Analítica de encuestas"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html:125
+msgid "Generar"
+msgstr ""
+
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html:137
 msgid "Reports Available for Download"
 msgstr ""
 
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:112
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html:139
 msgid ""
 "The reports listed below are available for download, identified by UTC "
 "date and time of generation."
 msgstr ""
 
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:117
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html:144
 msgid ""
 "The answer distribution report listed below is generated periodically by "
 "an automated background process. The report is cumulative, so answers "
@@ -1691,7 +1962,7 @@ msgid ""
 "The report is generated several times per day."
 msgstr ""
 
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:123
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html:150
 msgid ""
 "{strong_start}Note{strong_end}: {ul_start}{li_start}To keep student data "
 "secure, you cannot save or email these links for direct access. Copies of"
@@ -1701,12 +1972,12 @@ msgid ""
 "security policies.{li_end}{ul_end}"
 msgstr ""
 
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:140
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html:167
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html:137
 msgid "Pending Tasks"
 msgstr ""
 
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:142
+#: lms/templates/instructor/instructor_dashboard_2/data_download.html:169
 msgid "The status for any active tasks appears in a table below."
 msgstr ""
 
@@ -1965,9 +2236,9 @@ msgid "or sign in with"
 msgstr ""
 
 #: lms/templates/student_account/login2.underscore:50
-#: lms/templates/student_account/login_and_register.html:88
-#: lms/templates/student_account/login_and_register.html:176
-#: lms/templates/student_account/login_and_register.html:195
+#: lms/templates/student_account/login_and_register.html:90
+#: lms/templates/student_account/login_and_register.html:182
+#: lms/templates/student_account/login_and_register.html:200
 msgid "Sign in with Mi.UChile"
 msgstr ""
 
@@ -1984,58 +2255,53 @@ msgstr ""
 msgid "Create an Account."
 msgstr ""
 
-#: lms/templates/student_account/login_and_register.html:12
+#: lms/templates/student_account/login_and_register.html:14
 msgid "Sign in or Register"
 msgstr ""
 
-#: lms/templates/student_account/login_and_register.html:98
+#: lms/templates/student_account/login_and_register.html:100
 msgid "Account not active"
 msgstr ""
 
-#: lms/templates/student_account/login_and_register.html:101
+#: lms/templates/student_account/login_and_register.html:103
 msgid "There is no account associated with the email entered"
 msgstr ""
 
-#: lms/templates/student_account/login_and_register.html:105
+#: lms/templates/student_account/login_and_register.html:107
 msgid "Enter email"
 msgstr ""
 
-#: lms/templates/student_account/login_and_register.html:111
+#: lms/templates/student_account/login_and_register.html:113
 msgid ""
 "Unexpected error, refresh the page and try again, if the error persists "
 "contact the help desk"
 msgstr ""
 
-#: lms/templates/student_account/login_and_register.html:166
+#: lms/templates/student_account/login_and_register.html:172
 msgid "Enter document number"
 msgstr ""
 
-#: lms/templates/student_account/login_and_register.html:167
+#: lms/templates/student_account/login_and_register.html:173
 msgid "The document number must be between 5 and 20 characters"
 msgstr ""
 
-#: lms/templates/student_account/login_and_register.html:168
+#: lms/templates/student_account/login_and_register.html:174
 msgid "Select a document type"
 msgstr ""
 
-#: lms/templates/student_account/login_and_register.html:169
+#: lms/templates/student_account/login_and_register.html:175
 msgid "The document number must be alphanumeric"
 msgstr ""
 
-#: lms/templates/student_account/login_and_register.html:170
+#: lms/templates/student_account/login_and_register.html:176
 msgid "Incorrect Rut"
 msgstr ""
 
-#: lms/templates/student_account/login_and_register.html:172
-msgid "Document number already exists on the platform"
+#: lms/templates/student_account/login_and_register.html:178
+msgid "Document number already exists on the platform, press the login button."
 msgstr ""
 
-#: lms/templates/student_account/login_and_register.html:179
-#: lms/templates/student_account/login_and_register.html:198
-msgid "Create Mi.UChile account"
-msgstr ""
-
-#: lms/templates/student_account/login_and_register.html:209
+#: lms/templates/student_account/login_and_register.html:213
 msgid "Unexpected error, please update and try again"
 msgstr ""
 
@@ -2169,5 +2435,80 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Rut already exists on the platform"
+#~ msgstr ""
+
+#~ msgid "Contact Form"
+#~ msgstr ""
+
+#~ msgid "Fill out the form and our help desk will contact you shortly."
+#~ msgstr ""
+
+#~ msgid "Help desk hours (GMT-4): from 09:00 until 18:00 (Monday - Friday)"
+#~ msgstr ""
+
+#~ msgid "Try Again"
+#~ msgstr ""
+
+#~ msgid "There was a problem trying to generate your ticket."
+#~ msgstr ""
+
+#~ msgid "If the problem persists, send an email to"
+#~ msgstr ""
+
+#~ msgid "Enter a valid {error}"
+#~ msgstr ""
+
+#~ msgid "¡Sent!"
+#~ msgstr ""
+
+#~ msgid "Our help desk will answer you as soon as possible"
+#~ msgstr ""
+
+#~ msgid "Name"
+#~ msgstr ""
+
+#~ msgid "Enter your name"
+#~ msgstr ""
+
+#~ msgid "Email"
+#~ msgstr ""
+
+#~ msgid "Enter your email"
+#~ msgstr ""
+
+#~ msgid "Related to:"
+#~ msgstr ""
+
+#~ msgid "Select an option"
+#~ msgstr ""
+
+#~ msgid "General"
+#~ msgstr ""
+
+#~ msgid "Specific Course"
+#~ msgstr ""
+
+#~ msgid "Login"
+#~ msgstr ""
+
+#~ msgid "Other"
+#~ msgstr ""
+
+#~ msgid "Course name"
+#~ msgstr ""
+
+#~ msgid "Enter the course name"
+#~ msgstr ""
+
+#~ msgid "Describe your problem"
+#~ msgstr ""
+
+#~ msgid "Enter your questions and queries here"
+#~ msgstr ""
+
+#~ msgid "Document number already exists on the platform"
+#~ msgstr ""
+
+#~ msgid "Create Mi.UChile account"
 #~ msgstr ""
 
