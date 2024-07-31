@@ -175,16 +175,15 @@
                 if(data.error == "wrong_document") $('#register-document-validation-error-msg').html('${_("The document number must be alphanumeric") }');
                 if(data.error == "wrong_rut") $('#register-document-validation-error-msg').html('${_("Incorrect Rut") }');
                 if(data.error == "document_exists") {
-                    $('#register-document-validation-error-msg').html('${_("Document number already exists on the platform") }');
+                    $('#register-document-validation-error-msg').html('${_("Document number already exists on the platform, press the login button.") }');
                     if(type_document == 'rut'){
                         if(data.have_sso){
                             $('form#register button[type="submit"]').prop("disabled",true);
                             crearte_btn('${_("Sign in with Mi.UChile") }', 'login');
+                            $('form#register button#SSO_btn').show();
+                        } else{
+                            $('form#register button#SSO_btn').hide();
                         }
-                        else{
-                            crearte_btn('${_("Create Mi.UChile account") }', 'create');
-                        }
-                        $('form#register button#SSO_btn').show();
                     }
                 }
             }
@@ -199,11 +198,10 @@
                     if(data.have_sso){
                         $('form#register button[type="submit"]').prop("disabled",true);
                         crearte_btn('${_("Sign in with Mi.UChile") }', 'login');
+                        $('form#register button#SSO_btn').show();
+                    } else{
+                        $('form#register button#SSO_btn').hide();
                     }
-                    else{
-                        crearte_btn('${_("Create Mi.UChile account") }', 'create');
-                    }
-                    $('form#register button#SSO_btn').show();
                 }
             }
         })
