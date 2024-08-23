@@ -2274,8 +2274,8 @@ msgid "First time here?"
 msgstr "¿Primera vez aquí?"
 
 #: lms/templates/student_account/login2.underscore:84
-msgid "Create an Account."
-msgstr "Crear Cuenta"
+msgid "Create an account"
+msgstr "Crear una cuenta"
 
 #: lms/templates/student_account/login_and_register.html:14
 msgid "Sign in or Register"
@@ -2357,8 +2357,8 @@ msgid "or create a new one here"
 msgstr ""
 
 #: lms/templates/student_account/register.underscore:48
-msgid "Create an Account"
-msgstr ""
+msgid "Create an account"
+msgstr "Crear una cuenta"
 
 #: lms/templates/student_account/register.underscore:60
 msgid "Support education research by providing additional information"
@@ -2535,4 +2535,3 @@ msgstr ""
 
 #~ msgid "Create Mi.UChile account"
 #~ msgstr "Crear cuenta Mi.UChile"
-

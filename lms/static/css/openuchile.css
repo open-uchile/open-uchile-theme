@@ -1427,3 +1427,21 @@ body .wrapper-preview-menu .preview-menu {
     background-color: white;
     color: #0075b4 ;
 }
+
+.separator-login {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-bottom: 2px solid #172c6b;
+}
+.separator-login::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 2px solid #172c6b;
+}
+.separator-login::before {
+    margin-right: .25em;
+}
+.separator-login::after {
+    margin-left: .25em;
+}

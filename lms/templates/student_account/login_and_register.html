@@ -32,14 +32,11 @@
 </%block>
 
 <%block name="header_extras">
-    % for template_name in ["account", "access", "form_field", "register", "institution_login", "institution_register", "password_reset", "hinted_login"]:
+    % for template_name in ["account", "access", "form_field", "login", "register", "institution_login", "institution_register", "password_reset", "hinted_login"]:
         <script type="text/template" id="${template_name}-tpl">
             <%static:include path="student_account/${template_name}.underscore" />
         </script>
     % endfor
-    <script type="text/template" id="login-tpl">
-        <%static:include path="student_account/login2.underscore" />
-    </script>
 </%block>
 <div style="visibility: hidden;" id="url_next">${ reverse('eol_sso_login:uchile_login') | h }?${urlencode({'next':login_redirect_url})}</div>
 <div class="container px-3 mt-2">
@@ -57,162 +54,21 @@
         <div id="login-and-registration-container" class="login-register ${border_class}"></div>
     </div>
 </div>
+
 <script type="text/javascript">
     //LOGIN
-    function msg_login(msg){
-        $('#login_btn').hide();
-        $('#sso_btn').hide();
-        $('#next_btn').show();
-        $('.form-field.password-password').hide();
-        $('#create_text').text(msg);
-    }
     $('#login-email').live('keydown', function(e) {
         if(e.keyCode === 13){
             e.preventDefault();
             e.stopPropagation();
         }
     });
-
-    function check_sso_email(){
-        $('#next_btn').hide();
-        $('#create_text').text('');
-        $('#login_btn').hide();
-        $('#sso_btn').hide();
-        $('#first_time').show();
-        $('.form-field.password-password').hide();
-        let email = $('#login-email').val();
-        $.post( "/eol_sso_login/api/email/", {email: email} )
-        .done(function( data ) {
-            if (data.result == 'success'){
-                if(data.exists){
-                    if(data.active){
-                        if(data.have_sso){
-                            $('#sso_btn').text('${_("Sign in with Mi.UChile") }');
-                            $('#sso_btn').show();
-                            $('#first_time').hide();
-                        }
-                        else{
-                            $('#sso_btn').hide();
-                            $('#login_btn').show();
-                            $('.form-field.password-password').show();
-                        }
-                    }
-                    else msg_login('${_("Account not active") }');
-                }
-                else{
-                    msg_login('${_("There is no account associated with the email entered") }');
-                }
-            }
-            else {
-                $('#create_text').text('${_("Enter email") }');
-                $('#next_btn').show();
-            }
-            
-        })
-        .fail(function() {
-            msg_login('${_("Unexpected error, refresh the page and try again, if the error persists contact the help desk") }');
-        });
-    }
-    $('#login-email').live('focusout', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        check_sso_email();
-
-    });
-    $('#next_btn').live('click', function(e){
-        e.preventDefault();
-        e.stopPropagation();
-        check_sso_email();
-    });
-    $('#sso_btn').live('click', function(e){
+    $('#redirect_to').live('click', function(e){
         e.preventDefault();
         e.stopPropagation();
         var url = document.getElementById("url_next").textContent;
         window.location.href = url;
     });
     
-    // REGISTER
-
-    function crearte_btn(text, btn_type){
-        if($('form#register button#SSO_btn').length > 0){
-            $('form#register button#SSO_btn')[0].innerText = text;
-            $('form#register button#SSO_btn')[0].dataset.type = btn_type;
-        }
-        else{
-            let SSO_btn = document.createElement('button');
-            SSO_btn.id = 'SSO_btn';
-            SSO_btn.className = 'action action-primary';
-            SSO_btn.innerText = text;
-            SSO_btn.dataset.type = btn_type;
-            $('form#register').append(SSO_btn);
-        }
-    }
-    $('form#register button#SSO_btn').live('click', function(e){
-        e.preventDefault();
-        e.stopPropagation();
-        if(this.dataset.type == 'login') {
-            var url = document.getElementById("url_next").textContent;
-            window.location.href = url;
-        }
-        else window.open('https://cuenta.uchile.cl/crear-cuenta', '_blank').focus();
-    });
-    $('#register-document').live('focusout', function(e) {
-        e.preventDefault();
-        //e.stopPropagation();
-        $('form#register button#SSO_btn').hide();
-        let type_document = $('#register-type_document').val();
-        let document = this.value;
-        $.post( "/eol_sso_login/api/registration/", {document: document, type_document: type_document} )
-        .done(function( data ) {
-            if(data.result == 'error'){
-                $('#register-document-validation-error').removeClass('hidden');
-                $('label[for="register-document"]').removeClass('success').addClass('error');
-                $('#register-document-required-label').removeClass('success');
-                $('#register-document-validation-icon').removeClass('success').removeClass('fa-check');
-                if(data.error == "no_document") $('#register-document-validation-error-msg').html('${_("Enter document number") }');
-                if(data.error == "document_length") $('#register-document-validation-error-msg').html('${_("The document number must be between 5 and 20 characters") }');
-                if(data.error == "no_type_document") $('#register-document-validation-error-msg').html('${_("Select a document type") }');
-                if(data.error == "wrong_document") $('#register-document-validation-error-msg').html('${_("The document number must be alphanumeric") }');
-                if(data.error == "wrong_rut") $('#register-document-validation-error-msg').html('${_("Incorrect Rut") }');
-                if(data.error == "document_exists") {
-                    $('#register-document-validation-error-msg').html('${_("Document number already exists on the platform, press the login button.") }');
-                    if(type_document == 'rut'){
-                        if(data.have_sso){
-                            $('form#register button[type="submit"]').prop("disabled",true);
-                            crearte_btn('${_("Sign in with Mi.UChile") }', 'login');
-                            $('form#register button#SSO_btn').show();
-                        } else{
-                            $('form#register button#SSO_btn').hide();
-                        }
-                    }
-                }
-            }
-            else{
-                $('#register-document-validation-error-msg').html('')
-                $('#register-document-validation-error').addClass('hidden');
-                $('label[for="register-document"]').addClass('success').removeClass('error');
-                $('#register-document-required-label').addClass('success');
-                $('#register-document-validation-icon').addClass('success').addClass('fa-check');
-                $('form#register button[type="submit"]').prop("disabled",false);
-                if(type_document == 'rut'){
-                    if(data.have_sso){
-                        $('form#register button[type="submit"]').prop("disabled",true);
-                        crearte_btn('${_("Sign in with Mi.UChile") }', 'login');
-                        $('form#register button#SSO_btn').show();
-                    } else{
-                        $('form#register button#SSO_btn').hide();
-                    }
-                }
-            }
-        })
-        .fail(function() {
-            $('#register-document-validation-error').removeClass('hidden');
-            $('label[for="register-document"]').removeClass('success').addClass('error');
-            $('#register-document-required-label').removeClass('success');
-            $('#register-document-validation-icon').removeClass('success').removeClass('fa-check');
-            $('#register-document-validation-error-msg').html('${_("Unexpected error, please update and try again") }');
-            $('form#register button[type="submit"]').remove();
-            $('form#register button#SSO_btn').remove();
-        });
-    } )
+    
 </script>

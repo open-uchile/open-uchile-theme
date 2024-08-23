@@ -579,7 +579,7 @@ msgstr ""
 #: lms/templates/header/navbar-not-authenticated.html:53
 #: lms/templates/header/navbar-not-authenticated.html:70
 msgid "Contact us"
-msgstr ""
+msgstr "Mesa de Ayuda"
 
 #: lms/templates/footer.html:29
 msgid "Términos y Condiciones"
@@ -1717,7 +1717,7 @@ msgstr ""
 
 #: lms/templates/header/navbar-authenticated.html:18
 msgid "Search"
-msgstr ""
+msgstr "Buscar"
 
 #: lms/templates/header/navbar-authenticated.html:31
 #: lms/templates/header/navbar-authenticated.html:32
@@ -2157,7 +2157,7 @@ msgstr ""
 
 #: lms/templates/student_account/form_field.underscore:136
 msgid "Need help signing in?"
-msgstr ""
+msgstr "¿Necesitas ayuda para iniciar sesión?"
 
 #: lms/templates/student_account/form_field.underscore:138
 msgid "Forgot my password"
@@ -2245,7 +2245,7 @@ msgstr ""
 
 #: lms/templates/student_account/login2.underscore:83
 msgid "First time here?"
-msgstr ""
+msgstr "¿Primera vez aquí?"
 
 #: lms/templates/student_account/login2.underscore:84
 msgid "Create an Account."
@@ -2503,4 +2503,3 @@ msgstr ""
 
 #~ msgid "Create Mi.UChile account"
 #~ msgstr ""
-
