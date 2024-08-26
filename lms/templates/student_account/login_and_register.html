@@ -51,7 +51,8 @@
                 border_class = ''
             %>
         % endif
-        <div id="login-and-registration-container" class="login-register ${border_class}"></div>
+        <div id="login-and-registration-container" class="login-register ${border_class}">
+        </div>
     </div>
 </div>
 
@@ -63,12 +64,10 @@
             e.stopPropagation();
         }
     });
-    $('#redirect_to').live('click', function(e){
+    $('#sso_btn').live('click', function(e){
         e.preventDefault();
         e.stopPropagation();
         var url = document.getElementById("url_next").textContent;
         window.location.href = url;
-    });
-    
-    
+    });    
 </script>

@@ -1,14 +1,14 @@
 # Spanish (Latin America) translations for PROJECT.
-# Copyright (C) 2022 EOL
+# Copyright (C) 2024 EOL
 # This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: help-open@uchile.cl\n"
-"POT-Creation-Date: 2024-07-31 21:43+0000\n"
-"PO-Revision-Date: 2022-07-28 20:11+0000\n"
+"POT-Creation-Date: 2024-08-26 16:46+0000\n"
+"PO-Revision-Date: 2024-08-26 16:43+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es_419\n"
 "Language-Team: es_419 <LL@li.org>\n"
@@ -543,11 +543,11 @@ msgstr ""
 
 #: lms/templates/course.html:70 lms/templates/course_portal.html:54
 msgid "Finished course"
-msgstr "Curso finalizado"
+msgstr ""
 
 #: lms/templates/course.html:88 lms/templates/course_portal.html:72
 msgid "Permanently open"
-msgstr "Abierto permanentemente"
+msgstr ""
 
 #: lms/templates/course.html:97 lms/templates/course_portal.html:81
 msgid "Inicio del curso"
@@ -559,11 +559,11 @@ msgstr ""
 
 #: lms/templates/course.html:113 lms/templates/course_portal.html:97
 msgid "See more"
-msgstr "Aprender más"
+msgstr ""
 
 #: lms/templates/courses_list.html:18
 msgid "Starred Courses"
-msgstr "Cursos Destacados"
+msgstr ""
 
 #: lms/templates/courses_list.html:66
 msgid "No existen cursos"
@@ -579,7 +579,7 @@ msgstr ""
 #: lms/templates/header/navbar-not-authenticated.html:53
 #: lms/templates/header/navbar-not-authenticated.html:70
 msgid "Contact us"
-msgstr "Mesa de Ayuda"
+msgstr ""
 
 #: lms/templates/footer.html:29
 msgid "Términos y Condiciones"
@@ -587,15 +587,15 @@ msgstr ""
 
 #: lms/templates/footer.html:32 lms/templates/static_templates/privacy.html:6
 msgid "Privacy Policy"
-msgstr "Política de Privacidad"
+msgstr ""
 
 #: lms/templates/index.html:20
 msgid "Open UChile "
-msgstr "Open UChile"
+msgstr ""
 
 #: lms/templates/index.html:21
 msgid "E-Learning Platform "
-msgstr "Cursos E-Learning"
+msgstr ""
 
 #: lms/templates/main.html:192
 msgid "Skip to main content"
@@ -608,34 +608,34 @@ msgstr ""
 #: lms/templates/header/navbar-not-authenticated.html:51
 #: lms/templates/header/navbar-not-authenticated.html:67
 msgid "Certificate Validation "
-msgstr "Validación de certificados"
+msgstr ""
 
 #: lms/templates/certificates/validate_certificates.html:25
 #: lms/templates/certificates/validate_certificates.html:26
 msgid "Certificates validation"
-msgstr "Validación de Certificados"
+msgstr ""
 
 #: lms/templates/certificates/validate_certificates.html:39
 msgid "Certificate ID number"
-msgstr "ID de certificado"
+msgstr ""
 
 #: lms/templates/certificates/validate_certificates.html:49
 msgid "Certificate was not found"
-msgstr "Certificado no encontrado"
+msgstr ""
 
 #: lms/templates/certificates/validate_certificates.html:53
 msgid "Validate"
-msgstr "Validar"
+msgstr ""
 
 #: lms/templates/course_experience/course-outline-fragment.html:79
 msgid "Expand All"
-msgstr "Expandir Todo"
+msgstr ""
 
 #: lms/templates/course_experience/course-outline-fragment.html:98
 #: lms/templates/course_experience/course-outline-fragment.html:151
 #: lms/templates/course_experience/course-outline-fragment.html:245
 msgid "Completed"
-msgstr "Completado"
+msgstr ""
 
 #: lms/templates/course_experience/course-outline-fragment.html:132
 msgid "Prerequisite: "
@@ -780,10 +780,6 @@ msgid ""
 "the certificate, once you make the payment within the platform and pass "
 "the course according to the established rules."
 msgstr ""
-"Toma este curso de forma gratuita y tendrá acceso a parte del material, "
-"actividades y foros de discusión. Podrás optar por el certificado, una "
-"vez efectuado el pago dentro de la plataforma y apruebe el curso conforme"
-" a las reglas establecidas."
 
 #: lms/templates/course_modes/choose.html:215
 msgid "Audit This Course (No Certificate)"
@@ -858,7 +854,7 @@ msgstr ""
 
 #: lms/templates/courseware/course_about.html:204
 msgid "Classes Start:"
-msgstr "Inicio de clases:"
+msgstr ""
 
 #: lms/templates/courseware/course_about.html:207
 msgid "Today"
@@ -866,24 +862,24 @@ msgstr ""
 
 #: lms/templates/courseware/course_about.html:226
 msgid "Classes End:"
-msgstr "Término de clases:"
+msgstr ""
 
 #: lms/templates/courseware/course_about.html:240
 msgid "Price:"
-msgstr "Precio:"
+msgstr ""
 
 #: lms/templates/courseware/course_about.html:253
 msgid "There is one session available:"
-msgstr "Hay una edición del curso disponible:"
+msgstr ""
 
 #: lms/templates/courseware/course_about.html:254
 msgid " already enrolled!"
-msgstr " inscritos de momento!"
+msgstr ""
 
 #: lms/templates/courseware/course_about.html:288
 #: lms/templates/static_templates/faq.html:35
 msgid "Frequently Asked Questions"
-msgstr "Preguntas Frecuentes"
+msgstr ""
 
 #: lms/templates/courseware/course_about.html:305
 msgctxt "self"
@@ -897,36 +893,35 @@ msgstr ""
 
 #: lms/templates/courseware/courses.html:32
 msgid "Courses"
-msgstr "Cursos"
+msgstr ""
 
 #: lms/templates/courseware/courses.html:45
 #: lms/templates/eoldiscussion/templates2.underscore:642
 msgid "Previous"
-msgstr "Anterior"
+msgstr ""
 
 #: lms/templates/courseware/courses.html:49
 #: lms/templates/eoldiscussion/templates2.underscore:666
-#: lms/templates/student_account/login2.underscore:51
 msgid "Next"
-msgstr "Siguiente"
+msgstr ""
 
 #: lms/templates/courseware/courses.html:61
 #: lms/templates/courseware/courses.html:62
 msgid "Search for a course"
-msgstr "Buscar en nuestros cursos"
+msgstr ""
 
 #: lms/templates/courseware/courses.html:71
 msgid "Newer"
-msgstr "Más recientes"
+msgstr ""
 
 #: lms/templates/courseware/courses.html:72
 msgid "Older"
-msgstr "Más antiguos"
+msgstr ""
 
 #: lms/templates/courseware/courses.html:92
 #: lms/templates/courseware/courses.html:104
 msgid "Refine Your Search"
-msgstr "Refinar su búsqueda"
+msgstr ""
 
 #: lms/templates/courseware/courses.html:96
 msgid "Has seleccionado"
@@ -934,29 +929,29 @@ msgstr ""
 
 #: lms/templates/courseware/courses.html:97
 msgid "Clear All"
-msgstr "Borrar Todo"
+msgstr ""
 
 #: lms/templates/courseware/courses.html:108
 msgid "Year"
-msgstr "Año"
+msgstr ""
 
 #: lms/templates/courseware/courses.html:125
 msgid "State"
-msgstr "Estado"
+msgstr ""
 
 #: lms/templates/courseware/courses.html:131
 #: lms/templates/courseware/courses.html:132
 msgid "Active"
-msgstr "Activo"
+msgstr ""
 
 #: lms/templates/courseware/courses.html:135
 #: lms/templates/courseware/courses.html:136
 msgid "Finished"
-msgstr "Finalizado"
+msgstr ""
 
 #: lms/templates/courseware/courses.html:142
 msgid "Organizations"
-msgstr "Organizaciones"
+msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html:71
 msgid "Course details"
@@ -1023,38 +1018,38 @@ msgstr ""
 #: lms/templates/dashboard/_dashboard_course_listing.html:209
 #: lms/templates/dashboard/_dashboard_course_listing.html:231
 msgid "¡Te invito a matricularte a este curso! {course_name}"
-msgstr "I invite you to enroll in this course! {course_name}"
+msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html:212
 msgid "Share {course_name} on Facebook"
-msgstr "Compartir {course_name} en Facebook"
+msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html:215
 #: lms/templates/dashboard/_dashboard_course_listing.html:221
 msgid "Share on Facebook"
-msgstr "Compartir en Facebook"
+msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html:234
 msgid "Share {course_name} on Twitter"
-msgstr "Compartir {course_name} en Twitter"
+msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html:237
 #: lms/templates/dashboard/_dashboard_course_listing.html:243
 msgid "Share on Twitter"
-msgstr "Compartir en Twitter"
+msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html:253
 msgid "¡Te invito a matricularte a este curso! {course_name} {url}"
-msgstr "I invite you to enroll in this course! {course_name} {url}"
+msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html:255
 msgid "Share {course_name} on Linkedin"
-msgstr "Compartir {course_name} en Linkedin"
+msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html:258
 #: lms/templates/dashboard/_dashboard_course_listing.html:264
 msgid "Share on Linkedin"
-msgstr "Compartir en Linkedin"
+msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html:282
 msgid "Course options for"
@@ -1186,13 +1181,13 @@ msgstr ""
 
 #: lms/templates/emails/failed_verification_email.txt:34
 msgid "Resubmit Verification: {reverify_url}"
-msgstr "Reenviar Verificación: {reverify_url}"
+msgstr ""
 
 #: lms/templates/emails/failed_verification_email.txt:37
 #: lms/templates/emails/passed_verification_email.txt:9
 #: lms/templates/emails/photo_submission_confirmation.txt:12
 msgid "Thank you,"
-msgstr "Gracias,"
+msgstr ""
 
 #: lms/templates/emails/failed_verification_email.txt:38
 #: lms/templates/emails/passed_verification_email.txt:10
@@ -1216,11 +1211,11 @@ msgstr ""
 
 #: lms/templates/emails/photo_submission_confirmation.txt:4
 msgid "Hi {full_name},"
-msgstr "Hola {full_name},"
+msgstr ""
 
 #: lms/templates/emails/photo_submission_confirmation.txt:7
 msgid "Thanks for submitting your photos!"
-msgstr "¡Gracias por enviar sus fotos!"
+msgstr ""
 
 #: lms/templates/emails/photo_submission_confirmation.txt:8
 msgid ""
@@ -1364,7 +1359,7 @@ msgstr ""
 #: lms/templates/eoldiscussion/templates2.underscore:201
 #: lms/templates/eoldiscussion/templates2.underscore:540
 msgid "Submit"
-msgstr "Enviar Consulta"
+msgstr ""
 
 #: lms/templates/eoldiscussion/templates2.underscore:45
 #: lms/templates/eoldiscussion/templates2.underscore:685
@@ -1721,7 +1716,7 @@ msgstr ""
 
 #: lms/templates/header/navbar-authenticated.html:18
 msgid "Search"
-msgstr "Buscar"
+msgstr ""
 
 #: lms/templates/header/navbar-authenticated.html:31
 #: lms/templates/header/navbar-authenticated.html:32
@@ -1740,7 +1735,7 @@ msgstr ""
 #: lms/templates/header/navbar-not-authenticated.html:45
 #: lms/templates/header/navbar-not-authenticated.html:58
 msgid "Explore courses"
-msgstr "Buscar Cursos"
+msgstr ""
 
 #: lms/templates/header/navbar-authenticated.html:40
 #: lms/templates/header/navbar-authenticated.html:57
@@ -1765,7 +1760,7 @@ msgid "{platform_name} Home Page"
 msgstr ""
 
 #: lms/templates/header/navbar-not-authenticated.html:35
-#: lms/templates/student_account/login2.underscore:49
+#: lms/templates/student_account/login.underscore:38
 msgid "Sign in"
 msgstr ""
 
@@ -1931,12 +1926,10 @@ msgid ""
 "Click to generate a ZIP file that contains all submission texts and "
 "attachments."
 msgstr ""
-"Click para generar un archivo ZIP que contiene todas las respuestas y "
-"archivos enviados."
 
 #: lms/templates/instructor/instructor_dashboard_2/data_download.html:107
 msgid "Generate Submission Files Archive"
-msgstr "Generar reporte de archivos enviados"
+msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/data_download.html:121
 msgid "Analítica de encuestas"
@@ -2117,28 +2110,23 @@ msgstr ""
 #: lms/templates/static_templates/about.html:24
 #: lms/templates/static_templates/about.html:25
 msgid "About Us"
-msgstr "Acerca de"
+msgstr ""
 
 #: lms/templates/static_templates/about.html:30
 msgid "What is Open UChile?"
-msgstr "¿Qué es OpenUChile?"
+msgstr ""
 
 #: lms/templates/static_templates/about.html:33
 msgid ""
 "Universidad de Chile (UChile) is the first University in the country, "
 "within the 500 in the World and 9th in Latin America"
 msgstr ""
-"La Universidad de Chile (UChile) es la primera universidad del país, "
-"dentro de las 500 del mundo y la 9° de América Latina"
 
 #: lms/templates/static_templates/about.html:33
 msgid ""
 "As a public university, UChile is deeply concerned about global issues, "
 "such as Climate Change and the UN2030 agenda."
 msgstr ""
-"Como universidad pública, la UChile está profundamente preocupada por los"
-" temas globales, como el Cambio Climático y la Agenda 2030 de Naciones "
-"Unidas."
 
 #: lms/templates/static_templates/about.html:34
 msgid ""
@@ -2151,15 +2139,6 @@ msgid ""
 "worldwide referents in those topics, and this MOOC platform seeks to "
 "spread those knowledge and experience."
 msgstr ""
-"Chile es un laboratorio natural en un entorno realmente complejo, desde "
-"el Desierto de Atacama hasta la Antártida, amenazado por 9 (de 10) "
-"peligros naturales (Desastres y Cambio Climático). Esta condición nos "
-"brinda una ubicación perfecta para desarrollar centros de investigación "
-"en diferentes áreas, tales como minería, geología, sismología, "
-"infraestructura sismorresistente y asuntos públicos. Nuestros académicos "
-"tienen un profundo conocimiento y experiencia y son referentes a nivel "
-"mundial en esos temas, y esta plataforma MOOC busca busca difundir esos "
-"conocimientos y experiencia."
 
 #: lms/templates/static_templates/about.html:35
 msgid ""
@@ -2170,368 +2149,78 @@ msgid ""
 "University of Auckland, The University of Manchester, University of "
 "Nairobi, University of Toronto,"
 msgstr ""
-"UChile también es miembro fundador de Global MOOC Alliance junto a "
-"diversas universidades, como Tsinghua University, Cornell University, "
-"Center for Research and Interdisciplinarity (CRI), Peking University, "
-"Politecnico di Milano, Saint Petersburg State University, Shanghai Jiao "
-"Tong University, The University of Auckland, The University of "
-"Manchester, University of Nairobi, Universidad de Toronto,"
 
 #: lms/templates/static_templates/about.html:35
 msgid "among others"
-msgstr "entre otras instituciones"
+msgstr ""
 
 #: lms/templates/student_account/form_field.underscore:136
 msgid "Need help signing in?"
-msgstr "¿Necesitas ayuda para iniciar sesión?"
+msgstr ""
 
 #: lms/templates/student_account/form_field.underscore:138
 msgid "Forgot my password"
-msgstr "Olvidé mi contraseña"
+msgstr ""
 
 #: lms/templates/student_account/form_field.underscore:140
-#: lms/templates/student_account/form_field.underscore:149
 msgid "Other sign-in issues"
 msgstr ""
 
-#: lms/templates/student_account/form_field.underscore:145
-msgid "Need other help signing in?"
-msgstr ""
-
-#: lms/templates/student_account/form_field.underscore:147
-msgid "Create an account"
-msgstr "Crear una cuenta"
-
-#: lms/templates/student_account/login2.underscore:8
+#: lms/templates/student_account/login.underscore:3
 msgid "Sign in to continue learning as {email}"
 msgstr ""
 
-#: lms/templates/student_account/login2.underscore:10
+#: lms/templates/student_account/login.underscore:5
 msgid "Sign in to continue learning"
 msgstr ""
 
-#: lms/templates/student_account/login2.underscore:13
+#: lms/templates/student_account/login.underscore:8
 msgid "You already have an edX account with your {enterprise_name} email address."
 msgstr ""
 
-#: lms/templates/student_account/login2.underscore:15
+#: lms/templates/student_account/login.underscore:10
 msgid ""
 "Going forward, your account information will be updated and maintained by"
 " {enterprise_name}."
 msgstr ""
 
-#: lms/templates/student_account/login2.underscore:17
+#: lms/templates/student_account/login.underscore:12
 msgid ""
 "You can view your information or unlink from {enterprise_name} anytime in"
 " your Account Settings."
 msgstr ""
 
-#: lms/templates/student_account/login2.underscore:19
+#: lms/templates/student_account/login.underscore:14
 msgid "To continue learning with this account, sign in below."
 msgstr ""
 
-#: lms/templates/student_account/login2.underscore:21
+#: lms/templates/student_account/login.underscore:16
 msgid "Sign In"
 msgstr ""
 
-#: lms/templates/student_account/login2.underscore:28
-msgid ""
-"Sign in here using your email address and password, or use one of the "
-"providers listed below."
-msgstr ""
-
-#: lms/templates/student_account/login2.underscore:30
-msgid "Sign in here using your email address and password."
-msgstr ""
-
-#: lms/templates/student_account/login2.underscore:32
-msgid "If you do not yet have an account, use the button below to register."
-msgstr ""
-
-#: lms/templates/student_account/login2.underscore:37
+#: lms/templates/student_account/login.underscore:26
 msgid "Use my university info"
 msgstr ""
 
-#: lms/templates/student_account/login2.underscore:42
-#: lms/templates/student_account/login2.underscore:59
+#: lms/templates/student_account/login.underscore:31
+#: lms/templates/student_account/login.underscore:43
 msgid "or sign in with"
 msgstr ""
 
-#: lms/templates/student_account/login2.underscore:50
-#: lms/templates/student_account/login_and_register.html:90
-#: lms/templates/student_account/login_and_register.html:182
-#: lms/templates/student_account/login_and_register.html:200
-msgid "Sign in with Mi.UChile"
-msgstr "Iniciar Sesión con Mi.UChile"
-
-#: lms/templates/student_account/login2.underscore:72
+#: lms/templates/student_account/login.underscore:56
 #, python-format
 msgid "Sign in with %(providerName)s"
 msgstr ""
 
-#: lms/templates/student_account/login2.underscore:83
+#: lms/templates/student_account/login.underscore:63
 msgid "First time here?"
-msgstr "¿Primera vez aquí?"
+msgstr ""
 
-#: lms/templates/student_account/login2.underscore:84
-msgid "Create an account"
-msgstr "Crear una cuenta"
+#: lms/templates/student_account/login.underscore:64
+msgid "Create an Account."
+msgstr ""
 
 #: lms/templates/student_account/login_and_register.html:14
 msgid "Sign in or Register"
 msgstr ""
 
-#: lms/templates/student_account/login_and_register.html:100
-msgid "Account not active"
-msgstr "Cuenta no activa"
-
-#: lms/templates/student_account/login_and_register.html:103
-msgid "There is no account associated with the email entered"
-msgstr "No existe una cuenta asociada al correo ingresado"
-
-#: lms/templates/student_account/login_and_register.html:107
-msgid "Enter email"
-msgstr "Ingrese un correo"
-
-#: lms/templates/student_account/login_and_register.html:113
-msgid ""
-"Unexpected error, refresh the page and try again, if the error persists "
-"contact the help desk"
-msgstr ""
-"Error inesperado, actualice la página e intente nuevamente, si el error "
-"persiste contáctese con la mesa de ayuda"
-
-#: lms/templates/student_account/login_and_register.html:172
-msgid "Enter document number"
-msgstr "Ingrese número de documento"
-
-#: lms/templates/student_account/login_and_register.html:173
-msgid "The document number must be between 5 and 20 characters"
-msgstr "El número documento debe estar entre 5 y 20 carácteres"
-
-#: lms/templates/student_account/login_and_register.html:174
-msgid "Select a document type"
-msgstr "Seleccione un tipo de documento"
-
-#: lms/templates/student_account/login_and_register.html:175
-msgid "The document number must be alphanumeric"
-msgstr "El documento debe ser alfanumérico"
-
-#: lms/templates/student_account/login_and_register.html:176
-msgid "Incorrect Rut"
-msgstr "Rut incorrecto"
-
-#: lms/templates/student_account/login_and_register.html:178
-msgid "Document number already exists on the platform, press the login button."
-msgstr ""
-"Número documento ya existe en plataforma, presione el botón de inicio de "
-"sesión"
-
-#: lms/templates/student_account/login_and_register.html:213
-msgid "Unexpected error, please update and try again"
-msgstr "Error inesperado, por favor actualizar la página e intente nuevamente"
-
-#: lms/templates/student_account/register.underscore:6
-msgid "Already have an {platformName} account?"
-msgstr ""
-
-#: lms/templates/student_account/register.underscore:7
-msgid "Sign in."
-msgstr ""
-
-#: lms/templates/student_account/register.underscore:18
-msgid "Create an account using"
-msgstr ""
-
-#: lms/templates/student_account/register.underscore:31
-#, python-format
-msgid "Create account using %(providerName)s."
-msgstr ""
-
-#: lms/templates/student_account/register.underscore:38
-msgid "Use my institution/campus credentials"
-msgstr ""
-
-#: lms/templates/student_account/register.underscore:44
-msgid "or create a new one here"
-msgstr ""
-
-#: lms/templates/student_account/register.underscore:48
-msgid "Create an account"
-msgstr "Crear una cuenta"
-
-#: lms/templates/student_account/register.underscore:60
-msgid "Support education research by providing additional information"
-msgstr ""
-
-#: lms/templates/student_account/register.underscore:67
-msgid "Create Account"
-msgstr ""
-
-#~ msgid "Certificate Validation"
-#~ msgstr "Validación de certificados"
-
-#~ msgid " already enrolled! After a course session ends, it will be archived."
-#~ msgstr ""
-#~ " inscritos de momento. Cuando el "
-#~ "curso termine, será guardado en la "
-#~ "pestaña de 'Cursos Archivados'"
-
-#~ msgid "The {platform_name} team"
-#~ msgstr "El equipo de {platform_name}"
-
-#~ msgid ""
-#~ "Hemos recibido su información y el "
-#~ "proceso de verificación de ID ha "
-#~ "empezado. Revise si recibe un correo "
-#~ "electrónico de {platform_name} en los "
-#~ "próximos días para confirmar si su "
-#~ "verificación fue exitosa. También puede "
-#~ "revisar el estado del proceso de "
-#~ "verificación en su página de inicio."
-#~ msgstr ""
-
-#~ msgid "Help desk hours (GMT-3): from 09:00 until 18:00 (Monday - Friday)"
-#~ msgstr "Horario de atención (GMT-3): Lunes a Viernes de 9:00 a 18:00 Hrs"
-
-#~ msgid "Discover New"
-#~ msgstr ""
-
-#~ msgid "Starts"
-#~ msgstr ""
-
-#~ msgid "Starts: {date}"
-#~ msgstr ""
-
-#~ msgid "E-Learning "
-#~ msgstr "Cursos E-Learning"
-
-#~ msgid "Platform "
-#~ msgstr " "
-
-#~ msgid "Enrollment in this course is by invitation only"
-#~ msgstr "Curso requiere postulación"
-
-#~ msgid "List of Courses"
-#~ msgstr "Lista de Cursos"
-
-#~ msgid "Sort by:"
-#~ msgstr "Ordenar por:"
-
-#~ msgid "Year:"
-#~ msgstr "Año:"
-
-#~ msgid "State:"
-#~ msgstr "Estado:"
-
-#~ msgid "Organizations:"
-#~ msgstr "Organizaciones:"
-
-#~ msgid "Universität Heidelberg"
-#~ msgstr ""
-
-#~ msgid "Facultad de Ciencias Físicas y Matemáticas"
-#~ msgstr ""
-
-#~ msgid "Facultad de Economía y Negocios"
-#~ msgstr ""
-
-#~ msgid "Facultad de Medicina"
-#~ msgstr ""
-
-#~ msgid "ECBI Chile"
-#~ msgstr ""
-
-#~ msgid "Centro de Ciencia del Clima y la Resiliencia (CR)^2"
-#~ msgstr ""
-
-#~ msgid "Red Universitaria Nacional (REUNA)"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "It's official. It's easily shareable. "
-#~ "It's a proven motivator to complete "
-#~ "the course. {line_break}{link_start}Learn more "
-#~ "about the verified {cert_name_long}{link_end}."
-#~ msgstr ""
-
-#~ msgid "Enroll Now"
-#~ msgstr ""
-
-#~ msgid "Rut already exists on the platform"
-#~ msgstr "Rut ya existe en plataforma"
-
-#~ msgid "Contact Form"
-#~ msgstr "Formulario de contacto"
-
-#~ msgid "Fill out the form and our help desk will contact you shortly."
-#~ msgstr ""
-#~ "Llena el formulario y nuestra mesa "
-#~ "de ayuda se pondrá en contacto a"
-#~ " la brevedad."
-
-#~ msgid "Help desk hours (GMT-4): from 09:00 until 18:00 (Monday - Friday)"
-#~ msgstr ""
-
-#~ msgid "Try Again"
-#~ msgstr "¡Intente nuevamente!"
-
-#~ msgid "There was a problem trying to generate your ticket."
-#~ msgstr "Hubo un problema al intentar generar su ticket."
-
-#~ msgid "If the problem persists, send an email to"
-#~ msgstr "Si el problema persiste, envíe un correo a"
-
-#~ msgid "Enter a valid {error}"
-#~ msgstr "Ingresa un {error} válido"
-
-#~ msgid "¡Sent!"
-#~ msgstr "¡Consulta enviada!"
-
-#~ msgid "Our help desk will answer you as soon as possible"
-#~ msgstr "Espera a que nuestra mesa de ayuda se ponga en contacto contigo."
-
-#~ msgid "Name"
-#~ msgstr "Nombre"
-
-#~ msgid "Enter your name"
-#~ msgstr "Ingresa tu nombre"
-
-#~ msgid "Email"
-#~ msgstr "Correo electrónico"
-
-#~ msgid "Enter your email"
-#~ msgstr "Ingresa tu correo electrónico"
-
-#~ msgid "Related to:"
-#~ msgstr "Tipo de consulta"
-
-#~ msgid "Select an option"
-#~ msgstr "Selecciona una opción"
-
-#~ msgid "General"
-#~ msgstr "General"
-
-#~ msgid "Specific Course"
-#~ msgstr "Dudas de un curso en específico"
-
-#~ msgid "Login"
-#~ msgstr "Problemas con inicio de sesión"
-
-#~ msgid "Other"
-#~ msgstr "Otro"
-
-#~ msgid "Course name"
-#~ msgstr "Nombre del curso"
-
-#~ msgid "Enter the course name"
-#~ msgstr "Ingresa el nombre del curso con dudas"
-
-#~ msgid "Describe your problem"
-#~ msgstr "Describa su problema"
-
-#~ msgid "Enter your questions and queries here"
-#~ msgstr "Ingresa tus dudas y consultas en este campo de texto"
-
-#~ msgid "Create Mi.UChile account"
-#~ msgstr "Crear cuenta Mi.UChile"
