@@ -20,9 +20,9 @@
         <button id="sso_btn" class=" action-primary w-100 add-margin-bottom">Iniciar Sesión con Mi.UChile</button>
         <button id="href_login_normal" class="action-primary w-100" href="#Login_Normal" onclick="return show_email_login();">Iniciar Sesión con OpenUChile</button>
     </div>
-
+    <div id="js-form-feedback" class="js-form-feedback mt-3" aria-live="assertive" tabindex="-1"></div>
     <div id="Login_Normal" class="login-providers d-none text-start">
-        <div id="js-form-feedback" class="js-form-feedback mt-3" aria-live="assertive" tabindex="-1"></div>
+        
         <% if ( context.hasSecondaryProviders ) { %>
             <button type="button" class="button-secondary-login form-toggle" data-type="institution_login">
                 <%- gettext("Use my university info") %>
@@ -74,6 +74,7 @@
     function show_email_login() {
         $('#Login_Normal').removeClass('d-none');
         $('#pre_login').hide();
+        $('#js-form-feedback').find('*').remove();
     }
     
     function show_pre_login() {
@@ -82,6 +83,5 @@
         $('#login-email').val('');
         $('#login-password').val('');
         $('#js-form-feedback').find('*').remove();
-
     }
 </script>
