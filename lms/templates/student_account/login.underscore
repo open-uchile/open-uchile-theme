@@ -17,11 +17,11 @@
 <% } %>
 <form id="login" class="login-form" tabindex="-1" method="POST">
     <div id="pre_login"> 
-        <button id="sso_btn" class=" action-primary w-100" style="margin-bottom:1.5rem">Iniciar Sesión con Mi.UChile</button>
-        <button id="href_login_normal" class=" action-primary w-100" href="#Login_Normal" onclick="return show_email_login();">Iniciar Sesión con OpenUChile</button>
+        <button id="sso_btn" class=" action-primary w-100 add-margin-bottom">Iniciar Sesión con Mi.UChile</button>
+        <button id="href_login_normal" class="action-primary w-100" href="#Login_Normal" onclick="return show_email_login();">Iniciar Sesión con OpenUChile</button>
     </div>
 
-    <div id="Login_Normal" class="login-providers" style="text-align: left;display: none;">
+    <div id="Login_Normal" class="login-providers d-none text-start">
         <div id="js-form-feedback" class="js-form-feedback mt-3" aria-live="assertive" tabindex="-1"></div>
         <% if ( context.hasSecondaryProviders ) { %>
             <button type="button" class="button-secondary-login form-toggle" data-type="institution_login">
@@ -38,7 +38,7 @@
         <%= HtmlUtils.HTML(context.fields) %>
         <div class="d-flex justify-content-between">
             <button type="button" class="action-primary" onclick="return show_pre_login();">Volver</button>
-            <button type="submit" class="action action-primary action-update js-login login-button" style="margin-rigth:1rem"><%- gettext("Sign in") %></button>
+            <button type="submit" class="action action-primary action-update js-login login-button"><%- gettext("Sign in") %></button>
         </div>
         <% if ( context.providers.length > 0 && !context.currentProvider) { %>
             <div class="login-providers">
@@ -51,11 +51,11 @@
                 <% _.each( context.providers, function( provider ) {
                     if ( provider.loginUrl ) { %>
                         <button type="button" class="button button-primary button-<%- provider.id %> login-provider login-<%- provider.id %>" data-provider-url="<%- provider.loginUrl %>">
-                            <div class="icon <% if ( provider.iconClass ) { %>fa <%- provider.iconClass %><% } %>" aria-hidden="true">
+                            <span class="icon <% if ( provider.iconClass ) { %>fa <%- provider.iconClass %><% } %>" aria-hidden="true">
                                 <% if ( provider.iconImage ) { %>
                                     <img class="icon-image" src="<%- provider.iconImage %>" alt="<%- provider.name %> icon" />
                                 <% } %>
-                            </div>
+                            </span>
                             <span aria-hidden="true"><%- provider.name %></span>
                             <span class="sr"><%- _.sprintf( gettext("Sign in with %(providerName)s"), {providerName: provider.name} ) %></span>
                         </button>
@@ -72,15 +72,12 @@
 
 <script type="text/javascript">
     function show_email_login() {
-        var x = document.getElementById("Login_Normal");
-        if (x.style.display === "none") {
-            $('#Login_Normal').show();
-            $('#pre_login').hide();
-        }
+        $('#Login_Normal').removeClass('d-none');
+        $('#pre_login').hide();
     }
     
     function show_pre_login() {
-        $('#Login_Normal').hide();
+        $('#Login_Normal').addClass('d-none');
         $('#pre_login').show();
         $('#login-email').val('');
         $('#login-password').val('');
