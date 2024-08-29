@@ -1,14 +1,14 @@
 # English translations for PROJECT.
-# Copyright (C) 2024 EOL
+# Copyright (C) 2022 EOL
 # This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: help-open@uchile.cl\n"
-"POT-Creation-Date: 2024-08-26 16:46+0000\n"
-"PO-Revision-Date: 2024-08-26 16:43+0000\n"
+"POT-Creation-Date: 2024-07-31 21:43+0000\n"
+"PO-Revision-Date: 2022-07-28 20:11+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
 "Language-Team: en <LL@li.org>\n"
@@ -583,7 +583,7 @@ msgstr ""
 
 #: lms/templates/footer.html:29
 msgid "Términos y Condiciones"
-msgstr ""
+msgstr "Terms and Conditions"
 
 #: lms/templates/footer.html:32 lms/templates/static_templates/privacy.html:6
 msgid "Privacy Policy"
@@ -838,7 +838,7 @@ msgstr ""
 
 #: lms/templates/courseware/course_about.html:131
 msgid "Curso requiere postulación"
-msgstr ""
+msgstr "Enrollment in this course is by invitation only"
 
 #: lms/templates/courseware/course_about.html:133
 msgid "Enrollment is Closed"
@@ -846,7 +846,7 @@ msgstr ""
 
 #: lms/templates/courseware/course_about.html:152
 msgid "Inscríbase ahora"
-msgstr ""
+msgstr "Enroll now"
 
 #: lms/templates/courseware/course_about.html:174
 msgid "View About Page in studio"
@@ -902,6 +902,7 @@ msgstr ""
 
 #: lms/templates/courseware/courses.html:49
 #: lms/templates/eoldiscussion/templates2.underscore:666
+#: lms/templates/student_account/login2.underscore:51
 msgid "Next"
 msgstr ""
 
@@ -925,7 +926,7 @@ msgstr ""
 
 #: lms/templates/courseware/courses.html:96
 msgid "Has seleccionado"
-msgstr ""
+msgstr "You have selected"
 
 #: lms/templates/courseware/courses.html:97
 msgid "Clear All"
@@ -1166,18 +1167,20 @@ msgid ""
 "¡Lo lamentamos! Las fotos que enviaste para verificar tu identidad no "
 "fueron aceptadas, detalle(s) a continuación:"
 msgstr ""
+"Sorry! The photos you submitted to verify your identity were not "
+"accepted, detail(s) below:"
 
 #: lms/templates/emails/failed_verification_email.txt:9
 msgid "Tu fotografía:"
-msgstr ""
+msgstr "Your photo:"
 
 #: lms/templates/emails/failed_verification_email.txt:17
 msgid "La fotografía de tu ID:"
-msgstr ""
+msgstr "Your photo ID:"
 
 #: lms/templates/emails/failed_verification_email.txt:25
 msgid "Otras razones:"
-msgstr ""
+msgstr "Other reasons:"
 
 #: lms/templates/emails/failed_verification_email.txt:34
 msgid "Resubmit Verification: {reverify_url}"
@@ -1201,13 +1204,15 @@ msgstr ""
 
 #: lms/templates/emails/passed_verification_email.txt:6
 msgid "¡Felicitaciones! Tu verificación de identidad fue exitosa."
-msgstr ""
+msgstr "Congratulations! Your ID verification was successful."
 
 #: lms/templates/emails/passed_verification_email.txt:7
 msgid ""
 "Tu verificación es válida durante un año. Esta expirará el "
 "{expiration_datetime}."
 msgstr ""
+"Your verification is valid for one year. It will expire on "
+"{expiration_datetime}."
 
 #: lms/templates/emails/photo_submission_confirmation.txt:4
 msgid "Hi {full_name},"
@@ -1760,7 +1765,7 @@ msgid "{platform_name} Home Page"
 msgstr ""
 
 #: lms/templates/header/navbar-not-authenticated.html:35
-#: lms/templates/student_account/login.underscore:38
+#: lms/templates/student_account/login2.underscore:49
 msgid "Sign in"
 msgstr ""
 
@@ -2163,60 +2168,90 @@ msgid "Forgot my password"
 msgstr ""
 
 #: lms/templates/student_account/form_field.underscore:140
+#: lms/templates/student_account/form_field.underscore:149
 msgid "Other sign-in issues"
 msgstr ""
 
-#: lms/templates/student_account/login.underscore:3
+#: lms/templates/student_account/form_field.underscore:145
+msgid "Need other help signing in?"
+msgstr ""
+
+#: lms/templates/student_account/form_field.underscore:147
+msgid "Create an account"
+msgstr ""
+
+#: lms/templates/student_account/login2.underscore:8
 msgid "Sign in to continue learning as {email}"
 msgstr ""
 
-#: lms/templates/student_account/login.underscore:5
+#: lms/templates/student_account/login2.underscore:10
 msgid "Sign in to continue learning"
 msgstr ""
 
-#: lms/templates/student_account/login.underscore:8
+#: lms/templates/student_account/login2.underscore:13
 msgid "You already have an edX account with your {enterprise_name} email address."
 msgstr ""
 
-#: lms/templates/student_account/login.underscore:10
+#: lms/templates/student_account/login2.underscore:15
 msgid ""
 "Going forward, your account information will be updated and maintained by"
 " {enterprise_name}."
 msgstr ""
 
-#: lms/templates/student_account/login.underscore:12
+#: lms/templates/student_account/login2.underscore:17
 msgid ""
 "You can view your information or unlink from {enterprise_name} anytime in"
 " your Account Settings."
 msgstr ""
 
-#: lms/templates/student_account/login.underscore:14
+#: lms/templates/student_account/login2.underscore:19
 msgid "To continue learning with this account, sign in below."
 msgstr ""
 
-#: lms/templates/student_account/login.underscore:16
+#: lms/templates/student_account/login2.underscore:21
 msgid "Sign In"
 msgstr ""
 
-#: lms/templates/student_account/login.underscore:26
+#: lms/templates/student_account/login2.underscore:28
+msgid ""
+"Sign in here using your email address and password, or use one of the "
+"providers listed below."
+msgstr ""
+
+#: lms/templates/student_account/login2.underscore:30
+msgid "Sign in here using your email address and password."
+msgstr ""
+
+#: lms/templates/student_account/login2.underscore:32
+msgid "If you do not yet have an account, use the button below to register."
+msgstr ""
+
+#: lms/templates/student_account/login2.underscore:37
 msgid "Use my university info"
 msgstr ""
 
-#: lms/templates/student_account/login.underscore:31
-#: lms/templates/student_account/login.underscore:43
+#: lms/templates/student_account/login2.underscore:42
+#: lms/templates/student_account/login2.underscore:59
 msgid "or sign in with"
 msgstr ""
 
-#: lms/templates/student_account/login.underscore:56
+#: lms/templates/student_account/login2.underscore:50
+#: lms/templates/student_account/login_and_register.html:90
+#: lms/templates/student_account/login_and_register.html:182
+#: lms/templates/student_account/login_and_register.html:200
+msgid "Sign in with Mi.UChile"
+msgstr ""
+
+#: lms/templates/student_account/login2.underscore:72
 #, python-format
 msgid "Sign in with %(providerName)s"
 msgstr ""
 
-#: lms/templates/student_account/login.underscore:63
+#: lms/templates/student_account/login2.underscore:83
 msgid "First time here?"
 msgstr ""
 
-#: lms/templates/student_account/login.underscore:64
+#: lms/templates/student_account/login2.underscore:84
 msgid "Create an Account."
 msgstr ""
 
@@ -2224,3 +2259,255 @@ msgstr ""
 msgid "Sign in or Register"
 msgstr ""
 
+#: lms/templates/student_account/login_and_register.html:100
+msgid "Account not active"
+msgstr ""
+
+#: lms/templates/student_account/login_and_register.html:103
+msgid "There is no account associated with the email entered"
+msgstr ""
+
+#: lms/templates/student_account/login_and_register.html:107
+msgid "Enter email"
+msgstr ""
+
+#: lms/templates/student_account/login_and_register.html:113
+msgid ""
+"Unexpected error, refresh the page and try again, if the error persists "
+"contact the help desk"
+msgstr ""
+
+#: lms/templates/student_account/login_and_register.html:172
+msgid "Enter document number"
+msgstr ""
+
+#: lms/templates/student_account/login_and_register.html:173
+msgid "The document number must be between 5 and 20 characters"
+msgstr ""
+
+#: lms/templates/student_account/login_and_register.html:174
+msgid "Select a document type"
+msgstr ""
+
+#: lms/templates/student_account/login_and_register.html:175
+msgid "The document number must be alphanumeric"
+msgstr ""
+
+#: lms/templates/student_account/login_and_register.html:176
+msgid "Incorrect Rut"
+msgstr ""
+
+#: lms/templates/student_account/login_and_register.html:178
+msgid "Document number already exists on the platform, press the login button."
+msgstr ""
+
+#: lms/templates/student_account/login_and_register.html:213
+msgid "Unexpected error, please update and try again"
+msgstr ""
+
+#: lms/templates/student_account/register.underscore:6
+msgid "Already have an {platformName} account?"
+msgstr ""
+
+#: lms/templates/student_account/register.underscore:7
+msgid "Sign in."
+msgstr ""
+
+#: lms/templates/student_account/register.underscore:18
+msgid "Create an account using"
+msgstr ""
+
+#: lms/templates/student_account/register.underscore:31
+#, python-format
+msgid "Create account using %(providerName)s."
+msgstr ""
+
+#: lms/templates/student_account/register.underscore:38
+msgid "Use my institution/campus credentials"
+msgstr ""
+
+#: lms/templates/student_account/register.underscore:44
+msgid "or create a new one here"
+msgstr ""
+
+#: lms/templates/student_account/register.underscore:48
+msgid "Create an Account"
+msgstr ""
+
+#: lms/templates/student_account/register.underscore:60
+msgid "Support education research by providing additional information"
+msgstr ""
+
+#: lms/templates/student_account/register.underscore:67
+msgid "Create Account"
+msgstr ""
+
+#~ msgid "Certificate Validation"
+#~ msgstr ""
+
+#~ msgid " already enrolled! After a course session ends, it will be archived."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Hemos recibido su información y el "
+#~ "proceso de verificación de ID ha "
+#~ "empezado. Revise si recibe un correo "
+#~ "electrónico de {platform_name} en los "
+#~ "próximos días para confirmar si su "
+#~ "verificación fue exitosa. También puede "
+#~ "revisar el estado del proceso de "
+#~ "verificación en su página de inicio."
+#~ msgstr ""
+#~ "We have received your information and"
+#~ " the ID verification process has "
+#~ "started. Check if you have an "
+#~ "email from {platform_name} in the next"
+#~ " few days to confirm if your "
+#~ "verification was successful. You can "
+#~ "also check the status of the "
+#~ "verification process on your home page."
+
+#~ msgid "Help desk hours (GMT-3): from 09:00 until 18:00 (Monday - Friday)"
+#~ msgstr ""
+
+#~ msgid "Discover New"
+#~ msgstr ""
+
+#~ msgid "Starts"
+#~ msgstr ""
+
+#~ msgid "Starts: {date}"
+#~ msgstr ""
+
+#~ msgid "E-Learning "
+#~ msgstr ""
+
+#~ msgid "Platform "
+#~ msgstr ""
+
+#~ msgid "Enrollment in this course is by invitation only"
+#~ msgstr ""
+
+#~ msgid "List of Courses"
+#~ msgstr ""
+
+#~ msgid "Sort by:"
+#~ msgstr ""
+
+#~ msgid "Year:"
+#~ msgstr ""
+
+#~ msgid "State:"
+#~ msgstr ""
+
+#~ msgid "Organizations:"
+#~ msgstr ""
+
+#~ msgid "Universität Heidelberg"
+#~ msgstr "University Heidelberg"
+
+#~ msgid "Facultad de Ciencias Físicas y Matemáticas"
+#~ msgstr "Faculty of Physical Sciences and Mathematics"
+
+#~ msgid "Facultad de Economía y Negocios"
+#~ msgstr "Faculty of Economics and Business"
+
+#~ msgid "Facultad de Medicina"
+#~ msgstr "School of Medicine"
+
+#~ msgid "ECBI Chile"
+#~ msgstr ""
+
+#~ msgid "Centro de Ciencia del Clima y la Resiliencia (CR)^2"
+#~ msgstr "Climate Science and Resilience Center (CR)^2"
+
+#~ msgid "Red Universitaria Nacional (REUNA)"
+#~ msgstr "National University Network (REUNA)"
+
+#~ msgid ""
+#~ "It's official. It's easily shareable. "
+#~ "It's a proven motivator to complete "
+#~ "the course. {line_break}{link_start}Learn more "
+#~ "about the verified {cert_name_long}{link_end}."
+#~ msgstr ""
+
+#~ msgid "Enroll Now"
+#~ msgstr ""
+
+#~ msgid "Rut already exists on the platform"
+#~ msgstr ""
+
+#~ msgid "Contact Form"
+#~ msgstr ""
+
+#~ msgid "Fill out the form and our help desk will contact you shortly."
+#~ msgstr ""
+
+#~ msgid "Help desk hours (GMT-4): from 09:00 until 18:00 (Monday - Friday)"
+#~ msgstr ""
+
+#~ msgid "Try Again"
+#~ msgstr ""
+
+#~ msgid "There was a problem trying to generate your ticket."
+#~ msgstr ""
+
+#~ msgid "If the problem persists, send an email to"
+#~ msgstr ""
+
+#~ msgid "Enter a valid {error}"
+#~ msgstr ""
+
+#~ msgid "¡Sent!"
+#~ msgstr ""
+
+#~ msgid "Our help desk will answer you as soon as possible"
+#~ msgstr ""
+
+#~ msgid "Name"
+#~ msgstr ""
+
+#~ msgid "Enter your name"
+#~ msgstr ""
+
+#~ msgid "Email"
+#~ msgstr ""
+
+#~ msgid "Enter your email"
+#~ msgstr ""
+
+#~ msgid "Related to:"
+#~ msgstr ""
+
+#~ msgid "Select an option"
+#~ msgstr ""
+
+#~ msgid "General"
+#~ msgstr ""
+
+#~ msgid "Specific Course"
+#~ msgstr ""
+
+#~ msgid "Login"
+#~ msgstr ""
+
+#~ msgid "Other"
+#~ msgstr ""
+
+#~ msgid "Course name"
+#~ msgstr ""
+
+#~ msgid "Enter the course name"
+#~ msgstr ""
+
+#~ msgid "Describe your problem"
+#~ msgstr ""
+
+#~ msgid "Enter your questions and queries here"
+#~ msgstr ""
+
+#~ msgid "Document number already exists on the platform"
+#~ msgstr ""
+
+#~ msgid "Create Mi.UChile account"
+#~ msgstr ""
