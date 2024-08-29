@@ -16,11 +16,16 @@
     <h1><%- gettext("Sign In") %></h1>
 <% } %>
 <form id="login" class="login-form" tabindex="-1" method="POST">
+    <div id="js-form-feedback" class="js-form-feedback" aria-live="assertive" tabindex="-1"></div>
     <div id="pre_login"> 
         <button id="sso_btn" class=" action-primary w-100 add-margin-bottom">Iniciar Sesión con Mi.UChile</button>
         <button id="href_login_normal" class="action-primary w-100" href="#Login_Normal" onclick="return show_email_login();">Iniciar Sesión con OpenUChile</button>
+         <div class="row justify-content-center">
+            <button id="register_btn" type="button" class="action-primary w-50 mt-5"><%- gettext("Create an Account") %></button>
+        </div>
     </div>
-    <div id="js-form-feedback" class="js-form-feedback mt-3" aria-live="assertive" tabindex="-1"></div>
+   
+   
     <div id="Login_Normal" class="login-providers d-none text-start">
         
         <% if ( context.hasSecondaryProviders ) { %>
@@ -39,6 +44,9 @@
         <div class="d-flex justify-content-between">
             <button type="button" class="action-primary" onclick="return show_pre_login();">Volver</button>
             <button type="submit" class="action action-primary action-update js-login login-button"><%- gettext("Sign in") %></button>
+        </div>
+          <div class="d-flex justify-content-end">
+            <button id="reset_password" type="button" class="action-primary"><%- gettext("Forgot my password") %></button>
         </div>
         <% if ( context.providers.length > 0 && !context.currentProvider) { %>
             <div class="login-providers">
@@ -65,7 +73,9 @@
         <% } %>
         <div id="first_time" class="toggle-form text-center mt-4">
             <span class="lead"><%- gettext("First time here?") %></span>
-            <a href="#login" class="form-toggle" data-type="register"><%- gettext("Create an Account.") %></a>
+            <div class="row justify-content-center">
+                <button id="register_btn" type="button" class="action-primary w-50 mt-5"><%- gettext("Create an Account") %></button>
+            </div>
         </div>
     </div>
 </form>
@@ -75,13 +85,18 @@
         $('#Login_Normal').removeClass('d-none');
         $('#pre_login').hide();
         $('#js-form-feedback').find('*').remove();
-    }
-    
+    };
     function show_pre_login() {
         $('#Login_Normal').addClass('d-none');
         $('#pre_login').show();
         $('#login-email').val('');
         $('#login-password').val('');
         $('#js-form-feedback').find('*').remove();
-    }
+    };
+    $('#register_btn').live('click', function(e){
+        window.open('/register','_blank');
+    });    
+   $('#reset_password').live('click', function(e){
+        window.location.href='password_assistance'
+    });
 </script>
