@@ -24,10 +24,7 @@
             <button id="register_btn" type="button" class="action-primary w-50 mt-5"><%- gettext("Create an Account") %></button>
         </div>
     </div>
-   
-   
     <div id="Login_Normal" class="login-providers d-none text-start">
-        
         <% if ( context.hasSecondaryProviders ) { %>
             <button type="button" class="button-secondary-login form-toggle" data-type="institution_login">
                 <%- gettext("Use my university info") %>
@@ -39,7 +36,6 @@
                 </h3>
             </div>
         <% } %>
-    
         <%= HtmlUtils.HTML(context.fields) %>
         <div class="d-flex justify-content-between">
             <button type="button" class="action-primary" onclick="return show_pre_login();">Volver</button>
@@ -55,7 +51,6 @@
                         <span class="text"><%- gettext("or sign in with") %></span>
                     </h3>
                 </div>
-
                 <% _.each( context.providers, function( provider ) {
                     if ( provider.loginUrl ) { %>
                         <button type="button" class="button button-primary button-<%- provider.id %> login-provider login-<%- provider.id %>" data-provider-url="<%- provider.loginUrl %>">
@@ -79,7 +74,6 @@
         </div>
     </div>
 </form>
-
 <script type="text/javascript">
     function show_email_login() {
         $('#Login_Normal').removeClass('d-none');
