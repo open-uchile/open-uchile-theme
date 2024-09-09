@@ -13,72 +13,124 @@
     </p>
     <p><%- gettext("To continue learning with this account, sign in below.") %></p>
 <% } else { %>
-    <h1><%- gettext("Sign In") %></h1>
+    <h1 class="m-0"><%- gettext("Sign In") %></h1>
+    <h1 id="login-subtitle" ><%- gettext("with your account") %><b> OpenUChile</b></h1>
 <% } %>
 <form id="login" class="login-form" tabindex="-1" method="POST">
+
     <div id="js-form-feedback" class="js-form-feedback" aria-live="assertive" tabindex="-1"></div>
-    <div id="pre_login"> 
-        <button id="sso_btn" class=" action-primary w-100 add-margin-bottom">Iniciar Sesión con Mi.UChile</button>
-        <button id="href_login_normal" class="action-primary w-100" href="#Login_Normal" onclick="return show_email_login();">Iniciar Sesión con OpenUChile</button>
-         <div class="row justify-content-center">
-            <button id="register_btn" type="button" class="action-primary w-50 mt-5"><%- gettext("Create an Account") %></button>
+        <div id="pre_login"> 
+          <div class="col-11">
+            <button id="href_login_normal" type="button" class="font-size-16 w-100 dark-blue-button p-2 font-weight-bold" href="#Login_Normal" onclick="return show_email_login();"><span class="font-weight-normal"><%- gettext("Log in with your account")%></span> OpenUChile</button>
+               </div>
+            <div class="row">
+          
+                <div class="col-11">
+                    
+                    <img class="uchile-separator img-login" src="/static/open-uchile-theme/images/uchile_separator.png" alt="">
+                    <button id="sso_btn" type="button" class=" font-size-16 w-100 login-open-u-chile-button font-weight-bold" ><span class="font-weight-normal"><%- gettext("Log in with your account")%></span>  Mi.UChile</button>
+                </div>
+                <div class="col-1 mt-2 text-center align-items-center d-flex">
+                    <i id="info-miUchile" class="fa fa-info-circle" aria-hidden="true" data-bs-toggle="tooltip" data-bs-placement="top" title="Información adicional"></i>
+                </div>
+            </div>
+            <div id="login_separator" class="separator col-11"><%- gettext("Or") %></div>
+            <div id="register-div" class="col-11">
+                <h1><%- gettext("Don't have an account?") %></h1>
+                <div class=" justify-content-center">
+                    <button id="register_btn" type="button" class="font-size-16 font-weight-bold w-100 register-button-color"><%- gettext("Create account") %></button>
+                </div>
+            </div>
         </div>
     </div>
+     
     <div id="Login_Normal" class="login-providers d-none text-start">
-        <% if ( context.hasSecondaryProviders ) { %>
-            <button type="button" class="button-secondary-login form-toggle" data-type="institution_login">
-                <%- gettext("Use my university info") %>
-            </button>
+        <div class="row">
+            <div class="col-2 mt-2 text-center">
+                <i id="go-back-icon" class="fa fa-arrow-circle-o-left fa-2x" aria-hidden="true"></i>
+                <p><%- gettext("Go back")%></p>
+            </div>
+            <div class="col-10">
+                <% if ( context.hasSecondaryProviders ) { %>
+                    <button type="button" class="button-secondary-login form-toggle" data-type="institution_login">
+                        <%- gettext("Use my university info") %>
+                    </button>
 
-            <div class="section-title lines">
-                <h3>
-                    <span class="text"><%- gettext("or sign in with") %></span>
-                </h3>
-            </div>
-        <% } %>
-        <%= HtmlUtils.HTML(context.fields) %>
-        <div class="d-flex justify-content-between">
-            <button type="button" class="action-primary" onclick="return show_pre_login();">Volver</button>
-            <button type="submit" class="action action-primary action-update js-login login-button"><%- gettext("Sign in") %></button>
-        </div>
-          <div class="d-flex justify-content-end">
-            <button id="reset_password" type="button" class="action-primary"><%- gettext("Forgot my password") %></button>
-        </div>
-        <% if ( context.providers.length > 0 && !context.currentProvider) { %>
-            <div class="login-providers">
-                <div class="section-title lines">
-                    <h3>
-                        <span class="text"><%- gettext("or sign in with") %></span>
-                    </h3>
-                </div>
-                <% _.each( context.providers, function( provider ) {
-                    if ( provider.loginUrl ) { %>
-                        <button type="button" class="button button-primary button-<%- provider.id %> login-provider login-<%- provider.id %>" data-provider-url="<%- provider.loginUrl %>">
-                            <span class="icon <% if ( provider.iconClass ) { %>fa <%- provider.iconClass %><% } %>" aria-hidden="true">
-                                <% if ( provider.iconImage ) { %>
-                                    <img class="icon-image" src="<%- provider.iconImage %>" alt="<%- provider.name %> icon" />
-                                <% } %>
-                            </span>
-                            <span aria-hidden="true"><%- provider.name %></span>
-                            <span class="sr"><%- _.sprintf( gettext("Sign in with %(providerName)s"), {providerName: provider.name} ) %></span>
-                        </button>
-                    <% }
-                }); %>
-            </div>
-        <% } %>
-        <div id="first_time" class="toggle-form text-center mt-4">
-            <span class="lead"><%- gettext("First time here?") %></span>
-            <div class="row justify-content-center">
-                <button id="register_btn" type="button" class="action-primary w-50 mt-5"><%- gettext("Create an Account") %></button>
+                    <div class="section-title lines">
+                        <h3>
+                            <span class="text"><%- gettext("or sign in with") %></span>
+                        </h3>
+                    </div>
+                <% } %>
+            
+                <%= HtmlUtils.HTML(context.fields) %>
+            
+                <button type="submit" class="action action-update js-login login-button font-size-16 w-100 dark-blue-button my-4"><b><%- gettext("Sign in") %></b></button>
+            
+                <% if ( context.providers.length > 0 && !context.currentProvider) { %>
+                    <div class="login-providers">
+                        <div class="section-title lines">
+                            <h3>
+                                <span class="text"><%- gettext("or sign in with") %></span>
+                            </h3>
+                        </div>
+                        <% _.each( context.providers, function( provider ) {
+                            if ( provider.loginUrl ) { %>
+                                <button type="button" class="button button-primary button-<%- provider.id %> login-provider login-<%- provider.id %>" data-provider-url="<%- provider.loginUrl %>">
+                                    <span class="icon <% if ( provider.iconClass ) { %>fa <%- provider.iconClass %><% } %>" aria-hidden="true">
+                                        <% if ( provider.iconImage ) { %>
+                                            <img class="icon-image" src="<%- provider.iconImage %>" alt="<%- provider.name %> icon" />
+                                        <% } %>
+                                    </span>
+                                    <span aria-hidden="true"><%- provider.name %></span>
+                                    <span class="sr"><%- _.sprintf( gettext("Sign in with %(providerName)s"), {providerName: provider.name} ) %></span>
+                                </button>
+                            <% }
+                        }); %>
+                    </div>
+                <% } %>      
             </div>
         </div>
     </div>
 </form>
 <script type="text/javascript">
+    $('#login-email-desc').hide();
+    $('#login-subtitle').hide();
+    $('#register_btn').live('click', function(e){
+        window.open('/register','_blank');
+    });    
+
+    create_tooltip();
+    position_reset_password_link();
+    add_function_to_icon();
+
+    function add_function_to_icon(){
+        var icon = document.getElementById('go-back-icon');
+        icon.addEventListener('click', function() {
+            show_pre_login();
+        });
+    }
+    function create_tooltip(){
+        var info =  document.getElementById('info-miUchile');
+        var tooltipTrigger = document.getElementById('info-miUchile');
+        var tooltip = new bootstrap.Tooltip(tooltipTrigger, {
+            trigger: 'click',
+            title: 'Mensaje de ejemplo para mi Uchile',
+            placement: 'top'
+        });
+
+        document.addEventListener('click', function (e) {
+            if (!tooltipTrigger.contains(e.target)) {
+                tooltip.hide();
+            }
+        });
+    };
     function show_email_login() {
         $('#Login_Normal').removeClass('d-none');
         $('#pre_login').hide();
         $('#js-form-feedback').find('*').remove();
+        changeFontSiZe();
+        $('#login-subtitle').show();
     };
     function show_pre_login() {
         $('#Login_Normal').addClass('d-none');
@@ -87,10 +139,30 @@
         $('#login-password').val('');
         $('#js-form-feedback').find('*').remove();
     };
-    $('#register_btn').live('click', function(e){
-        window.open('/register','_blank');
-    });    
-   $('#reset_password').live('click', function(e){
-        window.location.href='password_assistance'
-    });
+    function position_reset_password_link(){
+        const container = document.querySelector('.password-password');
+        if (container) {
+            const label = container.querySelector('label');
+            if (label) {
+                const newDiv = document.createElement('div');
+                const labelCloned = label.cloneNode(true);
+                labelCloned.classList.add('font-size-14','font-weight-normal');
+                newDiv.appendChild(labelCloned);
+                newDiv.classList.add('d-flex', 'justify-content-between','align-items-center');
+                const forgot_password_link = document.createElement('a');
+                forgot_password_link.href = '/password_assistance';
+                forgot_password_link.id = 'forgot-password-link';
+                forgot_password_link.textContent = gettext('Forgot my password');
+                forgot_password_link.classList.add('font-weight-normal');
+                newDiv.appendChild(forgot_password_link);
+                container.appendChild(newDiv);
+                container.replaceChild(newDiv, label);
+            }
+        }
+    }
+    function changeFontSiZe(){
+        const emailDiv = document.querySelector('.email-email');
+        const label = emailDiv.querySelector('label');
+        label.classList.add('font-size-14','font-weight-normal');
+    }
 </script>

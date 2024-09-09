@@ -13,8 +13,8 @@ create_translations_catalogs: ## Create the initial configuration of .mo files f
 	pybabel extract -F conf/locale/babel.cfg -o  conf/locale/django.pot --msgid-bugs-address=eol-ing@uchile.cl  --copyright-holder=EOL --project=OPEN--last-translator='EOL <eol-ing@uchile.cl>' *
 	pybabel extract -F conf/locale/babel-js.cfg -o  conf/locale/django-js.pot --msgid-bugs-address=eol-ing@uchile.cl  --copyright-holder=EOL  --project=OPEN  --last-translator='EOL <eol-ing@uchile.cl>' *
 	for lang in $(lang_targets) ; do \
-        pybabel init -i conf/locale/django.pot -D django -d conf/locale/ -l $$lang ; \
-        pybabel init -i conf/locale/django-js.pot -D djangojs -d conf/locale/ -l $$lang ; \
+		pybabel init -i conf/locale/django.pot -D django -d conf/locale/ -l $$lang ; \
+		pybabel init -i conf/locale/django-js.pot -D djangojs -d conf/locale/ -l $$lang ; \
     done
 
 update_translations: ## update strings to be translated

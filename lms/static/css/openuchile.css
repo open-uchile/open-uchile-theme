@@ -145,7 +145,7 @@ footer#openuchile-footer img:hover {
 
 /* Certificate Validation */
 
-#certificate_validation h1 {
+#certificate_validation add-margin-bottom {
     border-bottom: .15rem solid black;
     color: black;
 }
@@ -183,26 +183,17 @@ footer#openuchile-footer img:hover {
     box-shadow: none !important;
     color: #ffff;
     background: none;
-    background-color: #069bdc !important;
-    border-color: #069bdc;
+    background-color: #0075b4 !important;
+    border-color: #0075b4;
     text-shadow: none;
 }
 
 #eol-contact .btn:hover {
-    background-color: #048dc9 !important;
-    border-color: #048dc9;
+    background-color: #0075b4 !important;
+    border-color: #0075b4;
 }
 
 /* LOGIN */
-
-#content-container {
-    background-color: #00000017 !important;
-    border-color: transparent;
-}
-
-#content-container input {
-    border-color: transparent;
-}
 
 #login-and-registration-container {
     background-color: transparent;
@@ -211,9 +202,10 @@ footer#openuchile-footer img:hover {
 }
 
 #content-container h1 {
-    text-align: left;
-    border-bottom: .15rem solid black;
+    text-align: center;
     color: black;
+    font-size: 32px;
+    font-weight: 500;
 }
 
 /* Courses List */
@@ -1428,6 +1420,116 @@ body .wrapper-preview-menu .preview-menu {
     color: #0075b4 ;
 }
 
-.add-margin-bottom{
+.dark-blue-button, .dark-blue-button:hover:not(:disabled){
+    cursor: pointer;
+    background:#1C4D94;
+    color: #ffff;
+    box-shadow: none;
+    border: none;
+    border-radius: 5px;
     margin-bottom:1.5rem;
+}
+.register-button-color, .register-button-color:hover:not(:disabled){
+    cursor: pointer;
+    background:#008852;
+    color: #ffff;
+    box-shadow: none;
+    border: none;
+    border-radius: 5px;
+    margin-bottom:1.5rem;
+    font-weight: bold;
+}
+
+.login-open-u-chile-button, .login-open-u-chile-button:hover:not(:disabled){
+    border-top-left-radius:0px;
+    border-top-right-radius:0px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background:black;
+    opacity: 63%;
+    margin-top: 0px;
+    box-shadow: none;
+    margin-bottom:1.5rem;
+}
+.img-login{
+    margin-top:1.5rem;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: black;
+    font-size: 9px;
+    font-weight: 500;
+}
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 2px solid #F5F5F5;
+}
+.separator::before {
+    margin-right: .25em;
+}
+.separator::after {
+    margin-left: .25em;
+}
+#register-div{
+    margin-top:1.5rem;
+}
+.font-size-10{
+    font-size: 10px;
+    text-shadow: none;
+}
+.font-size-13{
+    font-size:13px;
+    text-shadow: none;
+}
+.font-size-14{
+    font-size:14px;
+    text-shadow: none;
+}
+
+.font-size-16{
+    font-size:16px;
+    font-weight: 500;
+    text-shadow: none;
+}
+
+
+.font-weight-medium{
+    font-weight: 500;
+    text-shadow: none;
+}
+
+.info-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #007bff;
+}
+.dark-blue-color{
+    color:#1C4D94;
+}
+#password-reset-email, #register-name, #register-username, #register-email, #register-password, #login-email,#login-password {
+    border-radius: 5px;
+}
+#forgot-password-link{
+    color: #1C4D94;
+    font-size:10px;
+}
+#login-and-registration-container{
+    font-weight: 500;
+    text-shadow: none;
+
+}
+#register-checkbox-label{
+    font-weight: 500  !important;
+}
+.font-size-9{
+    font-size: 9px;
+}
+#go-back-icon{
+    cursor: pointer;
 }
