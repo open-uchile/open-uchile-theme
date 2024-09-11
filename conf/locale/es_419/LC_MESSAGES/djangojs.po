@@ -579,7 +579,7 @@ msgstr "con tu cuenta"
 #: lms/templates/student_account/login.underscore:24
 #: lms/templates/student_account/login.underscore:31
 msgid "Log in with your account"
-msgstr "Inicie sesión con su cuenta"
+msgstr "Ingresa con tu cuenta"
 
 #: lms/templates/student_account/login.underscore:37
 msgid "Or"
@@ -629,7 +629,7 @@ msgstr "Recuperar contraseña"
 msgid ""
 "Please enter the e-mail address you use to log in to the Open UChile "
 "platform"
-msgstr "Ingrese el correo electrónico que utiliza para iniciar sesión en la plataforma Open UChile."
+msgstr "Ingresa tu correo electrónico que utiliza para iniciar sesión en la plataforma Open UChile."
 
 #: lms/templates/student_account/password_reset.underscore:11
 msgid "Recover my password"
@@ -637,7 +637,7 @@ msgstr "Recuperar mi contraseña"
 
 #: lms/templates/student_account/register.underscore:6
 msgid "Already have an {platformName} account?"
-msgstr ""
+msgstr "¿Ya tienes una cuenta en la plataforma Open UChile?"
 
 #: lms/templates/student_account/register.underscore:10
 msgid "Access"

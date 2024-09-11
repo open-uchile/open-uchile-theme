@@ -19,35 +19,51 @@
 <form id="login" class="login-form" tabindex="-1" method="POST">
 
     <div id="js-form-feedback" class="js-form-feedback" aria-live="assertive" tabindex="-1"></div>
-        <div id="pre_login"> 
-          <div class="col-11">
-            <button id="href_login_normal" type="button" class="font-size-16 w-100 dark-blue-button p-2 font-weight-bold" href="#Login_Normal" onclick="return show_email_login();"><span class="font-weight-normal"><%- gettext("Log in with your account")%></span> OpenUChile</button>
-               </div>
+        <div id="pre_login">
             <div class="row">
-          
-                <div class="col-11">
-                    
-                    <img class="uchile-separator img-login" src="/static/open-uchile-theme/images/uchile_separator.png" alt="">
-                    <button id="sso_btn" type="button" class=" font-size-16 w-100 login-open-u-chile-button font-weight-bold" ><span class="font-weight-normal"><%- gettext("Log in with your account")%></span>  Mi.UChile</button>
-                </div>
-                <div class="col-1 mt-2 text-center align-items-center d-flex">
-                    <i id="info-miUchile" class="fa fa-info-circle" aria-hidden="true" data-bs-toggle="tooltip" data-bs-placement="top" title="Información adicional"></i>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-1 mt-2 d-flex"></div>
+                        <div class="col-10">
+                            <button id="href_login_normal" type="button" class="font-size-16 w-100 dark-blue-button p-2 font-weight-bold" href="#Login_Normal" onclick="return show_email_login();"><span class="font-weight-normal"><%- gettext("Log in with your account")%></span> OpenUChile</button>
+                        </div>
+                        <div class="col-1 mt-2 d-flex"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1 mt-2 d-flex"></div>
+                        <div class="col-10">
+                            <img class="uchile-separator img-login" src="/static/open-uchile-theme/images/uchile_separator.png" alt="">
+                            <button id="sso_btn" type="button" class=" font-size-16 w-100 login-open-u-chile-button font-weight-bold" ><span class="font-weight-normal"><%- gettext("Log in with your account")%></span>  Mi.UChile</button>
+                        </div>
+                        <div class="col-1 mt-2 px-0 px-sm-2 text-left align-items-center d-flex">
+                            <img id="info-miUchile" class="w-100" aria-hidden="true" data-bs-toggle="tooltip" data-bs-placement="top" title="Información adicional" src="/static/open-uchile-theme/images/svg-2023/info-icon.svg">
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div id="login_separator" class="separator col-11"><%- gettext("Or") %></div>
-            <div id="register-div" class="col-11">
-                <h1><%- gettext("Don't have an account?") %></h1>
-                <div class=" justify-content-center">
-                    <button id="register_btn" type="button" class="font-size-16 font-weight-bold w-100 register-button-color"><%- gettext("Create account") %></button>
-                </div>
+            <div class="row">
+                <div id="login_separator" class="separator col-12"><%- gettext("Or") %></div>
+            </div>
+            <div class="row">
+                <div class="col-1 mt-2 d-flex"></div>
+                <div id="register-div" class="col-10">
+                    <div class="row">
+                        <h1><%- gettext("Don't have an account?") %></h1>
+                    </div>
+                    <div class="row">
+                        <div class=" justify-content-center">
+                            <button id="register_btn" type="button" class="font-size-16 font-weight-bold w-100 register-button-color"><%- gettext("Create account") %></button>
+                        </div>
+                    </div>
+                </div> 
+                <div class="col-1 mt-2 d-flex"></div>
             </div>
         </div>
     </div>
-     
     <div id="Login_Normal" class="login-providers d-none text-start">
         <div class="row">
-            <div class="col-2 mt-2 text-center">
-                <i id="go-back-icon" class="fa fa-arrow-circle-o-left fa-2x" aria-hidden="true"></i>
+            <div class="col-1 mt-2 text-center user-select-none font-size-9">
+                <img id="go-back-icon" class="w-100" aria-hidden="true" src="/static/open-uchile-theme/images/svg-2023/flecha-izquierda-login.svg">
                 <p><%- gettext("Go back")%></p>
             </div>
             <div class="col-10">
@@ -90,6 +106,8 @@
                     </div>
                 <% } %>      
             </div>
+            <div class="col-1">
+            </div>
         </div>
     </div>
 </form>
@@ -127,6 +145,7 @@
     };
     function show_email_login() {
         $('#Login_Normal').removeClass('d-none');
+        $('#login-subtitle').removeClass('d-none');
         $('#pre_login').hide();
         $('#js-form-feedback').find('*').remove();
         changeFontSiZe();
@@ -134,6 +153,7 @@
     };
     function show_pre_login() {
         $('#Login_Normal').addClass('d-none');
+        $('#login-subtitle').addClass('d-none');
         $('#pre_login').show();
         $('#login-email').val('');
         $('#login-password').val('');
