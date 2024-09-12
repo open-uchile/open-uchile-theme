@@ -36,7 +36,7 @@
                             <button id="sso_btn" type="button" class=" font-size-16 w-100 login-open-u-chile-button font-weight-bold" ><span class="font-weight-normal"><%- gettext("Log in with your account")%></span>  Mi.UChile</button>
                         </div>
                         <div class="col-1 mt-2 px-0 px-sm-2 text-left align-items-center d-flex">
-                            <img id="info-miUchile" class="w-100" aria-hidden="true" data-bs-toggle="tooltip" data-bs-placement="top" title="Información adicional" src="/static/open-uchile-theme/images/svg-2023/info-icon.svg">
+                            <img id="info-miUchile" class="w-100" aria-hidden="true" data-bs-toggle="tooltip" data-bs-placement="top" title="<%- gettext("Click here to log in with your Mi.UChile account, the single access account for corporate services provided by the University of Chile. This account allows users to register and access online services depending on their relationship with the university. For more information, visit cuenta.uchile.cl.") %>" src="/static/open-uchile-theme/images/svg-2023/info-icon.svg">
                         </div>
                     </div>
                 </div>
@@ -62,11 +62,11 @@
     </div>
     <div id="Login_Normal" class="login-providers d-none text-start">
         <div class="row">
-            <div class="col-1 mt-2 text-center user-select-none font-size-9">
-                <img id="go-back-icon" class="w-100" aria-hidden="true" src="/static/open-uchile-theme/images/svg-2023/flecha-izquierda-login.svg">
-                <p><%- gettext("Go back")%></p>
+            <div class="col-12 mt-2 d-flex text-center user-select-none font-size-9">
+                <img id="go-back-icon" aria-hidden="true" src="/static/open-uchile-theme/images/svg-2023/flecha-izquierda-login.svg">
+                <p style="margin-left: 10px;padding: 15px 0px;"><%- gettext("Go back")%></p>
             </div>
-            <div class="col-10">
+            <div class="col-12">
                 <% if ( context.hasSecondaryProviders ) { %>
                     <button type="button" class="button-secondary-login form-toggle" data-type="institution_login">
                         <%- gettext("Use my university info") %>
@@ -105,8 +105,6 @@
                         }); %>
                     </div>
                 <% } %>      
-            </div>
-            <div class="col-1">
             </div>
         </div>
     </div>

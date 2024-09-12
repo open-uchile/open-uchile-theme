@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: help-open@uchile.cl\n"
-"POT-Creation-Date: 2024-09-10 12:18+0000\n"
+"POT-Creation-Date: 2024-09-12 12:47+0000\n"
 "PO-Revision-Date: 2022-07-28 20:11+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -576,48 +576,57 @@ msgstr ""
 msgid "with your account"
 msgstr ""
 
-#: lms/templates/student_account/login.underscore:24
-#: lms/templates/student_account/login.underscore:31
+#: lms/templates/student_account/login.underscore:28
+#: lms/templates/student_account/login.underscore:36
 msgid "Log in with your account"
 msgstr ""
 
-#: lms/templates/student_account/login.underscore:37
+#: lms/templates/student_account/login.underscore:39
+msgid ""
+"Click here to log in with your Mi.UChile account, the single access "
+"account for corporate services provided by the University of Chile. This "
+"account allows users to register and access online services depending on "
+"their relationship with the university. For more information, visit "
+"cuenta.uchile.cl."
+msgstr ""
+
+#: lms/templates/student_account/login.underscore:45
 msgid "Or"
 msgstr ""
 
-#: lms/templates/student_account/login.underscore:39
+#: lms/templates/student_account/login.underscore:51
 msgid "Don't have an account?"
 msgstr ""
 
-#: lms/templates/student_account/login.underscore:41
+#: lms/templates/student_account/login.underscore:55
 #: lms/templates/student_account/register.underscore:49
 #: lms/templates/student_account/register.underscore:66
 msgid "Create account"
 msgstr ""
 
-#: lms/templates/student_account/login.underscore:51
+#: lms/templates/student_account/login.underscore:67
 msgid "Go back"
 msgstr ""
 
-#: lms/templates/student_account/login.underscore:56
+#: lms/templates/student_account/login.underscore:72
 msgid "Use my university info"
 msgstr ""
 
-#: lms/templates/student_account/login.underscore:61
-#: lms/templates/student_account/login.underscore:74
+#: lms/templates/student_account/login.underscore:77
+#: lms/templates/student_account/login.underscore:90
 msgid "or sign in with"
 msgstr ""
 
-#: lms/templates/student_account/login.underscore:68
+#: lms/templates/student_account/login.underscore:84
 msgid "Sign in"
 msgstr ""
 
-#: lms/templates/student_account/login.underscore:86
+#: lms/templates/student_account/login.underscore:102
 #, python-format
 msgid "Sign in with %(providerName)s"
 msgstr ""
 
-#: lms/templates/student_account/login.underscore:155
+#: lms/templates/student_account/login.underscore:173
 msgid "Forgot my password"
 msgstr ""
 
@@ -663,3 +672,4 @@ msgstr ""
 #: lms/templates/student_account/register.underscore:61
 msgid "Support education research by providing additional information"
 msgstr ""
+
