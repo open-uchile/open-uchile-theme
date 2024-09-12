@@ -1534,6 +1534,9 @@ body .wrapper-preview-menu .preview-menu {
 #go-back-icon{
     cursor: pointer;
 }
+.tooltip-login{
+    color:rgba(0, 0, 0, 0.63);
+}
 .tooltip-login.show{
     opacity: 1;
 }
@@ -1542,6 +1545,19 @@ body .wrapper-preview-menu .preview-menu {
     color: black;
     border: 1px rgba(0, 0, 0, 0.63) solid;
 }
-.tooltip-login .tooltip-arrow,.tooltip-login .tooltip-arrow::before{
+.tooltip-login.bs-tooltip-start .tooltip-arrow::before{
+    border-left-color: rgba(0, 0, 0, 0.63);
+    left:0px;
+}
+.tooltip-login.bs-tooltip-end .tooltip-arrow::before{
+    border-right-color: rgba(0, 0, 0, 0.63);
+    right:0px;
+}
+.tooltip-login.bs-tooltip-bottom .tooltip-arrow::before{
+    border-bottom-color: rgba(0, 0, 0, 0.63);
+    bottom:0px;
+}
+.tooltip-login.bs-tooltip-top .tooltip-arrow::before{
     border-top-color: rgba(0, 0, 0, 0.63);
+    top: 0px;
 }

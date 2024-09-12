@@ -35,7 +35,7 @@
                             <img class="uchile-separator img-login" src="/static/open-uchile-theme/images/uchile_separator.png" alt="" aria-hidden="true">
                             <button id="sso_btn" type="button" class=" font-size-16 w-100 login-open-u-chile-button font-weight-bold" ><span class="font-weight-normal"><%- gettext("Log in with your account")%></span>  Mi.UChile</button>
                         </div>
-                        <div class="col-1 px-0 px-sm-2 text-left align-items-center d-flex">
+                        <div class="col-1 text-left align-items-center d-flex pl-0 pr-2">
                             <img id="info-miUchile" class="w-100" aria-hidden="true" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="tooltip-login" title="<%- gettext("This option provides access through the University of Chile's single corporate services account, which allows users to register and access online services, depending on their relationship with the university. For more information, visit  ") %><a href='https://cuenta.uchile.cl/' target='_blank'>cuenta.uchile.cl</a>." src="/static/open-uchile-theme/images/svg-2023/info-icon.svg">
                         </div>
                     </div>
