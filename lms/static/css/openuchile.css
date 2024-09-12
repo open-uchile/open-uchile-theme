@@ -207,6 +207,12 @@ footer#openuchile-footer img:hover {
     font-size: 32px;
     font-weight: 500;
 }
+#content-container h2 {
+    text-align: center;
+    color: black;
+    font-size: 32px;
+    font-weight: 500;
+}
 
 /* Courses List */
 
@@ -553,7 +559,7 @@ a.nav-link.user-menu:hover,
 }
 #open-navbar .nav-link:hover,
 #open-navbar .nav-link:focus{
-    color: #0d3d8f;
+    color: #fece43;
 }
 #open-navbar .nav-item .nav-link:not(.btn):hover, .navbar .nav-item .nav-link:not(.btn):focus {
     border-color: rgb(255 255 255 / 55%) !important;
@@ -1399,7 +1405,7 @@ body .wrapper-preview-menu .preview-menu {
     border-color: white;
     background-color: #172c6b;
     color: white;
-    padding: 3px 0px;
+    padding: 0px 6px;
     font-size: 12px;
     width: 95px;
 }
@@ -1491,19 +1497,15 @@ body .wrapper-preview-menu .preview-menu {
     font-size:14px;
     text-shadow: none;
 }
-
 .font-size-16{
     font-size:16px;
     font-weight: 500;
     text-shadow: none;
 }
-
-
 .font-weight-medium{
     font-weight: 500;
     text-shadow: none;
 }
-
 .info-icon {
     font-size: 1.5rem;
     cursor: pointer;
@@ -1522,7 +1524,6 @@ body .wrapper-preview-menu .preview-menu {
 #login-and-registration-container{
     font-weight: 500;
     text-shadow: none;
-
 }
 #register-checkbox-label{
     font-weight: 500  !important;
@@ -1532,4 +1533,15 @@ body .wrapper-preview-menu .preview-menu {
 }
 #go-back-icon{
     cursor: pointer;
+}
+.tooltip-login.show{
+    opacity: 1;
+}
+.tooltip-login  .tooltip-inner{
+    background-color: white;
+    color: black;
+    border: 1px rgba(0, 0, 0, 0.63) solid;
+}
+.tooltip-login .tooltip-arrow,.tooltip-login .tooltip-arrow::before{
+    border-top-color: rgba(0, 0, 0, 0.63);
 }

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: help-open@uchile.cl\n"
-"POT-Creation-Date: 2024-09-12 12:47+0000\n"
+"POT-Creation-Date: 2024-09-12 17:27+0000\n"
 "PO-Revision-Date: 2022-07-28 20:11+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -583,11 +583,10 @@ msgstr ""
 
 #: lms/templates/student_account/login.underscore:39
 msgid ""
-"Click here to log in with your Mi.UChile account, the single access "
-"account for corporate services provided by the University of Chile. This "
-"account allows users to register and access online services depending on "
-"their relationship with the university. For more information, visit "
-"cuenta.uchile.cl."
+"This option provides access through the University of Chile's single "
+"corporate services account, which allows users to register and access "
+"online services, depending on their relationship with the university. For"
+" more information, visit  "
 msgstr ""
 
 #: lms/templates/student_account/login.underscore:45
@@ -626,7 +625,7 @@ msgstr ""
 msgid "Sign in with %(providerName)s"
 msgstr ""
 
-#: lms/templates/student_account/login.underscore:173
+#: lms/templates/student_account/login.underscore:179
 msgid "Forgot my password"
 msgstr ""
 
@@ -672,4 +671,3 @@ msgstr ""
 #: lms/templates/student_account/register.underscore:61
 msgid "Support education research by providing additional information"
 msgstr ""
-

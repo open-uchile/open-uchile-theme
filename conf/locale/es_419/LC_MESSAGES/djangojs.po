@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: help-open@uchile.cl\n"
-"POT-Creation-Date: 2024-09-12 12:47+0000\n"
+"POT-Creation-Date: 2024-09-12 17:27+0000\n"
 "PO-Revision-Date: 2022-07-28 20:11+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es_419\n"
@@ -583,17 +583,11 @@ msgstr "Ingresa con tu cuenta"
 
 #: lms/templates/student_account/login.underscore:39
 msgid ""
-"Click here to log in with your Mi.UChile account, the single access "
-"account for corporate services provided by the University of Chile. This "
-"account allows users to register and access online services depending on "
-"their relationship with the university. For more information, visit "
-"cuenta.uchile.cl."
-msgstr ""
-"Haz clic aquí para ingresar con tu cuenta Mi.UChile, la cuenta de acceso "
-"única a los servicios corporativos de la Universidad de Chile. Esta "
-"cuenta permite a los usuarios registrarse y acceder a los servicios en "
-"línea, dependiendo de su relación con la universidad. Para más "
-"información, visita cuenta.uchile.cl."
+"This option provides access through the University of Chile's single "
+"corporate services account, which allows users to register and access "
+"online services, depending on their relationship with the university. For"
+" more information, visit  "
+msgstr "Esta opción provee acceso a través de la cuenta única de los servicios corporativos de la Universidad de Chile, que permite a los usuarios registrarse y acceder a los servicios en línea, dependiendo de su relación con la universidad. Para más información, visita "
 
 #: lms/templates/student_account/login.underscore:45
 msgid "Or"
@@ -631,7 +625,7 @@ msgstr "Iniciar sesión"
 msgid "Sign in with %(providerName)s"
 msgstr ""
 
-#: lms/templates/student_account/login.underscore:173
+#: lms/templates/student_account/login.underscore:179
 msgid "Forgot my password"
 msgstr "Olvidé mi contraseña"
 
@@ -679,4 +673,3 @@ msgstr ""
 #: lms/templates/student_account/register.underscore:61
 msgid "Support education research by providing additional information"
 msgstr ""
-

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: help-open@uchile.cl\n"
-"POT-Creation-Date: 2024-09-12 12:47+0000\n"
+"POT-Creation-Date: 2024-09-12 17:27+0000\n"
 "PO-Revision-Date: 2022-07-28 20:11+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -1231,6 +1231,7 @@ msgid ""
 msgstr ""
 
 #: lms/templates/header/navbar-authenticated.html:18
+#: lms/templates/header/navbar-not-authenticated.html:25
 msgid "Search"
 msgstr ""
 
