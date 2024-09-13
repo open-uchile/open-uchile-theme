@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: help-open@uchile.cl\n"
-"POT-Creation-Date: 2024-09-12 17:27+0000\n"
+"POT-Creation-Date: 2024-09-12 20:37+0000\n"
 "PO-Revision-Date: 2022-07-28 20:11+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es_419\n"
@@ -448,7 +448,7 @@ msgstr ""
 #: lms/templates/header/navbar-not-authenticated.html:56
 #: lms/templates/header/navbar-not-authenticated.html:73
 msgid "Contact us"
-msgstr "Mesa de Ayuda"
+msgstr "Contáctanos"
 
 #: lms/templates/footer.html:29
 msgid "Términos y Condiciones"
@@ -1692,3 +1692,4 @@ msgstr "entre otras instituciones"
 #: lms/templates/student_account/login_and_register.html:14
 msgid "Sign in or Register"
 msgstr ""
+
