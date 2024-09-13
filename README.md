@@ -26,20 +26,20 @@ Depending on the languages you have enabled you can add the custom translations 
 **Install**
 
     docker run -it --rm -w /code -v $(pwd):/code python:3.8 bash
-    pip install -r requirements.txt
+    pip install -r requirements.in
     make create_translations_catalogs
     add your translation in .po files
 
 **Compile**
 
     docker run -it --rm -w /code -v $(pwd):/code python:3.8 bash
-    pip install -r requirements.txt
+    pip install -r requirements.in
     make compile_translations
 
 **Update**
 
     docker run -it --rm -w /code -v $(pwd):/code python:3.8 bash
-    pip install -r requirements.txt
+    pip install -r requirements.in
     make update_translations
 
 **lms & cms .yml**

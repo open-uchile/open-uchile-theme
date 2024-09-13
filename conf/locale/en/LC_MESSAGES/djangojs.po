@@ -7,381 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: help-open@uchile.cl\n"
-"POT-Creation-Date: 2024-07-31 21:43+0000\n"
+"POT-Creation-Date: 2024-09-12 20:37+0000\n"
 "PO-Revision-Date: 2022-07-28 20:11+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
 "Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
-
-#: cms/templates/container.html:127
-#: cms/templates/js/course-outline.underscore:123
-#: cms/templates/js/course-outline.underscore:128
-msgid "Display Name"
-msgstr ""
-
-#: cms/templates/container.html:134 cms/templates/container.html:135
-#: cms/templates/course_outline.html:177 cms/templates/course_outline.html:178
-#: cms/templates/videos_index.html:74 cms/templates/videos_index.html:75
-msgid "Page Actions"
-msgstr ""
-
-#: cms/templates/container.html:139
-msgid "Open the courseware in the LMS"
-msgstr ""
-
-#: cms/templates/container.html:140
-msgid "View Live Version"
-msgstr ""
-
-#: cms/templates/container.html:144
-msgid "Preview the courseware in the LMS"
-msgstr ""
-
-#: cms/templates/container.html:145
-msgid "Preview"
-msgstr ""
-
-#: cms/templates/container.html:152 cms/templates/studio_xblock_wrapper.html:81
-#: lms/templates/eoldiscussion/templates2.underscore:890
-msgid "Edit"
-msgstr ""
-
-#: cms/templates/container.html:171 cms/templates/course_outline.html:259
-msgid "Loading"
-msgstr ""
-
-#: cms/templates/container.html:177
-msgid "Adding components"
-msgstr ""
-
-#: cms/templates/container.html:178
-msgid ""
-"Select a component type under {strong_start}Add New "
-"Component{strong_end}. Then select a template."
-msgstr ""
-
-#: cms/templates/container.html:182
-msgid ""
-"The new component is added at the bottom of the page or group. You can "
-"then edit and move the component."
-msgstr ""
-
-#: cms/templates/container.html:183
-msgid "Editing components"
-msgstr ""
-
-#: cms/templates/container.html:184
-msgid ""
-"Click the {strong_start}Edit{strong_end} icon in a component to edit its "
-"content."
-msgstr ""
-
-#: cms/templates/container.html:188
-msgid "Reorganizing components"
-msgstr ""
-
-#: cms/templates/container.html:189
-msgid "Drag components to new locations within this component."
-msgstr ""
-
-#: cms/templates/container.html:190
-msgid "For content experiments, you can drag components to other groups."
-msgstr ""
-
-#: cms/templates/container.html:191
-msgid "Working with content experiments"
-msgstr ""
-
-#: cms/templates/container.html:192
-msgid ""
-"Confirm that you have properly configured content in each of your "
-"experiment groups."
-msgstr ""
-
-#: cms/templates/container.html:195
-msgid "Learn more about component containers"
-msgstr ""
-
-#: cms/templates/container.html:201
-msgid "Unit Location"
-msgstr ""
-
-#: cms/templates/container.html:203
-msgid "Location ID"
-msgstr ""
-
-#: cms/templates/container.html:206
-msgid ""
-"To create a link to this unit from an HTML component in this course, "
-"enter \"/jump_to_id/<location ID>\" as the URL value."
-msgstr ""
-
-#: cms/templates/course_outline.html:16 cms/templates/course_outline.html:174
-#: cms/templates/course_outline.html:254
-msgid "Course Outline"
-msgstr ""
-
-#: cms/templates/course_outline.html:58
-msgid "This course was created as a re-run. Some manual configuration is needed."
-msgstr ""
-
-#: cms/templates/course_outline.html:60
-msgid ""
-"No course content is currently visible, and no learners are enrolled. Be "
-"sure to review and reset all dates, including the Course Start Date; set "
-"up the course team; review course updates and other assets for dated "
-"material; and seed the discussions and wiki."
-msgstr ""
-
-#: cms/templates/course_outline.html:67
-msgid "Dismiss"
-msgstr ""
-
-#: cms/templates/course_outline.html:78
-msgid "Warning"
-msgstr ""
-
-#: cms/templates/course_outline.html:81
-msgid "This course uses features that are no longer supported."
-msgstr ""
-
-#: cms/templates/course_outline.html:85
-msgid "You must delete or replace the following components."
-msgstr ""
-
-#: cms/templates/course_outline.html:86
-msgid "Unsupported Components"
-msgstr ""
-
-#: cms/templates/course_outline.html:93
-msgid "Deprecated Component"
-msgstr ""
-
-#: cms/templates/course_outline.html:105
-msgid ""
-"To avoid errors, {platform_name} strongly recommends that you remove "
-"unsupported features from the course advanced settings. To do this, go to"
-" the {link_start}Advanced Settings page{link_end}, locate the \"Advanced "
-"Module List\" setting, and then delete the following modules from the "
-"list."
-msgstr ""
-
-#: cms/templates/course_outline.html:111
-msgid "Unsupported Advance Modules"
-msgstr ""
-
-#: cms/templates/course_outline.html:131
-msgid "This course has proctored exam settings that are incomplete or invalid."
-msgstr ""
-
-#: cms/templates/course_outline.html:135
-msgid ""
-"To update these settings go to the {link_start}Proctored Exam Settings "
-"page{link_end}."
-msgstr ""
-
-#: cms/templates/course_outline.html:143
-msgid ""
-"To update these settings go to the {link_start}Advanced Settings "
-"page{link_end}."
-msgstr ""
-
-#: cms/templates/course_outline.html:150
-msgid "Proctoring Settings Errors"
-msgstr ""
-
-#: cms/templates/course_outline.html:173 cms/templates/videos_index.html:70
-msgid "Content"
-msgstr ""
-
-#: cms/templates/course_outline.html:181
-msgid "Section"
-msgstr ""
-
-#: cms/templates/course_outline.html:181
-msgid "Click to add a new section"
-msgstr ""
-
-#: cms/templates/course_outline.html:182
-msgid "New Section"
-msgstr ""
-
-#: cms/templates/course_outline.html:187
-msgid "Reindex current course"
-msgstr ""
-
-#: cms/templates/course_outline.html:188
-msgid "Reindex"
-msgstr ""
-
-#: cms/templates/course_outline.html:194
-msgid "Collapse All Sections"
-msgstr ""
-
-#: cms/templates/course_outline.html:195
-msgid "Expand All Sections"
-msgstr ""
-
-#: cms/templates/course_outline.html:200
-msgid "Click to open the courseware in the LMS in a new tab"
-msgstr ""
-
-#: cms/templates/course_outline.html:200
-msgid "View Live"
-msgstr ""
-
-#: cms/templates/course_outline.html:264
-msgid "Creating your course organization"
-msgstr ""
-
-#: cms/templates/course_outline.html:265
-msgid "You add sections, subsections, and units directly in the outline."
-msgstr ""
-
-#: cms/templates/course_outline.html:266
-msgid ""
-"Create a section, then add subsections and units. Open a unit to add "
-"course components."
-msgstr ""
-
-#: cms/templates/course_outline.html:269
-msgid "Reorganizing your course"
-msgstr ""
-
-#: cms/templates/course_outline.html:270
-msgid "Drag sections, subsections, and units to new locations in the outline."
-msgstr ""
-
-#: cms/templates/course_outline.html:272
-msgid "Learn more about the course outline"
-msgstr ""
-
-#: cms/templates/course_outline.html:276
-msgid "Setting release dates and grading policies"
-msgstr ""
-
-#: cms/templates/course_outline.html:277
-msgid ""
-"Select the Configure icon for a section or subsection to set its release "
-"date. When you configure a subsection, you can also set the grading "
-"policy and due date."
-msgstr ""
-
-#: cms/templates/course_outline.html:279
-msgid "Learn more about grading policy settings"
-msgstr ""
-
-#: cms/templates/course_outline.html:283
-msgid "Changing the content learners see"
-msgstr ""
-
-#: cms/templates/course_outline.html:284
-msgid ""
-"To publish draft content, select the Publish icon for a section, "
-"subsection, or unit."
-msgstr ""
-
-#: cms/templates/course_outline.html:285
-msgid ""
-"To make a section, subsection, or unit unavailable to learners, select "
-"the Configure icon for that level, then select the appropriate "
-"{em_start}Hide{em_end} option. Grades for hidden sections, subsections, "
-"and units are not included in grade calculations."
-msgstr ""
-
-#: cms/templates/course_outline.html:286
-msgid ""
-"To hide the content of a subsection from learners after the subsection "
-"due date has passed, select the Configure icon for a subsection, then "
-"select {em_start}Hide content after due date{em_end}. Grades for the "
-"subsection remain included in grade calculations."
-msgstr ""
-
-#: cms/templates/course_outline.html:288
-msgid "Learn more about content visibility settings"
-msgstr ""
-
-#: cms/templates/studio_xblock_wrapper.html:61
-#: cms/templates/studio_xblock_wrapper.html:63
-msgid "Expand or Collapse"
-msgstr ""
-
-#: cms/templates/studio_xblock_wrapper.html:86
-msgid "Access Settings"
-msgstr ""
-
-#: cms/templates/studio_xblock_wrapper.html:88
-msgid "Set Access"
-msgstr ""
-
-#: cms/templates/js/course-outline.underscore:160
-#: cms/templates/js/course-outline.underscore:162
-#: cms/templates/studio_xblock_wrapper.html:94
-#: cms/templates/studio_xblock_wrapper.html:96
-msgid "Duplicar a otro Curso"
-msgstr ""
-
-#: cms/templates/js/course-outline.underscore:166
-#: cms/templates/js/course-outline.underscore:168
-#: cms/templates/studio_xblock_wrapper.html:100
-#: cms/templates/studio_xblock_wrapper.html:102
-msgid "Duplicate"
-msgstr ""
-
-#: cms/templates/studio_xblock_wrapper.html:108
-#: cms/templates/studio_xblock_wrapper.html:113
-msgid "Move"
-msgstr ""
-
-#: cms/templates/js/course-outline.underscore:174
-#: cms/templates/js/course-outline.underscore:176
-#: cms/templates/studio_xblock_wrapper.html:121
-#: cms/templates/studio_xblock_wrapper.html:123
-#: lms/templates/eoldiscussion/templates2.underscore:898
-msgid "Delete"
-msgstr ""
-
-#: cms/templates/js/course-outline.underscore:182
-#: cms/templates/js/course-outline.underscore:184
-#: cms/templates/studio_xblock_wrapper.html:129
-msgid "Drag to reorder"
-msgstr ""
-
-#: cms/templates/studio_xblock_wrapper.html:135
-msgid "Details"
-msgstr ""
-
-#: cms/templates/studio_xblock_wrapper.html:147
-msgid "This block contains multiple components."
-msgstr ""
-
-#: cms/templates/studio_xblock_wrapper.html:152
-msgid "View"
-msgstr ""
-
-#: cms/templates/videos_index.html:13 cms/templates/videos_index.html:71
-msgid "Video Uploads"
-msgstr ""
-
-#: cms/templates/videos_index.html:51 cms/templates/videos_index.html:55
-msgid ""
-"Los tiempos de procesamiento una vez subido el video puede demorar varios"
-" minutos/horas en completarse, dependiendo del tamaño del archivo. Una "
-"vez subido el video, espere unos minutos y recargue la página."
-msgstr ""
-
-#: cms/templates/videos_index.html:57
-msgid "EN PROGRESO"
-msgstr ""
-
-#: cms/templates/videos_index.html:77
-msgid "Course Video Settings"
-msgstr ""
+"Generated-By: Babel 2.16.0\n"
 
 #: cms/templates/js/course-outline.underscore:40
 #, python-format
@@ -439,6 +74,11 @@ msgstr ""
 msgid "Collapse/Expand this %(xblock_type)s"
 msgstr ""
 
+#: cms/templates/js/course-outline.underscore:123
+#: cms/templates/js/course-outline.underscore:128
+msgid "Display Name"
+msgstr ""
+
 #: cms/templates/js/course-outline.underscore:137
 #: cms/templates/js/course-outline.underscore:138
 msgid "Proctoring Settings"
@@ -452,6 +92,27 @@ msgstr ""
 #: cms/templates/js/course-outline.underscore:152
 #: cms/templates/js/course-outline.underscore:154
 msgid "Configure"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:160
+#: cms/templates/js/course-outline.underscore:162
+msgid "Duplicar a otro Curso"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:166
+#: cms/templates/js/course-outline.underscore:168
+msgid "Duplicate"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:174
+#: cms/templates/js/course-outline.underscore:176
+#: lms/templates/eoldiscussion/templates2.underscore:898
+msgid "Delete"
+msgstr ""
+
+#: cms/templates/js/course-outline.underscore:182
+#: cms/templates/js/course-outline.underscore:184
+msgid "Drag to reorder"
 msgstr ""
 
 #: cms/templates/js/course-outline.underscore:202
@@ -502,846 +163,9 @@ msgstr ""
 msgid "Click to add a new %(xblock_type)s"
 msgstr ""
 
-#: cms/templates/widgets/video/transcripts.html:112
-msgid "Seleccione un video"
-msgstr ""
-
-#: cms/templates/widgets/video/transcripts.html:115
-msgid ""
-"Seleccione un video previamente cargado al curso o inserte un enlace "
-"externo de YouTube en el campo correspondiente."
-msgstr ""
-
-#: cms/templates/widgets/video/transcripts.html:122
-msgid "Enlace externo de YouTube"
-msgstr ""
-
-#: cms/templates/widgets/video/transcripts.html:126
-msgid "Enlace externo de YouTube (URL de video por defecto)"
-msgstr ""
-
-#: cms/templates/widgets/video/transcripts.html:143
-msgid "Actualizar miniatura desde Vimeo"
-msgstr ""
-
-#: cms/templates/widgets/video/transcripts.html:144
-msgid "Actualizar"
-msgstr ""
-
-#: cms/templates/widgets/video/transcripts.html:147
-msgid "Actualizando"
-msgstr ""
-
-#: cms/templates/widgets/video/transcripts.html:203
-msgid "Miniatura actualizada."
-msgstr ""
-
-#: cms/templates/widgets/video/transcripts.html:207
-#: cms/templates/widgets/video/transcripts.html:213
-msgid "Se ha producido un error en actualizar la miniatura."
-msgstr ""
-
-#: lms/templates/course.html:70 lms/templates/course_portal.html:54
-msgid "Finished course"
-msgstr ""
-
-#: lms/templates/course.html:88 lms/templates/course_portal.html:72
-msgid "Permanently open"
-msgstr ""
-
-#: lms/templates/course.html:97 lms/templates/course_portal.html:81
-msgid "Inicio del curso"
-msgstr ""
-
-#: lms/templates/course.html:106 lms/templates/course_portal.html:90
-msgid "Termino del curso"
-msgstr ""
-
-#: lms/templates/course.html:113 lms/templates/course_portal.html:97
-msgid "See more"
-msgstr ""
-
-#: lms/templates/courses_list.html:18
-msgid "Starred Courses"
-msgstr ""
-
-#: lms/templates/courses_list.html:66
-msgid "No existen cursos"
-msgstr ""
-
-#: lms/templates/footer.html:22
-msgid "Need help?"
-msgstr ""
-
-#: lms/templates/footer.html:22
-#: lms/templates/header/navbar-authenticated.html:46
-#: lms/templates/header/navbar-authenticated.html:66
-#: lms/templates/header/navbar-not-authenticated.html:53
-#: lms/templates/header/navbar-not-authenticated.html:70
-msgid "Contact us"
-msgstr ""
-
-#: lms/templates/footer.html:29
-msgid "Términos y Condiciones"
-msgstr ""
-
-#: lms/templates/footer.html:32 lms/templates/static_templates/privacy.html:6
-msgid "Privacy Policy"
-msgstr ""
-
-#: lms/templates/index.html:20
-msgid "Open UChile "
-msgstr ""
-
-#: lms/templates/index.html:21
-msgid "E-Learning Platform "
-msgstr ""
-
-#: lms/templates/main.html:192
-msgid "Skip to main content"
-msgstr ""
-
-#: lms/templates/certificates/validate_certificates.html:7
-#: lms/templates/certificates/validate_certificates.html:33
-#: lms/templates/header/navbar-authenticated.html:44
-#: lms/templates/header/navbar-authenticated.html:63
-#: lms/templates/header/navbar-not-authenticated.html:51
-#: lms/templates/header/navbar-not-authenticated.html:67
-msgid "Certificate Validation "
-msgstr ""
-
-#: lms/templates/certificates/validate_certificates.html:25
-#: lms/templates/certificates/validate_certificates.html:26
-msgid "Certificates validation"
-msgstr ""
-
-#: lms/templates/certificates/validate_certificates.html:39
-msgid "Certificate ID number"
-msgstr ""
-
-#: lms/templates/certificates/validate_certificates.html:49
-msgid "Certificate was not found"
-msgstr ""
-
-#: lms/templates/certificates/validate_certificates.html:53
-msgid "Validate"
-msgstr ""
-
-#: lms/templates/course_experience/course-outline-fragment.html:79
-msgid "Expand All"
-msgstr ""
-
-#: lms/templates/course_experience/course-outline-fragment.html:98
-#: lms/templates/course_experience/course-outline-fragment.html:151
-#: lms/templates/course_experience/course-outline-fragment.html:245
-msgid "Completed"
-msgstr ""
-
-#: lms/templates/course_experience/course-outline-fragment.html:132
-msgid "Prerequisite: "
-msgstr ""
-
-#: lms/templates/course_experience/course-outline-fragment.html:167
-msgid "due {date}"
-msgstr ""
-
-#: lms/templates/course_experience/course-outline-fragment.html:169
-msgid "{subsection_format} due {{date}}"
-msgstr ""
-
-#: lms/templates/course_experience/course-outline-fragment.html:207
-msgid "This content is graded"
-msgstr ""
-
-#: lms/templates/course_modes/_upgrade_button.html:14
-#: lms/templates/course_modes/choose.html:143
-msgid "Pursue the Verified Track"
-msgstr ""
-
-#: lms/templates/course_modes/_upgrade_button.html:17
-#: lms/templates/course_modes/choose.html:145
-msgid "Pursue a Verified Certificate"
-msgstr ""
-
-#: lms/templates/course_modes/choose.html:12
-msgid "Enroll In {course_name} | Choose Your Track"
-msgstr ""
-
-#: lms/templates/course_modes/choose.html:69
-msgid "Sorry, there was an error when trying to enroll you"
-msgstr ""
-
-#: lms/templates/course_modes/choose.html:102
-msgid "Pursue Academic Credit with the Verified Track"
-msgstr ""
-
-#: lms/templates/course_modes/choose.html:104
-msgid "Pursue Academic Credit with a Verified Certificate"
-msgstr ""
-
-#: lms/templates/course_modes/choose.html:108
-msgid ""
-"Become eligible for academic credit and highlight your new skills and "
-"knowledge with a verified certificate. Use this valuable credential to "
-"qualify for academic credit, advance your career, or strengthen your "
-"school applications."
-msgstr ""
-
-#: lms/templates/course_modes/choose.html:113
-#: lms/templates/course_modes/choose.html:155
-msgid "Benefits of the Verified Track"
-msgstr ""
-
-#: lms/templates/course_modes/choose.html:115
-#: lms/templates/course_modes/choose.html:127
-msgid ""
-"{b_start}Eligible for credit:{b_end} Receive academic credit after "
-"successfully completing the course"
-msgstr ""
-
-#: lms/templates/course_modes/choose.html:117
-#: lms/templates/course_modes/choose.html:158
-msgid ""
-"{b_start}Unlimited Course Access: {b_end}Learn at your own pace, and "
-"access materials anytime to brush up on what you've learned."
-msgstr ""
-
-#: lms/templates/course_modes/choose.html:120
-#: lms/templates/course_modes/choose.html:161
-msgid ""
-"{b_start}Graded Assignments: {b_end}Build your skills through graded "
-"assignments and projects."
-msgstr ""
-
-#: lms/templates/course_modes/choose.html:122
-#: lms/templates/course_modes/choose.html:163
-msgid ""
-"{b_start}Easily Sharable: {b_end}Add the certificate to your CV or "
-"resume, or post it directly on LinkedIn."
-msgstr ""
-
-#: lms/templates/course_modes/choose.html:125
-#: lms/templates/course_modes/choose.html:166
-msgid "Benefits of a Verified Certificate"
-msgstr ""
-
-#: lms/templates/course_modes/choose.html:128
-msgid ""
-"{b_start}Official:{b_end} Receive an instructor-signed certificate with "
-"the institution's logo"
-msgstr ""
-
-#: lms/templates/course_modes/choose.html:129
-msgid ""
-"{b_start}Easily shareable:{b_end} Add the certificate to your CV or "
-"resume, or post it directly on LinkedIn"
-msgstr ""
-
-#: lms/templates/course_modes/choose.html:150
-msgid ""
-"Highlight your new knowledge and skills with a verified certificate. Use "
-"this valuable credential to improve your job prospects and advance your "
-"career, or highlight your certificate in school applications."
-msgstr ""
-
-#: lms/templates/course_modes/choose.html:168
-msgid ""
-"{b_start}Official: {b_end}Receive an instructor-signed certificate with "
-"the institution's logo"
-msgstr ""
-
-#: lms/templates/course_modes/choose.html:169
-msgid ""
-"{b_start}Easily shareable: {b_end}Add the certificate to your CV or "
-"resume, or post it directly on LinkedIn"
-msgstr ""
-
-#: lms/templates/course_modes/choose.html:170
-msgid ""
-"{b_start}Motivating: {b_end}Give yourself an additional incentive to "
-"complete the course"
-msgstr ""
-
-#: lms/templates/course_modes/choose.html:189
-#: lms/templates/course_modes/choose.html:209
-msgid "or"
-msgstr ""
-
-#: lms/templates/course_modes/choose.html:195
-#: lms/templates/course_modes/choose.html:203
-#: lms/templates/course_modes/choose.html:232
-msgid "Audit This Course"
-msgstr ""
-
-#: lms/templates/course_modes/choose.html:197
-msgid ""
-"Enroll in this course for free and you will have limited access to "
-"contents, activities and discussion forums. You will be able to opt for "
-"the certificate, once you make the payment within the platform and pass "
-"the course according to the established rules."
-msgstr ""
-
-#: lms/templates/course_modes/choose.html:215
-msgid "Audit This Course (No Certificate)"
-msgstr ""
-
-#: lms/templates/course_modes/choose.html:219
-msgid ""
-"Audit this course for free and have access to course materials and "
-"discussions forums. {b_start}This track does not include graded "
-"assignments, or unlimited course access.{b_end}"
-msgstr ""
-
-#: lms/templates/course_modes/choose.html:221
-msgid ""
-"Audit this course for free and have access to course materials and "
-"discussions forums. {b_start}This track does not include graded "
-"assignments.{b_end}"
-msgstr ""
-
-#: lms/templates/course_modes/choose.html:223
-msgid ""
-"Audit this course for free and have access to course materials and "
-"discussions forums. {b_start}This track does not include unlimited course"
-" access.{b_end}"
-msgstr ""
-
-#: lms/templates/course_modes/choose.html:225
-msgid ""
-"Audit this course for free and have complete access to all the course "
-"material, activities, tests, and forums.  {b_start}Please note that this "
-"track does not offer a certificate for learners who earn a passing "
-"grade.{b_end}"
-msgstr ""
-
-#: lms/templates/courseware/course_about.html:45
-msgid "An error has occurred. Please ensure that you are logged in to enroll."
-msgstr ""
-
-#: lms/templates/courseware/course_about.html:49
-msgid "An error occurred. Please try again later."
-msgstr ""
-
-#: lms/templates/courseware/course_about.html:121
-#: lms/templates/courseware/course_about.html:126
-msgid "You are enrolled in this course"
-msgstr ""
-
-#: lms/templates/courseware/course_about.html:123
-#: lms/templates/courseware/course_about.html:137
-msgid "View Course"
-msgstr ""
-
-#: lms/templates/courseware/course_about.html:129
-msgid "Course is full"
-msgstr ""
-
-#: lms/templates/courseware/course_about.html:131
-msgid "Curso requiere postulación"
-msgstr ""
-
-#: lms/templates/courseware/course_about.html:133
-msgid "Enrollment is Closed"
-msgstr ""
-
-#: lms/templates/courseware/course_about.html:152
-msgid "Inscríbase ahora"
-msgstr ""
-
-#: lms/templates/courseware/course_about.html:174
-msgid "View About Page in studio"
-msgstr ""
-
-#: lms/templates/courseware/course_about.html:204
-msgid "Classes Start:"
-msgstr ""
-
-#: lms/templates/courseware/course_about.html:207
-msgid "Today"
-msgstr ""
-
-#: lms/templates/courseware/course_about.html:226
-msgid "Classes End:"
-msgstr ""
-
-#: lms/templates/courseware/course_about.html:240
-msgid "Price:"
-msgstr ""
-
-#: lms/templates/courseware/course_about.html:253
-msgid "There is one session available:"
-msgstr ""
-
-#: lms/templates/courseware/course_about.html:254
-msgid " already enrolled!"
-msgstr ""
-
-#: lms/templates/courseware/course_about.html:288
-#: lms/templates/static_templates/faq.html:35
-msgid "Frequently Asked Questions"
-msgstr ""
-
-#: lms/templates/courseware/course_about.html:305
-msgctxt "self"
-msgid "Enroll"
-msgstr ""
-
-#: lms/templates/courseware/course_about.html:310
-msgctxt "self"
-msgid "enroll"
-msgstr ""
-
-#: lms/templates/courseware/courses.html:32
-msgid "Courses"
-msgstr ""
-
-#: lms/templates/courseware/courses.html:45
-#: lms/templates/eoldiscussion/templates2.underscore:642
-msgid "Previous"
-msgstr ""
-
-#: lms/templates/courseware/courses.html:49
-#: lms/templates/eoldiscussion/templates2.underscore:666
-#: lms/templates/student_account/login2.underscore:51
-msgid "Next"
-msgstr ""
-
-#: lms/templates/courseware/courses.html:61
-#: lms/templates/courseware/courses.html:62
-msgid "Search for a course"
-msgstr ""
-
-#: lms/templates/courseware/courses.html:71
-msgid "Newer"
-msgstr ""
-
-#: lms/templates/courseware/courses.html:72
-msgid "Older"
-msgstr ""
-
-#: lms/templates/courseware/courses.html:92
-#: lms/templates/courseware/courses.html:104
-msgid "Refine Your Search"
-msgstr ""
-
-#: lms/templates/courseware/courses.html:96
-msgid "Has seleccionado"
-msgstr ""
-
-#: lms/templates/courseware/courses.html:97
-msgid "Clear All"
-msgstr ""
-
-#: lms/templates/courseware/courses.html:108
-msgid "Year"
-msgstr ""
-
-#: lms/templates/courseware/courses.html:125
-msgid "State"
-msgstr ""
-
-#: lms/templates/courseware/courses.html:131
-#: lms/templates/courseware/courses.html:132
-msgid "Active"
-msgstr ""
-
-#: lms/templates/courseware/courses.html:135
-#: lms/templates/courseware/courses.html:136
-msgid "Finished"
-msgstr ""
-
-#: lms/templates/courseware/courses.html:142
-msgid "Organizations"
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:71
-msgid "Course details"
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:76
-msgid "{course_number} {course_name} Home Page"
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:80
-#: lms/templates/dashboard/_dashboard_course_listing.html:85
-msgid "{course_number} {course_name} Cover Image"
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:90
-msgid "Enrolled as: "
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:116
-msgid "Coming Soon"
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:122
-msgid "Ended - {date}"
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:125
-msgid "Started - {date}"
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:131
-#: lms/templates/dashboard/_dashboard_course_listing.html:135
-msgid "Starts - {date}"
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:146
-msgid "for {course_display_name}"
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:154
-msgid "You must select a session by {expiration_date} to access the course."
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:156
-msgid "You must select a session to access the course."
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:169
-msgid "Change or Leave Session"
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:177
-msgid "You can no longer change sessions."
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:179
-msgid "You can change sessions until {entitlement_expiration_date}."
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:189
-msgid "View Archived Course"
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:209
-#: lms/templates/dashboard/_dashboard_course_listing.html:231
-msgid "¡Te invito a matricularte a este curso! {course_name}"
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:212
-msgid "Share {course_name} on Facebook"
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:215
-#: lms/templates/dashboard/_dashboard_course_listing.html:221
-msgid "Share on Facebook"
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:234
-msgid "Share {course_name} on Twitter"
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:237
-#: lms/templates/dashboard/_dashboard_course_listing.html:243
-msgid "Share on Twitter"
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:253
-msgid "¡Te invito a matricularte a este curso! {course_name} {url}"
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:255
-msgid "Share {course_name} on Linkedin"
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:258
-#: lms/templates/dashboard/_dashboard_course_listing.html:264
-msgid "Share on Linkedin"
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:282
-msgid "Course options for"
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:289
-msgid "Available Actions"
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:302
-msgid "Unenroll"
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:308
-msgid ""
-"You are enrolled by your institution and you should reach out to your "
-"institution to drop this course."
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:314
-msgid "Email Settings"
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:353
-msgid "Related Programs"
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:382
-msgid "Verification not yet complete."
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:383
-msgid "You only have {days} day left to verify for this course."
-msgid_plural "You only have {days} days left to verify for this course."
-msgstr[0] ""
-msgstr[1] ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:389
-msgid "Almost there!"
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:390
-msgid "You still need to verify for this course."
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:394
-msgid "Verify Now"
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:397
-msgid "You have submitted your verification information."
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:398
-msgid ""
-"You will see a message on your dashboard when the verification process is"
-" complete (usually within 5-7 days)."
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:400
-msgid "Your current verification will expire soon!"
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:401
-msgid ""
-"You have submitted your reverification information. You will see a "
-"message on your dashboard when the verification process is complete "
-"(usually within 5-7 days)."
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:403
-msgid "You have successfully verified your ID with edX"
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:405
-msgid "Your current verification is effective until {date}."
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:408
-msgid "Your current verification will expire soon."
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:411
-msgid ""
-"Your current verification will expire in {days} days. {start_link}Re-"
-"verify your identity now{end_link} using a webcam and a government-issued"
-" photo ID."
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:426
-msgid ""
-"Pursue a {cert_name_long} to highlight the knowledge and skills you gain "
-"in this course."
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:428
-msgid ""
-"Es oficial. Es fácil de compartir. Es comprobado como motivador para la "
-"finalización del curso. "
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:441
-msgid "Upgrade to Verified"
-msgstr ""
-
-#: lms/templates/dashboard/_dashboard_course_listing.html:455
-msgid ""
-"You must successfully complete {link_start}{prc_display}{link_end} before"
-" you begin this course."
-msgstr ""
-
-#: lms/templates/emails/failed_verification_email.txt:4
-msgid ""
-"¡Lo lamentamos! Las fotos que enviaste para verificar tu identidad no "
-"fueron aceptadas, detalle(s) a continuación:"
-msgstr ""
-
-#: lms/templates/emails/failed_verification_email.txt:9
-msgid "Tu fotografía:"
-msgstr ""
-
-#: lms/templates/emails/failed_verification_email.txt:17
-msgid "La fotografía de tu ID:"
-msgstr ""
-
-#: lms/templates/emails/failed_verification_email.txt:25
-msgid "Otras razones:"
-msgstr ""
-
-#: lms/templates/emails/failed_verification_email.txt:34
-msgid "Resubmit Verification: {reverify_url}"
-msgstr ""
-
-#: lms/templates/emails/failed_verification_email.txt:37
-#: lms/templates/emails/passed_verification_email.txt:9
-#: lms/templates/emails/photo_submission_confirmation.txt:12
-msgid "Thank you,"
-msgstr ""
-
-#: lms/templates/emails/failed_verification_email.txt:38
-#: lms/templates/emails/passed_verification_email.txt:10
-#: lms/templates/emails/photo_submission_confirmation.txt:13
-msgid "{platform_name} team"
-msgstr ""
-
-#: lms/templates/emails/passed_verification_email.txt:4
-msgid "Hola {full_name},"
-msgstr ""
-
-#: lms/templates/emails/passed_verification_email.txt:6
-msgid "¡Felicitaciones! Tu verificación de identidad fue exitosa."
-msgstr ""
-
-#: lms/templates/emails/passed_verification_email.txt:7
-msgid ""
-"Tu verificación es válida durante un año. Esta expirará el "
-"{expiration_datetime}."
-msgstr ""
-
-#: lms/templates/emails/photo_submission_confirmation.txt:4
-msgid "Hi {full_name},"
-msgstr ""
-
-#: lms/templates/emails/photo_submission_confirmation.txt:7
-msgid "Thanks for submitting your photos!"
-msgstr ""
-
-#: lms/templates/emails/photo_submission_confirmation.txt:8
-msgid ""
-"Hemos recibido su información y el proceso de verificación de ID ha "
-"empezado.Revise si recibe un correo electrónico de OpenUChile en los "
-"próximos días para confirmar si su verificación fue exitosa.También puede"
-" revisar el estado del proceso de verificación en su página de inicio."
-msgstr ""
-
-#: lms/templates/eoldiscussion/_discussion_inline.html:40
-msgid "Topic:"
-msgstr ""
-
-#: lms/templates/eoldiscussion/_discussion_inline.html:51
-msgid "El foro termina el"
-msgstr ""
-
-#: lms/templates/eoldiscussion/_discussion_inline.html:55
-msgid "El foro inicia el"
-msgstr ""
-
-#: lms/templates/eoldiscussion/_discussion_inline.html:59
-#: lms/templates/eoldiscussion/_discussion_inline.html:65
-msgid "El foro ha finalizado."
-msgstr ""
-
-#: lms/templates/eoldiscussion/_discussion_inline.html:71
-#: lms/templates/eoldiscussion/_discussion_inline.html:81
-msgid "Notifications"
-msgstr ""
-
-#: lms/templates/eoldiscussion/_discussion_inline.html:122
-msgid "Save"
-msgstr ""
-
-#: lms/templates/eoldiscussion/_discussion_inline_studio.html:8
-msgid "To view live discussions, click Preview or View Live in Unit Settings."
-msgstr ""
-
-#: lms/templates/eoldiscussion/_discussion_inline_studio.html:9
-msgid "Discussion ID: {discussion_id}"
-msgstr ""
-
-#: lms/templates/eoldiscussion/_filter_dropdown.html:53
-msgid "Discussion topics list"
-msgstr ""
-
-#: lms/templates/eoldiscussion/_filter_dropdown.html:55
-#: lms/templates/eoldiscussion/_filter_dropdown.html:56
-msgid "Filter Topics"
-msgstr ""
-
-#: lms/templates/eoldiscussion/_filter_dropdown.html:57
-msgid "filter topics"
-msgstr ""
-
-#: lms/templates/eoldiscussion/_filter_dropdown.html:63
-msgid "All Discussions"
-msgstr ""
-
-#: lms/templates/eoldiscussion/_filter_dropdown.html:67
-msgid "Posts I'm Following"
-msgstr ""
-
-#: lms/templates/eoldiscussion/_thread_list_template.html:8
-msgid "Filter:"
-msgstr ""
-
-#: lms/templates/eoldiscussion/_thread_list_template.html:11
-msgid "Show all posts"
-msgstr ""
-
-#: lms/templates/eoldiscussion/_thread_list_template.html:13
-msgid "Unread posts"
-msgstr ""
-
-#: lms/templates/eoldiscussion/_thread_list_template.html:16
-msgid "Unanswered posts"
-msgstr ""
-
-#: lms/templates/eoldiscussion/_thread_list_template.html:20
-msgid "Flagged"
-msgstr ""
-
-#: lms/templates/eoldiscussion/_thread_list_template.html:26
-msgid "Group:"
-msgstr ""
-
-#: lms/templates/eoldiscussion/_thread_list_template.html:28
-msgid "in all groups"
-msgstr ""
-
-#: lms/templates/eoldiscussion/_thread_list_template.html:37
-msgid "Sort:"
-msgstr ""
-
-#: lms/templates/eoldiscussion/_thread_list_template.html:40
-msgid "Por actividad reciente"
-msgstr ""
-
-#: lms/templates/eoldiscussion/_thread_list_template.html:42
-msgid "Por mayor actividad"
-msgstr ""
-
-#: lms/templates/eoldiscussion/_thread_list_template.html:44
-msgid "Por mayor número de votos"
-msgstr ""
-
-#: lms/templates/eoldiscussion/_user_profile.html:8
-#, python-format
-msgid "%s discussion started"
-msgid_plural "%s discussions started"
-msgstr[0] ""
-msgstr[1] ""
-
-#: lms/templates/eoldiscussion/_user_profile.html:9
-#, python-format
-msgid "%s comment"
-msgid_plural "%s comments"
-msgstr[0] ""
-msgstr[1] ""
-
 #: lms/templates/eoldiscussion/templates2.underscore:15
 msgid "Responder"
-msgstr ""
+msgstr "Reply"
 
 #: lms/templates/eoldiscussion/templates2.underscore:22
 msgid "Add a response:"
@@ -1354,7 +178,7 @@ msgstr ""
 #: lms/templates/eoldiscussion/templates2.underscore:334
 #: lms/templates/eoldiscussion/templates2.underscore:509
 msgid "Caracteres restantes"
-msgstr ""
+msgstr "Remaining characters"
 
 #: lms/templates/eoldiscussion/templates2.underscore:36
 #: lms/templates/eoldiscussion/templates2.underscore:201
@@ -1509,12 +333,12 @@ msgstr ""
 #: lms/templates/eoldiscussion/templates2.underscore:413
 #: lms/templates/eoldiscussion/templates2.underscore:414
 msgid "Creación"
-msgstr ""
+msgstr "Creation"
 
 #: lms/templates/eoldiscussion/templates2.underscore:416
 #: lms/templates/eoldiscussion/templates2.underscore:417
 msgid "Última actividad"
-msgstr ""
+msgstr "Last activity"
 
 #: lms/templates/eoldiscussion/templates2.underscore:434
 #, python-format
@@ -1538,7 +362,7 @@ msgstr ""
 #: lms/templates/eoldiscussion/templates2.underscore:462
 #: lms/templates/eoldiscussion/templates2.underscore:612
 msgid "Crear publicación"
-msgstr ""
+msgstr "Create publication"
 
 #: lms/templates/eoldiscussion/templates2.underscore:477
 msgid "Visible to"
@@ -1556,7 +380,7 @@ msgstr ""
 
 #: lms/templates/eoldiscussion/templates2.underscore:507
 msgid "Tu pregunta o idea (requerido)"
-msgstr ""
+msgstr "Your question or idea (required)"
 
 #: lms/templates/eoldiscussion/templates2.underscore:523
 msgid "follow this post"
@@ -1607,9 +431,17 @@ msgstr ""
 msgid "Return to all posts"
 msgstr ""
 
+#: lms/templates/eoldiscussion/templates2.underscore:642
+msgid "Previous"
+msgstr ""
+
 #: lms/templates/eoldiscussion/templates2.underscore:648
 #: lms/templates/eoldiscussion/templates2.underscore:660
 msgid "…"
+msgstr ""
+
+#: lms/templates/eoldiscussion/templates2.underscore:666
+msgid "Next"
 msgstr ""
 
 #: lms/templates/eoldiscussion/templates2.underscore:692
@@ -1695,6 +527,10 @@ msgstr ""
 msgid "Open"
 msgstr ""
 
+#: lms/templates/eoldiscussion/templates2.underscore:890
+msgid "Edit"
+msgstr ""
+
 #: lms/templates/eoldiscussion/templates2.underscore:909
 #: lms/templates/eoldiscussion/templates2.underscore:910
 msgid "More"
@@ -1704,803 +540,134 @@ msgstr ""
 msgid "OK"
 msgstr ""
 
-#: lms/templates/header/header.html:100
-#: lms/templates/widgets/footer-language-selector.html:24
-msgid "Choose Language"
-msgstr ""
-
-#: lms/templates/header/header.html:137
-msgid ""
-"{begin_strong}Warning:{end_strong} Your browser is not fully supported. "
-"We strongly recommend using {chrome_link} or {ff_link}."
-msgstr ""
-
-#: lms/templates/header/navbar-authenticated.html:18
-msgid "Search"
-msgstr ""
-
-#: lms/templates/header/navbar-authenticated.html:31
-#: lms/templates/header/navbar-authenticated.html:32
-#: lms/templates/header/navbar-not-authenticated.html:40
-#: lms/templates/header/navbar-not-authenticated.html:41
-msgid "Menu"
-msgstr ""
-
-#: lms/templates/header/navbar-authenticated.html:36
-#: lms/templates/header/navbar-authenticated.html:51
-msgid "My Courses"
-msgstr ""
-
-#: lms/templates/header/navbar-authenticated.html:38
-#: lms/templates/header/navbar-authenticated.html:54
-#: lms/templates/header/navbar-not-authenticated.html:45
-#: lms/templates/header/navbar-not-authenticated.html:58
-msgid "Explore courses"
-msgstr ""
-
-#: lms/templates/header/navbar-authenticated.html:40
-#: lms/templates/header/navbar-authenticated.html:57
-#: lms/templates/header/navbar-not-authenticated.html:47
-#: lms/templates/header/navbar-not-authenticated.html:61
-#: lms/templates/static_templates/about.html:6
-msgid "About"
-msgstr ""
-
-#: lms/templates/header/navbar-authenticated.html:42
-#: lms/templates/header/navbar-authenticated.html:60
-#: lms/templates/header/navbar-not-authenticated.html:49
-#: lms/templates/header/navbar-not-authenticated.html:64
-#: lms/templates/static_templates/faq.html:6
-#: lms/templates/static_templates/faq.html:29
-#: lms/templates/static_templates/faq.html:30
-msgid "FAQ"
-msgstr ""
-
-#: lms/templates/header/navbar-logo-header.html:19
-msgid "{platform_name} Home Page"
-msgstr ""
-
-#: lms/templates/header/navbar-not-authenticated.html:35
-#: lms/templates/student_account/login2.underscore:49
-msgid "Sign in"
-msgstr ""
-
-#: lms/templates/header/user_dropdown.html:31
-msgid "Profile:"
-msgstr ""
-
-#: lms/templates/header/user_dropdown.html:37
-msgid "Dashboard for:"
-msgstr ""
-
-#: lms/templates/header/user_dropdown.html:41
-msgid "Profile"
-msgstr ""
-
-#: lms/templates/header/user_dropdown.html:43
-msgid "Account"
-msgstr ""
-
-#: lms/templates/header/user_dropdown.html:46
-msgid "Order History"
-msgstr ""
-
-#: lms/templates/header/user_dropdown.html:49
-msgid "Sign Out"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:18
-msgid ""
-"Click to display the grading configuration for the course. The grading "
-"configuration is the breakdown of graded subsections of the course (such "
-"as exams and problem sets), and can be changed on the 'Grading' page "
-"(under 'Settings') in Studio."
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:19
-msgid "Grading Configuration"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:24
-msgid "Click to download a CSV of anonymized student IDs:"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:25
-msgid "Get Student Anonymized IDs CSV"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:31
-msgid "Reports"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:33
-msgid ""
-"For large courses, generating some reports can take several hours. When "
-"report generation is complete, a link that includes the date and time of "
-"generation appears in the table below. These reports are generated in the"
-" background, meaning it is OK to navigate away from this page while your "
-"report is generating."
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:35
-msgid ""
-"Please be patient and do not click these buttons multiple times. Clicking"
-" these buttons multiple times will significantly slow the generation "
-"process."
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:37
-msgid ""
-"Click to generate a CSV file of all students enrolled in this course, "
-"along with profile information such as email address and username:"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:39
-msgid "Download profile information as a CSV"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:41
-msgid ""
-"Click to generate a CSV file that lists learners who can enroll in the "
-"course but have not yet done so."
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:43
-msgid "Download a CSV of learners who can enroll"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:46
-msgid "Click to generate a CSV file of all proctored exam results in this course."
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:47
-msgid "Generate Proctored Exam Results Report"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:51
-msgid "Click to generate a CSV file of survey results for this course."
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:52
-msgid "Generate Survey Results Report"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:55
-msgid ""
-"Select a problem to generate a CSV file that lists all student answers to"
-" the problem. You also select a section or chapter to include results of "
-"all problems in that section or chapter."
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:59
-msgid "NOTE"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:60
-msgid ""
-"The generated report is limited to {max_entries} responses. If you expect"
-" more than {max_entries} responses, try generating the report on a "
-"chapter-by-chapter, or problem-by-problem basis, or contact your site "
-"administrator to increase the limit."
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:82
-msgid "Click to list certificates that are issued for this course:"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:84
-msgid "View Certificates Issued"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:85
-msgid "Download CSV of Certificates Issued"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:92
-msgid ""
-"For smaller courses, click to list profile information for enrolled "
-"students directly on this page:"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:93
-msgid "List enrolled students' profile information"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:98
-msgid "Click to generate a CSV grade report for all currently enrolled students."
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:100
-msgid "Generate Grade Report"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:101
-msgid "Generate Problem Grade Report"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:102
-msgid "Generate ORA Data Report"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:105
-msgid ""
-"Click to generate a ZIP file that contains all submission texts and "
-"attachments."
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:107
-msgid "Generate Submission Files Archive"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:121
-msgid "Analítica de encuestas"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:125
-msgid "Generar"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:137
-msgid "Reports Available for Download"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:139
-msgid ""
-"The reports listed below are available for download, identified by UTC "
-"date and time of generation."
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:144
-msgid ""
-"The answer distribution report listed below is generated periodically by "
-"an automated background process. The report is cumulative, so answers "
-"submitted after the process starts are included in a subsequent report. "
-"The report is generated several times per day."
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:150
-msgid ""
-"{strong_start}Note{strong_end}: {ul_start}{li_start}To keep student data "
-"secure, you cannot save or email these links for direct access. Copies of"
-" links expire within 5 minutes.{li_end}{li_start}Report files are deleted"
-" 90 days after generation. If you will need access to old reports, "
-"download and store the files, in accordance with your institution's data "
-"security policies.{li_end}{ul_end}"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:167
-#: lms/templates/instructor/instructor_dashboard_2/send_email.html:137
-msgid "Pending Tasks"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/data_download.html:169
-msgid "The status for any active tasks appears in a table below."
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/instructor_dashboard_2.html:25
-#: lms/templates/instructor/instructor_dashboard_2/instructor_dashboard_2.html:105
-msgid "Instructor Dashboard"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/instructor_dashboard_2.html:108
-msgid "View Course in Studio"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/instructor_dashboard_2.html:124
-msgid "Correo de bienvenida"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/send_email.html:16
-msgid "Habilitar:"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/send_email.html:23
-msgid "Habilitar correo de bienvenida"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/send_email.html:30
-#: lms/templates/instructor/instructor_dashboard_2/send_email.html:34
-msgid "Send to:"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/send_email.html:38
-msgid "Myself"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/send_email.html:42
-msgid "Staff and Administrators"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/send_email.html:46
-msgid "All Learners"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/send_email.html:55
-msgid "Cohort: "
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/send_email.html:59
-msgid "(Learners not explicitly assigned to a cohort)"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/send_email.html:74
-msgid "Learners in the {track_name} Track"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/send_email.html:84
-msgid "Subject: "
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/send_email.html:92
-msgid "(Maximum 128 characters)"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/send_email.html:97
-msgid "Responder a (opcional): "
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/send_email.html:104
-msgid ""
-"(Ingrese el/los correos al que los estudiantes podrán responder. Si "
-"ingresa más de un correo separelos con una coma, ejemplo: "
-"correo1@correo.cl, correo2@correo.cl)"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/send_email.html:109
-msgid "Message:"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/send_email.html:118
-msgid ""
-"We recommend sending learners no more than one email message per week. "
-"Before you send your email, review the text carefully and send it to "
-"yourself first, so that you can preview the formatting and make sure "
-"embedded images and links work correctly."
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/send_email.html:121
-msgid "CAUTION!"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/send_email.html:122
-msgid ""
-"When you select Send Email, your email message is added to the queue for "
-"sending, and cannot be cancelled."
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/send_email.html:126
-msgid "Send Email"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/send_email.html:128
-msgid "Guardar Cambios"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/send_email.html:139
-msgid ""
-"Email actions run in the background. The status for any active tasks - "
-"including email tasks - appears in a table below."
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/send_email.html:151
-msgid "Email Task History"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/send_email.html:153
-msgid "To see the content of previously sent emails, click this button:"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/send_email.html:155
-msgid "Show Sent Email History"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/send_email.html:159
-msgid "To read a sent email message, click its subject."
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/send_email.html:166
-msgid ""
-"To see the status for all email tasks submitted for this course, click "
-"this button:"
-msgstr ""
-
-#: lms/templates/instructor/instructor_dashboard_2/send_email.html:168
-msgid "Show Email Task History"
-msgstr ""
-
-#: lms/templates/static_templates/about.html:24
-#: lms/templates/static_templates/about.html:25
-msgid "About Us"
-msgstr ""
-
-#: lms/templates/static_templates/about.html:30
-msgid "What is Open UChile?"
-msgstr ""
-
-#: lms/templates/static_templates/about.html:33
-msgid ""
-"Universidad de Chile (UChile) is the first University in the country, "
-"within the 500 in the World and 9th in Latin America"
-msgstr ""
-
-#: lms/templates/static_templates/about.html:33
-msgid ""
-"As a public university, UChile is deeply concerned about global issues, "
-"such as Climate Change and the UN2030 agenda."
-msgstr ""
-
-#: lms/templates/static_templates/about.html:34
-msgid ""
-"Chile is a natural laboratory in a really complex environment, from "
-"Atacama Desert to Antarctica, threatened by 9 (out of 10) natural hazards"
-" (Disasters and Climate Change). This condition provides us a perfect "
-"location to develop research centers in different areas, such as mining, "
-"geology, seismology, earthquake resistant infrastructure and public "
-"affairs. Our academics have deep knowledge and experience and are "
-"worldwide referents in those topics, and this MOOC platform seeks to "
-"spread those knowledge and experience."
-msgstr ""
-
-#: lms/templates/static_templates/about.html:35
-msgid ""
-"UChile is also founder member of the Global MOOC Alliance (Tsinghua "
-"University, Cornell University, Center for Research and "
-"Interdisciplinarity (CRI), Peking University, Politecnico di Milano, "
-"Saint Petersburg State University, Shanghai Jiao Tong University, The "
-"University of Auckland, The University of Manchester, University of "
-"Nairobi, University of Toronto,"
-msgstr ""
-
-#: lms/templates/static_templates/about.html:35
-msgid "among others"
-msgstr ""
-
-#: lms/templates/student_account/form_field.underscore:136
-msgid "Need help signing in?"
-msgstr ""
-
-#: lms/templates/student_account/form_field.underscore:138
-msgid "Forgot my password"
-msgstr ""
-
-#: lms/templates/student_account/form_field.underscore:140
-#: lms/templates/student_account/form_field.underscore:149
-msgid "Other sign-in issues"
-msgstr ""
-
-#: lms/templates/student_account/form_field.underscore:145
-msgid "Need other help signing in?"
-msgstr ""
-
-#: lms/templates/student_account/form_field.underscore:147
-msgid "Create an account"
-msgstr ""
-
-#: lms/templates/student_account/login2.underscore:8
+#: lms/templates/student_account/login.underscore:3
 msgid "Sign in to continue learning as {email}"
 msgstr ""
 
-#: lms/templates/student_account/login2.underscore:10
+#: lms/templates/student_account/login.underscore:5
 msgid "Sign in to continue learning"
 msgstr ""
 
-#: lms/templates/student_account/login2.underscore:13
+#: lms/templates/student_account/login.underscore:8
 msgid "You already have an edX account with your {enterprise_name} email address."
 msgstr ""
 
-#: lms/templates/student_account/login2.underscore:15
+#: lms/templates/student_account/login.underscore:10
 msgid ""
 "Going forward, your account information will be updated and maintained by"
 " {enterprise_name}."
 msgstr ""
 
-#: lms/templates/student_account/login2.underscore:17
+#: lms/templates/student_account/login.underscore:12
 msgid ""
 "You can view your information or unlink from {enterprise_name} anytime in"
 " your Account Settings."
 msgstr ""
 
-#: lms/templates/student_account/login2.underscore:19
+#: lms/templates/student_account/login.underscore:14
 msgid "To continue learning with this account, sign in below."
 msgstr ""
 
-#: lms/templates/student_account/login2.underscore:21
+#: lms/templates/student_account/login.underscore:16
 msgid "Sign In"
 msgstr ""
 
-#: lms/templates/student_account/login2.underscore:28
+#: lms/templates/student_account/login.underscore:17
+msgid "with your account"
+msgstr ""
+
+#: lms/templates/student_account/login.underscore:28
+#: lms/templates/student_account/login.underscore:36
+msgid "Log in with your account"
+msgstr ""
+
+#: lms/templates/student_account/login.underscore:39
 msgid ""
-"Sign in here using your email address and password, or use one of the "
-"providers listed below."
+"This option provides access through the University of Chile's single "
+"corporate services account, which allows users to register and access "
+"online services, depending on their relationship with the university. For"
+" more information, visit  "
 msgstr ""
 
-#: lms/templates/student_account/login2.underscore:30
-msgid "Sign in here using your email address and password."
+#: lms/templates/student_account/login.underscore:45
+msgid "Or"
 msgstr ""
 
-#: lms/templates/student_account/login2.underscore:32
-msgid "If you do not yet have an account, use the button below to register."
+#: lms/templates/student_account/login.underscore:51
+msgid "Don't have an account?"
 msgstr ""
 
-#: lms/templates/student_account/login2.underscore:37
+#: lms/templates/student_account/login.underscore:55
+#: lms/templates/student_account/register.underscore:49
+#: lms/templates/student_account/register.underscore:66
+msgid "Create account"
+msgstr ""
+
+#: lms/templates/student_account/login.underscore:67
+msgid "Go back"
+msgstr ""
+
+#: lms/templates/student_account/login.underscore:72
 msgid "Use my university info"
 msgstr ""
 
-#: lms/templates/student_account/login2.underscore:42
-#: lms/templates/student_account/login2.underscore:59
+#: lms/templates/student_account/login.underscore:77
+#: lms/templates/student_account/login.underscore:90
 msgid "or sign in with"
 msgstr ""
 
-#: lms/templates/student_account/login2.underscore:50
-#: lms/templates/student_account/login_and_register.html:90
-#: lms/templates/student_account/login_and_register.html:182
-#: lms/templates/student_account/login_and_register.html:200
-msgid "Sign in with Mi.UChile"
+#: lms/templates/student_account/login.underscore:84
+msgid "Sign in"
 msgstr ""
 
-#: lms/templates/student_account/login2.underscore:72
+#: lms/templates/student_account/login.underscore:102
 #, python-format
 msgid "Sign in with %(providerName)s"
 msgstr ""
 
-#: lms/templates/student_account/login2.underscore:83
-msgid "First time here?"
+#: lms/templates/student_account/login.underscore:179
+msgid "Forgot my password"
 msgstr ""
 
-#: lms/templates/student_account/login2.underscore:84
-msgid "Create an Account."
+#: lms/templates/student_account/password_reset.underscore:4
+msgid "Password recovery"
 msgstr ""
 
-#: lms/templates/student_account/login_and_register.html:14
-msgid "Sign in or Register"
-msgstr ""
-
-#: lms/templates/student_account/login_and_register.html:100
-msgid "Account not active"
-msgstr ""
-
-#: lms/templates/student_account/login_and_register.html:103
-msgid "There is no account associated with the email entered"
-msgstr ""
-
-#: lms/templates/student_account/login_and_register.html:107
-msgid "Enter email"
-msgstr ""
-
-#: lms/templates/student_account/login_and_register.html:113
+#: lms/templates/student_account/password_reset.underscore:7
 msgid ""
-"Unexpected error, refresh the page and try again, if the error persists "
-"contact the help desk"
+"Please enter the e-mail address you use to log in to the Open UChile "
+"platform"
 msgstr ""
 
-#: lms/templates/student_account/login_and_register.html:172
-msgid "Enter document number"
-msgstr ""
-
-#: lms/templates/student_account/login_and_register.html:173
-msgid "The document number must be between 5 and 20 characters"
-msgstr ""
-
-#: lms/templates/student_account/login_and_register.html:174
-msgid "Select a document type"
-msgstr ""
-
-#: lms/templates/student_account/login_and_register.html:175
-msgid "The document number must be alphanumeric"
-msgstr ""
-
-#: lms/templates/student_account/login_and_register.html:176
-msgid "Incorrect Rut"
-msgstr ""
-
-#: lms/templates/student_account/login_and_register.html:178
-msgid "Document number already exists on the platform, press the login button."
-msgstr ""
-
-#: lms/templates/student_account/login_and_register.html:213
-msgid "Unexpected error, please update and try again"
+#: lms/templates/student_account/password_reset.underscore:11
+msgid "Recover my password"
 msgstr ""
 
 #: lms/templates/student_account/register.underscore:6
 msgid "Already have an {platformName} account?"
 msgstr ""
 
-#: lms/templates/student_account/register.underscore:7
-msgid "Sign in."
+#: lms/templates/student_account/register.underscore:10
+msgid "Access"
 msgstr ""
 
-#: lms/templates/student_account/register.underscore:18
+#: lms/templates/student_account/register.underscore:19
 msgid "Create an account using"
 msgstr ""
 
-#: lms/templates/student_account/register.underscore:31
+#: lms/templates/student_account/register.underscore:32
 #, python-format
 msgid "Create account using %(providerName)s."
 msgstr ""
 
-#: lms/templates/student_account/register.underscore:38
+#: lms/templates/student_account/register.underscore:39
 msgid "Use my institution/campus credentials"
 msgstr ""
 
-#: lms/templates/student_account/register.underscore:44
+#: lms/templates/student_account/register.underscore:45
 msgid "or create a new one here"
 msgstr ""
 
-#: lms/templates/student_account/register.underscore:48
-msgid "Create an Account"
-msgstr ""
-
-#: lms/templates/student_account/register.underscore:60
+#: lms/templates/student_account/register.underscore:61
 msgid "Support education research by providing additional information"
 msgstr ""
-
-#: lms/templates/student_account/register.underscore:67
-msgid "Create Account"
-msgstr ""
-
-#~ msgid "Certificate Validation"
-#~ msgstr ""
-
-#~ msgid " already enrolled! After a course session ends, it will be archived."
-#~ msgstr ""
-
-#~ msgid "The {platform_name} team"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Hemos recibido su información y el "
-#~ "proceso de verificación del ID ha "
-#~ "empezado.Revise si tiene un correo "
-#~ "electrónico de nosotros en los próximos"
-#~ " días para confirmar si su "
-#~ "verificación fue exitosa.También puede revisar"
-#~ " el estado del proceso de "
-#~ "verificación en su página de inicio "
-#~ "."
-#~ msgstr ""
-
-#~ msgid "Help desk hours (GMT-3): from 09:00 until 18:00 (Monday - Friday)"
-#~ msgstr ""
-
-#~ msgid "Discover New"
-#~ msgstr ""
-
-#~ msgid "Starts"
-#~ msgstr ""
-
-#~ msgid "Starts: {date}"
-#~ msgstr ""
-
-#~ msgid "E-Learning "
-#~ msgstr ""
-
-#~ msgid "Platform "
-#~ msgstr ""
-
-#~ msgid "Enrollment in this course is by invitation only"
-#~ msgstr ""
-
-#~ msgid "List of Courses"
-#~ msgstr ""
-
-#~ msgid "Sort by:"
-#~ msgstr ""
-
-#~ msgid "Year:"
-#~ msgstr ""
-
-#~ msgid "State:"
-#~ msgstr ""
-
-#~ msgid "Organizations:"
-#~ msgstr ""
-
-#~ msgid "Universität Heidelberg"
-#~ msgstr ""
-
-#~ msgid "Facultad de Ciencias Físicas y Matemáticas"
-#~ msgstr ""
-
-#~ msgid "Facultad de Economía y Negocios"
-#~ msgstr ""
-
-#~ msgid "Facultad de Medicina"
-#~ msgstr ""
-
-#~ msgid "ECBI Chile"
-#~ msgstr ""
-
-#~ msgid "Centro de Ciencia del Clima y la Resiliencia (CR)^2"
-#~ msgstr ""
-
-#~ msgid "Red Universitaria Nacional (REUNA)"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "It's official. It's easily shareable. "
-#~ "It's a proven motivator to complete "
-#~ "the course. {line_break}{link_start}Learn more "
-#~ "about the verified {cert_name_long}{link_end}."
-#~ msgstr ""
-
-#~ msgid "Enroll Now"
-#~ msgstr ""
-
-#~ msgid "Rut already exists on the platform"
-#~ msgstr ""
-
-#~ msgid "Contact Form"
-#~ msgstr ""
-
-#~ msgid "Fill out the form and our help desk will contact you shortly."
-#~ msgstr ""
-
-#~ msgid "Help desk hours (GMT-4): from 09:00 until 18:00 (Monday - Friday)"
-#~ msgstr ""
-
-#~ msgid "Try Again"
-#~ msgstr ""
-
-#~ msgid "There was a problem trying to generate your ticket."
-#~ msgstr ""
-
-#~ msgid "If the problem persists, send an email to"
-#~ msgstr ""
-
-#~ msgid "Enter a valid {error}"
-#~ msgstr ""
-
-#~ msgid "¡Sent!"
-#~ msgstr ""
-
-#~ msgid "Our help desk will answer you as soon as possible"
-#~ msgstr ""
-
-#~ msgid "Name"
-#~ msgstr ""
-
-#~ msgid "Enter your name"
-#~ msgstr ""
-
-#~ msgid "Email"
-#~ msgstr ""
-
-#~ msgid "Enter your email"
-#~ msgstr ""
-
-#~ msgid "Related to:"
-#~ msgstr ""
-
-#~ msgid "Select an option"
-#~ msgstr ""
-
-#~ msgid "General"
-#~ msgstr ""
-
-#~ msgid "Specific Course"
-#~ msgstr ""
-
-#~ msgid "Login"
-#~ msgstr ""
-
-#~ msgid "Other"
-#~ msgstr ""
-
-#~ msgid "Course name"
-#~ msgstr ""
-
-#~ msgid "Enter the course name"
-#~ msgstr ""
-
-#~ msgid "Describe your problem"
-#~ msgstr ""
-
-#~ msgid "Enter your questions and queries here"
-#~ msgstr ""
-
-#~ msgid "Document number already exists on the platform"
-#~ msgstr ""
-
-#~ msgid "Create Mi.UChile account"
-#~ msgstr ""
-

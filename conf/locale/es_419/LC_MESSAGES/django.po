@@ -7,20 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: help-open@uchile.cl\n"
-"POT-Creation-Date: 2024-07-31 21:43+0000\n"
+"POT-Creation-Date: 2024-09-12 20:37+0000\n"
 "PO-Revision-Date: 2022-07-28 20:11+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es_419\n"
 "Language-Team: es_419 <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #: cms/templates/container.html:127
-#: cms/templates/js/course-outline.underscore:123
-#: cms/templates/js/course-outline.underscore:128
 msgid "Display Name"
 msgstr ""
 
@@ -47,7 +45,6 @@ msgid "Preview"
 msgstr ""
 
 #: cms/templates/container.html:152 cms/templates/studio_xblock_wrapper.html:81
-#: lms/templates/eoldiscussion/templates2.underscore:890
 msgid "Edit"
 msgstr ""
 
@@ -319,15 +316,11 @@ msgstr ""
 msgid "Set Access"
 msgstr ""
 
-#: cms/templates/js/course-outline.underscore:160
-#: cms/templates/js/course-outline.underscore:162
 #: cms/templates/studio_xblock_wrapper.html:94
 #: cms/templates/studio_xblock_wrapper.html:96
 msgid "Duplicar a otro Curso"
 msgstr ""
 
-#: cms/templates/js/course-outline.underscore:166
-#: cms/templates/js/course-outline.underscore:168
 #: cms/templates/studio_xblock_wrapper.html:100
 #: cms/templates/studio_xblock_wrapper.html:102
 msgid "Duplicate"
@@ -338,16 +331,11 @@ msgstr ""
 msgid "Move"
 msgstr ""
 
-#: cms/templates/js/course-outline.underscore:174
-#: cms/templates/js/course-outline.underscore:176
 #: cms/templates/studio_xblock_wrapper.html:121
 #: cms/templates/studio_xblock_wrapper.html:123
-#: lms/templates/eoldiscussion/templates2.underscore:898
 msgid "Delete"
 msgstr ""
 
-#: cms/templates/js/course-outline.underscore:182
-#: cms/templates/js/course-outline.underscore:184
 #: cms/templates/studio_xblock_wrapper.html:129
 msgid "Drag to reorder"
 msgstr ""
@@ -381,125 +369,6 @@ msgstr ""
 
 #: cms/templates/videos_index.html:77
 msgid "Course Video Settings"
-msgstr ""
-
-#: cms/templates/js/course-outline.underscore:40
-#, python-format
-msgid "Prerequisite: %(prereq_display_name)s"
-msgstr ""
-
-#: cms/templates/js/course-outline.underscore:48
-msgid "Contains staff only content"
-msgstr ""
-
-#: cms/templates/js/course-outline.underscore:54
-msgid "Unpublished changes to live content"
-msgstr ""
-
-#: cms/templates/js/course-outline.underscore:56
-msgid "Unpublished units will not be released"
-msgstr ""
-
-#: cms/templates/js/course-outline.underscore:58
-msgid "Unpublished changes to content that will release in the future"
-msgstr ""
-
-#: cms/templates/js/course-outline.underscore:66
-msgid "Access to this unit is restricted to: {selectedGroupsLabel}"
-msgstr ""
-
-#: cms/templates/js/course-outline.underscore:75
-msgid ""
-"Access to some content in this unit is restricted to specific groups of "
-"learners"
-msgstr ""
-
-#: cms/templates/js/course-outline.underscore:80
-msgid "Ungraded"
-msgstr ""
-
-#: cms/templates/js/course-outline.underscore:91
-msgid "Onboarding Exam"
-msgstr ""
-
-#: cms/templates/js/course-outline.underscore:93
-msgid "Practice proctored Exam"
-msgstr ""
-
-#: cms/templates/js/course-outline.underscore:95
-msgid "Proctored Exam"
-msgstr ""
-
-#: cms/templates/js/course-outline.underscore:99
-msgid "Timed Exam"
-msgstr ""
-
-#: cms/templates/js/course-outline.underscore:114
-#, python-format
-msgid "Collapse/Expand this %(xblock_type)s"
-msgstr ""
-
-#: cms/templates/js/course-outline.underscore:137
-#: cms/templates/js/course-outline.underscore:138
-msgid "Proctoring Settings"
-msgstr ""
-
-#: cms/templates/js/course-outline.underscore:144
-#: cms/templates/js/course-outline.underscore:146
-msgid "Publish"
-msgstr ""
-
-#: cms/templates/js/course-outline.underscore:152
-#: cms/templates/js/course-outline.underscore:154
-msgid "Configure"
-msgstr ""
-
-#: cms/templates/js/course-outline.underscore:202
-msgid "Release Status:"
-msgstr ""
-
-#: cms/templates/js/course-outline.underscore:207
-msgid "Released:"
-msgstr ""
-
-#: cms/templates/js/course-outline.underscore:210
-msgid "Scheduled:"
-msgstr ""
-
-#: cms/templates/js/course-outline.underscore:213
-msgid "Unscheduled"
-msgstr ""
-
-#: cms/templates/js/course-outline.underscore:228
-msgid "Section Highlights"
-msgstr ""
-
-#: cms/templates/js/course-outline.underscore:235
-#: cms/templates/js/course-outline.underscore:249
-msgid "Graded as:"
-msgstr ""
-
-#: cms/templates/js/course-outline.underscore:242
-#: cms/templates/js/course-outline.underscore:253
-msgid "Due:"
-msgstr ""
-
-#: cms/templates/js/course-outline.underscore:264
-msgid "Subsection is hidden after course end date"
-msgstr ""
-
-#: cms/templates/js/course-outline.underscore:266
-msgid "Subsection is hidden after due date"
-msgstr ""
-
-#: cms/templates/js/course-outline.underscore:288
-msgid "You haven't added any content to this course yet."
-msgstr ""
-
-#: cms/templates/js/course-outline.underscore:292
-#: cms/templates/js/course-outline.underscore:313
-#, python-format
-msgid "Click to add a new %(xblock_type)s"
 msgstr ""
 
 #: cms/templates/widgets/video/transcripts.html:112
@@ -576,10 +445,10 @@ msgstr ""
 #: lms/templates/footer.html:22
 #: lms/templates/header/navbar-authenticated.html:46
 #: lms/templates/header/navbar-authenticated.html:66
-#: lms/templates/header/navbar-not-authenticated.html:53
-#: lms/templates/header/navbar-not-authenticated.html:70
+#: lms/templates/header/navbar-not-authenticated.html:56
+#: lms/templates/header/navbar-not-authenticated.html:73
 msgid "Contact us"
-msgstr "Mesa de Ayuda"
+msgstr "Contáctanos"
 
 #: lms/templates/footer.html:29
 msgid "Términos y Condiciones"
@@ -605,8 +474,7 @@ msgstr ""
 #: lms/templates/certificates/validate_certificates.html:33
 #: lms/templates/header/navbar-authenticated.html:44
 #: lms/templates/header/navbar-authenticated.html:63
-#: lms/templates/header/navbar-not-authenticated.html:51
-#: lms/templates/header/navbar-not-authenticated.html:67
+#: lms/templates/header/navbar-not-authenticated.html:54
 msgid "Certificate Validation "
 msgstr "Validación de certificados"
 
@@ -900,13 +768,10 @@ msgid "Courses"
 msgstr "Cursos"
 
 #: lms/templates/courseware/courses.html:45
-#: lms/templates/eoldiscussion/templates2.underscore:642
 msgid "Previous"
 msgstr "Anterior"
 
 #: lms/templates/courseware/courses.html:49
-#: lms/templates/eoldiscussion/templates2.underscore:666
-#: lms/templates/student_account/login2.underscore:51
 msgid "Next"
 msgstr "Siguiente"
 
@@ -1023,7 +888,7 @@ msgstr ""
 #: lms/templates/dashboard/_dashboard_course_listing.html:209
 #: lms/templates/dashboard/_dashboard_course_listing.html:231
 msgid "¡Te invito a matricularte a este curso! {course_name}"
-msgstr "I invite you to enroll in this course! {course_name}"
+msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html:212
 msgid "Share {course_name} on Facebook"
@@ -1045,7 +910,7 @@ msgstr "Compartir en Twitter"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html:253
 msgid "¡Te invito a matricularte a este curso! {course_name} {url}"
-msgstr "I invite you to enroll in this course! {course_name} {url}"
+msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html:255
 msgid "Share {course_name} on Linkedin"
@@ -1343,371 +1208,6 @@ msgid_plural "%s comments"
 msgstr[0] ""
 msgstr[1] ""
 
-#: lms/templates/eoldiscussion/templates2.underscore:15
-msgid "Responder"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:22
-msgid "Add a response:"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:26
-#: lms/templates/eoldiscussion/templates2.underscore:161
-#: lms/templates/eoldiscussion/templates2.underscore:191
-#: lms/templates/eoldiscussion/templates2.underscore:278
-#: lms/templates/eoldiscussion/templates2.underscore:334
-#: lms/templates/eoldiscussion/templates2.underscore:509
-msgid "Caracteres restantes"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:36
-#: lms/templates/eoldiscussion/templates2.underscore:201
-#: lms/templates/eoldiscussion/templates2.underscore:540
-msgid "Submit"
-msgstr "Enviar Consulta"
-
-#: lms/templates/eoldiscussion/templates2.underscore:45
-#: lms/templates/eoldiscussion/templates2.underscore:685
-msgid "This thread is closed."
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:84
-#, python-format
-msgid "discussion posted %(time_ago)s by %(author)s"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:86
-#, python-format
-msgid "question posted %(time_ago)s by %(author)s"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:94
-msgid "Pinned"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:97
-#: lms/templates/eoldiscussion/templates2.underscore:251
-#: lms/templates/eoldiscussion/templates2.underscore:324
-msgid "Reported"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:100
-msgid "Closed"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:123
-#, python-format
-msgid "Related to: %(courseware_title_linked)s"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:133
-#, python-format
-msgid "This post is visible only to %(group_name)s."
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:139
-msgid "This post is visible to everyone."
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:146
-msgid "Editing post"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:151
-#: lms/templates/eoldiscussion/templates2.underscore:496
-msgid "Title"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:153
-#: lms/templates/eoldiscussion/templates2.underscore:498
-msgid "Add a clear and descriptive title to encourage participation. (Required)"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:159
-msgid "Edit your post below."
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:171
-msgid "Update post"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:172
-#: lms/templates/eoldiscussion/templates2.underscore:288
-#: lms/templates/eoldiscussion/templates2.underscore:344
-#: lms/templates/eoldiscussion/templates2.underscore:466
-#: lms/templates/eoldiscussion/templates2.underscore:541
-msgid "Cancel"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:178
-#, python-format
-msgid "Show Comment (%(num_comments)s)"
-msgid_plural "Show Comments (%(num_comments)s)"
-msgstr[0] ""
-msgstr[1] ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:188
-#: lms/templates/eoldiscussion/templates2.underscore:190
-msgid "Add a comment"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:222
-#, python-format
-msgid "marked as answer %(time_ago)s by %(user)s"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:226
-#, python-format
-msgid "marked as answer %(time_ago)s"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:232
-#, python-format
-msgid "endorsed %(time_ago)s by %(user)s"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:236
-#, python-format
-msgid "endorsed %(time_ago)s"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:275
-msgid "Editing response"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:287
-msgid "Update response"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:317
-#, python-format
-msgid "posted %(time_ago)s by %(author)s"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:331
-msgid "Editing comment"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:343
-msgid "Update comment"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:386
-#: lms/templates/eoldiscussion/templates2.underscore:605
-#: lms/templates/eoldiscussion/templates2.underscore:680
-msgid "anonymous"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:398
-msgid "Staff"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:400
-msgid "Community TA"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:403
-msgid "Student"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:413
-#: lms/templates/eoldiscussion/templates2.underscore:414
-msgid "Creación"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:416
-#: lms/templates/eoldiscussion/templates2.underscore:417
-msgid "Última actividad"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:434
-#, python-format
-msgid ""
-"%(comments_count)s %(span_sr_open)scomments (%(unread_comments_count)s "
-"unread comments)%(span_close)s"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:437
-#, python-format
-msgid "%(comments_count)s %(span_sr_open)scomments %(span_close)s"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:454
-#: lms/templates/eoldiscussion/templates2.underscore:876
-#: lms/templates/eoldiscussion/templates2.underscore:878
-#: lms/templates/eoldiscussion/templates2.underscore:926
-msgid "Close"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:462
-#: lms/templates/eoldiscussion/templates2.underscore:612
-msgid "Crear publicación"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:477
-msgid "Visible to"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:480
-msgid ""
-"Discussion admins, moderators, and TAs can make their posts visible to "
-"all students or specify a single group."
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:484
-msgid "All Groups"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:507
-msgid "Tu pregunta o idea (requerido)"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:523
-msgid "follow this post"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:529
-msgid "post anonymously"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:535
-msgid "post anonymously to classmates"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:559
-msgid "Error posting your message."
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:572
-#, python-format
-msgid "This post will be visible only to %(group_name)s."
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:578
-msgid "This post will be visible to everyone."
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:584
-msgid "Topic area"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:587
-msgid "Add your post to a relevant topic to help others find it. (Required)"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:600
-msgid "(Community TA)"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:602
-msgid "(Staff)"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:628
-msgid "All Posts"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:629
-msgid "Return to all posts"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:648
-#: lms/templates/eoldiscussion/templates2.underscore:660
-msgid "…"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:692
-msgid "View discussion"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:753
-#: lms/templates/eoldiscussion/templates2.underscore:942
-msgid "Load more"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:763
-msgid "Post type"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:767
-msgid ""
-"Questions raise issues that need answers. Discussions share ideas and "
-"start conversations. (Required)"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:775
-msgid "Question"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:783
-msgid "Discussion"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:792
-#: lms/templates/eoldiscussion/templates2.underscore:794
-msgid "Endorse"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:795
-msgid "Unendorse"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:804
-#: lms/templates/eoldiscussion/templates2.underscore:806
-msgid "Mark as Answer"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:807
-msgid "Unmark as Answer"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:816
-#: lms/templates/eoldiscussion/templates2.underscore:818
-msgid "Follow"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:819
-msgid "Unfollow"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:832
-msgid "Vote for this post,"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:848
-msgid "Report abuse"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:850
-msgid "Report"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:851
-msgid "Unreport"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:862
-#: lms/templates/eoldiscussion/templates2.underscore:864
-msgid "Pin"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:865
-msgid "Unpin"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:879
-msgid "Open"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:909
-#: lms/templates/eoldiscussion/templates2.underscore:910
-msgid "More"
-msgstr ""
-
-#: lms/templates/eoldiscussion/templates2.underscore:935
-msgid "OK"
-msgstr ""
-
 #: lms/templates/header/header.html:100
 #: lms/templates/widgets/footer-language-selector.html:24
 msgid "Choose Language"
@@ -1720,13 +1220,14 @@ msgid ""
 msgstr ""
 
 #: lms/templates/header/navbar-authenticated.html:18
+#: lms/templates/header/navbar-not-authenticated.html:25
 msgid "Search"
 msgstr "Buscar"
 
 #: lms/templates/header/navbar-authenticated.html:31
 #: lms/templates/header/navbar-authenticated.html:32
-#: lms/templates/header/navbar-not-authenticated.html:40
-#: lms/templates/header/navbar-not-authenticated.html:41
+#: lms/templates/header/navbar-not-authenticated.html:43
+#: lms/templates/header/navbar-not-authenticated.html:44
 msgid "Menu"
 msgstr ""
 
@@ -1737,23 +1238,23 @@ msgstr ""
 
 #: lms/templates/header/navbar-authenticated.html:38
 #: lms/templates/header/navbar-authenticated.html:54
-#: lms/templates/header/navbar-not-authenticated.html:45
-#: lms/templates/header/navbar-not-authenticated.html:58
+#: lms/templates/header/navbar-not-authenticated.html:48
+#: lms/templates/header/navbar-not-authenticated.html:61
 msgid "Explore courses"
 msgstr "Buscar Cursos"
 
 #: lms/templates/header/navbar-authenticated.html:40
 #: lms/templates/header/navbar-authenticated.html:57
-#: lms/templates/header/navbar-not-authenticated.html:47
-#: lms/templates/header/navbar-not-authenticated.html:61
+#: lms/templates/header/navbar-not-authenticated.html:50
+#: lms/templates/header/navbar-not-authenticated.html:64
 #: lms/templates/static_templates/about.html:6
 msgid "About"
 msgstr ""
 
 #: lms/templates/header/navbar-authenticated.html:42
 #: lms/templates/header/navbar-authenticated.html:60
-#: lms/templates/header/navbar-not-authenticated.html:49
-#: lms/templates/header/navbar-not-authenticated.html:64
+#: lms/templates/header/navbar-not-authenticated.html:52
+#: lms/templates/header/navbar-not-authenticated.html:67
 #: lms/templates/static_templates/faq.html:6
 #: lms/templates/static_templates/faq.html:29
 #: lms/templates/static_templates/faq.html:30
@@ -1765,8 +1266,15 @@ msgid "{platform_name} Home Page"
 msgstr ""
 
 #: lms/templates/header/navbar-not-authenticated.html:35
-#: lms/templates/student_account/login2.underscore:49
 msgid "Sign in"
+msgstr ""
+
+#: lms/templates/header/navbar-not-authenticated.html:39
+msgid "Register"
+msgstr ""
+
+#: lms/templates/header/navbar-not-authenticated.html:70
+msgid "Certificate validation "
 msgstr ""
 
 #: lms/templates/header/user_dropdown.html:31
@@ -2181,358 +1689,7 @@ msgstr ""
 msgid "among others"
 msgstr "entre otras instituciones"
 
-#: lms/templates/student_account/form_field.underscore:136
-msgid "Need help signing in?"
-msgstr "¿Necesitas ayuda para iniciar sesión?"
-
-#: lms/templates/student_account/form_field.underscore:138
-msgid "Forgot my password"
-msgstr "Olvidé mi contraseña"
-
-#: lms/templates/student_account/form_field.underscore:140
-#: lms/templates/student_account/form_field.underscore:149
-msgid "Other sign-in issues"
-msgstr ""
-
-#: lms/templates/student_account/form_field.underscore:145
-msgid "Need other help signing in?"
-msgstr ""
-
-#: lms/templates/student_account/form_field.underscore:147
-msgid "Create an account"
-msgstr "Crear una cuenta"
-
-#: lms/templates/student_account/login2.underscore:8
-msgid "Sign in to continue learning as {email}"
-msgstr ""
-
-#: lms/templates/student_account/login2.underscore:10
-msgid "Sign in to continue learning"
-msgstr ""
-
-#: lms/templates/student_account/login2.underscore:13
-msgid "You already have an edX account with your {enterprise_name} email address."
-msgstr ""
-
-#: lms/templates/student_account/login2.underscore:15
-msgid ""
-"Going forward, your account information will be updated and maintained by"
-" {enterprise_name}."
-msgstr ""
-
-#: lms/templates/student_account/login2.underscore:17
-msgid ""
-"You can view your information or unlink from {enterprise_name} anytime in"
-" your Account Settings."
-msgstr ""
-
-#: lms/templates/student_account/login2.underscore:19
-msgid "To continue learning with this account, sign in below."
-msgstr ""
-
-#: lms/templates/student_account/login2.underscore:21
-msgid "Sign In"
-msgstr ""
-
-#: lms/templates/student_account/login2.underscore:28
-msgid ""
-"Sign in here using your email address and password, or use one of the "
-"providers listed below."
-msgstr ""
-
-#: lms/templates/student_account/login2.underscore:30
-msgid "Sign in here using your email address and password."
-msgstr ""
-
-#: lms/templates/student_account/login2.underscore:32
-msgid "If you do not yet have an account, use the button below to register."
-msgstr ""
-
-#: lms/templates/student_account/login2.underscore:37
-msgid "Use my university info"
-msgstr ""
-
-#: lms/templates/student_account/login2.underscore:42
-#: lms/templates/student_account/login2.underscore:59
-msgid "or sign in with"
-msgstr ""
-
-#: lms/templates/student_account/login2.underscore:50
-#: lms/templates/student_account/login_and_register.html:90
-#: lms/templates/student_account/login_and_register.html:182
-#: lms/templates/student_account/login_and_register.html:200
-msgid "Sign in with Mi.UChile"
-msgstr "Iniciar Sesión con Mi.UChile"
-
-#: lms/templates/student_account/login2.underscore:72
-#, python-format
-msgid "Sign in with %(providerName)s"
-msgstr ""
-
-#: lms/templates/student_account/login2.underscore:83
-msgid "First time here?"
-msgstr "¿Primera vez aquí?"
-
-#: lms/templates/student_account/login2.underscore:84
-msgid "Create an Account."
-msgstr "Crear Cuenta"
-
 #: lms/templates/student_account/login_and_register.html:14
 msgid "Sign in or Register"
 msgstr ""
-
-#: lms/templates/student_account/login_and_register.html:100
-msgid "Account not active"
-msgstr "Cuenta no activa"
-
-#: lms/templates/student_account/login_and_register.html:103
-msgid "There is no account associated with the email entered"
-msgstr "No existe una cuenta asociada al correo ingresado"
-
-#: lms/templates/student_account/login_and_register.html:107
-msgid "Enter email"
-msgstr "Ingrese un correo"
-
-#: lms/templates/student_account/login_and_register.html:113
-msgid ""
-"Unexpected error, refresh the page and try again, if the error persists "
-"contact the help desk"
-msgstr ""
-"Error inesperado, actualice la página e intente nuevamente, si el error "
-"persiste contáctese con la mesa de ayuda"
-
-#: lms/templates/student_account/login_and_register.html:172
-msgid "Enter document number"
-msgstr "Ingrese número de documento"
-
-#: lms/templates/student_account/login_and_register.html:173
-msgid "The document number must be between 5 and 20 characters"
-msgstr "El número documento debe estar entre 5 y 20 carácteres"
-
-#: lms/templates/student_account/login_and_register.html:174
-msgid "Select a document type"
-msgstr "Seleccione un tipo de documento"
-
-#: lms/templates/student_account/login_and_register.html:175
-msgid "The document number must be alphanumeric"
-msgstr "El documento debe ser alfanumérico"
-
-#: lms/templates/student_account/login_and_register.html:176
-msgid "Incorrect Rut"
-msgstr "Rut incorrecto"
-
-#: lms/templates/student_account/login_and_register.html:178
-msgid "Document number already exists on the platform, press the login button."
-msgstr ""
-"Número documento ya existe en plataforma, presione el botón de inicio de "
-"sesión"
-
-#: lms/templates/student_account/login_and_register.html:213
-msgid "Unexpected error, please update and try again"
-msgstr "Error inesperado, por favor actualizar la página e intente nuevamente"
-
-#: lms/templates/student_account/register.underscore:6
-msgid "Already have an {platformName} account?"
-msgstr ""
-
-#: lms/templates/student_account/register.underscore:7
-msgid "Sign in."
-msgstr ""
-
-#: lms/templates/student_account/register.underscore:18
-msgid "Create an account using"
-msgstr ""
-
-#: lms/templates/student_account/register.underscore:31
-#, python-format
-msgid "Create account using %(providerName)s."
-msgstr ""
-
-#: lms/templates/student_account/register.underscore:38
-msgid "Use my institution/campus credentials"
-msgstr ""
-
-#: lms/templates/student_account/register.underscore:44
-msgid "or create a new one here"
-msgstr ""
-
-#: lms/templates/student_account/register.underscore:48
-msgid "Create an Account"
-msgstr ""
-
-#: lms/templates/student_account/register.underscore:60
-msgid "Support education research by providing additional information"
-msgstr ""
-
-#: lms/templates/student_account/register.underscore:67
-msgid "Create Account"
-msgstr ""
-
-#~ msgid "Certificate Validation"
-#~ msgstr "Validación de certificados"
-
-#~ msgid " already enrolled! After a course session ends, it will be archived."
-#~ msgstr ""
-#~ " inscritos de momento. Cuando el "
-#~ "curso termine, será guardado en la "
-#~ "pestaña de 'Cursos Archivados'"
-
-#~ msgid "The {platform_name} team"
-#~ msgstr "El equipo de {platform_name}"
-
-#~ msgid ""
-#~ "Hemos recibido su información y el "
-#~ "proceso de verificación de ID ha "
-#~ "empezado. Revise si recibe un correo "
-#~ "electrónico de {platform_name} en los "
-#~ "próximos días para confirmar si su "
-#~ "verificación fue exitosa. También puede "
-#~ "revisar el estado del proceso de "
-#~ "verificación en su página de inicio."
-#~ msgstr ""
-
-#~ msgid "Help desk hours (GMT-3): from 09:00 until 18:00 (Monday - Friday)"
-#~ msgstr "Horario de atención (GMT-3): Lunes a Viernes de 9:00 a 18:00 Hrs"
-
-#~ msgid "Discover New"
-#~ msgstr ""
-
-#~ msgid "Starts"
-#~ msgstr ""
-
-#~ msgid "Starts: {date}"
-#~ msgstr ""
-
-#~ msgid "E-Learning "
-#~ msgstr "Cursos E-Learning"
-
-#~ msgid "Platform "
-#~ msgstr " "
-
-#~ msgid "Enrollment in this course is by invitation only"
-#~ msgstr "Curso requiere postulación"
-
-#~ msgid "List of Courses"
-#~ msgstr "Lista de Cursos"
-
-#~ msgid "Sort by:"
-#~ msgstr "Ordenar por:"
-
-#~ msgid "Year:"
-#~ msgstr "Año:"
-
-#~ msgid "State:"
-#~ msgstr "Estado:"
-
-#~ msgid "Organizations:"
-#~ msgstr "Organizaciones:"
-
-#~ msgid "Universität Heidelberg"
-#~ msgstr ""
-
-#~ msgid "Facultad de Ciencias Físicas y Matemáticas"
-#~ msgstr ""
-
-#~ msgid "Facultad de Economía y Negocios"
-#~ msgstr ""
-
-#~ msgid "Facultad de Medicina"
-#~ msgstr ""
-
-#~ msgid "ECBI Chile"
-#~ msgstr ""
-
-#~ msgid "Centro de Ciencia del Clima y la Resiliencia (CR)^2"
-#~ msgstr ""
-
-#~ msgid "Red Universitaria Nacional (REUNA)"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "It's official. It's easily shareable. "
-#~ "It's a proven motivator to complete "
-#~ "the course. {line_break}{link_start}Learn more "
-#~ "about the verified {cert_name_long}{link_end}."
-#~ msgstr ""
-
-#~ msgid "Enroll Now"
-#~ msgstr ""
-
-#~ msgid "Rut already exists on the platform"
-#~ msgstr "Rut ya existe en plataforma"
-
-#~ msgid "Contact Form"
-#~ msgstr "Formulario de contacto"
-
-#~ msgid "Fill out the form and our help desk will contact you shortly."
-#~ msgstr ""
-#~ "Llena el formulario y nuestra mesa "
-#~ "de ayuda se pondrá en contacto a"
-#~ " la brevedad."
-
-#~ msgid "Help desk hours (GMT-4): from 09:00 until 18:00 (Monday - Friday)"
-#~ msgstr ""
-
-#~ msgid "Try Again"
-#~ msgstr "¡Intente nuevamente!"
-
-#~ msgid "There was a problem trying to generate your ticket."
-#~ msgstr "Hubo un problema al intentar generar su ticket."
-
-#~ msgid "If the problem persists, send an email to"
-#~ msgstr "Si el problema persiste, envíe un correo a"
-
-#~ msgid "Enter a valid {error}"
-#~ msgstr "Ingresa un {error} válido"
-
-#~ msgid "¡Sent!"
-#~ msgstr "¡Consulta enviada!"
-
-#~ msgid "Our help desk will answer you as soon as possible"
-#~ msgstr "Espera a que nuestra mesa de ayuda se ponga en contacto contigo."
-
-#~ msgid "Name"
-#~ msgstr "Nombre"
-
-#~ msgid "Enter your name"
-#~ msgstr "Ingresa tu nombre"
-
-#~ msgid "Email"
-#~ msgstr "Correo electrónico"
-
-#~ msgid "Enter your email"
-#~ msgstr "Ingresa tu correo electrónico"
-
-#~ msgid "Related to:"
-#~ msgstr "Tipo de consulta"
-
-#~ msgid "Select an option"
-#~ msgstr "Selecciona una opción"
-
-#~ msgid "General"
-#~ msgstr "General"
-
-#~ msgid "Specific Course"
-#~ msgstr "Dudas de un curso en específico"
-
-#~ msgid "Login"
-#~ msgstr "Problemas con inicio de sesión"
-
-#~ msgid "Other"
-#~ msgstr "Otro"
-
-#~ msgid "Course name"
-#~ msgstr "Nombre del curso"
-
-#~ msgid "Enter the course name"
-#~ msgstr "Ingresa el nombre del curso con dudas"
-
-#~ msgid "Describe your problem"
-#~ msgstr "Describa su problema"
-
-#~ msgid "Enter your questions and queries here"
-#~ msgstr "Ingresa tus dudas y consultas en este campo de texto"
-
-#~ msgid "Create Mi.UChile account"
-#~ msgstr "Crear cuenta Mi.UChile"
 
