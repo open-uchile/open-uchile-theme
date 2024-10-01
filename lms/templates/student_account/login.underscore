@@ -119,8 +119,15 @@
     $('#login-email-desc').hide();
     $('#login-subtitle').hide();
     $('#register_btn').live('click', function(e){
-        window.open('/register','_blank');
-    });    
+        e.preventDefault();
+        const urlParams = new URLSearchParams(window.location.search);
+        const next = urlParams.get('next');
+        let registerUrl = '/register';
+        if (next) {
+            registerUrl += '?next=' + encodeURIComponent(next);
+        }
+        document.location.assign(registerUrl);
+    });
 
     create_tooltip();
     position_reset_password_link();
