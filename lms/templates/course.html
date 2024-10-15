@@ -36,6 +36,11 @@ now = timezone.now()
           <img class="card-logo" src="${main_class[course.id]['logo'].url}" >
         %endif
         <h5 class="card-title" title="${course.display_name_with_default}">${course.display_name_with_default}</h5>
+        %if main_class[course.id]['days_left']>0:
+          <p>Faltan ${main_class[course.id]['days_left']} días para su inicio.</p>
+        %else:
+          <p>Comenzó hace ${-1* main_class[course.id]['days_left']} días.</p>
+        %endif
         %if not main_class or course.id not in main_class or not main_class[course.id]['logo']:
           <p class="card-text ct1" title="${course.display_org_with_default}"><small>
               %if course.org != course.display_org_with_default:
