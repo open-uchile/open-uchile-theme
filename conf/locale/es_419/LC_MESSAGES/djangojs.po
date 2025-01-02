@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: help-open@uchile.cl\n"
-"POT-Creation-Date: 2024-09-12 20:37+0000\n"
+"POT-Creation-Date: 2025-01-02 15:42+0000\n"
 "PO-Revision-Date: 2022-07-28 20:11+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es_419\n"
@@ -593,43 +593,43 @@ msgstr ""
 "registrarse y acceder a los servicios en línea, dependiendo de su "
 "relación con la universidad. Para más información, visita "
 
-#: lms/templates/student_account/login.underscore:45
+#: lms/templates/student_account/login.underscore:47
 msgid "Or"
 msgstr "O"
 
-#: lms/templates/student_account/login.underscore:51
+#: lms/templates/student_account/login.underscore:55
 msgid "Don't have an account?"
 msgstr "¿No tienes cuenta?"
 
-#: lms/templates/student_account/login.underscore:55
-#: lms/templates/student_account/register.underscore:49
-#: lms/templates/student_account/register.underscore:66
+#: lms/templates/student_account/login.underscore:59
+#: lms/templates/student_account/register.underscore:51
+#: lms/templates/student_account/register.underscore:68
 msgid "Create account"
 msgstr "Crear cuenta"
 
-#: lms/templates/student_account/login.underscore:67
+#: lms/templates/student_account/login.underscore:71
 msgid "Go back"
 msgstr "Volver"
 
-#: lms/templates/student_account/login.underscore:72
+#: lms/templates/student_account/login.underscore:77
 msgid "Use my university info"
 msgstr ""
 
-#: lms/templates/student_account/login.underscore:77
-#: lms/templates/student_account/login.underscore:90
+#: lms/templates/student_account/login.underscore:82
+#: lms/templates/student_account/login.underscore:95
 msgid "or sign in with"
 msgstr ""
 
-#: lms/templates/student_account/login.underscore:84
+#: lms/templates/student_account/login.underscore:89
 msgid "Sign in"
 msgstr "Iniciar sesión"
 
-#: lms/templates/student_account/login.underscore:102
+#: lms/templates/student_account/login.underscore:107
 #, python-format
 msgid "Sign in with %(providerName)s"
 msgstr ""
 
-#: lms/templates/student_account/login.underscore:179
+#: lms/templates/student_account/login.underscore:192
 msgid "Forgot my password"
 msgstr "Olvidé mi contraseña"
 
@@ -649,31 +649,32 @@ msgstr ""
 msgid "Recover my password"
 msgstr "Recuperar mi contraseña"
 
-#: lms/templates/student_account/register.underscore:6
+#: lms/templates/student_account/register.underscore:8
 msgid "Already have an {platformName} account?"
 msgstr "¿Ya tienes una cuenta en la plataforma Open UChile?"
 
-#: lms/templates/student_account/register.underscore:10
+#: lms/templates/student_account/register.underscore:12
 msgid "Access"
 msgstr "Acceder"
 
-#: lms/templates/student_account/register.underscore:19
+#: lms/templates/student_account/register.underscore:21
 msgid "Create an account using"
 msgstr ""
 
-#: lms/templates/student_account/register.underscore:32
+#: lms/templates/student_account/register.underscore:34
 #, python-format
 msgid "Create account using %(providerName)s."
 msgstr ""
 
-#: lms/templates/student_account/register.underscore:39
+#: lms/templates/student_account/register.underscore:41
 msgid "Use my institution/campus credentials"
 msgstr ""
 
-#: lms/templates/student_account/register.underscore:45
+#: lms/templates/student_account/register.underscore:47
 msgid "or create a new one here"
 msgstr ""
 
-#: lms/templates/student_account/register.underscore:61
+#: lms/templates/student_account/register.underscore:63
 msgid "Support education research by providing additional information"
 msgstr ""
+
