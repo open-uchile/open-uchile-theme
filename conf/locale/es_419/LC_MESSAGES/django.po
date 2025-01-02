@@ -1688,7 +1688,3 @@ msgstr "entre otras instituciones"
 #: lms/templates/student_account/login_and_register.html:14
 msgid "Sign in or Register"
 msgstr ""
-
-#~ msgid "An error has occurred. Please ensure that you are logged in to enroll."
-#~ msgstr ""
-
