@@ -14,9 +14,9 @@
 <%  course_class, main_class = get_course_ctgs(courses) %>
   % if 'featured' in course_class and len(course_class['featured']) > 0 :
     <section class="courses-container">
-      <div class="starred-course-title-container">
-        <h2 class="starred-course-tittle-institution">${_("Trending Courses").upper()}</h2>
-        <div class="starred-course-border"></div>
+      <div class="trending-course-title-container">
+        <h2 class="trending-course-tittle-institution">${_("Trending Courses").upper()}</h2>
+        <div class="trending-course-border"></div>
       </div>
       <section class="highlighted-courses">
         % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
