@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: help-open@uchile.cl\n"
-"POT-Creation-Date: 2024-09-12 20:37+0000\n"
+"POT-Creation-Date: 2025-01-02 15:42+0000\n"
 "PO-Revision-Date: 2022-07-28 20:11+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es_419\n"
@@ -431,7 +431,7 @@ msgid "See more"
 msgstr "Aprender más"
 
 #: lms/templates/courses_list.html:18
-msgid "Starred Courses"
+msgid "Trending Courses"
 msgstr "Cursos Destacados"
 
 #: lms/templates/courses_list.html:66
@@ -686,79 +686,75 @@ msgid ""
 "grade.{b_end}"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:45
-msgid "An error has occurred. Please ensure that you are logged in to enroll."
-msgstr ""
-
-#: lms/templates/courseware/course_about.html:49
+#: lms/templates/courseware/course_about.html:48
 msgid "An error occurred. Please try again later."
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:121
-#: lms/templates/courseware/course_about.html:126
+#: lms/templates/courseware/course_about.html:120
+#: lms/templates/courseware/course_about.html:125
 msgid "You are enrolled in this course"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:123
-#: lms/templates/courseware/course_about.html:137
+#: lms/templates/courseware/course_about.html:122
+#: lms/templates/courseware/course_about.html:136
 msgid "View Course"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:129
+#: lms/templates/courseware/course_about.html:128
 msgid "Course is full"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:131
+#: lms/templates/courseware/course_about.html:130
 msgid "Curso requiere postulación"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:133
+#: lms/templates/courseware/course_about.html:132
 msgid "Enrollment is Closed"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:152
+#: lms/templates/courseware/course_about.html:151
 msgid "Inscríbase ahora"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:174
+#: lms/templates/courseware/course_about.html:173
 msgid "View About Page in studio"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:204
+#: lms/templates/courseware/course_about.html:203
 msgid "Classes Start:"
 msgstr "Inicio de clases:"
 
-#: lms/templates/courseware/course_about.html:207
+#: lms/templates/courseware/course_about.html:206
 msgid "Today"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:226
+#: lms/templates/courseware/course_about.html:225
 msgid "Classes End:"
 msgstr "Término de clases:"
 
-#: lms/templates/courseware/course_about.html:240
+#: lms/templates/courseware/course_about.html:239
 msgid "Price:"
 msgstr "Precio:"
 
-#: lms/templates/courseware/course_about.html:253
+#: lms/templates/courseware/course_about.html:252
 msgid "There is one session available:"
 msgstr "Hay una edición del curso disponible:"
 
-#: lms/templates/courseware/course_about.html:254
+#: lms/templates/courseware/course_about.html:253
 msgid " already enrolled!"
 msgstr " inscritos de momento!"
 
-#: lms/templates/courseware/course_about.html:288
+#: lms/templates/courseware/course_about.html:287
 #: lms/templates/static_templates/faq.html:35
 msgid "Frequently Asked Questions"
 msgstr "Preguntas Frecuentes"
 
-#: lms/templates/courseware/course_about.html:305
+#: lms/templates/courseware/course_about.html:304
 msgctxt "self"
 msgid "Enroll"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:310
+#: lms/templates/courseware/course_about.html:309
 msgctxt "self"
 msgid "enroll"
 msgstr ""
@@ -1692,4 +1688,7 @@ msgstr "entre otras instituciones"
 #: lms/templates/student_account/login_and_register.html:14
 msgid "Sign in or Register"
 msgstr ""
+
+#~ msgid "An error has occurred. Please ensure that you are logged in to enroll."
+#~ msgstr ""
 
