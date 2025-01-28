@@ -21,16 +21,10 @@
       <section class="highlighted-courses">
         % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
           <ul class="courses-list">
-            %for course in course_class['featured']:
-              %if course.end is not None and course.end > now:
-                <li class="mb-3">
-                  <%include file="course.html" args="course=course,main_class=main_class" />
-                </li>
-              %elif course.end is None:
-                <li class="mb-3">
-                  <%include file="course.html" args="course=course,main_class=main_class" />
-                </li>
-              %endif
+            %for course in course_class['featured']:              
+              <li class="mb-3">
+                <%include file="course.html" args="course=course,main_class=main_class" />
+              </li>
             %endfor
           </ul>
         % endif
