@@ -4,15 +4,26 @@
 <%!
 from django.utils.translation import ugettext as _
 from django.urls import reverse
-
+from django.conf import settings
 from openedx.core.djangolib.markup import HTML, Text
+from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 %>
 
 <%block name="header_extras">
 <link rel="stylesheet" href="${static.url('open-uchile-theme/owlcarousel/owl.carousel.min.css')}">
 <link rel="stylesheet" href="${static.url('open-uchile-theme/owlcarousel/owl.theme.default.min.css')}">
 <script type="text/javascript" src="${static.url('open-uchile-theme/owlcarousel/owl.carousel.min.js')}"></script>
-
+</%block>
+<%block name="pagetitle">${_("Home")}</%block>
+<%block name="headextra">
+## OG (Open Graph) title and description added below to give social media info to display
+<meta property="og:title" content="${self.pagetitle()}">
+<meta property="og:description" content="${configuration_helpers.get_value('EOL_OG_SITE_DESCRIPTION', '')}">
+<meta property="og:type" content="website">
+<meta property="og:image" content="${static.url('open-uchile-theme/images/banner-linkedIn-2025.png')}">
+<meta property="og:url" content="${configuration_helpers.get_value('LMS_ROOT_URL', settings.LMS_ROOT_URL)}">
+<meta property="og:site_name" content="${configuration_helpers.get_value('EOL_OG_SITE_NAME', '')}">
+<meta property="og:locale" content="es_CL">
 </%block>
 <section class="container-fluid px-0" id="main">
   <div class="container-center">
