@@ -536,7 +536,7 @@ a.nav-link.user-menu{
 }
 a.nav-link.user-menu:hover,
 .nav-link.user-menu:focus{
-    filter: brightness(0) saturate(100%) invert(16%) sepia(78%) saturate(2139%) hue-rotate(203deg) brightness(99%) contrast(93%);
+    filter: brightness(0) invert(55%) sepia(109%) saturate(221%) hue-rotate(6deg) contrast(114%);
 }
 .open-mobile-view{
     display: block;
