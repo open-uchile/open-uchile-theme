@@ -22,6 +22,10 @@ now = timezone.now()
   ## (https://developers.facebook.com/docs/opengraph/howtos/maximizing-distribution-media-content#tags)
   <meta property="og:title" content="${course.display_name_with_default}" />
   <meta property="og:description" content="${get_course_about_section(request, course, 'short_description')}" />
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="${course_image_urls['large']}">
+  <meta property="og:site_name" content="OpenUChile">
+  <meta property="og:locale" content="es_CL">
 </%block>
 
 <%block name="js_extra">
