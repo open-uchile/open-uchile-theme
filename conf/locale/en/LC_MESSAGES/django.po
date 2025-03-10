@@ -482,7 +482,7 @@ msgstr ""
 msgid "E-Learning Platform "
 msgstr ""
 
-#: lms/templates/main.html:192
+#: lms/templates/main.html:193
 msgid "Skip to main content"
 msgstr ""
 
@@ -821,21 +821,26 @@ msgstr ""
 msgid "Year"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:101
+#: lms/templates/courseware/courses.html:105
 msgid "State"
-msgstr ""
-
-#: lms/templates/courseware/courses.html:107
-#: lms/templates/courseware/courses.html:108
-msgid "Active"
 msgstr ""
 
 #: lms/templates/courseware/courses.html:111
 #: lms/templates/courseware/courses.html:112
+msgid "Active"
+msgstr ""
+
+#: lms/templates/courseware/courses.html:115
+#: lms/templates/courseware/courses.html:116
 msgid "Finished"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:118
+#: lms/templates/courseware/courses.html:119
+#: lms/templates/courseware/courses.html:120
+msgid "Coming soon"
+msgstr ""
+
+#: lms/templates/courseware/courses.html:126
 msgid "Organizations"
 msgstr ""
 

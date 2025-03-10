@@ -477,7 +477,7 @@ msgstr "Open UChile"
 msgid "E-Learning Platform "
 msgstr "Cursos E-Learning"
 
-#: lms/templates/main.html:192
+#: lms/templates/main.html:193
 msgid "Skip to main content"
 msgstr ""
 
@@ -820,21 +820,26 @@ msgstr "Borrar Todo"
 msgid "Year"
 msgstr "Año"
 
-#: lms/templates/courseware/courses.html:101
+#: lms/templates/courseware/courses.html:105
 msgid "State"
 msgstr "Estado"
 
-#: lms/templates/courseware/courses.html:107
-#: lms/templates/courseware/courses.html:108
+#: lms/templates/courseware/courses.html:111
+#: lms/templates/courseware/courses.html:112
 msgid "Active"
 msgstr "Activo"
 
-#: lms/templates/courseware/courses.html:111
-#: lms/templates/courseware/courses.html:112
+#: lms/templates/courseware/courses.html:115
+#: lms/templates/courseware/courses.html:116
 msgid "Finished"
 msgstr "Finalizado"
 
-#: lms/templates/courseware/courses.html:118
+#: lms/templates/courseware/courses.html:119
+#: lms/templates/courseware/courses.html:120
+msgid "Coming soon"
+msgstr "Próximamente"
+
+#: lms/templates/courseware/courses.html:126
 msgid "Organizations"
 msgstr "Organizaciones"
 
@@ -1742,4 +1747,3 @@ msgstr ""
 
 #~ msgid "Next"
 #~ msgstr "Siguiente"
-
