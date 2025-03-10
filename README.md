@@ -1,6 +1,18 @@
 # open-uchile-theme
 Open UChile MOOCs theme for  OpenedX. This theme must be used as open-uchile-theme in OpenedX
 
+# Set OG Variables
+- Enter location `/admin/site_configuration/siteconfiguration/`
+    * In subdomain lms you must add the next two variables:
+        * EOL_OG_SITE_NAME is use to determine the site name on Open Graph on index
+        ```
+        "EOL_OG_SITE_NAME":"open Uchile"
+        ```
+        * EOL_OG_SITE_DESCRIPTION is use to describe the site name on Open Graph on index
+        ```
+        "EOL_OG_SITE_DESCRIPTION":"Somos la plataforma de educación online de la Universidad de Chile. Nuestro objetivo es ofrecer programas de alta calidad académica que combinen el prestigio de nuestra universidad con la flexibilidad del aprendizaje digital.""
+        ```
+
 ### Creating translation catalogues:
 
 Create this folder structure in your theme folder: your-theme-folder/conf/locale.
