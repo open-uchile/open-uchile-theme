@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: help-open@uchile.cl\n"
-"POT-Creation-Date: 2025-01-02 15:42+0000\n"
+"POT-Creation-Date: 2025-03-11 17:30+0000\n"
 "PO-Revision-Date: 2022-07-28 20:11+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es_419\n"
@@ -16,7 +16,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 
 #: cms/templates/container.html:127
 msgid "Display Name"
@@ -57,6 +57,7 @@ msgid "Adding components"
 msgstr ""
 
 #: cms/templates/container.html:178
+#, python-brace-format
 msgid ""
 "Select a component type under {strong_start}Add New "
 "Component{strong_end}. Then select a template."
@@ -73,6 +74,7 @@ msgid "Editing components"
 msgstr ""
 
 #: cms/templates/container.html:184
+#, python-brace-format
 msgid ""
 "Click the {strong_start}Edit{strong_end} icon in a component to edit its "
 "content."
@@ -160,6 +162,7 @@ msgid "Deprecated Component"
 msgstr ""
 
 #: cms/templates/course_outline.html:105
+#, python-brace-format
 msgid ""
 "To avoid errors, {platform_name} strongly recommends that you remove "
 "unsupported features from the course advanced settings. To do this, go to"
@@ -177,12 +180,14 @@ msgid "This course has proctored exam settings that are incomplete or invalid."
 msgstr ""
 
 #: cms/templates/course_outline.html:135
+#, python-brace-format
 msgid ""
 "To update these settings go to the {link_start}Proctored Exam Settings "
 "page{link_end}."
 msgstr ""
 
 #: cms/templates/course_outline.html:143
+#, python-brace-format
 msgid ""
 "To update these settings go to the {link_start}Advanced Settings "
 "page{link_end}."
@@ -284,6 +289,7 @@ msgid ""
 msgstr ""
 
 #: cms/templates/course_outline.html:285
+#, python-brace-format
 msgid ""
 "To make a section, subsection, or unit unavailable to learners, select "
 "the Configure icon for that level, then select the appropriate "
@@ -292,6 +298,7 @@ msgid ""
 msgstr ""
 
 #: cms/templates/course_outline.html:286
+#, python-brace-format
 msgid ""
 "To hide the content of a subsection from learners after the subsection "
 "due date has passed, select the Configure icon for a subsection, then "
@@ -443,10 +450,10 @@ msgid "Need help?"
 msgstr ""
 
 #: lms/templates/footer.html:22
-#: lms/templates/header/navbar-authenticated.html:46
-#: lms/templates/header/navbar-authenticated.html:66
-#: lms/templates/header/navbar-not-authenticated.html:56
-#: lms/templates/header/navbar-not-authenticated.html:73
+#: lms/templates/header/navbar-authenticated.html:47
+#: lms/templates/header/navbar-authenticated.html:67
+#: lms/templates/header/navbar-not-authenticated.html:57
+#: lms/templates/header/navbar-not-authenticated.html:74
 msgid "Contact us"
 msgstr "Contáctanos"
 
@@ -458,11 +465,15 @@ msgstr ""
 msgid "Privacy Policy"
 msgstr "Política de Privacidad"
 
-#: lms/templates/index.html:20
+#: lms/templates/index.html:17
+msgid "Home"
+msgstr ""
+
+#: lms/templates/index.html:31
 msgid "Open UChile "
 msgstr "Open UChile"
 
-#: lms/templates/index.html:21
+#: lms/templates/index.html:32
 msgid "E-Learning Platform "
 msgstr "Cursos E-Learning"
 
@@ -472,9 +483,9 @@ msgstr ""
 
 #: lms/templates/certificates/validate_certificates.html:7
 #: lms/templates/certificates/validate_certificates.html:33
-#: lms/templates/header/navbar-authenticated.html:44
-#: lms/templates/header/navbar-authenticated.html:63
-#: lms/templates/header/navbar-not-authenticated.html:54
+#: lms/templates/header/navbar-authenticated.html:45
+#: lms/templates/header/navbar-authenticated.html:64
+#: lms/templates/header/navbar-not-authenticated.html:55
 msgid "Certificate Validation "
 msgstr "Validación de certificados"
 
@@ -510,10 +521,12 @@ msgid "Prerequisite: "
 msgstr ""
 
 #: lms/templates/course_experience/course-outline-fragment.html:167
+#, python-brace-format
 msgid "due {date}"
 msgstr ""
 
 #: lms/templates/course_experience/course-outline-fragment.html:169
+#, python-brace-format
 msgid "{subsection_format} due {{date}}"
 msgstr ""
 
@@ -532,6 +545,7 @@ msgid "Pursue a Verified Certificate"
 msgstr ""
 
 #: lms/templates/course_modes/choose.html:12
+#, python-brace-format
 msgid "Enroll In {course_name} | Choose Your Track"
 msgstr ""
 
@@ -562,6 +576,7 @@ msgstr ""
 
 #: lms/templates/course_modes/choose.html:115
 #: lms/templates/course_modes/choose.html:127
+#, python-brace-format
 msgid ""
 "{b_start}Eligible for credit:{b_end} Receive academic credit after "
 "successfully completing the course"
@@ -569,6 +584,7 @@ msgstr ""
 
 #: lms/templates/course_modes/choose.html:117
 #: lms/templates/course_modes/choose.html:158
+#, python-brace-format
 msgid ""
 "{b_start}Unlimited Course Access: {b_end}Learn at your own pace, and "
 "access materials anytime to brush up on what you've learned."
@@ -576,6 +592,7 @@ msgstr ""
 
 #: lms/templates/course_modes/choose.html:120
 #: lms/templates/course_modes/choose.html:161
+#, python-brace-format
 msgid ""
 "{b_start}Graded Assignments: {b_end}Build your skills through graded "
 "assignments and projects."
@@ -583,6 +600,7 @@ msgstr ""
 
 #: lms/templates/course_modes/choose.html:122
 #: lms/templates/course_modes/choose.html:163
+#, python-brace-format
 msgid ""
 "{b_start}Easily Sharable: {b_end}Add the certificate to your CV or "
 "resume, or post it directly on LinkedIn."
@@ -594,12 +612,14 @@ msgid "Benefits of a Verified Certificate"
 msgstr ""
 
 #: lms/templates/course_modes/choose.html:128
+#, python-brace-format
 msgid ""
 "{b_start}Official:{b_end} Receive an instructor-signed certificate with "
 "the institution's logo"
 msgstr ""
 
 #: lms/templates/course_modes/choose.html:129
+#, python-brace-format
 msgid ""
 "{b_start}Easily shareable:{b_end} Add the certificate to your CV or "
 "resume, or post it directly on LinkedIn"
@@ -613,18 +633,21 @@ msgid ""
 msgstr ""
 
 #: lms/templates/course_modes/choose.html:168
+#, python-brace-format
 msgid ""
 "{b_start}Official: {b_end}Receive an instructor-signed certificate with "
 "the institution's logo"
 msgstr ""
 
 #: lms/templates/course_modes/choose.html:169
+#, python-brace-format
 msgid ""
 "{b_start}Easily shareable: {b_end}Add the certificate to your CV or "
 "resume, or post it directly on LinkedIn"
 msgstr ""
 
 #: lms/templates/course_modes/choose.html:170
+#, python-brace-format
 msgid ""
 "{b_start}Motivating: {b_end}Give yourself an additional incentive to "
 "complete the course"
@@ -658,6 +681,7 @@ msgid "Audit This Course (No Certificate)"
 msgstr ""
 
 #: lms/templates/course_modes/choose.html:219
+#, python-brace-format
 msgid ""
 "Audit this course for free and have access to course materials and "
 "discussions forums. {b_start}This track does not include graded "
@@ -665,6 +689,7 @@ msgid ""
 msgstr ""
 
 #: lms/templates/course_modes/choose.html:221
+#, python-brace-format
 msgid ""
 "Audit this course for free and have access to course materials and "
 "discussions forums. {b_start}This track does not include graded "
@@ -672,6 +697,7 @@ msgid ""
 msgstr ""
 
 #: lms/templates/course_modes/choose.html:223
+#, python-brace-format
 msgid ""
 "Audit this course for free and have access to course materials and "
 "discussions forums. {b_start}This track does not include unlimited course"
@@ -679,6 +705,7 @@ msgid ""
 msgstr ""
 
 #: lms/templates/course_modes/choose.html:225
+#, python-brace-format
 msgid ""
 "Audit this course for free and have complete access to all the course "
 "material, activities, tests, and forums.  {b_start}Please note that this "
@@ -686,136 +713,128 @@ msgid ""
 "grade.{b_end}"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:48
+#: lms/templates/courseware/course_about.html:53
 msgid "An error occurred. Please try again later."
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:120
 #: lms/templates/courseware/course_about.html:125
+#: lms/templates/courseware/course_about.html:130
 msgid "You are enrolled in this course"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:122
-#: lms/templates/courseware/course_about.html:136
+#: lms/templates/courseware/course_about.html:127
+#: lms/templates/courseware/course_about.html:141
 msgid "View Course"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:128
+#: lms/templates/courseware/course_about.html:133
 msgid "Course is full"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:130
+#: lms/templates/courseware/course_about.html:135
 msgid "Curso requiere postulación"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:132
+#: lms/templates/courseware/course_about.html:137
 msgid "Enrollment is Closed"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:151
+#: lms/templates/courseware/course_about.html:156
 msgid "Inscríbase ahora"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:173
+#: lms/templates/courseware/course_about.html:178
 msgid "View About Page in studio"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:203
+#: lms/templates/courseware/course_about.html:208
 msgid "Classes Start:"
 msgstr "Inicio de clases:"
 
-#: lms/templates/courseware/course_about.html:206
+#: lms/templates/courseware/course_about.html:211
 msgid "Today"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:225
+#: lms/templates/courseware/course_about.html:230
 msgid "Classes End:"
 msgstr "Término de clases:"
 
-#: lms/templates/courseware/course_about.html:239
+#: lms/templates/courseware/course_about.html:244
 msgid "Price:"
 msgstr "Precio:"
 
-#: lms/templates/courseware/course_about.html:252
+#: lms/templates/courseware/course_about.html:257
 msgid "There is one session available:"
 msgstr "Hay una edición del curso disponible:"
 
-#: lms/templates/courseware/course_about.html:253
+#: lms/templates/courseware/course_about.html:258
 msgid " already enrolled!"
 msgstr " inscritos de momento!"
 
-#: lms/templates/courseware/course_about.html:287
+#: lms/templates/courseware/course_about.html:292
 #: lms/templates/static_templates/faq.html:35
 msgid "Frequently Asked Questions"
 msgstr "Preguntas Frecuentes"
 
-#: lms/templates/courseware/course_about.html:304
+#: lms/templates/courseware/course_about.html:309
 msgctxt "self"
 msgid "Enroll"
 msgstr ""
 
-#: lms/templates/courseware/course_about.html:309
+#: lms/templates/courseware/course_about.html:314
 msgctxt "self"
 msgid "enroll"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:32
+#: lms/templates/courseware/courses.html:27
 msgid "Courses"
 msgstr "Cursos"
 
-#: lms/templates/courseware/courses.html:45
-msgid "Previous"
-msgstr "Anterior"
-
-#: lms/templates/courseware/courses.html:49
-msgid "Next"
-msgstr "Siguiente"
-
-#: lms/templates/courseware/courses.html:61
-#: lms/templates/courseware/courses.html:62
+#: lms/templates/courseware/courses.html:37
+#: lms/templates/courseware/courses.html:38
 msgid "Search for a course"
 msgstr "Buscar en nuestros cursos"
 
-#: lms/templates/courseware/courses.html:71
+#: lms/templates/courseware/courses.html:47
 msgid "Newer"
 msgstr "Más recientes"
 
-#: lms/templates/courseware/courses.html:72
+#: lms/templates/courseware/courses.html:48
 msgid "Older"
 msgstr "Más antiguos"
 
-#: lms/templates/courseware/courses.html:92
-#: lms/templates/courseware/courses.html:104
+#: lms/templates/courseware/courses.html:68
+#: lms/templates/courseware/courses.html:80
 msgid "Refine Your Search"
 msgstr "Refinar su búsqueda"
 
-#: lms/templates/courseware/courses.html:96
+#: lms/templates/courseware/courses.html:72
 msgid "Has seleccionado"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:97
+#: lms/templates/courseware/courses.html:73
 msgid "Clear All"
 msgstr "Borrar Todo"
 
-#: lms/templates/courseware/courses.html:108
+#: lms/templates/courseware/courses.html:84
 msgid "Year"
 msgstr "Año"
 
-#: lms/templates/courseware/courses.html:125
+#: lms/templates/courseware/courses.html:101
 msgid "State"
 msgstr "Estado"
 
-#: lms/templates/courseware/courses.html:131
-#: lms/templates/courseware/courses.html:132
+#: lms/templates/courseware/courses.html:107
+#: lms/templates/courseware/courses.html:108
 msgid "Active"
 msgstr "Activo"
 
-#: lms/templates/courseware/courses.html:135
-#: lms/templates/courseware/courses.html:136
+#: lms/templates/courseware/courses.html:111
+#: lms/templates/courseware/courses.html:112
 msgid "Finished"
 msgstr "Finalizado"
 
-#: lms/templates/courseware/courses.html:142
+#: lms/templates/courseware/courses.html:118
 msgid "Organizations"
 msgstr "Organizaciones"
 
@@ -824,11 +843,13 @@ msgid "Course details"
 msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html:76
+#, python-brace-format
 msgid "{course_number} {course_name} Home Page"
 msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html:80
 #: lms/templates/dashboard/_dashboard_course_listing.html:85
+#, python-brace-format
 msgid "{course_number} {course_name} Cover Image"
 msgstr ""
 
@@ -841,23 +862,28 @@ msgid "Coming Soon"
 msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html:122
+#, python-brace-format
 msgid "Ended - {date}"
 msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html:125
+#, python-brace-format
 msgid "Started - {date}"
 msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html:131
 #: lms/templates/dashboard/_dashboard_course_listing.html:135
+#, python-brace-format
 msgid "Starts - {date}"
 msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html:146
+#, python-brace-format
 msgid "for {course_display_name}"
 msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html:154
+#, python-brace-format
 msgid "You must select a session by {expiration_date} to access the course."
 msgstr ""
 
@@ -874,6 +900,7 @@ msgid "You can no longer change sessions."
 msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html:179
+#, python-brace-format
 msgid "You can change sessions until {entitlement_expiration_date}."
 msgstr ""
 
@@ -883,10 +910,12 @@ msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html:209
 #: lms/templates/dashboard/_dashboard_course_listing.html:231
+#, python-brace-format
 msgid "¡Te invito a matricularte a este curso! {course_name}"
 msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html:212
+#, python-brace-format
 msgid "Share {course_name} on Facebook"
 msgstr "Compartir {course_name} en Facebook"
 
@@ -896,6 +925,7 @@ msgid "Share on Facebook"
 msgstr "Compartir en Facebook"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html:234
+#, python-brace-format
 msgid "Share {course_name} on Twitter"
 msgstr "Compartir {course_name} en Twitter"
 
@@ -905,10 +935,12 @@ msgid "Share on Twitter"
 msgstr "Compartir en Twitter"
 
 #: lms/templates/dashboard/_dashboard_course_listing.html:253
+#, python-brace-format
 msgid "¡Te invito a matricularte a este curso! {course_name} {url}"
 msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html:255
+#, python-brace-format
 msgid "Share {course_name} on Linkedin"
 msgstr "Compartir {course_name} en Linkedin"
 
@@ -947,7 +979,8 @@ msgstr ""
 msgid "Verification not yet complete."
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:383
+#: lms/templates/dashboard/_dashboard_course_listing.html:384
+#, python-brace-format
 msgid "You only have {days} day left to verify for this course."
 msgid_plural "You only have {days} days left to verify for this course."
 msgstr[0] ""
@@ -991,6 +1024,7 @@ msgid "You have successfully verified your ID with edX"
 msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html:405
+#, python-brace-format
 msgid "Your current verification is effective until {date}."
 msgstr ""
 
@@ -999,6 +1033,7 @@ msgid "Your current verification will expire soon."
 msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html:411
+#, python-brace-format
 msgid ""
 "Your current verification will expire in {days} days. {start_link}Re-"
 "verify your identity now{end_link} using a webcam and a government-issued"
@@ -1006,12 +1041,13 @@ msgid ""
 msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html:426
+#, python-brace-format
 msgid ""
 "Pursue a {cert_name_long} to highlight the knowledge and skills you gain "
 "in this course."
 msgstr ""
 
-#: lms/templates/dashboard/_dashboard_course_listing.html:428
+#: lms/templates/dashboard/_dashboard_course_listing.html:429
 msgid ""
 "Es oficial. Es fácil de compartir. Es comprobado como motivador para la "
 "finalización del curso. "
@@ -1022,6 +1058,7 @@ msgid "Upgrade to Verified"
 msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html:455
+#, python-brace-format
 msgid ""
 "You must successfully complete {link_start}{prc_display}{link_end} before"
 " you begin this course."
@@ -1046,6 +1083,7 @@ msgid "Otras razones:"
 msgstr ""
 
 #: lms/templates/emails/failed_verification_email.txt:34
+#, python-brace-format
 msgid "Resubmit Verification: {reverify_url}"
 msgstr "Reenviar Verificación: {reverify_url}"
 
@@ -1058,10 +1096,12 @@ msgstr "Gracias,"
 #: lms/templates/emails/failed_verification_email.txt:38
 #: lms/templates/emails/passed_verification_email.txt:10
 #: lms/templates/emails/photo_submission_confirmation.txt:13
+#, python-brace-format
 msgid "{platform_name} team"
 msgstr ""
 
 #: lms/templates/emails/passed_verification_email.txt:4
+#, python-brace-format
 msgid "Hola {full_name},"
 msgstr ""
 
@@ -1070,12 +1110,14 @@ msgid "¡Felicitaciones! Tu verificación de identidad fue exitosa."
 msgstr ""
 
 #: lms/templates/emails/passed_verification_email.txt:7
+#, python-brace-format
 msgid ""
 "Tu verificación es válida durante un año. Esta expirará el "
 "{expiration_datetime}."
 msgstr ""
 
 #: lms/templates/emails/photo_submission_confirmation.txt:4
+#, python-brace-format
 msgid "Hi {full_name},"
 msgstr "Hola {full_name},"
 
@@ -1122,6 +1164,7 @@ msgid "To view live discussions, click Preview or View Live in Unit Settings."
 msgstr ""
 
 #: lms/templates/eoldiscussion/_discussion_inline_studio.html:9
+#, python-brace-format
 msgid "Discussion ID: {discussion_id}"
 msgstr ""
 
@@ -1210,6 +1253,7 @@ msgid "Choose Language"
 msgstr ""
 
 #: lms/templates/header/header.html:137
+#, python-brace-format
 msgid ""
 "{begin_strong}Warning:{end_strong} Your browser is not fully supported. "
 "We strongly recommend using {chrome_link} or {ff_link}."
@@ -1220,37 +1264,37 @@ msgstr ""
 msgid "Search"
 msgstr "Buscar"
 
-#: lms/templates/header/navbar-authenticated.html:31
-#: lms/templates/header/navbar-authenticated.html:32
-#: lms/templates/header/navbar-not-authenticated.html:43
-#: lms/templates/header/navbar-not-authenticated.html:44
-msgid "Menu"
-msgstr ""
-
-#: lms/templates/header/navbar-authenticated.html:36
-#: lms/templates/header/navbar-authenticated.html:51
-msgid "My Courses"
-msgstr ""
-
-#: lms/templates/header/navbar-authenticated.html:38
-#: lms/templates/header/navbar-authenticated.html:54
-#: lms/templates/header/navbar-not-authenticated.html:48
-#: lms/templates/header/navbar-not-authenticated.html:61
+#: lms/templates/header/navbar-authenticated.html:27
+#: lms/templates/header/navbar-authenticated.html:55
+#: lms/templates/header/navbar-not-authenticated.html:34
+#: lms/templates/header/navbar-not-authenticated.html:62
 msgid "Explore courses"
 msgstr "Buscar Cursos"
 
-#: lms/templates/header/navbar-authenticated.html:40
-#: lms/templates/header/navbar-authenticated.html:57
-#: lms/templates/header/navbar-not-authenticated.html:50
-#: lms/templates/header/navbar-not-authenticated.html:64
+#: lms/templates/header/navbar-authenticated.html:34
+#: lms/templates/header/navbar-authenticated.html:35
+#: lms/templates/header/navbar-not-authenticated.html:46
+#: lms/templates/header/navbar-not-authenticated.html:47
+msgid "Menu"
+msgstr ""
+
+#: lms/templates/header/navbar-authenticated.html:39
+#: lms/templates/header/navbar-authenticated.html:52
+msgid "My Courses"
+msgstr ""
+
+#: lms/templates/header/navbar-authenticated.html:41
+#: lms/templates/header/navbar-authenticated.html:58
+#: lms/templates/header/navbar-not-authenticated.html:51
+#: lms/templates/header/navbar-not-authenticated.html:65
 #: lms/templates/static_templates/about.html:6
 msgid "About"
 msgstr ""
 
-#: lms/templates/header/navbar-authenticated.html:42
-#: lms/templates/header/navbar-authenticated.html:60
-#: lms/templates/header/navbar-not-authenticated.html:52
-#: lms/templates/header/navbar-not-authenticated.html:67
+#: lms/templates/header/navbar-authenticated.html:43
+#: lms/templates/header/navbar-authenticated.html:61
+#: lms/templates/header/navbar-not-authenticated.html:53
+#: lms/templates/header/navbar-not-authenticated.html:68
 #: lms/templates/static_templates/faq.html:6
 #: lms/templates/static_templates/faq.html:29
 #: lms/templates/static_templates/faq.html:30
@@ -1258,18 +1302,19 @@ msgid "FAQ"
 msgstr ""
 
 #: lms/templates/header/navbar-logo-header.html:19
+#, python-brace-format
 msgid "{platform_name} Home Page"
 msgstr ""
 
-#: lms/templates/header/navbar-not-authenticated.html:35
+#: lms/templates/header/navbar-not-authenticated.html:38
 msgid "Sign in"
 msgstr ""
 
-#: lms/templates/header/navbar-not-authenticated.html:39
+#: lms/templates/header/navbar-not-authenticated.html:42
 msgid "Register"
 msgstr ""
 
-#: lms/templates/header/navbar-not-authenticated.html:70
+#: lms/templates/header/navbar-not-authenticated.html:71
 msgid "Certificate validation "
 msgstr ""
 
@@ -1385,6 +1430,7 @@ msgid "NOTE"
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/data_download.html:60
+#, python-brace-format
 msgid ""
 "The generated report is limited to {max_entries} responses. If you expect"
 " more than {max_entries} responses, try generating the report on a "
@@ -1469,6 +1515,7 @@ msgid ""
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/data_download.html:150
+#, python-brace-format
 msgid ""
 "{strong_start}Note{strong_end}: {ul_start}{li_start}To keep student data "
 "secure, you cannot save or email these links for direct access. Copies of"
@@ -1534,6 +1581,7 @@ msgid "(Learners not explicitly assigned to a cohort)"
 msgstr ""
 
 #: lms/templates/instructor/instructor_dashboard_2/send_email.html:74
+#, python-brace-format
 msgid "Learners in the {track_name} Track"
 msgstr ""
 
@@ -1688,3 +1736,10 @@ msgstr "entre otras instituciones"
 #: lms/templates/student_account/login_and_register.html:14
 msgid "Sign in or Register"
 msgstr ""
+
+#~ msgid "Previous"
+#~ msgstr "Anterior"
+
+#~ msgid "Next"
+#~ msgstr "Siguiente"
+
