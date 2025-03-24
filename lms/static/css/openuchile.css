@@ -859,7 +859,7 @@ ul.courses-list{
 }
 .courses-list .card-body .card-logo,
 #open-carousel-courses .card-body .card-logo{
-    max-height:75px;
+    max-height: 75px;
     margin-left: auto;
     margin-bottom: 10px;
 }
