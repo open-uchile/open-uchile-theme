@@ -48,14 +48,8 @@ now = timezone.now()
         <p class="card-text ct2" title="${course.short_description}">
           <small>${course.short_description}</small>
         </p>
+     
         <div class="row">
-          <div class="col-6">
-            % if course.course_state in ['ongoing_enrollable','upcoming_enrollable'] :
-              <span class="enrollable-badge"> ${_("Open Enrollments")} </span>
-            % elif course.course_state in ['upcoming_notenrollable','ongoing_notenrollable', 'completed']:
-              <span class="enrollable-badge-closed"> ${_("Closed Enrollments")} </span>
-            %endif
-          </div>
           <div class="col-6 text-right">
             %if main_class and course.id in main_class and main_class[course.id]['logo']:
                 <img class="card-logo" src="${main_class[course.id]['logo'].url}" >
@@ -63,13 +57,30 @@ now = timezone.now()
           </div>
         </div>
         <div class="row ct3">
-          <p class="text-left py-2 px-0">
-            % if course.course_state in ['ongoing_enrollable','upcoming_enrollable'] :
-              %if (course.days_left)>0:
-                ${_(f"Starts in {course.days_left} days.")}
+          <div class="col-md-6 py-2 px-0">
+            <p >
+              % if course.course_state in ['ongoing_enrollable','upcoming_enrollable'] :
+                %if (course.time_left[1] =='d'):
+                  ${_(f"Starts in {course.time_left[0]} days.")}
+                %elif (course.time_left[1] =='m'):
+                  ${_(f"Starts in {course.time_left[0]} months.")}
+                %elif (course.time_left[1] =='y'):
+                  ${_(f"Starts in {course.time_left[0]} years.")}
+                %endif
+              %endif
+              </p>
+          </div>
+          <div class="col-md-6 py-2 px-0">
+            %if course.invitation_only:
+              ${_("Curso requiere postulación")}
+            % else:
+              % if course.course_state in ['ongoing_enrollable','upcoming_enrollable'] :
+              <p class="enrollable-badge"> ${_("Open Enrollments")} </p>
+              % elif course.course_state in ['upcoming_notenrollable','ongoing_notenrollable', 'completed']:
+                <p class="enrollable-badge-closed"> ${_("Closed Enrollments")} </p>
               %endif
             %endif
-            </p>
+          </div>
           <%
             if course.start is not None:
                 course_date_string = course.start.strftime('%Y-%m-%dT%H:%M:%S%z')
