@@ -61,11 +61,11 @@ now = timezone.now()
             <p >
               % if course.course_state in ['ongoing_enrollable','upcoming_enrollable'] :
                 %if (course.time_left[1] =='d'):
-                  ${_(f"Starts in {course.time_left[0]} days.")}
+                  ${_("Starts in {time_left_int} days.").format(time_left_int=course.time_left[0])}
                 %elif (course.time_left[1] =='m'):
-                  ${_(f"Starts in {course.time_left[0]} months.")}
+                  ${_("Starts in {time_left_int} months.").format(time_left_int=course.time_left[0])}
                 %elif (course.time_left[1] =='y'):
-                  ${_(f"Starts in {course.time_left[0]} years.")}
+                  ${_("Starts in {time_left_int} years.").format(time_left_int=course.time_left[0])}
                 %endif
               %endif
               </p>
