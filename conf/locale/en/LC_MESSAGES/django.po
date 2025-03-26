@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: help-open@uchile.cl\n"
-"POT-Creation-Date: 2025-06-16 21:08+0000\n"
+"POT-Creation-Date: 2025-07-15 19:58+0000\n"
 "PO-Revision-Date: 2022-07-28 20:11+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -430,13 +430,10 @@ msgstr ""
 msgid "Permanently open"
 msgstr ""
 
-#: lms/templates/course.html:97 lms/templates/course_portal.html:81
-msgid "Inicio del curso"
-msgstr "Beginning of the course"
-
-#: lms/templates/course.html:106 lms/templates/course_portal.html:90
-msgid "Termino del curso"
-msgstr "Completion of the course"
+#: lms/templates/course.html:97 lms/templates/course.html:106
+#: lms/templates/course_portal.html:81 lms/templates/course_portal.html:90
+msgid "Beginning of the course"
+msgstr ""
 
 #: lms/templates/course.html:113 lms/templates/course_portal.html:97
 msgid "See more"
