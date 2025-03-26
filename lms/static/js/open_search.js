@@ -1,4 +1,5 @@
 var now = new Date();
+
 var index = 0;
 var currentTotal = 0;
 var state = 0 //0:can get data 1:waiting data 2: no more data
@@ -12,28 +13,14 @@ var filters = {
 
 var translation = {
     "Starts": "Empieza",
-    "Viewing": "Mostrando",
     "courses": "cursos",
     "course": "curso",
     "Newer": "Más nuevo",
     "Older": "Más antiguo",
-    "Refine Your Search": "Refinar su búsqueda",
     "Sort by:": "Ordenar por:",
     "Year:": "Año:",
-    "Finished course": "Curso finalizado",
-    "Permanently open": "Abierto permanentemente",
-    "See more": "Aprender más"
 }
 $(window).load(function() {
-    /*if(document.documentElement.lang == "es-419" ){
-        //delete when translations have been generated
-        $('.facet-option.discovery-button.order_by').each(function( index ) {
-        $( this ).text(T($( this ).data('text')))
-        });
-        $('.search-facets .header-facet').each(function( index ) {
-        $( this ).text(T($( this ).data('text')))
-        });
-    }*/
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     if (urlParams.has('search_query')){ 
@@ -79,7 +66,7 @@ function getData(){
             state = 0;
         }
         else state = 2;
-        $(".open-filter-bar #discovery-message").text(T("Viewing")+' ' + data.total + " "+T("courses"));
+        $(".open-filter-bar #discovery-message").text(gettext("Showing")+" " + data.total + " "+ gettext("courses"));
     });
 }
 
@@ -323,7 +310,7 @@ function createCourse(data, extra_data){
     '<img src="{image_url}" class="card-img-top img-fluid rounded-start" alt="{course_display_name}"></figure></div>'+
     '<div class="col-md-5"><div class="card-body">'+img_html+'<h5 class="card-title" title="{course_display_name}">{course_display_name}</h5>'+
     org_html+'<p class="card-text ct2" title="{course_overview}"><small>{course_overview}</small></p>'+
-    '<div class="row ct3">{course_date_html}</div><div class="card-button"><a href="/courses/{course}/about"><button type="button" class="btn btn-outline-light">'+T("See more")+'</button></a></div>'+
+    '<div class="row ct3">{course_date_html}</div><div class="card-button"><a href="/courses/{course}/about"><button type="button" class="btn btn-outline-light">'+gettext("See more")+'</button></a></div>'+
     '</div></div></div></div></div>';
     data['course_date_html'] = create_course_date_html(data.start, data.end, extra_data.advertised_start)
     data["course_display_name"] = data.content.display_name;
@@ -331,7 +318,6 @@ function createCourse(data, extra_data){
     data["is_active"] = course_is_active(data.end);
     if(extra_data.display_org_with_default != data["org"]) data["org"] = extra_data.display_org_with_default;
     else data["org"] = extra_data.main_classification.name || data.org;
-    //data["formatDate"] = formatDate(data.start, data.end);
     return edx.HtmlUtils.interpolateHtml(edx.HtmlUtils.HTML(coursehtml), data);
 }
 function course_is_active(end){
@@ -345,10 +331,10 @@ function create_course_date_html(start, end, advertised_start){
     const html1 = '<div class="col-md-12"><div class="open-course-date-icon"><img src="/static/open-uchile-theme/images/svg-2023/fecha termino.svg"></div>'+
     '<div class="open-course-date-text"><span>{date_text}</span></div></div>';
     const html2 = '<div class="col-md-6"><div class="open-course-date-icon"><img src="/static/open-uchile-theme/images/svg-2023/fecha inicio.svg"></div>'+
-    '<div class="open-course-date-text"><span>Inicio del curso</span>'+
+    '<div class="open-course-date-text"><span>'+gettext("Inicio del curso")+'</span>'+
     '<div class="course-date" aria-hidden="true">{start_date}</div> </div>'+
     '</div><div class="col-md-6"><div class="open-course-date-icon"><img src="/static/open-uchile-theme/images/svg-2023/fecha termino.svg"></div>'+
-    '<div class="open-course-date-text"><span>Termino del curso</span>'+
+    '<div class="open-course-date-text"><span>'+gettext("Termino del curso")+'</span>'+
     '<div class="course-date" aria-hidden="true">{end_date}</div></div></div>';
     var start_date  = new Date(start);
     var date_data = {
@@ -358,25 +344,13 @@ function create_course_date_html(start, end, advertised_start){
     if (end !== undefined){
         var end_date = new Date(end);
         date_data['end_date'] = translate_date(end_date);
-        if(end_date < now) return edx.HtmlUtils.interpolateHtml(edx.HtmlUtils.HTML(html1), {'date_text': T("Finished course")});
+        if(end_date < now) return edx.HtmlUtils.interpolateHtml(edx.HtmlUtils.HTML(html1), {'date_text':gettext("Finished course")});
     }
     if(advertised_start !== undefined && advertised_start != null && advertised_start != '') return edx.HtmlUtils.interpolateHtml(edx.HtmlUtils.HTML(html1), {'date_text': advertised_start});
-    if(now >= start_date) return edx.HtmlUtils.interpolateHtml(edx.HtmlUtils.HTML(html1), {'date_text': T("Permanently open")});
+    if(now >= start_date) return edx.HtmlUtils.interpolateHtml(edx.HtmlUtils.HTML(html1), {'date_text': gettext("Permanently open")});
     else return edx.HtmlUtils.interpolateHtml(edx.HtmlUtils.HTML(html2), date_data);
 }
 
-function formatDate(start, end){
-    var start_date  = new Date(start);
-    if (end !== undefined){
-        var end_date = new Date(end);
-        if(end_date < now) return T("Finished course");
-        else return translate_date(start_date);
-    }
-    else{
-        if(now >= start_date) return T("Permanently open");
-        else return translate_date(start_date);
-    }
-}
 
 function translate_date(date){
     var options = { year: 'numeric', month: 'short', day: 'numeric' };
@@ -391,11 +365,6 @@ function AddBtnFilterBar(type, value){
     createBtnActiveFilters(type, value)
 }
 
-/*function createActiveFilters(){
-    let filterBarHtml = '<div class="filters-inner"><ul id="active-filters" class="active-filters facet-list">'+
-        '</ul><button id="clear-all-filters" class="clear-filters flt-right discovery-button">Borrar todo</button></div>';
-    edx.HtmlUtils.append($("#filter-bar")[0], edx.HtmlUtils.HTML(filterBarHtml));
-}*/
 
 function createBtnActiveFilters(type, value){
     $('#active-filters li[data-type="'+type+'"]').remove();
