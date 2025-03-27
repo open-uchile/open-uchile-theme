@@ -330,7 +330,7 @@ function create_course_date_html(start, end, advertised_start){
         if(end_date < now) return edx.HtmlUtils.interpolateHtml(edx.HtmlUtils.HTML(html1), {'date_text':gettext("Finished course")});
     }
     if(advertised_start !== undefined && advertised_start != null && advertised_start != '') return edx.HtmlUtils.interpolateHtml(edx.HtmlUtils.HTML(html1), {'date_text': advertised_start});
-    if(now >= start_date) return edx.HtmlUtils.interpolateHtml(edx.HtmlUtils.HTML(html1), {'date_text': gettext("Permanently open")});
+    if(now >= start_date & date_data['end_date']  == '') return edx.HtmlUtils.interpolateHtml(edx.HtmlUtils.HTML(html1), {'date_text': gettext("Permanently open")});
     else return edx.HtmlUtils.interpolateHtml(edx.HtmlUtils.HTML(html2), date_data);
 }
 
