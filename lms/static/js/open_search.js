@@ -4,22 +4,13 @@ var index = 0;
 var currentTotal = 0;
 var state = 0 //0:can get data 1:waiting data 2: no more data
 var filters = {
-"search_string": "",
-"order_by": "",
-"year": "",
-"state": "",
-"classification": ""
+    "search_string": "",
+    "order_by": "",
+    "year": "",
+    "state": "",
+    "classification": ""
 }
 
-var translation = {
-    "Starts": "Empieza",
-    "courses": "cursos",
-    "course": "curso",
-    "Newer": "Más nuevo",
-    "Older": "Más antiguo",
-    "Sort by:": "Ordenar por:",
-    "Year:": "Año:",
-}
 $(window).load(function() {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
@@ -31,8 +22,8 @@ $(window).load(function() {
     $(window).scroll(function() {
     if($(window).scrollTop()  > $(window).height() / 2) {
         if (state == 0){
-        state = 1;
-        getData();
+            state = 1;
+            getData();
         }
     }
 });
@@ -41,11 +32,11 @@ function initDiscovery(search_string=""){
     currentTotal = 0;
     state = 1;
     filters = {
-    "search_string": search_string,
-    "order_by": "",
-    "year": "",
-    "state": "",
-    "classification":""
+        "search_string": search_string,
+        "order_by": "",
+        "year": "",
+        "state": "",
+        "classification":""
     };
     getData();
 }
@@ -74,7 +65,7 @@ $('.open-filter-bar .search-facets-lists input[type="checkbox"]').live('change',
     e.preventDefault();
     //$(this).blur();
     let facet = $(this).data("facet");
-    let display_name = T($(this).data("text"));
+    let display_name = gettext($(this).data("text"));
     let add_btn = true;
     if (this.checked){
         //$(this).addClass("selected");
@@ -255,13 +246,6 @@ $('#open-filter-mobile-btn').live('click', function(e) {
         if (this.checked) $('#FilterOffcanvasBottom .search-facets-lists input[data-facet="'+$(this).data("facet")+'"][data-value="'+$(this).data("value")+'"]').prop( "checked", true );
     });
 });
-function T(w){
-    // translate to spanish
-    if(document.documentElement.lang == "es-419" && translation[w] !== undefined ){
-        return translation[w];
-    }
-    else return w;
-}
 
 function getCourses(){
     cleanCourses();
@@ -272,7 +256,6 @@ function getCourses(){
         resolve('Promise success');
         reject('Promise rejected');
     });
-    
 }
 
 function createCourse(data, extra_data){
