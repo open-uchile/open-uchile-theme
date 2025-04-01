@@ -289,7 +289,7 @@ function createCourse(data, extra_data){
         data["mainClass_logo"] = extra_data.main_classification.logo;
         org_html = '';
     }
-    const coursehtml = '<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-3"><div class="card mb-3 {is_active}" data-about="/courses/{course}/about" style="cursor: pointer;" onclick="window.location.href = this.dataset.about"><div class="row g-0"><div class="col-md-7"><figure>'+
+    const coursehtml = '<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-3"><div class="card mb-3 {is_active}" data-about="/courses/{course}/about" data-state="{state}" style="cursor: pointer;" onclick="window.location.href = this.dataset.about"><div class="row g-0"><div class="col-md-7"><figure>'+
     '<img src="{image_url}" class="card-img-top img-fluid rounded-start" alt="{course_display_name}"></figure></div>'+
     '<div class="col-md-5"><div class="card-body">'+img_html+'<h5 class="card-title" title="{course_display_name}">{course_display_name}</h5>'+
     org_html+'<p class="card-text ct2" title="{course_overview}"><small>{course_overview}</small></p>'+
@@ -299,6 +299,7 @@ function createCourse(data, extra_data){
     data["course_display_name"] = data.content.display_name;
     data["course_overview"] = extra_data.short_description || data.content.overview;
     data["is_active"] = course_is_active(data.end);
+    data["state"] = data.course_state || '';
     if(extra_data.display_org_with_default != data["org"]) data["org"] = extra_data.display_org_with_default;
     else data["org"] = extra_data.main_classification.name || data.org;
     return edx.HtmlUtils.interpolateHtml(edx.HtmlUtils.HTML(coursehtml), data);
