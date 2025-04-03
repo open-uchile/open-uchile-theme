@@ -862,6 +862,7 @@ ul.courses-list{
     max-height: 75px;
     margin-left: auto;
     margin-bottom: 10px;
+    max-width: 100%;
 }
 .courses-list .card-body .ct1,
 #open-carousel-courses .card-body .ct1{
@@ -995,7 +996,12 @@ ul.courses-list{
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.courses-list .card .card-body .enrollable-badge {
+.courses-list .card .card-body .enrollable-badge-invitation {
+    background-color: #047c4c;
+}
+
+
+.courses-list .card .card-body .enrollable-badge-open {
     background-color: #e62e29;
 }
 
