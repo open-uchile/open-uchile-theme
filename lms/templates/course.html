@@ -32,39 +32,43 @@ now = timezone.now()
     </div>
     <div class="col-md-5">
       <div class="card-body">
-       
-        <h5 class="card-title" title="${course.display_name_with_default}">${course.display_name_with_default}</h5>
-        %if not main_class or course.id not in main_class or not main_class[course.id]['logo']:
-          <p class="card-text ct1" title="${course.display_org_with_default}"><small>
-              %if course.org != course.display_org_with_default:
-                ${course.display_org_with_default}
-              %elif main_class and course.id in main_class:
-                ${main_class[course.id]['name']}
-              %else:
-                ${course.org}
-              %endif
-          </small></p>
-        %endif
-        <p class="card-text ct2" title="${course.short_description}">
-          <small>${course.short_description}</small>
-        </p>
-     
         <div class="row">
-          <div class="col-6 text-right">
+          <div class="col-md-8">
+            <h5 class="card-title" title="${course.display_name_with_default}">${course.display_name_with_default}</h5>
+          </div>
+          <div class="col-md-4">
             %if main_class and course.id in main_class and main_class[course.id]['logo']:
                 <img class="card-logo" src="${main_class[course.id]['logo'].url}" >
             %endif
           </div>
-        </div>
+            %if not main_class or course.id not in main_class or not main_class[course.id]['logo']:
+              <p class="card-text ct1" title="${course.display_org_with_default}">
+                <small>
+                  %if course.org != course.display_org_with_default:
+                    ${course.display_org_with_default}
+                  %elif main_class and course.id in main_class:
+                    ${main_class[course.id]['name']}
+                  %else:
+                    ${course.org}
+                  %endif
+                </small>
+              </p>
+            %endif
+          </div>
+       
+        <p class="card-text ct2" title="${course.short_description}">
+          <small>${course.short_description}</small>
+        </p>
+
         <div class="row ct3">
           <div class="col-md-6 py-2 px-0">
             <p >
-              % if course.course_state in ['ongoing_enrollable','upcoming_enrollable'] :
-                %if (course.time_left[1] =='d'):
+              % if course.course_state in ['ongoing_enrollable','upcoming_enrollable']:
+                %if (course.time_left[1] =='d' and course.time_left[0] > 0):
                   ${_("Starts in {time_left_int} days.").format(time_left_int=course.time_left[0])}
-                %elif (course.time_left[1] =='m'):
+                %elif (course.time_left[1] =='m' and course.time_left[0] > 0):
                   ${_("Starts in {time_left_int} months.").format(time_left_int=course.time_left[0])}
-                %elif (course.time_left[1] =='y'):
+                %elif (course.time_left[1] =='y' and course.time_left[0] > 0):
                   ${_("Starts in {time_left_int} years.").format(time_left_int=course.time_left[0])}
                 %endif
               %endif
@@ -72,10 +76,10 @@ now = timezone.now()
           </div>
           <div class="col-md-6 py-2 px-0">
             %if course.invitation_only:
-              ${_("Curso requiere postulación")}
+              <p class="enrollable-badge-invitation"> ${_("Curso requiere postulación")}</p>
             % else:
               % if course.course_state in ['ongoing_enrollable','upcoming_enrollable'] :
-              <p class="enrollable-badge"> ${_("Open Enrollments")} </p>
+                <p class="enrollable-badge-open"> ${_("Open Enrollments")} </p>
               % elif course.course_state in ['upcoming_notenrollable','ongoing_notenrollable', 'completed']:
                 <p class="enrollable-badge-closed"> ${_("Closed Enrollments")} </p>
               %endif
