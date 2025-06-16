@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: help-open@uchile.cl\n"
-"POT-Creation-Date: 2025-03-11 17:30+0000\n"
+"POT-Creation-Date: 2025-06-16 21:08+0000\n"
 "PO-Revision-Date: 2022-07-28 20:11+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es_419\n"
@@ -477,7 +477,7 @@ msgstr "Open UChile"
 msgid "E-Learning Platform "
 msgstr "Cursos E-Learning"
 
-#: lms/templates/main.html:193
+#: lms/templates/main.html:192
 msgid "Skip to main content"
 msgstr ""
 
@@ -1747,3 +1747,4 @@ msgstr ""
 
 #~ msgid "Next"
 #~ msgstr "Siguiente"
+
