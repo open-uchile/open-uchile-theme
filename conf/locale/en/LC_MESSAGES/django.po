@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: help-open@uchile.cl\n"
-"POT-Creation-Date: 2025-03-11 17:30+0000\n"
+"POT-Creation-Date: 2025-06-16 21:08+0000\n"
 "PO-Revision-Date: 2022-07-28 20:11+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -821,21 +821,26 @@ msgstr ""
 msgid "Year"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:101
+#: lms/templates/courseware/courses.html:105
 msgid "State"
-msgstr ""
-
-#: lms/templates/courseware/courses.html:107
-#: lms/templates/courseware/courses.html:108
-msgid "Active"
 msgstr ""
 
 #: lms/templates/courseware/courses.html:111
 #: lms/templates/courseware/courses.html:112
+msgid "Active"
+msgstr ""
+
+#: lms/templates/courseware/courses.html:115
+#: lms/templates/courseware/courses.html:116
 msgid "Finished"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:118
+#: lms/templates/courseware/courses.html:119
+#: lms/templates/courseware/courses.html:120
+msgid "Coming soon"
+msgstr ""
+
+#: lms/templates/courseware/courses.html:126
 msgid "Organizations"
 msgstr ""
 
