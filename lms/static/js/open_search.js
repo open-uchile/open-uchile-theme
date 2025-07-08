@@ -67,10 +67,10 @@ function getData(){
     var pages = {"page_size": 20, "page_index": index }
     var copy = {...filters, ...pages};
     
-    $.post( "/search/course_discovery_eol/", copy )
+    $.post( "/course_classification/search/", copy )
     .done(function( data ) {
         data.results.forEach(element => {
-            edx.HtmlUtils.append($("#list-courses")[0], createCourse(element.data, element.extra_data));
+            edx.HtmlUtils.append($("#list-courses")[0], createCourse(element, element.extra_data));
         });
 
         currentTotal = currentTotal + data.results.length;
