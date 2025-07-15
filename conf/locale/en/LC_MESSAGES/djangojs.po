@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: help-open@uchile.cl\n"
-"POT-Creation-Date: 2025-06-16 21:08+0000\n"
+"POT-Creation-Date: 2025-07-15 19:58+0000\n"
 "PO-Revision-Date: 2022-07-28 20:11+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -162,6 +162,30 @@ msgstr ""
 #: cms/templates/js/course-outline.underscore:313
 #, python-format
 msgid "Click to add a new %(xblock_type)s"
+msgstr ""
+
+#: lms/static/js/open_search.js:61
+msgid "Showing"
+msgstr ""
+
+#: lms/static/js/open_search.js:61
+msgid "courses"
+msgstr ""
+
+#: lms/static/js/open_search.js:324
+msgid "See more"
+msgstr ""
+
+#: lms/static/js/open_search.js:345 lms/static/js/open_search.js:348
+msgid "Beginning of the course"
+msgstr ""
+
+#: lms/static/js/open_search.js:358
+msgid "Finished course"
+msgstr ""
+
+#: lms/static/js/open_search.js:361
+msgid "Permanently open"
 msgstr ""
 
 #: lms/templates/eoldiscussion/templates2.underscore:15
