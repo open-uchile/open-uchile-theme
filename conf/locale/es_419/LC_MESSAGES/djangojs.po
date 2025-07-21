@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: help-open@uchile.cl\n"
-"POT-Creation-Date: 2025-07-15 19:58+0000\n"
+"POT-Creation-Date: 2025-07-30 19:35+0000\n"
 "PO-Revision-Date: 2022-07-28 20:11+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es_419\n"
@@ -176,15 +176,19 @@ msgstr "cursos"
 msgid "See more"
 msgstr "Aprender más"
 
-#: lms/static/js/open_search.js:345 lms/static/js/open_search.js:348
-msgid "Beginning of the course"
-msgstr "Inicio del curso"
+#: lms/static/js/open_search.js:346
+msgid "Start date"
+msgstr "Fecha de inicio"
 
-#: lms/static/js/open_search.js:358
+#: lms/static/js/open_search.js:349
+msgid "End date"
+msgstr "Fecha de término"
+
+#: lms/static/js/open_search.js:359
 msgid "Finished course"
 msgstr "Curso finalizado"
 
-#: lms/static/js/open_search.js:361
+#: lms/static/js/open_search.js:362
 msgid "Permanently open"
 msgstr "Abierto permanentemente"
 
@@ -707,4 +711,3 @@ msgstr ""
 #: lms/templates/student_account/register.underscore:63
 msgid "Support education research by providing additional information"
 msgstr ""
-

@@ -315,10 +315,10 @@ function create_course_date_html(start, end, advertised_start){
     const html1 = '<div class="col-md-12"><div class="open-course-date-icon"><img src="/static/open-uchile-theme/images/svg-2023/fecha termino.svg"></div>'+
     '<div class="open-course-date-text"><span>{date_text}</span></div></div>';
     const html2 = '<div class="col-md-6"><div class="open-course-date-icon"><img src="/static/open-uchile-theme/images/svg-2023/fecha inicio.svg"></div>'+
-    '<div class="open-course-date-text"><span>'+gettext("Beginning of the course")+'</span>'+
+    '<div class="open-course-date-text"><span>'+gettext("Start date")+'</span>'+
     '<div class="course-date" aria-hidden="true">{start_date}</div> </div>'+
     '</div><div class="col-md-6"><div class="open-course-date-icon"><img src="/static/open-uchile-theme/images/svg-2023/fecha termino.svg"></div>'+
-    '<div class="open-course-date-text"><span>'+gettext("Beginning of the course")+'</span>'+
+    '<div class="open-course-date-text"><span>'+gettext("End date")+'</span>'+
     '<div class="course-date" aria-hidden="true">{end_date}</div></div></div>';
     var start_date  = new Date(start);
     var date_data = {
