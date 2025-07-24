@@ -38,18 +38,29 @@ function initDiscovery(search_string=""){
         "state": "",
         "classification":""
     };
+    clearFilter();
     getData();
 }
 
 function getData(){
     var pages = {"page_size": 20, "page_index": index }
     var copy = {...filters, ...pages};
-    
     $.post( "/course_classification/search/", copy )
     .done(function( data ) {
-        data.results.forEach(element => {
-            edx.HtmlUtils.append($("#list-courses")[0], createCourse(element, element.extra_data));
-        });
+        for (let i = 0; i < data.results.length; i += 2) {
+            const container = document.getElementById("list-courses"); 
+            let element_added = 0
+            const courseHtml = createCourse(data.results[i], data.results[i].extra_data);
+            const courseHtml2 = createCourse(data.results[i+1], data.results[i+1].extra_data);
+            if (element_added % 2 === 0) {
+                row = document.createElement('div');
+                row.className = 'row ml-5 mr-5 d-flex justify-content-center';
+                container.appendChild(row);
+            }
+            element_added = element_added + 1
+            edx.HtmlUtils.append(row, courseHtml);
+            edx.HtmlUtils.append(row, courseHtml2);
+        }
 
         currentTotal = currentTotal + data.results.length;
         if (data.total > currentTotal){
@@ -61,19 +72,33 @@ function getData(){
     });
 }
 
+$('#advance-button').live('click', function(e) {
+    const $div_filter = $('#filter-bar');
+    const $div_courses = $('#section-courses');
+
+    if ($div_filter.css('display') === 'none' || $div_filter.css('display') === '') {
+        $div_filter.css('display', 'block');
+        $div_filter.addClass("col-md-3");
+        $div_courses.removeClass("col-md-12");
+        $div_courses.addClass("col-md-9");
+    } else {
+        $div_filter.css('display', 'none');
+        $div_filter.removeClass("col-md-3");
+        $div_courses.removeClass("col-md-9");
+        $div_courses.addClass("col-md-12");
+    }
+});
+
 $('.open-filter-bar .search-facets-lists input[type="checkbox"]').live('change', function(e) {
     e.preventDefault();
-    //$(this).blur();
     let facet = $(this).data("facet");
     let display_name = gettext($(this).data("text"));
     let add_btn = true;
     if (this.checked){
-        //$(this).addClass("selected");
         filters[facet] = $(this).data("value");
         $('.open-filter-bar .search-facets-lists input[data-facet="'+facet+'"]').not(this).prop( "checked", false );
     }
     else{
-        //$(this).removeClass("selected");
         filters[facet] = "";
         add_btn = false;
     }
@@ -87,7 +112,7 @@ $('.open-filter-bar .search-facets-lists input[type="checkbox"]').live('change',
     // executes when promise is resolved successfully
     list_course1.then(
         function successValue(result) {
-            //console.log(result);
+            console.log(result);
         },
     )
     // executes if there is an error
@@ -95,30 +120,62 @@ $('.open-filter-bar .search-facets-lists input[type="checkbox"]').live('change',
         function errorValue(result) {
             console.log(result);
         }
+    );
+});
+
+$('#state-select, #year-select, #order-select').live('change', function(e) {
+    e.preventDefault();
+    let facet = $(this).data("facet");
+    filters[facet] = gettext($(this)[0].value);
+
+    let list_course1 = getCourses();
+    // executes when promise is resolved successfully
+    list_course1.then(
+        function successValue(result) {
+            // console.log(result);
+        },
     )
-    .finally(
-        function greet() {
+    .catch(
+        function errorValue(result) {
+            console.log(result);
         }
     );
 });
+
 $('#FilterOffcanvasBottom .search-facets-lists input[type="checkbox"]').live('change', function(e) {
     e.preventDefault();
     $('.open-filter-bar .search-facets-lists input[data-facet="'+$(this).data("facet")+'"][data-value="'+$(this).data("value")+'"]').trigger( "click" );
     $('#FilterOffcanvasBottom button.btn-close').trigger( "click" );
 });
+
+function clearFilter(){
+    filters["state"] = ""
+    filters["year"] = ""
+    filters["order_by"] = ""
+    let select = document.getElementById('state-select');
+    select.selectedIndex = 0;
+    select = document.getElementById('year-select');
+    select.selectedIndex = 0;
+    select = document.getElementById('order-select');
+    select.selectedIndex = 0;
+}
+
 $('.open-filter-bar #clear-filters').live('click', function(e) {
     e.preventDefault();
     $('.open-filter-bar #filter-bar').css("display", "none");
     $(".open-filter-bar #active-filters").html('');
     $('.open-filter-bar .search-facets-lists input').prop( "checked", false );
+    clearFilter();
     cleanCourses();
     initDiscovery();
 });
+
 $('#FilterOffcanvasBottom #clear-filters').live('click', function(e) {
     e.preventDefault();
     $('.open-filter-bar a#clear-filters').trigger( "click" );
     $('#FilterOffcanvasBottom button.btn-close').trigger( "click" );
 });
+
 $('.open-order-by-btn').live('click', function(e) {
     e.preventDefault();
     let facet = 'order_by';
@@ -137,17 +194,13 @@ $('.open-order-by-btn').live('click', function(e) {
     // executes when promise is resolved successfully
     list_course4.then(
         function successValue(result) {
-            //console.log(result);
+            console.log(result);
         },
     )
     // executes if there is an error
     .catch(
         function errorValue(result) {
             console.log(result);
-        }
-    )
-    .finally(
-        function greet() {
         }
     );
 });
@@ -185,16 +238,15 @@ $('#FilterOffcanvasBottom #filter-bar #active-filters span.fa-times').live('clic
     $('.open-filter-bar #filter-bar #active-filters li[data-type="'+$parent.data("type")+'"][data-value="'+$parent.data("value")+'"] span.fa-times').trigger( "click" );
     $('#FilterOffcanvasBottom button.btn-close').trigger( "click" );
 });
+
 $('#discovery-submit').live('click', function(e) {
     e.preventDefault();
-    //$('.icon.fa.fa-search').css("visibility", "hidden");
-    //$('#loading-indicator').toggleClass('hidden');
+
     filters["search_string"] = $("#discovery-input").val();
     let list_course3 = getCourses();
     // executes when promise is resolved successfully
     list_course3.then(
         function successValue(result) {
-            //console.log(result);
             if (filters["search_string"] != "") AddBtnFilterBar("search_string", filters["search_string"]);
         },
     )
@@ -206,11 +258,10 @@ $('#discovery-submit').live('click', function(e) {
     )
     .finally(
         function greet() {
-            //$('.icon.fa.fa-search').css("visibility", "visible");
-            //$('#loading-indicator').toggleClass('hidden');
         }
     );
 });
+
 $('#discovery-input').keypress(function(event){
     var keycode = (event.keyCode ? event.keyCode : event.which);
     if(keycode == '13'){
@@ -237,6 +288,7 @@ $('#discovery-input').keypress(function(event){
     );
     }
 });
+
 $('#open-filter-mobile-btn').live('click', function(e) {
     e.preventDefault();
     $('#open-filter-mobile-body').empty()
@@ -289,12 +341,27 @@ function createCourse(data, extra_data){
         data["mainClass_logo"] = extra_data.main_classification.logo;
         org_html = '';
     }
-    const coursehtml = '<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-3"><div class="card mb-3 {is_active}" data-about="/courses/{course}/about" data-state="{state}" style="cursor: pointer;" onclick="window.location.href = this.dataset.about"><div class="row g-0"><div class="col-md-7"><figure>'+
-    '<img src="{image_url}" class="card-img-top img-fluid rounded-start" alt="{course_display_name}"></figure></div>'+
-    '<div class="col-md-5"><div class="card-body">'+img_html+'<h5 class="card-title" title="{course_display_name}">{course_display_name}</h5>'+
+    let button_html = '<button type="button" class="btn btn-outline-light fw-bolder '
+    if (data.course_state == 'ongoing_enrollable' || data.course_state == 'upcoming_enrollable'){
+        button_html = button_html + data.course_state +'_color">'+gettext('Enroll now')
+    }else if(data.course_state == 'upcoming_notenrollable'){
+        button_html = button_html + data.course_state +'_color">'+gettext('Coming soon')
+    }else if(data.course_state == 'ongoing_notenrollable'){
+        button_html = button_html + data.course_state +'_color">'+gettext('See more')
+    }else if (data.course_state == 'completed'){
+        button_html = button_html  +'_color">'+gettext('Finished')
+    }
+
+    button_html =button_html +'</button>'
+    const coursehtml = '<div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 mb-3 mr-5">'+
+    '<div class="card mb-3 {is_active}" data-about="/courses/{course}/about" data-state="{state}" style="cursor: pointer;" onclick="window.location.href = this.dataset.about">'+
+    '<div class="row g-0">'+
+    '<figure><img src="{image_url}" class="card-img-top img-fluid rounded-start" alt="{course_display_name}"></figure></div>'+
+    '<div class="row g-0">'+
+    '<div class="card-body">'+img_html+'<h5 class="card-title" title="{course_display_name}">{course_display_name}</h5>'+
     org_html+'<p class="card-text ct2" title="{course_overview}"><small>{course_overview}</small></p>'+
-    '<div class="row ct3">{course_date_html}</div><div class="card-button"><a href="/courses/{course}/about"><button type="button" class="btn btn-outline-light">'+gettext("See more")+'</button></a></div>'+
-    '</div></div></div></div></div>';
+    '<div class="row ct3">{course_date_html}</div><div class="card-button"><a href="/courses/{course}/about"><button type="button" class="btn btn-outline-light fw-bolder">'+gettext("See more")+'</button></a></div>'+
+    '</div></div></div>';
     data['course_date_html'] = create_course_date_html(data.start, data.end, extra_data.advertised_start)
     data["course_display_name"] = data.content.display_name;
     data["course_overview"] = extra_data.short_description || data.content.overview;
@@ -304,6 +371,7 @@ function createCourse(data, extra_data){
     else data["org"] = extra_data.main_classification.name || data.org;
     return edx.HtmlUtils.interpolateHtml(edx.HtmlUtils.HTML(coursehtml), data);
 }
+
 function course_is_active(end){
     if (end !== undefined){
         var end_date = new Date(end);
@@ -311,6 +379,7 @@ function course_is_active(end){
     }
     return ''
 }
+
 function create_course_date_html(start, end, advertised_start){
     const html1 = '<div class="col-md-12"><div class="open-course-date-icon"><img src="/static/open-uchile-theme/images/svg-2023/fecha termino.svg"></div>'+
     '<div class="open-course-date-text"><span>{date_text}</span></div></div>';
@@ -335,7 +404,6 @@ function create_course_date_html(start, end, advertised_start){
     else return edx.HtmlUtils.interpolateHtml(edx.HtmlUtils.HTML(html2), date_data);
 }
 
-
 function translate_date(date){
     var options = { year: 'numeric', month: 'short', day: 'numeric' };
     if(document.documentElement.lang == "es-419" ){
@@ -349,17 +417,13 @@ function AddBtnFilterBar(type, value){
     createBtnActiveFilters(type, value)
 }
 
-
 function createBtnActiveFilters(type, value){
     $('#active-filters li[data-type="'+type+'"]').remove();
     let buttons = '<li data-type="{type}" data-value="{value}">{value}<span aria-hidden="true" class="fa fa-times"></span></li>'
     let filterBtn = edx.HtmlUtils.interpolateHtml(edx.HtmlUtils.HTML(buttons), {type:type, value:value});
     edx.HtmlUtils.append($(".open-filter-bar #active-filters")[0], filterBtn);
 }
-function removeBtnActiveFilters(type, value){
-    $("#" + type).remove();
-    if ( $('#active-filters').children().length == 0 ) $('#filter-bar').addClass("is-collapsed");
-}
+
 function cleanCourses(){
     index = 0;
     currentTotal = 0;
