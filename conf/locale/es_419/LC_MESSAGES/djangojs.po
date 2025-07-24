@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: help-open@uchile.cl\n"
-"POT-Creation-Date: 2025-07-15 19:58+0000\n"
+"POT-Creation-Date: 2025-07-24 21:24+0000\n"
 "PO-Revision-Date: 2022-07-28 20:11+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es_419\n"
@@ -164,27 +164,39 @@ msgstr ""
 msgid "Click to add a new %(xblock_type)s"
 msgstr ""
 
-#: lms/static/js/open_search.js:61
+#: lms/static/js/open_search.js:72
 msgid "Showing"
 msgstr "Mostrando"
 
-#: lms/static/js/open_search.js:61
+#: lms/static/js/open_search.js:72
 msgid "courses"
 msgstr "cursos"
 
-#: lms/static/js/open_search.js:324
+#: lms/static/js/open_search.js:368
+msgid "Enroll now"
+msgstr "Inscríbase ahora"
+
+#: lms/static/js/open_search.js:370
+msgid "Coming soon"
+msgstr "Próximamente"
+
+#: lms/static/js/open_search.js:372
 msgid "See more"
 msgstr "Aprender más"
 
-#: lms/static/js/open_search.js:345 lms/static/js/open_search.js:348
+#: lms/static/js/open_search.js:374
+msgid "Finished"
+msgstr "Finalizado"
+
+#: lms/static/js/open_search.js:410 lms/static/js/open_search.js:413
 msgid "Beginning of the course"
 msgstr "Inicio del curso"
 
-#: lms/static/js/open_search.js:358
+#: lms/static/js/open_search.js:423
 msgid "Finished course"
 msgstr "Curso finalizado"
 
-#: lms/static/js/open_search.js:361
+#: lms/static/js/open_search.js:426
 msgid "Permanently open"
 msgstr "Abierto permanentemente"
 
