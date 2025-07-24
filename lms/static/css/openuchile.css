@@ -1016,6 +1016,24 @@ ul.courses-list{
         width: 100%;
     }
 }
+.courses-list .card-button button.ongoing_enrollable_color,
+.courses-list .card-button button.upcoming_enrollable {
+    background: #008852;
+    border: #008852;
+    text-shadow: none;
+}
+.courses-list .card-button button.upcoming_notenrollable_color {
+    background: #EF4035;
+    border: #EF4035;
+    text-shadow: none;
+}
+.courses-list .card-button button.ongoing_notenrollable_color,
+.courses-list .card-button button.completed_color {
+    background: #004e98; 
+    border: #004e98;
+    text-shadow: none;
+}
+
 .btn-advanced-open:focus:not(:disabled),
 .btn-advanced-open:hover:not(:disabled),
 .btn-advanced-open{

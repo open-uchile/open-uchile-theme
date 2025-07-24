@@ -360,13 +360,14 @@ function createCourse(data, extra_data){
     '<div class="row g-0">'+
     '<div class="card-body">'+img_html+'<h5 class="card-title" title="{course_display_name}">{course_display_name}</h5>'+
     org_html+'<p class="card-text ct2" title="{course_overview}"><small>{course_overview}</small></p>'+
-    '<div class="row ct3">{course_date_html}</div><div class="card-button"><a href="/courses/{course}/about"><button type="button" class="btn btn-outline-light fw-bolder">'+gettext("See more")+'</button></a></div>'+
+    '<div class="row ct3">{course_date_html}</div><div class="card-button"><a href="/courses/{course}/about">'+ button_html +'</a></div>'+
     '</div></div></div>';
     data['course_date_html'] = create_course_date_html(data.start, data.end, extra_data.advertised_start)
     data["course_display_name"] = data.content.display_name;
     data["course_overview"] = extra_data.short_description || data.content.overview;
     data["is_active"] = course_is_active(data.end);
     data["state"] = data.course_state || '';
+   
     if(extra_data.display_org_with_default != data["org"]) data["org"] = extra_data.display_org_with_default;
     else data["org"] = extra_data.main_classification.name || data.org;
     return edx.HtmlUtils.interpolateHtml(edx.HtmlUtils.HTML(coursehtml), data);
