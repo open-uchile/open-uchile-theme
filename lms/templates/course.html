@@ -19,19 +19,16 @@ now = timezone.now()
 <%
     course_about = reverse('about_course', args=[text_type(course.id)])
 %>
-<div class="card ${card_class}" data-about="${course_about}" style="cursor: pointer;" onclick="window.location.href = this.dataset.about">
+<div class="card ${card_class} h-100" data-about="${course_about}" style="cursor: pointer;" onclick="window.location.href = this.dataset.about">
 
-  <div class="row g-0">
+  <div class="row g-0 p-0">
     <div class="col-md-12">
       <div class="card-body">
-          <div class="row g-0">
+          <div class="row g-0 p-0">
             <figure>
                 <img src="${course.course_image_url}" class="card-img-top img-fluid rounded-start" alt="${course.display_name_with_default}">
               </figure>
           </div>
-        %if main_class and course.id in main_class and main_class[course.id]['logo']:
-          <img class="card-logo" src="${main_class[course.id]['logo'].url}" >
-        %endif
        <strong><h5 class="card-title fw-bold my-2" title="${course.display_name_with_default}">${course.display_name_with_default}</h5></strong> 
         %if not main_class or course.id not in main_class or not main_class[course.id]['logo']:
           <p class="card-text ct1" title="${course.display_org_with_default}"><small>
@@ -60,13 +57,13 @@ now = timezone.now()
           %>
           % if course.end is not None and now is not None and course.end < now:
           <div class="col-md-6">
-            <div class="row g-0">
-              <div class="col-md-2">
+            <div class="row g-0 p-0">
+              <div class="col-md-2 col-sm-2 m-0">
                 <div class="open-course-date-icon">
                   <img src="${static.url('open-uchile-theme/images/svg-2023/fecha termino.svg')}">
                 </div>
               </div>
-              <div class="col-md-10">
+              <div class="col-md-10 col-sm-10">
                 <div class="open-course-date-text ml-2">
                   <span>${_("Finished course")}</span>
                 </div>
@@ -75,13 +72,13 @@ now = timezone.now()
           </div>
           % elif course.advertised_start is not None:
           <div class="col-md-6">
-            <div class="row g-0">
-                <div class="col-md-2">
+            <div class="row g-0 p-0">
+                <div class="col-md-2 col-sm-2 m-0">
                 <div class="open-course-date-icon">
                   <img src="${static.url('open-uchile-theme/images/svg-2023/fecha inicio.svg')}">
                 </div>
               </div>
-              <div class="col-md-10">
+              <div class="col-md-10 col-sm-10">
                 <div class="open-course-date-text ml-2">
                   <span>${course.advertised_start}</span>
                 </div>
@@ -90,13 +87,13 @@ now = timezone.now()
           </div>
           % elif course.self_paced and course.start <= now:
            <div class="col-md-6">
-              <div class="row g-0">
-                <div class="col-md-2">
+              <div class="row g-0 p-0">
+                <div class="col-md-2 col-sm-2 m-0">
                   <div class="open-course-date-icon">
                     <img src="${static.url('open-uchile-theme/images/svg-2023/fecha inicio.svg')}">
                   </div>
                 </div>
-                <div class="col-md-10">
+                <div class="col-md-10 col-sm-10">
                   <div class="open-course-date-text ml-2">
                     <span>${_("Permanently open")}</span>
                   </div>
@@ -104,13 +101,13 @@ now = timezone.now()
             </div>
           % else:
             <div class="col-md-6">
-                <div class="row g-0">
-                  <div class="col-md-2">
+                <div class="row g-0 p-0">
+                  <div class="col-md-2 col-sm-2 m-0">
                     <div class="open-course-date-icon">
                       <img src="${static.url('open-uchile-theme/images/svg-2023/fecha inicio.svg')}">
                     </div>
                   </div>
-                  <div class="col-md-10">
+                  <div class="col-md-10 col-sm-10">
                     <div class="open-course-date-text ml-2">
                       <strong><span>${_("Beginning of the course")}</span></strong>
                     <div class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_date_string}" data-language="${LANGUAGE_CODE}" data-string=""></div>
@@ -119,14 +116,14 @@ now = timezone.now()
               </div>
             </div>
             <div class="col-md-6">
-              <div class="row g-0">
-                  <div class="col-md-2">
+              <div class="row g-0 p-0">
+                  <div class="col-md-2 col-sm-2 m-0">
                     <div class="open-course-date-icon">
                       <img src="${static.url('open-uchile-theme/images/svg-2023/fecha termino.svg')}">
                     </div>
                  
                   </div>
-                   <div class="col-md-10">
+                   <div class="col-md-10 col-sm-10">
                        <div class="open-course-date-text ml-2">
                       <strong><span>${_("Termino del curso")}</span></strong>
                       <div class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_enddate_string}" data-language="${LANGUAGE_CODE}" data-string=""></div>

@@ -27,7 +27,7 @@ now = timezone.now()
 
 <%page args="course" expression_filter="h"/>
 
-<div class="card ${card_class}" data-about="${course['course_url']}" style="cursor: pointer;" onclick="window.location.href = this.dataset.about">
+<div class="card ${card_class} h-100" data-about="${course['course_url']}" style="cursor: pointer;" onclick="window.location.href = this.dataset.about">
     <div class="row g-0">
       <div class="col-md-7">
         <figure>
