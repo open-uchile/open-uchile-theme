@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: help-open@uchile.cl\n"
-"POT-Creation-Date: 2025-07-15 19:58+0000\n"
+"POT-Creation-Date: 2025-07-24 21:24+0000\n"
 "PO-Revision-Date: 2022-07-28 20:11+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -784,61 +784,76 @@ msgctxt "self"
 msgid "enroll"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:27
+#: lms/templates/courseware/courses.html:31
 msgid "Courses"
 msgstr ""
 
 #: lms/templates/courseware/courses.html:37
-#: lms/templates/courseware/courses.html:38
-msgid "Search for a course"
-msgstr ""
-
-#: lms/templates/courseware/courses.html:47
-msgid "Newer"
-msgstr ""
-
-#: lms/templates/courseware/courses.html:48
-msgid "Older"
-msgstr ""
-
-#: lms/templates/courseware/courses.html:68
-#: lms/templates/courseware/courses.html:80
+#: lms/templates/courseware/courses.html:44
 msgid "Refine Your Search"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:72
-msgid "Has seleccionado"
-msgstr "You have selected"
-
-#: lms/templates/courseware/courses.html:73
+#: lms/templates/courseware/courses.html:47
 msgid "Clear All"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:84
+#: lms/templates/courseware/courses.html:57
+msgid "Order"
+msgstr ""
+
+#: lms/templates/courseware/courses.html:59
+#: lms/templates/courseware/courses.html:115
+msgid "Newer"
+msgstr ""
+
+#: lms/templates/courseware/courses.html:60
+#: lms/templates/courseware/courses.html:116
+msgid "Older"
+msgstr ""
+
+#: lms/templates/courseware/courses.html:65
 msgid "Year"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:105
+#: lms/templates/courseware/courses.html:68
+msgid "Select a year"
+msgstr ""
+
+#: lms/templates/courseware/courses.html:77
 msgid "State"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:111
-#: lms/templates/courseware/courses.html:112
+#: lms/templates/courseware/courses.html:79
+msgid "Select a state"
+msgstr ""
+
+#: lms/templates/courseware/courses.html:80
 msgid "Active"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:115
-#: lms/templates/courseware/courses.html:116
+#: lms/templates/courseware/courses.html:81
 msgid "Finished"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:119
-#: lms/templates/courseware/courses.html:120
+#: lms/templates/courseware/courses.html:82
 msgid "Coming soon"
 msgstr ""
 
-#: lms/templates/courseware/courses.html:126
+#: lms/templates/courseware/courses.html:86
 msgid "Organizations"
+msgstr ""
+
+#: lms/templates/courseware/courses.html:108
+#: lms/templates/courseware/courses.html:109
+msgid "Search for a course"
+msgstr ""
+
+#: lms/templates/courseware/courses.html:122
+msgid "Advanced"
+msgstr ""
+
+#: lms/templates/courseware/courses.html:128
+msgid "All courses"
 msgstr ""
 
 #: lms/templates/dashboard/_dashboard_course_listing.html:71
@@ -1736,4 +1751,7 @@ msgstr ""
 
 #~ msgid "Next"
 #~ msgstr ""
+
+#~ msgid "Has seleccionado"
+#~ msgstr "You have selected"
 
