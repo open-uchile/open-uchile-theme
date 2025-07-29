@@ -779,11 +779,7 @@ input[type="search"]::-ms-input-placeholder {
     margin-top: 50px;
 }
 /* New course card */
-@media screen and (min-width: 991px) {
-    .courses-list .card{
-        width: 874px;
-    }
-}
+
 @media screen and (min-width: 1900px) {
     ul.courses-list li{
         float: left
@@ -836,7 +832,6 @@ ul.courses-list{
 {
     padding-left: 5px;
 }
-.courses-list .card-body,
 #open-carousel-courses .card-body{
     padding: 0;
     padding-top: 10px;
@@ -888,6 +883,9 @@ ul.courses-list{
     -webkit-box-orient: vertical;
     line-height: 16px;
 }
+.courses-list .card-body .ct3 .col-md-6 .row{
+    display: contents;
+}
 .courses-list .card-body .ct3,
 #open-carousel-courses .card-body .ct3{
     margin: auto;
@@ -896,7 +894,6 @@ ul.courses-list{
     /*margin-top: 30px;*/
     margin-bottom: 5px;
     font-size: 13px;
-    min-width: 90%;
 }
 .courses-list .card-body .ct3 .col-md-12,
 #open-carousel-courses .card-body .ct3 .col-md-12{
@@ -932,7 +929,6 @@ ul.courses-list{
 }
 .courses-list .card-body .ct3 .col-md-6 .open-course-date-text,
 #open-carousel-courses .card-body .ct3 .col-md-6 .open-course-date-text{
-    width: calc(100% - 35px);
     display: flex;
     flex-direction: column;
     text-align: left;
