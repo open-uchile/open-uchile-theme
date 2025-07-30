@@ -997,6 +997,7 @@ ul.courses-list{
     position: relative;
     z-index: 10;
     width: 50%;
+    margin-right: 50px;
 }
 .open-search-bar .row{
     max-height: 64px;
@@ -1021,17 +1022,20 @@ ul.courses-list{
     background: #008852;
     border: #008852;
     text-shadow: none;
+    height: 30px;
 }
 .courses-list .card-button button.upcoming_notenrollable_color {
     background: #EF4035;
     border: #EF4035;
     text-shadow: none;
+    height: 30px;
 }
 .courses-list .card-button button.ongoing_notenrollable_color,
 .courses-list .card-button button.completed_color {
     background: #004e98; 
     border: #004e98;
     text-shadow: none;
+    height: 30px;
 }
 
 .btn-advanced-open:focus:not(:disabled),
@@ -1143,7 +1147,6 @@ ul.courses-list{
     font-size: 40px;
     line-height: 100%;
     letter-spacing: 0%;
-    border-bottom: 5px solid #004e98 ;width: 220px;
 }
 .courses-list #list-courses .col-md-12,
 .courses-container .courses-list .col-md-6{
@@ -1239,16 +1242,20 @@ aside span#title-filter{
     color: #565756;
 }
 #clear-filter-button{
-    height: 28px;
-    width: 66px;
+    background-color: white;
+    color: rgba(34, 99, 227, 1);
+    border: 2px solid rgba(34, 99, 227, 1);
+    box-shadow: none;
+    background-image: none;
 }
 aside a#clear-filters{
     display: contents;
-    color:#004e98;
+    color: #2263E3;
     font-size: 14px;
     padding: 0px;
     margin: 0px;
     font-weight: 500;
+    text-shadow: none
 }
 aside a#clear-filters:hover,
 aside a#clear-filters:focus{
@@ -1303,8 +1310,6 @@ aside h2.open-refine-search{
     font-weight: 600;
     line-height: 24px;
     letter-spacing: 0px;
-    vertical-align: middle;
-
 }
 .open-search-bar .open-search-col .dropdown-menu.dropdown-menu-end{
     border-radius: unset;
