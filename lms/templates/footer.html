@@ -5,20 +5,49 @@
   from django.utils.translation import ugettext as _
   from lms.djangoapps.branding.api import get_footer
   from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_enabled
+  from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
+  import json
 %>
 <% footer = get_footer(is_secure=is_secure) %>
 <% icp_license_info = getattr(settings, 'ICP_LICENSE_INFO', {})%>
 <%namespace name='static' file='static_content.html'/>
+<%
+footer_url_config = configuration_helpers.get_value('FOOTER_URL', '{}')
+instagram_url = footer_url_config.get('instagram', '')
+youtube_url = footer_url_config.get('youtube', '')
+linkedin_url = footer_url_config.get('linkedin', '')
+%>
 
 <footer id="openuchile-footer" class="openuchile-bg mt-auto text-center mx-auto py-4">
   <div class="container border-0 mb-3 px-5 text-center">
     <a href="https://www.uchile.cl/" target="_blank" class="text-decoration-none">
-      <img src="${static.url('open-uchile-theme/images/logo_uchile.png')}" class="img-fluid my-auto py-2 px-5" alt="UChile" style="max-height: 80px;">
+      <img src="${static.url('open-uchile-theme/images/logo_uchile.png')}" class="img-fluid my-auto py-2 px-5" alt="UChile" style="max-height: 110px;">
     </a>
+    
     <a href="https://oficinaeol.uchile.cl/" target="_blank" class="text-decoration-none">
-      <img src="${static.url('open-uchile-theme/images/logo_eol.png')}" class="img-fluid my-auto py-2 px-5" alt="EOL" style="max-height: 70px;">
+      <img src="${static.url('open-uchile-theme/images/logo_eol.png')}" class="img-fluid my-auto py-2 px-5" alt="EOL" style="max-height: 80px;">
     </a>
+    % if footer_url_config != {}:
+      <div class="border-0 mb-0 p-0 pt-4 text-center">
+        % if linkedin_url  != '':
+          <a class="text-decoration-none" href="${linkedin_url}" role="button" aria-expanded="false" alt="linkedIn OpenUchile" title="LinkedIn">
+            <span class="icon fa fa-linkedin-square icon-footer linkedin-hover-color" aria-hidden="true"></span>
+          </a>
+        % endif
+        % if youtube_url != '':
+          <a class="text-decoration-none" href="${youtube_url}" role="button" aria-expanded="false" alt="Youtube oficina EOL" title="Youtube">
+            <span class="icon fa fa-youtube-play icon-footer youtube-hover-color" aria-hidden="true"></span>
+          </a>
+        % endif
+        % if instagram_url != '': 
+          <a class="text-decoration-none" href="${instagram_url}" role="button" aria-expanded="false" alt="Página web oficina EOL" title="Oficina Eol">
+            <span class="icon fa fa-instagram icon-footer instagram-hover-color" aria-hidden="true"></span>
+          </a>
+        % endif
+      </div>
+    % endif
   </div>
+
   <p class="text-center">${_('Need help?')} <a href="/contact_form">${_('Contact us')}</a></p>
   <p class="text-center">
     <small class="text-muted">
