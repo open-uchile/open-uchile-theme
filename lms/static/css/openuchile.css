@@ -1570,3 +1570,23 @@ body .wrapper-preview-menu .preview-menu {
     border-top-color: rgba(0, 0, 0, 0.63);
     top: 0px;
 }
+
+.icon-footer{
+    background-color: #383D38;
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    align-content: center;
+    color: white;
+    font-size: 35px;
+}
+
+.youtube-hover-color:hover{
+    background-color: #c4302b;
+}
+.linkedin-hover-color:hover{
+    background-color: #0e76a8;
+}
+.instagram-hover-color:hover{
+    background-color: rgb(221, 42, 123);
+}
