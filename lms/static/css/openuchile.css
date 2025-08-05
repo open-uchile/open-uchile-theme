@@ -1681,3 +1681,53 @@ body .wrapper-preview-menu .preview-menu {
 .instagram-hover-color:hover{
     background-color: rgb(221, 42, 123);
 }
+
+#myTab.nav-tabs .nav-item .nav-link.active{
+    color: #1C4D94;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 100%;
+    border: none;
+    border-bottom: 4px solid #1C4D94;
+    text-decoration: none;
+}
+#myTab.nav-tabs .nav-item .nav-link{
+    color: #494949;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 100%;
+    border: none;
+    border-bottom: 1px solid #494949;
+    text-decoration: none;
+}
+#myTab.nav-tabs .nav-item .nav-link:hover{
+    color: #1C4D94;
+    font-weight: 700;
+}
+#myTab.nav-tabs{
+    border: none;
+}
+.tab-content{
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+}
+.text-align-justify{
+    text-align: justify;
+}
+.tab-content .tab-pane .image-tab{
+    background-size: 75%;
+    background-repeat: no-repeat;
+}
+.image-tab .text-align-justify{
+    background-color: white;
+}
+.about-us-tab{
+    background-image: url('/static/open-uchile-theme/images/svg-2023/default-image-tab.svg');
+}
+.platform-works-tab {
+    background-image: url('/static/open-uchile-theme/images/svg-2023/default-image-tab.svg'); 
+}
+.about-uchile-tab{
+    background-image: url('/static/open-uchile-theme/images/svg-2023/default-image-tab.svg');  
+}
