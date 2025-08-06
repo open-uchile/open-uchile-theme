@@ -30,21 +30,10 @@ now = timezone.now()
               </figure>
           </div>
        <strong><h5 class="card-title fw-bold my-2" title="${course.display_name_with_default}">${course.display_name_with_default}</h5></strong> 
-        %if not main_class or course.id not in main_class or not main_class[course.id]['logo']:
-          <p class="card-text ct1" title="${course.display_org_with_default}"><small>
-              %if course.org != course.display_org_with_default:
-                ${course.display_org_with_default}
-              %elif main_class and course.id in main_class:
-                ${main_class[course.id]['name']}
-              %else:
-                ${course.org}
-              %endif
-          </small></p>
-        %endif
         <p class="card-text ct2" title="${course.short_description}">
           <small>${course.short_description}</small>
         </p>
-        <div class="row ct3">
+        <div class="row ct3 my-2">
           <%
             if course.start is not None:
                 course_date_string = course.start.strftime('%Y-%m-%dT%H:%M:%S%z')
@@ -135,7 +124,7 @@ now = timezone.now()
         </div>
         
         <div class="card-button mt-2 p-0 mb-0">
-          <a href="${course_about}"><button type="button" class="dark-blue-button w-100">${_("See more")}</button></a>
+          <a href="${course_about}"><button type="button" class="dark-blue-button w-100 mb-0">${_("See more")}</button></a>
         </div>
       </div>
     </div>

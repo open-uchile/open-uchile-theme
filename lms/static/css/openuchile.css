@@ -831,6 +831,8 @@ ul.courses-list{
     -webkit-box-orient: vertical;
     font-weight: bold;
     margin: 0;
+    max-height: 46px;
+    height: 46px;
 }
 .courses-list .card-body .card-logo,
 #open-carousel-courses .card-body .card-logo{
@@ -840,7 +842,6 @@ ul.courses-list{
 }
 .courses-list .card-body .ct1,
 #open-carousel-courses .card-body .ct1{
-    /*height: 45px;*/
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -849,19 +850,20 @@ ul.courses-list{
     line-height: 16px;
     font-weight: bold;
     text-transform: uppercase;
+    height: 17px;
 }
 .courses-list .card-body .ct2,
 #open-carousel-courses .card-body .ct2{
-   /* height: 110px;*/
     overflow: hidden;
     margin-top: 10px;
     margin-bottom: auto;
     font-weight: lighter;
-    /*padding: 0 15px;*/
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     line-height: 16px;
+    max-height: 34px;
+    height: 34px;
 }
 .courses-list .card-body .ct3 .col-md-6 .row{
     display: contents;
@@ -882,6 +884,7 @@ ul.courses-list{
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    height: 55px;
 }
 .courses-list .card-body .ct3 .col-md-12 .open-course-date-icon, 
 .courses-list .card-body .ct3 .col-md-6 .open-course-date-icon,
@@ -906,6 +909,7 @@ ul.courses-list{
     display: flex;
     flex-direction: row;
     align-items: center;
+    height: 55px;
 }
 .courses-list .card-body .ct3 .col-md-6 .open-course-date-text,
 #open-carousel-courses .card-body .ct3 .col-md-6 .open-course-date-text{
@@ -916,7 +920,7 @@ ul.courses-list{
 }
 .courses-list .card-body .ct3 .col-md-6 .open-course-date-text span,
 #open-carousel-courses .card-body .ct3 .col-md-6 .open-course-date-text span{
-    font-weight: lighter;
+    font-weight: bolder;
 }
 
 .courses-list .card-body .ct3 .col-md-6 .open-course-date-text .course-date,

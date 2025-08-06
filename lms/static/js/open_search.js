@@ -334,7 +334,6 @@ function createCourse(data, extra_data){
         'short_description', 'advertised_start', 'display_org_with_default', 'main_classification'
         }
     */
-    let org_html = '<p class="card-text ct1" title="{org}"><small>{org}</small></p>'
     let button_html = '<button type="button" class="btn btn-outline-light fw-bolder '
     if (data.course_state == 'ongoing_enrollable' || data.course_state == 'upcoming_enrollable'){
         button_html = button_html + data.course_state +'_color">'+gettext('Enroll now')
@@ -348,13 +347,13 @@ function createCourse(data, extra_data){
 
     button_html =button_html +'</button>'
     const coursehtml = '<div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 mb-3 mr-5">'+
-    '<div class="card mb-3 {is_active} h-100" data-about="/courses/{course}/about" data-state="{state}" style="cursor: pointer;" onclick="window.location.href = this.dataset.about">'+
+    '<div class="card {is_active} h-100" data-about="/courses/{course}/about" data-state="{state}" style="cursor: pointer;" onclick="window.location.href = this.dataset.about">'+
     '<div class="row g-0 m-1">'+
     '<figure><img src="{image_url}" class="card-img-top img-fluid rounded-start" alt="{course_display_name}"></figure></div>'+
     '<div class="row g-0">'+
     '<div class="card-body m-3"><h5 class="card-title" title="{course_display_name}">{course_display_name}</h5>'+
-    org_html+'<p class="card-text ct2" title="{course_overview}"><small>{course_overview}</small></p>'+
-    '<div class="row ct3">{course_date_html}</div><div class="card-button"><a href="/courses/{course}/about">'+ button_html +'</a></div>'+
+    '<p class="card-text ct2" title="{course_overview}"><small>{course_overview}</small></p>'+
+    '<div class="row ct3 my-2">{course_date_html}</div><div class="card-button"><a href="/courses/{course}/about">'+ button_html +'</a></div>'+
     '</div></div></div>';
     data['course_date_html'] = create_course_date_html(data.start, data.end, extra_data.advertised_start)
     data["course_display_name"] = data.content.display_name;
@@ -376,7 +375,7 @@ function course_is_active(end){
 }
 
 function create_course_date_html(start, end, advertised_start){
-    const html1 = '<div class="col-md-12"><div class="open-course-date-icon"><img src="/static/open-uchile-theme/images/svg-2023/fecha termino.svg"></div>'+
+    const html1 = '<div class="col-md-12 justify-content-start"><div class="open-course-date-icon"><img src="/static/open-uchile-theme/images/svg-2023/fecha termino.svg"></div>'+
     '<div class="open-course-date-text"><span>{date_text}</span></div></div>';
     const html2 = '<div class="col-md-6"><div class="open-course-date-icon"><img src="/static/open-uchile-theme/images/svg-2023/fecha inicio.svg"></div>'+
     '<div class="open-course-date-text"><span>'+gettext("Beginning of the course")+'</span>'+
