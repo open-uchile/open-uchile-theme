@@ -124,7 +124,21 @@ now = timezone.now()
         </div>
         
         <div class="card-button mt-2 p-0 mb-0">
-          <a href="${course_about}"><button type="button" class="dark-blue-button w-100 mb-0">${_("See more")}</button></a>
+          <a href="${course_about}">
+            %if course.course_state:
+              %if course.course_state == 'ongoing_enrollable' or course.course_state == 'upcoming_enrollable':
+                <button type="button" class="dark-blue-button w-100 mb-0 ongoing_enrollable_color">${_("Enroll now")}</button>
+              % elif course.course_state == 'upcoming_notenrollable':
+                <button type="button" class="dark-blue-button w-100 mb-0 upcoming_notenrollable_color">${_("Coming soon")}</button>
+              % elif course.course_state == 'ongoing_notenrollable':
+                <button type="button" class="dark-blue-button w-100 mb-0 ongoing_notenrollable_color">${_("See more")}</button>
+              % elif course.course_state == 'completed':
+                <button type="button" class="dark-blue-button w-100 mb-0 completed_color">${_("Finished")}</button>
+              % endif
+            % else:
+              <button type="button" class="dark-blue-button w-100 mb-0 ongoing_notenrollable_color">${_("See more")}</button>
+             % endif
+          </a>
         </div>
       </div>
     </div>
