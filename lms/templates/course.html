@@ -45,7 +45,7 @@ now = timezone.now()
                 course_enddate_string = ''
           %>
           % if course.end is not None and now is not None and course.end < now:
-          <div class="col-md-6">
+          <div class="col-md-12 justify-content-start">
             <div class="row g-0 p-0">
               <div class="col-md-2 col-sm-2 m-0">
                 <div class="open-course-date-icon">
@@ -75,7 +75,7 @@ now = timezone.now()
             </div>
           </div>
           % elif course.self_paced and course.start <= now:
-           <div class="col-md-6">
+           <div class="col-md-12 justify-content-start">
               <div class="row g-0 p-0">
                 <div class="col-md-2 col-sm-2 m-0">
                   <div class="open-course-date-icon">
@@ -133,6 +133,8 @@ now = timezone.now()
               <button type="button" class="dark-blue-button w-100 mb-0 ongoing_notenrollable_color">${_("See more")}</button>
             % elif course.course_state == 'completed':
               <button type="button" class="dark-blue-button w-100 mb-0 completed_color">${_("Finished")}</button>
+            % else:
+              <button type="button" class="dark-blue-button w-100 mb-0">${_("See more")}</button>
             % endif
           </a>
         </div>
