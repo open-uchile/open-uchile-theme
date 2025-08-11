@@ -51,7 +51,10 @@ function getData(){
             const container = document.getElementById("list-courses"); 
             let element_added = 0
             const courseHtml = createCourse(data.results[i], data.results[i].extra_data);
-            const courseHtml2 = createCourse(data.results[i+1], data.results[i+1].extra_data);
+            let courseHtml2  = edx.HtmlUtils.interpolateHtml(edx.HtmlUtils.HTML('<div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 mb-3 mr-5"></div>'))
+            if(data.results.length!= i+1){
+               courseHtml2 = createCourse(data.results[i+1], data.results[i+1].extra_data);
+            }
             if (element_added % 2 === 0) {
                 row = document.createElement('div');
                 row.className = 'row ml-5 mr-5 d-flex justify-content-center';
