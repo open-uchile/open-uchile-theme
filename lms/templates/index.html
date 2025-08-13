@@ -46,7 +46,7 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
         </div>
       </div>
     </div>
-    <div class="owl-carousel owl-theme">
+      <div class="owl-carousel owl-theme">
           %for logo in get_all_logos():
            %if logo[1]:
             <div class="item"><a href="${logo[1]}" target="_blank"><img src="${logo[0]}"></div></a>
@@ -56,7 +56,7 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
           %endfor
         </div>
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
+<ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
