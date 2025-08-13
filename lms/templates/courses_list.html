@@ -2,16 +2,16 @@
 <%namespace name='static' file='static_content.html'/>
 <%! from django.utils.translation import ugettext as _ %>
 <%! from portal_api.utils import get_active_enroll_courses, get_platform_names %>
+<%! from datetime import datetime %>
+<%! from django.utils import timezone %>
 
 <%
-  from django.utils import timezone
-  now = timezone.now()
   courses_portal_api = get_active_enroll_courses()
+  now = timezone.now()
   platforms_name = get_platform_names()
-  from datetime import datetime
 %>
 <%! from course_classification.utils import get_course_ctgs %>
-% if settings.FEATURES.get('SHOW_COURSES_BY_CLASS'):
+
 <%  course_class, main_class = get_course_ctgs(courses) %>
   % if 'featured' in course_class and len(course_class['featured']) > 0 :
     <div class="trending-course-title-container">
@@ -19,9 +19,7 @@
       <div class="trending-course-border"></div>
     </div>
     <section class="courses-container">
-
       <section class="highlighted-courses">
-        % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
           <div class="courses-list">
             <% displayed_courses = 0 %>
             %for course in course_class['featured']:
@@ -29,7 +27,7 @@
                 <div class="row">
               %endif
                 <div class="col-md-3 col-sm-12 p-2">
-                  <%include file="course_dict.html" args="course=course,main_class={}" />
+                  <%include file="course.html" args="course=course,main_class={}" />
                 </div>
               <%  displayed_courses = displayed_courses +1 %>
               %if displayed_courses %4 == 0:
@@ -37,91 +35,11 @@
               %endif
             %endfor
           </div>
-        % endif
       </section>
     </section>
   %else:
-    %for categ in course_class:
-      %if (categ['show_opt'] == 2 or (categ['show_opt'] == 1 and len(categ['courses']) > 0)):
-        <section class="courses-container">
-          <div class="course-title-container">
-            <h2 class="course-tittle">${categ['name'].capitalize()}</h2> 
-          </div>
-          <section class="highlighted-courses">
-            % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
-              <ul class="courses-list">
-                %for course in course_class[categ['id']]['courses']:
-                  %if course.get("end", None) is not None and datetime.fromisoformat(course.get("end")).strftime('%Y-%m-%dT%H:%M:%S%z') > now:
-                    <li class="mb-3">
-                      <%include file="course_dict.html" args="course=course,main_class=main_class" />
-                    </li>
-                  %elif course.get("end", None) is None:
-                    <li class="mb-3">
-                      <%include file="course_dict.html" args="course=course,main_class=main_class" />
-                    </li>
-                  %endif
-                %endfor
-              </ul>
-            % endif
-          </section>
-        </section>
-      %endif
-      %if (categ['show_opt'] == 2 and len(course_class[categ['id']]['courses']) == 0):
-        <p class="without-courses" style="padding-bottom: 10px;"> ${_("No existen cursos")}</p>
-      %endif
-    %endfor
+    <p class="without-courses" style="padding-bottom: 10px;"> ${_("There are no courses")}</p>
   %endif
-%else:
-<section class="courses-container">
-  <section class="highlighted-courses">
-    % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
-      <ul class="courses-list">
-          ## limiting the course number by using HOMEPAGE_COURSE_MAX as the maximum number of courses
-          %for course in courses:
-            %if course.get("end", None) is not None and datetime.fromisoformat(course.get("end")).strftime('%Y-%m-%dT%H:%M:%S%z') > now:
-              %if course.enrollment_start is not None and course.enrollment_end is not None:
-                %if course.enrollment_end > now:
-                  <li class="mb-3">
-                    <%include file="course.html" args="course=course,main_class={}" />
-                  </li>
-                %endif
-              %endif
-            %elif course.get("end", None) is None:
-              %if course.enrollment_start is not None and course.enrollment_end is not None:
-                %if course.enrollment_end > now:
-                  <li class="mb-3">
-                    <%include file="course.html" args="course=course,main_class={}" />
-                  </li>
-                %endif
-              %endif
-            %endif
-          %endfor
-      </ul>
-    % endif
-  </section>
-</section>
-  %for platform in courses_portal_api:
-    % if len(courses_portal_api[platform]) > 0:
-      <section class="courses-container">
-        <div class="course-title-container">
-          <h2 class="course-tittle">${platforms_name[platform]}</h2>
-        </div>
-        <section class="highlighted-courses">
-          % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
-            <ul class="courses-list">
-              %for course_portal in courses_portal_api[platform]:
-                <li class="mb-3">
-                  <%include file="course_portal.html" args="course=course_portal" />
-                </li>
-              %endfor
-            </ul>
-          % endif
-        </section>
-      </section>
-    % endif
-  %endfor
-% endif
-
 <section class="courses-container">
   <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
     <li class="nav-item">

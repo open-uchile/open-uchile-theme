@@ -439,8 +439,8 @@ msgid "Trending Courses"
 msgstr "Cursos Destacados"
 
 #: lms/templates/courses_list.html:66
-msgid "No existen cursos"
-msgstr ""
+msgid "There are no courses"
+msgstr "No existen cursos"
 
 #: lms/templates/footer.html:22
 msgid "Need help?"
