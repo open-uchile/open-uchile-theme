@@ -1,9 +1,6 @@
 <%page expression_filter="h"/>
 <%!
-  import json
   from django.utils.translation import ugettext as _
-  from openedx.core.djangolib.js_utils import js_escaped_string, dump_js_escaped_json
-  from course_classification.helpers import get_featured_courses
   from datetime import datetime, timedelta
 %>
 <%inherit file="../main.html" />
