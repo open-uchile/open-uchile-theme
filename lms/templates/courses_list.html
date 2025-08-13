@@ -8,8 +8,9 @@
   now = timezone.now()
   courses_portal_api = get_active_enroll_courses()
   platforms_name = get_platform_names()
+  from datetime import datetime
 %>
-<%! from course_classification.helpers import get_course_ctgs %>
+<%! from course_classification.utils import get_course_ctgs %>
 % if settings.FEATURES.get('SHOW_COURSES_BY_CLASS'):
 <%  course_class, main_class = get_course_ctgs(courses) %>
   % if 'featured' in course_class and len(course_class['featured']) > 0 :
@@ -27,15 +28,9 @@
               %if displayed_courses %4 == 0:
                 <div class="row">
               %endif
-              %if course.end is not None and course.end > now:
                 <div class="col-md-3 col-sm-12 p-2">
-                  <%include file="course.html" args="course=course,main_class=main_class" />
+                  <%include file="course_dict.html" args="course=course,main_class={}" />
                 </div>
-              %elif course.end is None:
-                <div class="col-md-3 col-sm-12 p-2">
-                  <%include file="course.html" args="course=course,main_class=main_class" />
-                </div>
-              %endif
               <%  displayed_courses = displayed_courses +1 %>
               %if displayed_courses %4 == 0:
                 </div>
@@ -46,7 +41,7 @@
       </section>
     </section>
   %else:
-    %for categ in course_class.values():
+    %for categ in course_class:
       %if (categ['show_opt'] == 2 or (categ['show_opt'] == 1 and len(categ['courses']) > 0)):
         <section class="courses-container">
           <div class="course-title-container">
@@ -56,13 +51,13 @@
             % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
               <ul class="courses-list">
                 %for course in course_class[categ['id']]['courses']:
-                  %if course.end is not None and course.end > now:
+                  %if course.get("end", None) is not None and datetime.fromisoformat(course.get("end")).strftime('%Y-%m-%dT%H:%M:%S%z') > now:
                     <li class="mb-3">
-                      <%include file="course.html" args="course=course,main_class=main_class" />
+                      <%include file="course_dict.html" args="course=course,main_class=main_class" />
                     </li>
-                  %elif course.end is None:
+                  %elif course.get("end", None) is None:
                     <li class="mb-3">
-                      <%include file="course.html" args="course=course,main_class=main_class" />
+                      <%include file="course_dict.html" args="course=course,main_class=main_class" />
                     </li>
                   %endif
                 %endfor
@@ -83,7 +78,7 @@
       <ul class="courses-list">
           ## limiting the course number by using HOMEPAGE_COURSE_MAX as the maximum number of courses
           %for course in courses:
-            %if course.end is not None and course.end > now:
+            %if course.get("end", None) is not None and datetime.fromisoformat(course.get("end")).strftime('%Y-%m-%dT%H:%M:%S%z') > now:
               %if course.enrollment_start is not None and course.enrollment_end is not None:
                 %if course.enrollment_end > now:
                   <li class="mb-3">
@@ -91,7 +86,7 @@
                   </li>
                 %endif
               %endif
-            %elif course.end is None:
+            %elif course.get("end", None) is None:
               %if course.enrollment_start is not None and course.enrollment_end is not None:
                 %if course.enrollment_end > now:
                   <li class="mb-3">
