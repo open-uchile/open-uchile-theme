@@ -510,13 +510,13 @@ body {
 
 
 /* New Desing and Search button */
-
 a.nav-link.user-menu{
+    filter: brightness(0) saturate(100%) invert(17%) sepia(119%) saturate(4392%) hue-rotate(185deg) brightness(83%) contrast(140%);
     transition: none;
 }
 a.nav-link.user-menu:hover,
 .nav-link.user-menu:focus{
-    filter: brightness(0) invert(55%) sepia(109%) saturate(221%) hue-rotate(6deg) contrast(114%);
+    filter: brightness(0) saturate(100%) invert(29%) sepia(100%) saturate(746%) hue-rotate(98deg) brightness(92%) contrast(97%);
 }
 .open-mobile-view{
     display: block;
@@ -534,16 +534,17 @@ a.nav-link.user-menu:hover,
 }
 
 #open-navbar{
-    background-color: #172c6b;
+    background-color: white;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    font-family: 'Raleway', sans-serif !important;
 }
 #open-navbar .nav-link {
-    color: white;
+    color: #004B93;
 }
 #open-navbar .nav-link:hover,
 #open-navbar .nav-link:focus{
-    color: #fece43;
+    color: #008852;
 }
 #open-navbar .nav-item .nav-link:not(.btn):hover, .navbar .nav-item .nav-link:not(.btn):focus {
     border-color: rgb(255 255 255 / 55%) !important;
@@ -1176,11 +1177,15 @@ aside .search-facets-lists a.filter-btn.collapsed .arrow-filter {
 }
 
 .open-desktop-view,
-.dropdown-menu.dropdown-menu-end.show,
-#settings-language-value {
+.dropdown-menu.dropdown-menu-end.show{
     font-weight: 500;
+    font-size: 18px;
 }
-
+#settings-language-value {
+    font-weight: 400;
+    font-size: 12px;
+    min-height: 27px;
+}
 aside .search-facets-lists .form-check-input[type=checkbox] {
     color: #98A0B4;
     margin-top: 2px;
@@ -1501,27 +1506,23 @@ body .wrapper-preview-menu .preview-menu {
     z-index: 10;
 }
 .header-lang-selector{
-    border-radius: 6px;
-    border-color: white;
-    background-color: #172c6b;
-    color: white;
+    border: 1px #004B93 solid ;
+    border-radius: 21px;
+    border-color: #004B93;
+    background-color: white;
+    color: #004B93;
     padding: 0px 6px;
     font-size: 12px;
     width: 105px;
 }
-/*.header-lang-selector:hover,
-.header-lang-selector:focus{
-    border-color: #0d3d8f;
-    color: #0d3d8f;
-}*/
 .header-lang-selector option{
     border-color: white;
-    background-color: #172c6b;
+    background-color: #004B93;
     color: white;
     padding: 3px 0px;
 }
 .header-lang-selector option:hover{
-    border-color: #172c6b ;
+    border-color: #004B93 ;
     background-color: white;
     color: #0075b4 ;
 }
@@ -1736,4 +1737,14 @@ body .wrapper-preview-menu .preview-menu {
 }
 .about-uchile-tab{
     background-image: url('/static/open-uchile-theme/images/svg-2023/default-image-tab.svg');  
+}
+#openMenu{
+    box-shadow:0px 3px 5px 0px rgba(0, 0, 0, 0.09);
+    border-radius: 10px;
+}
+
+.dropdown-menu.dropdown-menu-end.show .dropdown-item:hover{
+    color: #008852;
+    text-decoration: none;
+    background-color: white;
 }
