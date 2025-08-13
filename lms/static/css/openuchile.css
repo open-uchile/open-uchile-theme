@@ -48,8 +48,8 @@ img.openuchile-header {
 }
 
 .navbar .nav-item .nav-link:not(.btn):hover, .navbar .nav-item .nav-link:not(.btn):focus {
-    border-color: #0075b4 !important;
-    color: #0075b4;
+    border-color: #008852 !important;
+    color: #008852;
     text-decoration: none;
 }
 
@@ -546,9 +546,30 @@ a.nav-link.user-menu:hover,
 #open-navbar .nav-link:focus{
     color: #008852;
 }
-#open-navbar .nav-item .nav-link:not(.btn):hover, .navbar .nav-item .nav-link:not(.btn):focus {
+/* #open-navbar .nav-item .nav-link:not(.btn):hover, .navbar .nav-item .nav-link:not(.btn):focus {
     border-color: rgb(255 255 255 / 55%) !important;
     text-decoration: none;
+} */
+#open-navbar .nav-link.sign-in{
+	border: 1px #004B93 solid;
+	border-radius: 10px;
+	border-color: #004B93;
+	background-color: white;
+	color: #004B93;
+	padding: 0px 6px;
+	font-size: 16px;
+	font-weight: 500;
+	width: 135px;
+	height: 60px;
+    text-transform: capitalize;
+    align-items: center;
+}
+#open-navbar .nav-link.sign-in:hover{
+	border: 2px #008852 solid;
+	border-color: #008852;
+	color: #008852;
+    text-decoration: none;
+    
 }
 
 #open-navbar input[type="submit"]:hover:not(:disabled), 
