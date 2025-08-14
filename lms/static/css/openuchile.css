@@ -20,13 +20,49 @@ img.openuchile-header {
     max-height: 90px;
 }
 
-.navbar-toggler, .navbar-toggler:hover {
-    background: none !important;
-    box-shadow: none !important;
+.navbar-toggler {
+    color: #004B93;
+    background-color: white;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.09);
+    border-radius: 10px;
+    border: none;
+    border-color: none;
+    height: 44px;
+
+}
+.navbar-light .navbar-toggler:hover{
+    background-image: none;
+    background-color: white;
+    border-color: white;
+    color: #008852;
+    font-size: 28px;
+}
+.navbar-light .navbar-toggler{
+    background-image: none;
+    background-color: white;
+    border-color: white;
+    color: #004B93;
+    text-shadow: none;
+    font-size: 28px;
 }
 
-.navbar-toggler:hover {
+.navbar-toggler .fa-bars{
+    color: #004B93;
+}
+
+.navbar-toggler .fa-bars:hover{
+    background-color: white;
     border-color: white;
+    color: #008852;
+    text-shadow: none;
+    font-size: 28px;
+}
+.navbar-toggler:hover {
+    background-color: white;
+    border-color: white;
+    color: #008852;
+    text-shadow: none;
+    font-size: 28px;
 }
 
 .uchile-separator {
@@ -518,6 +554,9 @@ a.nav-link.user-menu:hover,
 .nav-link.user-menu:focus{
     filter: brightness(0) saturate(100%) invert(29%) sepia(100%) saturate(746%) hue-rotate(98deg) brightness(92%) contrast(97%);
 }
+.open-mobile-view .nav-item{
+    font-weight: 500;
+  }
 .open-mobile-view{
     display: block;
   }
@@ -561,22 +600,41 @@ a.nav-link.user-menu:hover,
 	font-weight: 500;
 	width: 135px;
 	height: 60px;
-    text-transform: capitalize;
     align-items: center;
 }
 #open-navbar .nav-link.sign-in:hover{
 	border: 2px #008852 solid;
 	border-color: #008852;
 	color: #008852;
-    text-decoration: none;
-    
+    text-decoration: none;   
+}
+#open-navbar .nav-link.register{
+	border: 1px #004B93 solid;
+	border-radius: 10px;
+	border-color: #004B93;
+	background-color: #004B93;
+	color: white;
+	padding: 0px 6px;
+	font-size: 16px;
+	font-weight: 500;
+	width: 135px;
+	height: 60px;
+    align-items: center;
+}
+#open-navbar .nav-link.register:hover{
+	border: 2px #008852 solid;
+	border-color: #008852;
+	color: white;
+    text-decoration: none;  
+    background-color: #008852; 
 }
 
 #open-navbar input[type="submit"]:hover:not(:disabled), 
 #open-navbar input[type="button"]:hover:not(:disabled), 
 #open-navbar button:hover:not(:disabled), 
 #open-navbar .button:hover:not(:disabled) {
-    background-color: #0d3d8f;
+    background-color: white;
+    color: #004B93;
     background-image: none;
 }
 #open-navbar .searchbutton {
