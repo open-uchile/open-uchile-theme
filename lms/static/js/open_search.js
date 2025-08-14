@@ -47,10 +47,14 @@ function getData(){
     
     $.post( "/course_classification/search/", copy )
     .done(function( data ) {
-        data.results.forEach(element => {
-            edx.HtmlUtils.append($("#list-courses")[0], createCourse(element, element.extra_data));
-        });
-
+        if (data.error == undefined) {
+            data.results.forEach(element => {
+                edx.HtmlUtils.append($("#list-courses")[0], createCourse(element, element.extra_data));
+            });
+        }else{
+            console.log("ERROR:" + data.error)
+        }
+    
         currentTotal = currentTotal + data.results.length;
         if (data.total > currentTotal){
             index = index + 1;
