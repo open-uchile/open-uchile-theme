@@ -57,14 +57,27 @@ img.openuchile-header {
     text-shadow: none;
     font-size: 28px;
 }
+
+#open-navbar button:hover:not(:disabled),
+#open-navbar button:focus:not(:disabled),
+#open-navbar button:hover,
+#open-navbar button:focus{
+    background-color: white;
+    border-color: white;
+    color: #008852;
+    text-shadow: none;
+    font-size: 28px;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.09);
+
+}
 .navbar-toggler:hover {
     background-color: white;
     border-color: white;
     color: #008852;
     text-shadow: none;
     font-size: 28px;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.09);
 }
-
 .uchile-separator {
     display: block;
     width: 100%;
@@ -554,22 +567,94 @@ a.nav-link.user-menu:hover,
 .nav-link.user-menu:focus{
     filter: brightness(0) saturate(100%) invert(29%) sepia(100%) saturate(746%) hue-rotate(98deg) brightness(92%) contrast(97%);
 }
-.open-mobile-view .nav-item{
-    font-weight: 500;
-  }
 .open-mobile-view{
     display: block;
-  }
-  .open-desktop-view{
+}
+.open-mobile-view .nav-item{
+    font-weight: 500;
+}
+.open-desktop-view.nav-item.dropdown{
     display: none;
-  } 
+}
+#openMenu{
+    display: none;
+}
+
+#open-navbar .nav-link.register,
+#open-navbar .nav-link.sign-in{
+	border:none;
+	border-radius: none;
+	border-color: none;
+	padding: 0px;
+	font-size: inherit;
+	font-weight: 500;
+	width: inherit;
+	height: inherit;
+    align-items: start;
+    justify-content: start;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    text-transform: capitalize;
+}
+
+#open-navbar .nav-link.register:hover,
+#open-navbar .nav-link.sign-in:hover{
+    border: none;
+    border-color: none;
+    color: #008852;
+    text-decoration: none;   
+}
+
 @media screen and (min-width: 991px) {
-  .open-mobile-view{
-    display: none;
-  }
-  .open-desktop-view{
-    display: block;
-  }    
+    .open-mobile-view{
+        display: none;
+    }
+    .open-desktop-view{
+        display: block;
+    }
+    .open-desktop-view.nav-item.dropdown{
+        display: block;
+    }
+    #openMenu{
+        display: block;
+    }
+    #open-navbar .nav-link.register,
+    #open-navbar .nav-link.sign-in{
+        border: 1px #004B93 solid;
+        border-radius: 10px;
+        border-color: #004B93;
+        background-color: white;
+        color: #004B93;
+        padding: 0px 6px;
+        font-size: 16px;
+        font-weight: 500;
+        width: 135px;
+        height: 60px;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+    }
+    #open-navbar .nav-link.sign-in{
+        background-color: white;
+        color: #004B93;
+    }
+    #open-navbar .nav-link.sign-in:hover{
+        border: 2px #008852 solid;
+        border-color: #008852;
+        color: #008852;
+        text-decoration: none;   
+    }
+    #open-navbar .nav-link.register{
+        background-color: #004B93;
+        color: white;
+    }
+    #open-navbar .nav-link.register:hover{
+        border: 2px #008852 solid;
+        border-color: #008852;
+        color: white;
+        background-color: #008852; 
+    }
+
 }
 
 #open-navbar{
@@ -585,50 +670,6 @@ a.nav-link.user-menu:hover,
 #open-navbar .nav-link:focus{
     color: #008852;
 }
-/* #open-navbar .nav-item .nav-link:not(.btn):hover, .navbar .nav-item .nav-link:not(.btn):focus {
-    border-color: rgb(255 255 255 / 55%) !important;
-    text-decoration: none;
-} */
-#open-navbar .nav-link.sign-in{
-	border: 1px #004B93 solid;
-	border-radius: 10px;
-	border-color: #004B93;
-	background-color: white;
-	color: #004B93;
-	padding: 0px 6px;
-	font-size: 16px;
-	font-weight: 500;
-	width: 135px;
-	height: 60px;
-    align-items: center;
-}
-#open-navbar .nav-link.sign-in:hover{
-	border: 2px #008852 solid;
-	border-color: #008852;
-	color: #008852;
-    text-decoration: none;   
-}
-#open-navbar .nav-link.register{
-	border: 1px #004B93 solid;
-	border-radius: 10px;
-	border-color: #004B93;
-	background-color: #004B93;
-	color: white;
-	padding: 0px 6px;
-	font-size: 16px;
-	font-weight: 500;
-	width: 135px;
-	height: 60px;
-    align-items: center;
-}
-#open-navbar .nav-link.register:hover{
-	border: 2px #008852 solid;
-	border-color: #008852;
-	color: white;
-    text-decoration: none;  
-    background-color: #008852; 
-}
-
 #open-navbar input[type="submit"]:hover:not(:disabled), 
 #open-navbar input[type="button"]:hover:not(:disabled), 
 #open-navbar button:hover:not(:disabled), 
