@@ -1512,9 +1512,6 @@ aside h2.open-refine-search{
     align-items: center;
     justify-content: center;
   }
-  .owl-nav{
-    display: block !important;
-  }
   .owl-dots{
     display: block !important;
   }
@@ -1867,4 +1864,8 @@ body .wrapper-preview-menu .preview-menu {
     color: #008852;
     text-decoration: none;
     background-color: white;
+}
+
+.owl-dot{
+    box-shadow: none;
 }
