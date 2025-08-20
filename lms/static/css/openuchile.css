@@ -1871,6 +1871,15 @@ body .wrapper-preview-menu .preview-menu {
 .about-uchile-tab{
     background-image: url('/static/open-uchile-theme/images/svg-2023/default-image-tab.svg');  
 }
+.index-front-page{
+    background-image: url('/static/open-uchile-theme/images/svg-2023/bannerOpenUchile.svg');  
+       min-width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+.index-front-page .p{
+    font-size: 60px;
+}
 #openMenu{
     box-shadow:0px 3px 5px 0px rgba(0, 0, 0, 0.09);
     border-radius: 10px;
