@@ -65,19 +65,20 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
       })
       $(document).ready(function(){
         $('.owl-carousel').owlCarousel({
-            loop:true,          
+            loop:true,
+            center: true,
             margin:60,
             nav:false,
             autoWidth:true,
             responsive:{
                 0:{
-                    items:3
+                    items:2
                 },
                 600:{
-                    items:6
+                    items:4
                 },
                 1000:{
-                    items:5
+                    items:6
                 }
             }
         })
