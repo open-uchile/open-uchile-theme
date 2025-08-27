@@ -17,47 +17,25 @@
       <h2 class="trending-course-tittle-institution">${_("Top Courses").upper()}</h2>
       <div class="trending-course-border"></div>
     </div>
-    <div class="open-carousel-top-courses">
+    <div class="open-carousel-top-courses pb-4 px-5">
       <div class="carousel-wrap">
-        <div class="owl-carousel-top-courses owl-theme">
+        <div class="owl-carousel-top-courses owl-carousel owl-theme courses-list">
           %for course in course_class:
-            <div class="item">
+            <div class="item" >
               <%include file="course.html" args="course=course,main_class={}" />
             </div>
           %endfor
         </div>
       </div>
     </div>
-    <section class="courses-container">
-      <section class="highlighted-courses">
-          <div class="courses-list">
-            <% displayed_courses = 0 %>
-            %for course in course_class:
-              %if displayed_courses %4 == 0:
-                <div class="row">
-              %endif
-                <div class="col-md-3 col-sm-12 p-2">
-                  <%include file="course.html" args="course=course,main_class={}" />
-                </div>
-              <%  displayed_courses = displayed_courses + 1 %>
-              %if displayed_courses %4 == 0:
-                </div>
-              %endif
-            %endfor
-            %if displayed_courses %4 != 0:
-              </div>
-            %endif
-          </div>
-      </section>
-    </section>
   %else:
     <p class="without-courses" style="padding-bottom: 10px;"> ${_("There are no courses")}</p>
   %endif
   <%  course_filtered = get_courses_filtered_by_course_state(["upcoming_notenrollable","ongoing_enrollable"]) %>
   % if len(course_filtered) > 0 :
     <div class="trending-course-title-container mt-5">
-      <h2 class="trending-course-tittle-institution">${_("New Courses").upper()}</h2>
-      <div class="trending-course-border"></div>
+      <h2 class="new-courses-title-container">${_("New Courses").upper()}</h2>
+      <div class="new-courses-border"></div>
     </div>
     <section class="courses-container">
       <section class="highlighted-courses">
@@ -65,7 +43,7 @@
             <% displayed_courses = 0 %>
             %for course in course_filtered[0:4]:
               %if displayed_courses %4 == 0:
-                <div class="row">
+                <div class="row px-5">
               %endif
                 <div class="col-md-3 col-sm-12 p-2">
                   <%include file="course.html" args="course=course,main_class={}" />
@@ -144,21 +122,22 @@
   $(this).tab('show')
 })
  $(document).ready(function(){
-  $('.owl-carousel-top-courses').owlCarousel({
+  $('.owl-carousel-top-courses .owl-carousel').owlCarousel({
       loop:true,
-      center: true,          
+      center: false,
+      autoWidth:true,
       margin:10,
       nav:false,
-      autoWidth:true,
+      dotsEach:4,
       responsive:{
           0:{
-              items:1
+              items:2
           },
           600:{
               items:4
           },
           1000:{
-              items:4
+              items:6
           }
       }
   })

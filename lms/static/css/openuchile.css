@@ -877,6 +877,21 @@ input[type="search"]::-ms-input-placeholder {
     margin-left: auto;
     margin-right: auto;
 }
+.new-courses-title-container{
+    font-size: 30px;
+    color: #494949;
+    text-align: center;
+    font-weight: 1000;
+    margin-bottom: 0;
+    text-transform: capitalize;
+}
+.new-courses-border{
+    border-top: 3px solid #1C4D94;
+    width: 60px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
 .courses-container .highlighted-courses{
     display: flex;
     padding-top: 25px;
@@ -1474,8 +1489,8 @@ aside h2.open-refine-search{
     background: #172C6B;
 }
 .open-carousel-top-courses .carousel-wrap {
-    margin-right: auto;
-    margin-left: auto;
+    margin-right: 5px;
+    margin-left: 5px;
     padding: 1% 5%;
     width: 100%;
     position: relative;
@@ -1498,22 +1513,51 @@ aside h2.open-refine-search{
   .owl-carousel .item {
     position: relative;
     z-index: 100; 
-    -webkit-backface-visibility: hidden; 
-    
+    -webkit-backface-visibility: hidden;
   }
-  .owl-carousel .owl-item {
-    width: 316px !important;
+  .owl-theme .owl-dots .owl-dot{
+    box-shadow: none;
+  }
+  .owl-carousel .owl-item .item{
+    max-width: 200px;
+  }
+  .owl-carousel-top-courses .owl-item .item{
+    width: 400px;
+    max-width: 400px;
   }
   @media (min-width: 600px) {
+    .owl-carousel-top-courses  .owl-item {
+        min-width: 231px !important;
+        margin-right: 20px !important; 
+    }
     .owl-carousel .owl-item {
-      width: 231px !important;
+        /* width: 380px !important; */
+        margin-right: 20px; 
     }
   }
   @media (min-width: 933px) {
     .owl-carousel .owl-item {
-      width: 180px !important;
+        /* width: 180px !important; */
+        margin-right: 20px; 
+    }
+    .owl-carousel-top-courses .owl-item {
+        /* min-width: 380px !important; */
+        margin-right: 20px !important; 
     }
   }
+
+.open-carousel-orgs .carousel-wrap .owl-theme .owl-dots .owl-dot.active span{
+    background: #004B93 ;
+  }
+.open-carousel-top-courses .carousel-wrap .owl-theme .owl-dots .owl-dot.active span{
+    background: #FFFFFF ;
+  }
+.open-carousel-top-courses .carousel-wrap .owl-theme .owl-dots .owl-dot span,
+.open-carousel-orgs .carousel-wrap .owl-theme .owl-dots .owl-dot span{
+    background: #999999 ;
+  }
+
+
   /* end fix */
   .owl-nav > button, .owl-nav > button:active, .owl-nav > button:focus{
     border-radius: 0;
@@ -1542,7 +1586,8 @@ aside h2.open-refine-search{
     align-items: center;
     justify-content: center;
   }
-  .owl-dots{
+.owl-carousel .owl-dots,
+.owl-carousel-top-courses .owl-dots{
     display: block !important;
   }
  
@@ -1598,6 +1643,11 @@ aside h2.open-refine-search{
     filter: none;
     -webkit-filter: grayscale(0%);
   }
+.owl-carousel-top-courses.owl-carousel img {
+    filter: none;
+    -webkit-filter: grayscale(0%);
+  }
+  
   
   .owl-carousel-top-courses.owl-loaded,
   .owl-carousel.owl-loaded {
