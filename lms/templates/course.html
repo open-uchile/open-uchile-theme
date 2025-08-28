@@ -26,79 +26,82 @@ now = timezone.now()
   <div class="row g-0 p-0">
     <div class="col-md-12">
       <div class="card-body">
-          <div class="row g-0 p-0">
-            <figure>
-                <img src="${course['image_url']}" class="card-img-top img-fluid rounded-start" alt="${course['content']['display_name']}">
-              </figure>
-          </div>
-       <strong><h5 class="card-title fw-bold my-2" title="${course['content']['display_name']}">${course['content']['display_name']}</h5></strong> 
-        <p class="card-text ct2" title="${course['extra_data']['short_description']}">
-          <small>${course['extra_data']['short_description']}</small>
-        </p>
-        <div class="row ct3 my-2">
-          <%
-            if course["start"] is not None:
-                course_date_string = datetime.fromisoformat(course["start"]).strftime('%Y-%m-%dT%H:%M:%S%z')
-            else:
-              course_date_string = ''
-            if course.get("end", None) is not None:
-              course_enddate_string =  datetime.fromisoformat(course.get("end")).strftime('%Y-%m-%dT%H:%M:%S%z')
-            else:
-                course_enddate_string = ''
-          %>
-          % if course.get("end", None) is not None and now is not None and datetime.fromisoformat(course.get("end")) < now:
-            <div class="col-md-12 justify-content-start">
-              <div class="open-course-date-icon">
-                <img src="${static.url('open-uchile-theme/images/svg-2023/fecha termino.svg')}">
-              </div>
-              <div class="open-course-date-text ml-2">
-                <strong><span>${_("Finished course")}</span></strong>
-              </div>
-            </div>
-          % elif datetime.fromisoformat(course["start"]) <= now and course.get("end", None) is None:
-            <div class="col-md-12 justify-content-start">
-                  <div class="open-course-date-icon">
-                    <img src="${static.url('open-uchile-theme/images/svg-2023/fecha inicio.svg')}">
-                  </div>
-                  <div class="open-course-date-text ml-2">
-                    <strong><span>${_("Permanently open")}</span></strong>
-                  </div>
-            </div>
-          % else:
-            <div class="col-md-6">
-                <div class="row g-0 p-0">
-                  <div class="col-md-2 col-sm-2 m-0">
-                    <div class="open-course-date-icon">
-                      <img src="${static.url('open-uchile-theme/images/svg-2023/fecha inicio.svg')}">
-                    </div>
-                  </div>
-                  <div class="col-md-10 col-sm-10">
-                    <div class="open-course-date-text ml-2">
-                      <strong><span>${_("Beginning of the course")}</span></strong>
-                    <div class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_date_string}" data-language="${LANGUAGE_CODE}" data-string=""></div>
-                  </div>
-                </div>    
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="row g-0 p-0">
-                  <div class="col-md-2 col-sm-2 m-0">
-                    <div class="open-course-date-icon">
-                      <img src="${static.url('open-uchile-theme/images/svg-2023/fecha termino.svg')}">
-                    </div>
-                 
-                  </div>
-                   <div class="col-md-10 col-sm-10">
-                       <div class="open-course-date-text ml-2">
-                      <strong><span>${_("Termino del curso")}</span></strong>
-                      <div class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_enddate_string}" data-language="${LANGUAGE_CODE}" data-string=""></div>
-                    </div>
-                   </div>
-              </div>
-            </div>
-          % endif
+        <div class="row g-0 p-0">
+          <figure>
+            <img src="${course['image_url']}" class="card-img-top img-fluid rounded-start" alt="${course['content']['display_name']}">
+          </figure>
         </div>
-        
+       <strong><h5 class="card-title fw-bold my-2" title="${course['content']['display_name']}">${course['content']['display_name']}</h5></strong> 
+        <%
+          if course["start"] is not None:
+              course_date_string = datetime.fromisoformat(course["start"]).strftime('%Y-%m-%dT%H:%M:%S%z')
+          else:
+            course_date_string = ''
+        %>
+        <div class="row ct3 my-2">
+          <div class="col-md-6 col-sm-12">
+            <div class="row g-0 p-0">
+              <div class="col-md-2 col-sm-2 m-0">
+                <div class="open-course-date-icon">
+                  <img src="${static.url('open-uchile-theme/images/svg-2023/fecha inicio.svg')}">
+                </div>
+              </div>
+              <div class="col-md-10 col-sm-10">
+                <div class="open-course-date-text ml-3">
+                  <strong><span>${_("Duration")}</span></strong>
+                  <div class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_date_string}" data-language="${LANGUAGE_CODE}" data-string=""></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <div class="row g-0 p-0">
+              <div class="col-md-2 col-sm-2 m-0">
+                <div class="open-course-date-icon">
+                  <img src="${static.url('open-uchile-theme/images/svg-2023/modalidad.svg')}">
+                </div>
+              </div>
+              <div class="col-md-10 col-sm-10">
+                <div class="open-course-date-text ml-3">
+                  <strong><span>${_("Modality")}</span></strong>
+                  <div class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_date_string}" data-language="${LANGUAGE_CODE}" data-string=""></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row ct3 my-2">
+          <div class="col-md-6 col-sm-12">
+            <div class="row g-0 p-0">
+              <div class="col-md-2 col-sm-2 m-0">
+                <div class="open-course-date-icon">
+                  <img src="${static.url('open-uchile-theme/images/svg-2023/precio.svg')}">
+                </div>
+              </div>
+              <div class="col-md-10 col-sm-10">
+                <div class="open-course-date-text ml-3">
+                  <strong><span>${_("Price")}</span></strong>
+                  <div class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_date_string}" data-language="${LANGUAGE_CODE}" data-string=""></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <div class="row g-0 p-0">
+              <div class="col-md-2 col-sm-2 m-0">
+                <div class="open-course-date-icon">
+                  <img src="${static.url('open-uchile-theme/images/svg-2023/fecha termino.svg')}">
+                </div>
+              </div>
+              <div class="col-md-10 col-sm-10">
+                <div class="open-course-date-text ml-3">
+                  <strong><span>${_("Classes Start")}</span></strong>
+                  <div class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_date_string}" data-language="${LANGUAGE_CODE}" data-string=""></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="card-button mt-2 p-0 mb-0">
           <a href="${course_about}">
             %if course["course_state"] == 'ongoing_enrollable' or course["course_state"] == 'upcoming_enrollable':

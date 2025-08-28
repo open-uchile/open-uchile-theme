@@ -877,6 +877,13 @@ input[type="search"]::-ms-input-placeholder {
     margin-left: auto;
     margin-right: auto;
 }
+.explorer-courses-border{
+    border-top: 3px solid #1C4D94;
+    width: 60px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
 .new-courses-title-container{
     font-size: 30px;
     color: #494949;
@@ -1264,7 +1271,7 @@ ul.courses-list{
     align-items: center;
 }
 
-.courses-list #list-courses .row .col-xl-5 .card{
+.courses-list #list-courses .row .col-md-5 .card{
     width: 100%;
 }
 
