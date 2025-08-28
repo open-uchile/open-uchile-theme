@@ -22,7 +22,7 @@
         <div class="owl-carousel-top-courses owl-carousel owl-theme courses-list">
           %for course in course_class:
             <div class="item" >
-              <%include file="course.html" args="course=course,main_class={}" />
+              <%include file="course.html" args="course=course" />
             </div>
           %endfor
         </div>
@@ -46,7 +46,7 @@
                 <div class="row px-5">
               %endif
                 <div class="col-md-3 col-sm-12 p-2">
-                  <%include file="course.html" args="course=course,main_class={}" />
+                  <%include file="course.html" args="course=course" />
                 </div>
               <%  displayed_courses = displayed_courses + 1 %>
               %if displayed_courses %4 == 0:
