@@ -12,7 +12,7 @@
 <% icp_license_info = getattr(settings, 'ICP_LICENSE_INFO', {})%>
 <%namespace name='static' file='static_content.html'/>
 <%
-footer_url_config = configuration_helpers.get_value('FOOTER_URL', '{}')
+footer_url_config = configuration_helpers.get_value('FOOTER_URL', {})
 instagram_url = footer_url_config.get('instagram', '')
 youtube_url = footer_url_config.get('youtube', '')
 linkedin_url = footer_url_config.get('linkedin', '')
