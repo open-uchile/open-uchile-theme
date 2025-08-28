@@ -1508,6 +1508,9 @@ aside h2.open-refine-search{
     width: 100%;
     position: relative;
   }
+  .open-carousel-orgs .owl-carousel .owl-item img{
+    max-height: 100px;
+  }
 
   /* fix blank or flashing items on carousel */
   .owl-carousel .item {
@@ -1518,8 +1521,8 @@ aside h2.open-refine-search{
   .owl-theme .owl-dots .owl-dot{
     box-shadow: none;
   }
-  .owl-carousel .owl-item .item{
-    max-width: 200px;
+  .open-carousel-orgs .owl-carousel .owl-item .item{
+    max-width: 400px;
   }
   .owl-carousel-top-courses .owl-item .item{
     width: 400px;
