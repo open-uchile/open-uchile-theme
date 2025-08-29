@@ -24,6 +24,25 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
 <meta property="og:url" content="${configuration_helpers.get_value('LMS_ROOT_URL', settings.LMS_ROOT_URL)}">
 <meta property="og:site_name" content="${configuration_helpers.get_value('EOL_OG_SITE_NAME', '')}">
 <meta property="og:locale" content="es_CL">
+<script type="application/ld+json" >
+{
+  "@context":"https://schema.org",
+  "@type":"EducationalOrganization",
+  "@id":"${configuration_helpers.get_value('LMS_ROOT_URL', settings.LMS_ROOT_URL)}",
+  "name":"${configuration_helpers.get_value('EOL_OG_SITE_NAME', '') }",
+  "url":"${configuration_helpers.get_value('LMS_ROOT_URL', settings.LMS_ROOT_URL)}",
+  "address":"Diagonal Paraguay 265, Torre 15, Oficina 1004, Santiago, Chile",
+  "email":"eol-ayuda@uchile.cl",
+  "keywords":"educación, educación continua, cursos",
+  "logo":"${static.url('open-uchile-theme/images/svg-2023/Logo-OpenUchile.svg')}",
+  "description":"${configuration_helpers.get_value('EOL_OG_SITE_DESCRIPTION', '')}",
+  "parentOrganization":{
+    "@id":"https://uchile.cl/",
+    "name":"Universidad de Chile",
+    "description":"Principal institución del Estado en educación superior pública, fundada en 1842. Carreras de pregrado, postgrado y postítulo, investigación y extensión."
+  }
+}
+</script>
 </%block>
 <section class="container-fluid px-0" id="main">
   <div class="container-center">
