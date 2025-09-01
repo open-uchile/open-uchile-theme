@@ -19,7 +19,7 @@ now = timezone.now()
 
 <%page args="course" expression_filter="h"/>
 <%
-    course_about = reverse('about_course', args=[text_type(course["id"])])
+    course_about = reverse('about_course', args=[text_type(course['id'])])
 %>
 <div class="card ${card_class} h-100" data-about="${course_about}" data-state="${course['course_state']}" style="cursor: pointer;" onclick="window.location.href = this.dataset.about">
 
@@ -43,12 +43,12 @@ now = timezone.now()
             <div class="row g-0 p-0">
               <div class="col-md-2 col-sm-2 m-0">
                 <div class="open-course-date-icon">
-                  <img src="${static.url('open-uchile-theme/images/svg-2023/fecha inicio.svg')}">
+                  <img src="${static.url('open-uchile-theme/images/svg-2023/fecha termino.svg')}">
                 </div>
               </div>
               <div class="col-md-10 col-sm-10">
                 <div class="open-course-date-text ml-3">
-                  <strong><span>${_("Duration")}</span></strong>
+                  <strong><span>${_("Classes Start")}</span></strong>
                   <div class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_date_string}" data-language="${LANGUAGE_CODE}" data-string=""></div>
                 </div>
               </div>
@@ -63,8 +63,12 @@ now = timezone.now()
               </div>
               <div class="col-md-10 col-sm-10">
                 <div class="open-course-date-text ml-3">
-                  <strong><span>${_("Modality")}</span></strong>
-                  <div class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_date_string}" data-language="${LANGUAGE_CODE}" data-string=""></div>
+                  <strong><span>${_("Pacing")}</span></strong>
+                  %if bool(course["extra_data"]["self_paced"]) == True:
+                  <div class="course-date" aria-hidden="true">${_("Student paced")}</div>
+                  % else:
+                  <div class="course-date" aria-hidden="true">${_("Instructor paced")}</div>
+                  % endif
                 </div>
               </div>
             </div>
@@ -81,25 +85,35 @@ now = timezone.now()
               <div class="col-md-10 col-sm-10">
                 <div class="open-course-date-text ml-3">
                   <strong><span>${_("Price")}</span></strong>
-                  <div class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_date_string}" data-language="${LANGUAGE_CODE}" data-string=""></div>
+                  <div class="course-date" aria-hidden="true">
+                      <% course_price = course["extra_data"]["price"] %>
+                      %if course_price not in ['Gratis', 'Free', None, "None"]:
+                        <% aux_price = int(course_price[1:]) %>
+                        $ ${f'{aux_price:,}'.replace(',', '.')}
+                      %else:
+                          ${course_price}
+                      %endif
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-md-6 col-sm-12">
-            <div class="row g-0 p-0">
-              <div class="col-md-2 col-sm-2 m-0">
-                <div class="open-course-date-icon">
-                  <img src="${static.url('open-uchile-theme/images/svg-2023/fecha termino.svg')}">
+            %if course["extra_data"]["effort"] != None:
+              <div class="row g-0 p-0">
+                <div class="col-md-2 col-sm-2 m-0">
+                  <div class="open-course-date-icon">
+                    <img src="${static.url('open-uchile-theme/images/svg-2023/fecha inicio.svg')}">
+                  </div>
+                </div>
+                <div class="col-md-10 col-sm-10">
+                  <div class="open-course-date-text ml-3">
+                    <strong><span>${_("Duration")}</span></strong>
+                      <div class="course-date" aria-hidden="true">${course["extra_data"]["effort"]}</div>
+                  </div>
                 </div>
               </div>
-              <div class="col-md-10 col-sm-10">
-                <div class="open-course-date-text ml-3">
-                  <strong><span>${_("Classes Start")}</span></strong>
-                  <div class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_date_string}" data-language="${LANGUAGE_CODE}" data-string=""></div>
-                </div>
-              </div>
-            </div>
+            % endif
           </div>
         </div>
         <div class="card-button mt-2 p-0 mb-0">
