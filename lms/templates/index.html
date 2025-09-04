@@ -24,6 +24,40 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
 <meta property="og:url" content="${configuration_helpers.get_value('LMS_ROOT_URL', settings.LMS_ROOT_URL)}">
 <meta property="og:site_name" content="${configuration_helpers.get_value('EOL_OG_SITE_NAME', '')}">
 <meta property="og:locale" content="es_CL">
+<%!
+use_schema_org = configuration_helpers.get_value('USE_SCHEMA_ORG', "False")
+%>
+
+% if use_schema_org == "True":
+  <script type="application/ld+json" >
+  {
+    "@context":"https://schema.org",
+    "@type":"EducationalOrganization",
+    "@id":"${configuration_helpers.get_value('LMS_ROOT_URL', settings.LMS_ROOT_URL)}",
+    "name":"${configuration_helpers.get_value('EOL_OG_SITE_NAME', '') }",
+    "url":"${configuration_helpers.get_value('LMS_ROOT_URL', settings.LMS_ROOT_URL)}",
+    "address":"${configuration_helpers.get_value('EOL_SITE_ADDRESS', '')}",
+    "email":"${configuration_helpers.get_value('EOL_SITE_EMAIL', '')}",
+    "latitude": "-33.44269461021022",
+    "longitude" "-70.63765775193981",
+    "keywords":"educación, educación continua, cursos",
+    "logo":
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageObject",
+      "contentLocation": "${configuration_helpers.get_value('EOL_SITE_ADDRESS', '')}",
+      "contentUrl": "${static.url('open-uchile-theme/images/svg-2023/Logo-OpenUchile.svg')}",
+      "author": "Oficina EOL"
+    },
+    "description":"${configuration_helpers.get_value('EOL_SITE_DESCRIPTION', '')}",
+    "parentOrganization":{
+      "@id":"https://uchile.cl/",
+      "name":"Universidad de Chile",
+      "description":"Principal institución del Estado en educación superior pública, fundada en 1842. Carreras de pregrado, postgrado y postítulo, investigación y extensión."
+    }
+  }
+  </script>
+%endif
 </%block>
 <section class="container-fluid px-0" id="main">
   <div class="container-center">
