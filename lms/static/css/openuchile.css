@@ -1497,8 +1497,8 @@ aside h2.open-refine-search{
     background: #172C6B;
 }
 .open-carousel-top-courses .carousel-wrap {
-    margin-right: auto;
-    margin-left: auto;
+    margin-right: 5px;
+    margin-left: 5px;
     padding: 1% 5%;
     width: 100%;
     position: relative;
@@ -1507,37 +1507,68 @@ aside h2.open-refine-search{
 .open-carousel-orgs{
     width:100%;
     display: flex;
-    box-shadow: 0px 4px 8px 2px rgb(0 0 0 / 20%);
     background: white;
 }
 .open-carousel-orgs .carousel-wrap {
     margin-right: auto;
     margin-left: auto;
     padding: 1% 5%;
-    width: 70%;
+    width: 100%;
     position: relative;
+  }
+  .open-carousel-orgs .owl-carousel .owl-item img{
+    max-height: 100px;
   }
 
   /* fix blank or flashing items on carousel */
   .owl-carousel .item {
     position: relative;
     z-index: 100; 
-    -webkit-backface-visibility: hidden; 
-    
+    -webkit-backface-visibility: hidden;
   }
-  .owl-carousel .owl-item {
-    width: 316px !important;
+  .owl-theme .owl-dots .owl-dot{
+    box-shadow: none;
+  }
+  .open-carousel-orgs .owl-carousel .owl-item .item{
+    max-width: 400px;
+  }
+  .owl-carousel-top-courses .owl-item .item{
+    width: 400px;
+    max-width: 400px;
   }
   @media (min-width: 600px) {
+    .owl-carousel-top-courses  .owl-item {
+        min-width: 231px !important;
+        margin-right: 20px !important; 
+    }
     .owl-carousel .owl-item {
-      width: 231px !important;
+        /* width: 380px !important; */
+        margin-right: 20px; 
     }
   }
   @media (min-width: 933px) {
     .owl-carousel .owl-item {
-      width: 180px !important;
+        /* width: 180px !important; */
+        margin-right: 20px; 
+    }
+    .owl-carousel-top-courses .owl-item {
+        /* min-width: 380px !important; */
+        margin-right: 20px !important; 
     }
   }
+
+.open-carousel-orgs .carousel-wrap .owl-theme .owl-dots .owl-dot.active span{
+    background: #004B93 ;
+  }
+.open-carousel-top-courses .carousel-wrap .owl-theme .owl-dots .owl-dot.active span{
+    background: #FFFFFF ;
+  }
+.open-carousel-top-courses .carousel-wrap .owl-theme .owl-dots .owl-dot span,
+.open-carousel-orgs .carousel-wrap .owl-theme .owl-dots .owl-dot span{
+    background: #999999 ;
+  }
+
+
   /* end fix */
   .owl-nav > button, .owl-nav > button:active, .owl-nav > button:focus{
     border-radius: 0;
@@ -1560,12 +1591,14 @@ aside h2.open-refine-search{
   .owl-nav .owl-next {
     right: -30px;
   }
+  .owl-carousel-top-courses .owl-stage,
   .owl-carousel .owl-stage {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .owl-nav{
+.owl-carousel .owl-dots,
+.owl-carousel-top-courses .owl-dots{
     display: block !important;
   }
  
@@ -1621,6 +1654,13 @@ aside h2.open-refine-search{
     filter: none;
     -webkit-filter: grayscale(0%);
   }
+.owl-carousel-top-courses.owl-carousel img {
+    filter: none;
+    -webkit-filter: grayscale(0%);
+  }
+  
+  
+  .owl-carousel-top-courses.owl-loaded,
   .owl-carousel.owl-loaded {
       display: flex;
   }
@@ -1912,8 +1952,13 @@ body .wrapper-preview-menu .preview-menu {
     text-align: justify;
 }
 .tab-content .tab-pane .image-tab{
-    background-size: 75%;
+    background-size: auto;
     background-repeat: no-repeat;
+}
+@media screen and  (min-width: 991px) {
+    .tab-content .tab-pane .image-tab{
+        background-size: 75%;
+    }
 }
 .image-tab .text-align-justify{
     background-color: white;
@@ -1927,6 +1972,16 @@ body .wrapper-preview-menu .preview-menu {
 .about-uchile-tab{
     background-image: url('/static/open-uchile-theme/images/svg-2023/about-uchile.svg');  
 }
+.index-front-page{
+    background-image: url('/static/open-uchile-theme/images/svg-2023/bannerOpenUchile.svg');  
+       min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 550px;
+}
+.index-front-page .p{
+    font-size: 60px;
+}
 #openMenu{
     box-shadow:0px 3px 5px 0px rgba(0, 0, 0, 0.09);
     border-radius: 10px;
@@ -1936,4 +1991,14 @@ body .wrapper-preview-menu .preview-menu {
     color: #008852;
     text-decoration: none;
     background-color: white;
+}
+
+.owl-dot{
+    box-shadow: none;
+}
+
+.index-text-presentation{
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 100%;
 }
