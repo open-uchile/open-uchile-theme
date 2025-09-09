@@ -41,12 +41,12 @@ now = timezone.now()
         <div class="row ct3 my-2">
           <div class="col-md-6 col-sm-12">
             <div class="row g-0 p-0">
-              <div class="col-md-2 col-sm-2 m-0">
+              <div class="col-2 m-0">
                 <div class="open-course-date-icon">
                   <img src="${static.url('open-uchile-theme/images/svg-2023/fecha termino.svg')}">
                 </div>
               </div>
-              <div class="col-md-10 col-sm-10">
+              <div class="col-10">
                 <div class="open-course-date-text ml-3">
                   <strong><span>${_("Classes Start")}</span></strong>
                   <div class="course-date localized_datetime" aria-hidden="true" data-format="shortDate" data-datetime="${course_date_string}" data-language="${LANGUAGE_CODE}" data-string=""></div>
@@ -56,12 +56,12 @@ now = timezone.now()
           </div>
           <div class="col-md-6 col-sm-12">
             <div class="row g-0 p-0">
-              <div class="col-md-2 col-sm-2 m-0">
+              <div class="col-2 m-0">
                 <div class="open-course-date-icon">
                   <img src="${static.url('open-uchile-theme/images/svg-2023/modalidad.svg')}">
                 </div>
               </div>
-              <div class="col-md-10 col-sm-10">
+              <div class="col-10">
                 <div class="open-course-date-text ml-3">
                   <strong><span>${_("Pacing")}</span></strong>
                   %if bool(course["extra_data"]["self_paced"]) == True:
@@ -77,12 +77,12 @@ now = timezone.now()
         <div class="row ct3 my-2">
           <div class="col-md-6 col-sm-12">
             <div class="row g-0 p-0">
-              <div class="col-md-2 col-sm-2 m-0">
+              <div class="col-2 m-0">
                 <div class="open-course-date-icon">
                   <img src="${static.url('open-uchile-theme/images/svg-2023/precio.svg')}">
                 </div>
               </div>
-              <div class="col-md-10 col-sm-10">
+              <div class="col-10">
                 <div class="open-course-date-text ml-3">
                   <strong><span>${_("Price")}</span></strong>
                   <div class="course-date" aria-hidden="true">
@@ -101,12 +101,12 @@ now = timezone.now()
           <div class="col-md-6 col-sm-12">
             %if course["extra_data"]["effort"] != None:
               <div class="row g-0 p-0">
-                <div class="col-md-2 col-sm-2 m-0">
+                <div class="col-2 m-0">
                   <div class="open-course-date-icon">
                     <img src="${static.url('open-uchile-theme/images/svg-2023/fecha inicio.svg')}">
                   </div>
                 </div>
-                <div class="col-md-10 col-sm-10">
+                <div class="col-10">
                   <div class="open-course-date-text ml-3">
                     <strong><span>${_("Duration")}</span></strong>
                       <div class="course-date" aria-hidden="true">${course["extra_data"]["effort"]}</div>
