@@ -17,9 +17,9 @@
       <h2 class="trending-course-tittle-institution">${_("Top Courses").upper()}</h2>
       <div class="trending-course-border"></div>
     </div>
-    <div class="open-carousel-top-courses">
-      <div class="carousel-wrap">
-        <div class="owl-carousel-top-courses owl-carousel owl-theme courses-list">
+    <div class="open-carousel-top-courses ml-0">
+      <div class="carousel-wrap m-0">
+        <div class="owl-carousel-top-courses owl-carousel owl-theme courses-list m-0">
           %for course in course_class:
             <div class="item" >
               <%include file="course.html" args="course=course" />
@@ -43,9 +43,9 @@
             <% displayed_courses = 0 %>
             %for course in course_filtered[0:4]:
               %if displayed_courses %4 == 0:
-                <div class="row px-5">
+                <div class="row px-5 m-0">
               %endif
-                <div class="col-md-3 col-sm-12 p-2">
+                <div class=" col-xl-3 col-lg-6 col-md-12 col-sm-12 col-12 p-2">
                   <%include file="course.html" args="course=course" />
                 </div>
               <%  displayed_courses = displayed_courses + 1 %>
@@ -63,7 +63,7 @@
     <p class="without-courses" style="padding-bottom: 10px;"> ${_("There are no courses")}</p>
   %endif
 <section class="courses-container">
-  <ul class="nav nav-tabs nav-justified flex-column flex-md-row" id="myTab" role="tablist">
+  <ul class="nav nav-tabs nav-justified flex-column flex-lg-row" id="myTab" role="tablist">
     <li class="nav-item">
       <a class="nav-link flex-sm-fill text-sm-center active" id="about_us-tab" data-toggle="tab" href="#about_us" role="tab" aria-controls="about_us" aria-selected="true">${_("About us")}</a>
     </li>
@@ -75,11 +75,11 @@
     </li>
   </ul>
 
-  <div class="tab-content py-5 row">
+  <div class="tab-content py-5 m-0 row">
     <div class="tab-pane active" id="about_us" role="tabpanel" aria-labelledby="about_us-tab">
       <div class="about-us-tab image-tab m-5 p-5">
         <div class="d-flex justify-content-md-end justify-content-sm-center">
-            <p class=" text-align-justify p-5 m-2 col-md-6 col-sm-12">
+            <p class=" text-justify p-5 m-2 col-xl-6 col-lg-12 col-md-12 col-sm-12">
               ${_("The Online Education Office of the University of Chile (OpenUChile) is an initiative promoted by the Vice Rector's Office of Information Technologies with the aim of promoting quality online training through an offer of open courses and continuing education programs. Our team is made up of professionals from the fields of education, technology and communication, who collaborate to design, produce and disseminate innovative training experiences. We work together with various faculties and academic units to bring the knowledge of the University of Chile to people from all over the country and abroad, promoting equitable access to education and digital transformation of learning. To learn more about us click here:")}
               <a class="text-decoration-none" href="https://oficinaeol.uchile.cl/we" role="button" aria-expanded="false" alt="Página web oficina EOL" title="Oficina Eol">
               https://oficinaeol.uchile.cl/we
@@ -92,7 +92,7 @@
     <div class="tab-pane" id="platform_works" role="tabpanel" aria-labelledby="platform_works-tab">
       <div class="platform-works-tab image-tab m-5 p-5">
         <div class=" d-flex justify-content-md-end justify-content-sm-center">
-          <p class=" text-align-justify p-5 m-2 col-md-6 col-sm-12">
+          <p class=" text-justify p-5 m-2 col-xl-6 col-lg-12 col-md-12 col-sm-12">
             ${_("OpenUChile's platform runs on Open edX technology, which allows it to offer online courses with an interactive and flexible learning experience. The courses are organized in thematic modules and include video lectures, readings, discussion forums, practical activities and evaluations. Some courses are free and open, while others require payment to access additional content or certification. To get started, simply register at open.uchile.cl, select a course and follow the instructions. The site also has a Frequently Asked Questions (FAQ) section and technical support to resolve doubts during the process.")}
             <a class="text-decoration-none" href=". https://open.uchile.cl/faq" role="button" aria-expanded="false" alt="Página web oficina EOL" title="Oficina Eol">
             https://open.uchile.cl/faq
@@ -104,7 +104,7 @@
     <div class="tab-pane" id="about_uchile" role="tabpanel" aria-labelledby="about_uchile-tab">
       <div class="about-uchile-tab image-tab m-5 p-5">
         <div class="d-flex justify-content-md-end justify-content-sm-center">
-          <p class=" text-align-justify p-5 m-2 col-md-6 col-sm-12">
+          <p class=" text-justify p-5 m-2 col-xl-6 col-lg-12 col-md-12 col-sm-12">
             ${_("The Universidad de Chile is the oldest public institution of higher education in the country, founded in 1842. Recognized for its academic excellence, its commitment to society and its contribution to research and culture, it has trained outstanding professionals and national and international leaders. It has 14 faculties, multiple research centers and extension programs that promote critical knowledge and sustainable development. OpenUChile is part of this commitment, offering online training accessible to people in Chile and the world, with the academic support of one of the most prestigious universities in Latin America. Learn more at")}
             <a class="text-decoration-none" href=" https://uchile.cl/" role="button" aria-expanded="false" alt="Página web oficina EOL" title="Oficina Eol">
             https://uchile.cl/
