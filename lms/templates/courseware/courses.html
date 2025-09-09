@@ -7,7 +7,7 @@
 <%
   course_discovery_enabled = settings.FEATURES.get('ENABLE_DASHBOARD_SEARCH')
   start_year = 2020
-  end_year =  (datetime.today() + timedelta(days=182)).year
+  end_year = (datetime.today() + timedelta(days=182)).year
   years = list(range(start_year, end_year + 1))
 %>
 
@@ -15,11 +15,6 @@
 
 % if course_discovery_enabled:
 <%block name="header_extras">
-  <style>
-    .search-container{
-      display: none !important;
-    }
-  </style>
 </%block>
 % endif
 <%block name="js_extra">
@@ -28,35 +23,31 @@
 <%block name="pagetitle">${_("Courses")}</%block>
 <main id="main" aria-label="Content" tabindex="-1">
   <section class="courses-list">
-    <div class="row" style="margin: 0;">
+    <div class="row m-0">
       <div class="col-md-3 open-filter-bar" id="filter-bar">
-
         <aside aria-label="${_('Refine Your Search')}" class="search-facets phone-menu pl-5">
           <div class="d-flex justify-content-end"> 
              <button type="button" class="btn-advanced-open border-0 p-0 mb-4" id="advance-button"> <span class="icon fa fa-times" aria-hidden="true"></span> </button>
           </div>
          
           <div class="row p-0 m-0">
-            <div class="col-md-9 p-0 align-content-center  m-0"> 
-              <h2 class="header-search-facets open-refine-search align-content-center  m-0">${_('Refine Your Search')}</h2>
+            <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12 p-0 align-content-center m-0"> 
+              <h2 class="header-search-facets open-refine-search align-content-center m-0">${_('Refine Your Search')}</h2>
             </div>
-            <div class="col-md-3 d-flex justify-content-end p-0 m-0"> 
+            <div class="col-xl-3 col-lg-12 col-md-12 col-sm-12 d-flex justify-content-end justify-content-sm-start p-0 py-sm-4 m-0"> 
               <button id="clear-filter-button" class="d-flex justify-content-center p-1 m-0">
                 <a id="clear-filters" href="#">${_('Clear All')}</a>
-                </button>
+              </button>
             </div>
           </div>
-            <h2 class="header-search-facets" id="discovery-message"></h2>
-        
-
+          <h2 class="header-search-facets" id="discovery-message"></h2>
           <section class="search-facets-lists">
-            
             <br>
             <div class="list-group">
              <label for="order-select" class="form-label"> ${_('Order')}</label>
               <select class="form-select" id="order-select" data-facet="order" class="form-check-input">
-                  <option value="newer"  data-value="newer" data-text="${_('Newer')}"> ${_('Newer')}</option>
-                  <option value="older"  data-value="older" data-text="${_('Older')}"> ${_('Older')}</option>
+                  <option value="newer" data-value="newer" data-text="${_('Newer')}"> ${_('Newer')}</option>
+                  <option value="older" data-value="older" data-text="${_('Older')}"> ${_('Older')}</option>
               </select>
             </div>
             <br>
@@ -70,15 +61,14 @@
                 %endfor
               </select>
             </div>
-
             <br>
             <div class="list-group">
              <label for="state-select" class="form-label"> ${_('State')}</label>
               <select class="form-select" id="state-select" data-facet="state" class="form-check-input">
                   <option value="" data-value="" disabled selected>${_('Select a state')}</option>
-                  <option value="active"  data-value="active" data-text="${_('Active')}">  ${_('Active')}</option>
-                  <option value="finished"  data-value="finished" data-text="${_('Finished')}">  ${_('Finished')}</option>
-                  <option value="coming_soon"  data-value="coming_soon" data-text="${_('Coming soon')}">  ${_('Coming soon')}</option>
+                  <option value="active" data-value="active" data-text="${_('Active')}">${_('Active')}</option>
+                  <option value="finished" data-value="finished" data-text="${_('Finished')}">${_('Finished')}</option>
+                  <option value="coming_soon" data-value="coming_soon" data-text="${_('Coming soon')}">${_('Coming soon')}</option>
               </select>
             </div>
             <br>
@@ -92,31 +82,32 @@
                 </label>
               %endfor
             </div>
+          </section>
       </div>
       <div class="col-sm-12 col-md-9" id="section-courses">
         <section>
-          <div class="open-search-container p-5">
-            <div class=" row m-0 p-2 w-100">      
-              <div class="col-sm-12 col-md-9 open-search-bar">
-                <div class="row m-0 p-0 w-100  align-content-center">
-                  <div class="col-sm-12 col-md-10 m-0 p-0">
+          <div class="open-search-container py-5">
+            <div class=" row m-0 p-2 w-100">
+              <div class="col-sm-12 col-md-12 col-lg-12 col-xl-9 open-search-bar align-content-center">
+                <div class="row m-0 p-0 w-100 align-content-center">
+                  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-9 m-0 p-0">
                     <button class="courses-search-btn" for="discovery-input" id="discovery-submit">
                       <span class="icon fa fa-search fa-1" aria-hidden="true"></span>
                     </button>
                     <label for="discovery-input" class="sr">${_('Search for a course')}</label>
                     <input id="discovery-input" class="open-discovery-input" placeholder="${_('Search for a course')}" type="text"/>
-                    <div class="vr h-100  d-md-inline-block d-none"></div>
+                    <div class="vr h-100 d-xl-inline-block d-none"></div>
                   </div>
-                  <div class="col-sm-12 col-md-2 m-0 p-0">
+                  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-3 m-0 p-0">
                     <select class="form-select border-0" id="order-select" data-facet="order" class="form-check-input">
-                      <option value="newer"  data-value="newer" data-text="${_('Newer')}"> ${_('Newer')}</option>
-                      <option value="older"  data-value="older" data-text="${_('Older')}"> ${_('Older')}</option>
+                      <option value="newer" data-value="newer" data-text="${_('Newer')}"> ${_('Newer')}</option>
+                      <option value="older" data-value="older" data-text="${_('Older')}"> ${_('Older')}</option>
                     </select>
                   </div>
                 </div>
               </div>
-              <div class="col-sm-12 col-md-3 align-content-center advance-button-container p-0">
-                <button type="button" class="btn-advanced-open" id="advance-button"><span class="icon fa fa-filter" aria-hidden="true"></span> ${_('Advanced')}  </button>
+              <div class="col-sm-12 col-md-12 col-lg-12 col-xl-3 align-content-center advance-button-container p-0 py-sm-2 py-md-2">
+                <button type="button" class="btn-advanced-open" id="advance-button"><span class="icon fa fa-filter" aria-hidden="true"></span> ${_('Advanced')}</button>
               </div>
             </div>
           </div>
@@ -127,7 +118,6 @@
         </section>
         <div id="list-courses"></div>
       </div>
-      
     </div>
   </section>
 </main>
