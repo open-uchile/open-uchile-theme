@@ -55,7 +55,7 @@ function getData(){
                 const courseHtml2 = createCourse(data.results[i+1], data.results[i+1].extra_data);
                 if (element_added % 2 === 0) {
                     row = document.createElement('div');
-                    row.className = 'row ml-5 mr-5 d-flex justify-content-center w-100';
+                    row.className = 'row d-flex justify-content-center w-100';
                     container.appendChild(row);
                 }
                 element_added = element_added + 1
@@ -351,7 +351,7 @@ function createCourse(data, extra_data){
 
     button_html =button_html +'</button>'
     const coursehtml = 
-    '<div class="col-md-4 col-sm-12 mb-3 mx-3 p-2">'+
+    '<div class="col-xl-4 col-lg-10 col-md-12 col-sm-12 mb-3 mx-3 p-2">'+
         '<div class="card {is_active} h-100" data-about="/courses/{course}/about" data-state="{state}" style="cursor: pointer;" onclick="window.location.href = this.dataset.about">'+
             '<div class="row g-0 p-0">'+
                 '<div class="col-md-12">'+
@@ -390,10 +390,10 @@ function create_course_date_html(start, self_paced, effort, course_price){
     if (effort != undefined){
         duration =
         '<div class="row g-0 p-0">'+
-            '<div class="col-md-2 col-sm-2 m-0">'+
+            '<div class="col-2 m-0">'+
                 '<div class="open-course-date-icon"><img src="/static/open-uchile-theme/images/svg-2023/fecha inicio.svg"></div>'+
             '</div>'+
-            '<div class="col-md-10 col-sm-10">'+
+            '<div class="col-10">'+
                 '<div class="open-course-date-text ml-3">'+
                     '<strong>'+
                         '<span>'+gettext("Duration")+'</span>'+
@@ -407,10 +407,10 @@ function create_course_date_html(start, self_paced, effort, course_price){
     '<div class="row ct3 my-2">'+
         '<div class="col-md-6 col-sm-12">'+
             '<div class="row g-0 p-0">'+
-                '<div class="col-md-2 col-sm-2 m-0">'+
+                '<div class="col-2 m-0">'+
                     '<div class="open-course-date-icon"><img src="/static/open-uchile-theme/images/svg-2023/fecha termino.svg"></div>'+
                 '</div>'+
-                '<div class="col-md-10 col-sm-10">'+
+                '<div class="col-10">'+
                     '<div class="open-course-date-text ml-3">'+
                         '<strong>'+
                             '<span>'+gettext("Classes Start")+'</span>'+
@@ -422,10 +422,10 @@ function create_course_date_html(start, self_paced, effort, course_price){
         '</div>'+
          '<div class="col-md-6 col-sm-12">'+
             '<div class="row g-0 p-0">'+
-                '<div class="col-md-2 col-sm-2 m-0">'+
+                '<div class="col-2 m-0">'+
                     '<div class="open-course-date-icon"><img src="/static/open-uchile-theme/images/svg-2023/modalidad.svg"></div>'+
                 '</div>'+
-                '<div class="col-md-10 col-sm-10">'+
+                '<div class="col-10">'+
                     '<div class="open-course-date-text ml-3">'+
                         '<strong>'+
                             '<span>'+gettext("Pacing")+'</span>'+
@@ -439,10 +439,10 @@ function create_course_date_html(start, self_paced, effort, course_price){
     '<div class="row ct3 my-2">'+
         '<div class="col-md-6 col-sm-12">'+
             '<div class="row g-0 p-0">'+
-                '<div class="col-md-2 col-sm-2 m-0">'+
+                '<div class="col-2 m-0">'+
                     '<div class="open-course-date-icon"><img src="/static/open-uchile-theme/images/svg-2023/precio.svg"></div>'+
                 '</div>'+
-                '<div class="col-md-10 col-sm-10">'+
+                '<div class="col-10">'+
                     '<div class="open-course-date-text ml-3">'+
                         '<strong>'+
                             '<span>'+gettext("Price")+'</span>'+
