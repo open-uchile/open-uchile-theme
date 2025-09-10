@@ -895,7 +895,6 @@ input[type="search"]::-ms-input-placeholder {
 }
 .courses-container .highlighted-courses{
     display: flex;
-    padding-top: 25px;
     max-width: 1765px;
 }
 .courses-container .highlighted-courses .courses-list{
@@ -904,7 +903,6 @@ input[type="search"]::-ms-input-placeholder {
 }
 .courses-container {
     max-width: 1765px;
-    margin-top: 50px;
 }
 /* New course card */
 
