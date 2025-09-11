@@ -21,6 +21,11 @@ now = timezone.now()
 <%
     course_about = reverse('about_course', args=[text_type(course['id'])])
 %>
+<script>
+  function show_default_image() {
+    return "${static.url('open-uchile-theme/images/default-course.png')}";
+  }
+</script>
 <div class="card ${card_class} h-100" data-about="${course_about}" data-state="${course['course_state']}" style="cursor: pointer;" onclick="window.location.href = this.dataset.about">
 
   <div class="row g-0 p-0">
@@ -28,7 +33,7 @@ now = timezone.now()
       <div class="card-body">
         <div class="row g-0 p-0">
           <figure>
-            <img src="${course['image_url']}" class="card-img-top img-fluid rounded-start" alt="${course['content']['display_name']}">
+            <img src="${course['image_url']}" class="card-img-top img-fluid rounded-start" alt="${course['content']['display_name']}" onerror="this.onerror=null; this.src=show_default_image()" >
           </figure>
         </div>
        <strong><h5 class="card-title fw-bold my-2" title="${course['content']['display_name']}">${course['content']['display_name']}</h5></strong> 
