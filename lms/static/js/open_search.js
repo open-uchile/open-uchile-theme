@@ -357,7 +357,7 @@ function createCourse(data, extra_data){
                 '<div class="col-md-12">'+
                     '<div class="card-body">'+
                         '<div class="row g-0 p-0">'+
-                            '<figure><img src="{image_url}" class="card-img-top img-fluid rounded-start" alt="{course_display_name}"></figure>'+
+                            '<figure><img src="{image_url}" class="card-img-top img-fluid rounded-start" alt="{course_display_name}" onerror="this.onerror=null; this.src=show_default_image()" ></figure>'+
                         '</div>'+
                         '<strong><h5 class="card-title fw-bold my-2" title="{course_display_name}">{course_display_name}</h5></strong>'+
                         '{course_date_html}'+

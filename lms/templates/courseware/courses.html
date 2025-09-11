@@ -21,6 +21,11 @@
   <script type="text/javascript" src="${static.url('open-uchile-theme/js/open_search.js')}"></script>
 </%block>
 <%block name="pagetitle">${_("Courses")}</%block>
+<script>
+  function show_default_image() {
+    return "${static.url('open-uchile-theme/images/default-course.png')}";
+  }
+</script>
 <main id="main" aria-label="Content" tabindex="-1">
   <section class="courses-list">
     <div class="row m-0">
