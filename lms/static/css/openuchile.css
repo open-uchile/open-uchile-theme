@@ -674,6 +674,7 @@ a.nav-link.user-menu:hover,
     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.09);
     background-color: white;
     padding-top: 1rem;
+    margin-top: 1rem;
     padding-bottom: 1rem;
     font-family: 'Raleway', sans-serif !important;
 }
@@ -1933,7 +1934,7 @@ body .wrapper-preview-menu .preview-menu {
     background-size: auto;
     background-repeat: no-repeat;
 }
-@media screen and  (min-width: 991px) {
+@media screen and (min-width: 991px) {
     .tab-content .tab-pane .image-tab{
         background-size: 75%;
     }
@@ -2021,10 +2022,25 @@ body .wrapper-preview-menu .preview-menu {
     width: auto;
     height: auto ;
   }
+
 @media (max-width: 405px) {
-  .index-text-presentation {
-    font-size: 15vw;
-  }
+    .index-text-presentation {
+        font-size: 15vw;
+    }
+}
+@media (max-width: 768px) {
+    .tab-content-text{
+        margin-top: 50%;
+    }
+    .tab-content .tab-pane .image-tab{
+        background-size: contain;
+    }
+}
+
+@media (max-width: 576px) {
+    .settings-language-form{
+        padding: 0px;
+    }
 }
 
 @media screen and (min-width: 991px) {
