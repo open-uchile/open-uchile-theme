@@ -1557,9 +1557,17 @@ aside h2.open-refine-search{
   .owl-theme .owl-dots .owl-dot{
     box-shadow: none;
   }
-  .open-carousel-orgs .owl-carousel .owl-item .item{
+
+.open-carousel-orgs .owl-carousel .owl-item .item{
     max-width: 400px;
-  }
+}
+
+@media (max-width: 500px){
+    .open-carousel-orgs .owl-carousel .owl-item .item{
+        max-width: 300px;
+    }
+}
+
   .owl-carousel-top-courses .owl-item .item{
     width: 400px;
     max-width: 80vw;
