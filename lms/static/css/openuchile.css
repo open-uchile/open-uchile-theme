@@ -1475,7 +1475,7 @@ aside h2.open-refine-search{
     font-size: 32px;
     color: #4B4B4B;
     font-weight: 600;
-    line-height: 24px;
+    line-height: normal;
     letter-spacing: 0px;
 }
 .open-search-bar .open-search-col .dropdown-menu.dropdown-menu-end{
