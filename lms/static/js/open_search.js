@@ -48,17 +48,29 @@ function getData(){
     $.post( "/course_classification/search/", copy )
     .done(function( data ) {
         if (data.error == undefined) {
-            for (let i = 0; i < data.results.length; i += 2) {
-                const container = document.getElementById("list-courses"); 
-                let element_added = 0
-                const courseHtml = createCourse(data.results[i], data.results[i].extra_data);
-                const courseHtml2 = createCourse(data.results[i+1], data.results[i+1].extra_data);
-                if (element_added % 2 === 0) {
-                    row = document.createElement('div');
-                    row.className = 'row d-flex justify-content-center w-100';
-                    container.appendChild(row);
+            let element_added = 0
+            if (data.results.length != 1){
+                for (let i = 0; i < data.results.length -1; i += 2) {
+                    const container = document.getElementById("list-courses"); 
+                    const courseHtml = createCourse(data.results[i], data.results[i].extra_data);
+                    const courseHtml2 = createCourse(data.results[i+1], data.results[i+1].extra_data);
+                    if (element_added % 2 === 0) {
+                        row = document.createElement('div');
+                        row.className = 'row d-flex justify-content-center w-100';
+                        container.appendChild(row);
+                    }
+                    element_added = element_added + 1
+                    edx.HtmlUtils.append(row, courseHtml);
+                    edx.HtmlUtils.append(row, courseHtml2);
                 }
-                element_added = element_added + 1
+            }
+            if (data.total % 2 !== 0){
+                const container = document.getElementById("list-courses"); 
+                const courseHtml = createCourse(data.results[data.results.length - 1], data.results[data.results.length - 1].extra_data);
+                const courseHtml2 = edx.HtmlUtils.HTML('<div class="col-xl-4 col-lg-10 col-md-12 col-sm-12 mb-3 mx-3 p-2"></div>') 
+                row = document.createElement('div');
+                row.className = 'row d-flex justify-content-center w-100';
+                container.appendChild(row);
                 edx.HtmlUtils.append(row, courseHtml);
                 edx.HtmlUtils.append(row, courseHtml2);
             }
@@ -70,6 +82,8 @@ function getData(){
         if (data.total > currentTotal){
             index = index + 1;
             state = 0;
+            console.log(data.total)
+            console.log(currentTotal)
         }
         else state = 2;
         $(".open-filter-bar #discovery-message").text(gettext("Showing")+" " + data.total + " "+ gettext("courses"));
